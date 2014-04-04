@@ -1,0 +1,154 @@
+<html>
+<head>
+<script type="text/javascript">
+function generate() {
+    cleanCode();
+    appendPackageName();
+    appendClassStart();
+    appendAttributes();
+    appendBuilder();
+    appendConstructor();
+    appendAttributeGetters();
+    appendClassEnd();
+}
+
+function appendPackageName() {
+    var packageName = document.getElementById('packageName').value;
+    appendLineOfJava('package ' + packageName);
+    appendLineOfJava('');
+}
+
+function appendBuilder() {
+    var className = document.getElementById('className').value;
+    appendLineOfJava('    public static class ' + className + 'Builder {');
+    appendLineOfJava('');
+    var lines = document.getElementById("attributes").value.split('\n');
+    for ( var i = 0; i < lines.length; i++ ) {
+        if ( lines[i] == '' ) {
+            continue;
+        }
+        var attributeType = lines[i].split(':')[0];
+        var attributeName = lines[i].split(':')[1];
+        appendLineOfJava('        private ' + attributeType + ' ' + attributeName + ';');
+    }
+    appendLineOfJava('');
+    for ( var i = 0; i < lines.length; i++ ) {
+        if ( lines[i] == '' ) {
+            continue;
+        }
+        var attributeType = lines[i].split(':')[0];
+        var attributeName = lines[i].split(':')[1];
+        appendLineOfJava('        public ' + className + 'Builder ' + attributeName + '(' + attributeType + ' ' + attributeName + ') {');
+        appendLineOfJava('            this.' + attributeName + ' = ' + attributeName + ';');
+        appendLineOfJava('            return this;');
+        appendLineOfJava('        }');
+        appendLineOfJava('');
+    }
+    appendLineOfJava('        public ' + className + ' build() {');
+    appendLineOfJava('            return new ' + className + '(this);');
+    appendLineOfJava('        }');
+    appendLineOfJava('    }');
+    appendLineOfJava('');
+}
+
+function appendClassEnd() {
+    appendLineOfJava('}');
+}
+
+function appendClassStart() {
+    var className = document.getElementById('className').value;
+    var classNameJavaDoc = document.getElementById('classNameJavaDoc').value;
+    appendLineOfJava('/**');
+    appendLineOfJava(' * ' + classNameJavaDoc);
+    appendLineOfJava(' */');
+    appendLineOfJava('public class ' + className + ' {');
+    appendLineOfJava('');
+}
+
+function appendConstructor() {
+    var className = document.getElementById('className').value;
+    var lines = document.getElementById("attributes").value.split('\n');
+    appendLineOfJava('    private ' + className + '(' + className + 'Builder builder) {');
+    for ( var i = 0; i < lines.length; i++ ) {
+        if ( lines[i] == '' ) {
+            continue;
+        }
+        var attributeType = lines[i].split(':')[0];
+        var attributeName = lines[i].split(':')[1];
+        appendLineOfJava('        this.' + attributeName + ' = builder.' + attributeName + ';');
+    }
+    appendLineOfJava('    }');
+    appendLineOfJava('');    
+}
+
+function appendAttributeGetters() {
+    var lines = document.getElementById("attributes").value.split('\n');
+    for ( var i = 0; i < lines.length; i++ ) {
+        if ( lines[i] == '' ) {
+            continue;
+        }
+        var attributeType = lines[i].split(':')[0];
+        var attributeName = lines[i].split(':')[1];
+        appendLineOfJava('    public final ' + attributeType + ' get' + attributeName[0].toUpperCase() + attributeName.substring(1) + '() {');
+        appendLineOfJava('        return ' + attributeName + ';');
+        appendLineOfJava('    }');
+        appendLineOfJava('');
+    }
+}
+
+function appendAttributes() {
+    var lines = document.getElementById("attributes").value.split('\n');
+    for ( var i = 0; i < lines.length; i++ ) {
+        if ( lines[i] == '' ) {
+            continue;
+        }
+        var attributeType = lines[i].split(':')[0]; 
+        var attributeName = lines[i].split(':')[1];
+        var attributeJavaDoc = lines[i].split(':')[2];
+        if ( attributeJavaDoc != '' ) {
+            appendLineOfJava('    /**');
+            appendLineOfJava('     * ' + attributeJavaDoc);
+            appendLineOfJava('     */');
+        }    
+        appendLineOfJava('    private final ' + attributeType + ' ' + attributeName + ';');
+        appendLineOfJava('');
+    }
+}
+
+function cleanCode() {
+    document.getElementById('javacode').value = '';
+}
+
+function deleteLastCharFromJava() {
+    var javacode = document.getElementById('javacode').value;
+    document.getElementById('javacode').value = javacode.substring(0, javacode.length-1);
+}
+
+function appendLineOfJava(code) {
+    appendJava(code + '\n');
+}
+
+function appendJava(code) {
+    document.getElementById('javacode').value += code;
+}
+
+
+</script>
+</head>
+<body>
+Sometimes I need this tool to generate codes to follow <a href="http://www.informit.com/articles/article.aspx?p=1216151&seqNum=2" target="new">Builder pattern</a>.<br />
+Wish this tool is also helpful to you. <br />
+The source code is committed in <a href="https://github.com/shooeugenesea/developer-tools" target="new">Github</a><br /><br />
+Package name: <input type="text" id="packageName" value="net.yourname" /><br />
+Class name: <input type="text" id="className" value="Person" /><br />
+Class name: <input type="text" id="classNameJavaDoc" value="This is a Person" /><br />
+<textarea id="attributes" rows="10" cols="80">
+String:attributeName:JavaDoc here
+String:firstName:The first name 
+String:lastName:The last name
+String:test:´ú¸ÕÄæ¦ì
+</textarea><br />
+<input type="button" value="Generate" onclick="generate()" /><br />
+<textarea id="javacode" rows="40" cols="120"></textarea>
+</body>
+</html>
