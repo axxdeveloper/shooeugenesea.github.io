@@ -25,7 +25,7 @@ function generate() {
 
 function appendPackageName() {
     var packageName = document.getElementById('packageName').value;
-    appendLineOfJava('package ' + packageName);
+    appendLineOfJava('package ' + packageName + ';');
     appendLineOfJava('');
 }
 
