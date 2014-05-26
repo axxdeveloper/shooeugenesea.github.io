@@ -1,0 +1,49 @@
+<html>
+<head>
+<script lang="JavaScript">
+function cal() {
+	document.getElementById('show').innerHTML = '';
+	var spendYear = parseInt(document.getElementById('spendYear').value);
+	var year = new Date().getFullYear();
+	var perYear = parseInt(document.getElementById('perYear').value);
+	var capital = parseInt(document.getElementById('initProperty').value);
+	var total = capital;
+	var income = 0;
+	var interest = parseFloat(document.getElementById('interest').value);
+	var html = '<table  border="1">' +
+					'<tr>' + 
+						'<th align="center">Year</th>' + 
+						'<th align="center">Capital</th>' + 
+						'<th align="center">Total</th>' + 
+						'<th align="center">Income</th>' + 
+					'</tr>';
+	for ( var x = 0; x < spendYear; x++ ) {
+		html += '<tr>' + 
+					'<td align="right">' + (year + x) + '</td>' + 
+					'<td align="right">' + capital + '</td>' +
+					'<td align="right">' + Math.floor(total) + '</td>' + 
+					'<td align="right">' + Math.floor(total - capital) + '</td>' + 
+				'</tr>';	
+		total = total * (1 + interest);
+		total += perYear;
+		capital += perYear;
+	}
+	html += '</table>';
+	document.getElementById('show').insertAdjacentHTML("beforeend", html);
+}
+</script>
+</head>
+<body onload="cal()">
+<h1>
+Plan
+</h1>
+I have <input type="number" id="initProperty" min="0" value="60000" style="text-align: right;" /> now.<br>
+Plan <input type="number" id="spendYear" min="0" max="200" value="20" style="text-align: right;" /> years to invest <input type="number" id="perYear" min="0" value="60000" style="text-align: right;" /> every year.<br>
+Expect <input type="number" id="interest" min="0" max="1" step="0.01" value="0.03" style="text-align: right;" /> interest these years.<br>
+
+<input type="button" value="Please list my financial targets" onclick="cal()" />
+<div id='show'>
+
+</div>
+</body>
+</html>
