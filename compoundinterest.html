@@ -17,13 +17,15 @@ function cal() {
 						'<th align="center">Total</th>' + 
 						'<th align="center">Income</th>' + 
 					'</tr>';
-	for ( var x = 0; x < spendYear; x++ ) {
+	var lastTotal = 0;
+	for ( var x = 0; x <= spendYear; x++ ) {
 		html += '<tr>' + 
 					'<td align="right">' + (year + x) + '</td>' + 
 					'<td align="right">' + capital + '</td>' +
 					'<td align="right">' + Math.floor(total) + '</td>' + 
-					'<td align="right">' + Math.floor(total - capital) + '</td>' + 
+					'<td align="right">' + Math.floor(total - lastTotal - perYear) + '</td>' + 
 				'</tr>';	
+		lastTotal = total;
 		total = total * (1 + interest);
 		total += perYear;
 		capital += perYear;
