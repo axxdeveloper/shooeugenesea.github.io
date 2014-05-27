@@ -8,7 +8,7 @@ function cal() {
 	var perYear = parseInt(document.getElementById('perYear').value);
 	var capital = parseInt(document.getElementById('initProperty').value);
 	var total = capital;
-	var income = 0;
+	var lastTotal = capital;
 	var interest = parseFloat(document.getElementById('interest').value);
 	var html = '<table  border="1">' +
 					'<tr>' + 
@@ -17,13 +17,13 @@ function cal() {
 						'<th align="center">Total</th>' + 
 						'<th align="center">Income</th>' + 
 					'</tr>';
-	var lastTotal = 0;
 	for ( var x = 0; x <= spendYear; x++ ) {
+		var income = x == 0 ? 0 : total - lastTotal - perYear;
 		html += '<tr>' + 
 					'<td align="right">' + (year + x) + '</td>' + 
 					'<td align="right">' + capital + '</td>' +
 					'<td align="right">' + Math.floor(total) + '</td>' + 
-					'<td align="right">' + Math.floor(total - lastTotal - perYear) + '</td>' + 
+					'<td align="right">' + Math.floor(income) + '</td>' + 
 				'</tr>';	
 		lastTotal = total;
 		total = total * (1 + interest);
