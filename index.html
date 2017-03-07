@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+        body {
+            background-color: 
+            lightgray;
+        }
+        table {    
+            border: 0;    
+            font-size: 85%;
+        }
+        a {
+            text-decoration: underline;
+        }
+        a:hover {
+            text-color: blue;
+            cursor: pointer;
+        }
+        p {    
+            text-align: center;       
+            font-size: 85%;
+        }
+        tr:hover {    
+            background-color: lightgray;
+        }
+        div#content {
+            width: 100%;
+        }
+        </style>
+        <script language="javascript">
+            function loadPage(link) {
+                document.getElementById("content").innerHTML='<object width=100% height=100% type="text/html" data="' + link + '" ></object>';
+            }   
+        </script>
+    </head>
+    <body>
+        <table align="center">
+            <tr>
+                <td><a onclick="loadPage('pttread/joke.html')">[joke]</a></td>
+                <td><a onclick="loadPage('pttread/BabyMother.html')">[媽寶]</a></td>
+                <td><a onclick="loadPage('pttread/LoL.html')">[LoL]</a></td>
+                <td><a onclick="loadPage('pttread/WomenTalk.html')">[女板]</a></td>
+                <td><a onclick="loadPage('pttread/movie.html')">[電影]</a></td>
+                <td><a onclick="loadPage('pttread/e-shopping.html')">[ES]</a></td>
+                <td><a onclick="loadPage('pttread/C_Chat.html')">[希洽]</a></td>
+                <td><a onclick="loadPage('pttread/Baseball.html')">[棒球]</a></td>
+                <td><a onclick="loadPage('pttread/Stock.html')">[股票]</a></td>
+                <td><a onclick="loadPage('pttread/NBA.html')">[NBA]</a></td>
+                <td><a onclick="loadPage('pttread/KoreaDrama.html')">[韓劇]</a></td>
+                <td><a onclick="loadPage('pttread/KoreaStar.html')">[韓星]</a></td>
+            </tr>
+        </table>
+        <div id="content" ></div>
+    </body>
+</html>
