@@ -18,8 +18,8 @@ public class JsoupExample {
 
 
     public static void main(String[] params) throws IOException {
-        String gitUserName = System.getenv("GIT_USERNAME");
-        String gitPassword = System.getenv("GIT_PASSWORD");
+        String gitUserName = "shooeugenesea";//System.getenv("GIT_USERNAME");
+        String gitPassword = "shooeugenesea_Tracy1212";//System.getenv("GIT_PASSWORD");
         String[][] ss = new String[][]{
                 {"e-shopping", "/bbs/e-shopping/index.html"},
                 {"BabyMother", "/bbs/BabyMother/index.html"},
