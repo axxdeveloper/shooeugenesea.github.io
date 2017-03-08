@@ -45,7 +45,7 @@ public class JsoupExample {
                     FileUtils.write(file, kanban.getHtml());
                     System.out.println("Export file: " + file + "...done");
                     ExpectJ expectinator = new ExpectJ(5);
-                    Spawn shell = expectinator.spawn("\"C:\\Program Files (x86)\\git\\bin\\sh.exe\" --login -i");
+                    Spawn shell = expectinator.spawn("\"C:\\Program Files\\Git\\bin\\sh.exe\" --login -i");
                     shell.send("cd ~/workspace_github/shooeugenesea.github.io/\n");
                     shell.send("git status \n");
                     shell.send("git add .\n");
