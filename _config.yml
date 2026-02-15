@@ -3,7 +3,9 @@ description: A blog about Java, programming, and software development
 url: "https://axxdeveloper.github.io"
 baseurl: "/shooeugenesea.github.io"
 
-theme: minima
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default"
+
 timezone: Asia/Taipei
 encoding: utf-8
 
@@ -12,15 +14,16 @@ permalink: /:year/:month/:day/:title/
 paginate: 10
 paginate_path: "/page/:num/"
 
-header_pages:
-  - _pages/archive.md
-  - _pages/tags.md
-  - _pages/about.md
+search: true
+
+author:
+  name: "a developer"
 
 plugins:
   - jekyll-paginate
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
 
 include:
   - _pages
@@ -30,12 +33,19 @@ defaults:
       path: "_pages"
       type: "pages"
     values:
-      layout: "page"
+      layout: "single"
   - scope:
       path: "_posts"
       type: "posts"
     values:
-      layout: "post"
+      layout: "single"
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 
 markdown: kramdown
 kramdown:
