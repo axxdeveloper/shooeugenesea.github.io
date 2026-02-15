@@ -1,0 +1,38 @@
+title: a developer
+description: A blog about Java, programming, and software development
+url: "https://shooeugenesea.github.io"
+baseurl: ""
+
+theme: minima
+timezone: Asia/Taipei
+encoding: utf-8
+
+permalink: /:year/:month/:day/:title/
+
+paginate: 10
+paginate_path: "/page/:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

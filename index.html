@@ -1,55 +1,47 @@
-<html>
-    <head>
-        <style>
-        body {
-            background-color: 
-            lightgray;
-        }
-        table {    
-            border: 0;    
-            font-size: 85%;
-        }
-        a {
-            text-decoration: underline;
-        }
-        a:hover {
-            text-color: blue;
-            cursor: pointer;
-        }
-        p {    
-            text-align: center;       
-            font-size: 85%;
-        }
-        tr:hover {    
-            background-color: lightgray;
-        }
-        div#content {
-            width: 100%;
-        }
-        </style>
-        <script language="javascript">
-            function loadPage(link) {
-                document.getElementById("content").innerHTML='<object width=100% height=100% type="text/html" data="' + link + '" ></object>';
-            }   
-        </script>
-    </head>
-    <body>
-        <table align="center">
-            <tr>
-                <td><a onclick="loadPage('pttread/joke.html')">[joke]</a></td>
-                <td><a onclick="loadPage('pttread/BabyMother.html')">[媽寶]</a></td>
-                <td><a onclick="loadPage('pttread/LoL.html')">[LoL]</a></td>
-                <td><a onclick="loadPage('pttread/WomenTalk.html')">[女板]</a></td>
-                <td><a onclick="loadPage('pttread/movie.html')">[電影]</a></td>
-                <td><a onclick="loadPage('pttread/e-shopping.html')">[ES]</a></td>
-                <td><a onclick="loadPage('pttread/C_Chat.html')">[希洽]</a></td>
-                <td><a onclick="loadPage('pttread/Baseball.html')">[棒球]</a></td>
-                <td><a onclick="loadPage('pttread/Stock.html')">[股票]</a></td>
-                <td><a onclick="loadPage('pttread/NBA.html')">[NBA]</a></td>
-                <td><a onclick="loadPage('pttread/KoreaDrama.html')">[韓劇]</a></td>
-                <td><a onclick="loadPage('pttread/KoreaStar.html')">[韓星]</a></td>
-            </tr>
-        </table>
-        <div id="content" ></div>
-    </body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
+
+  {% if paginator.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+      {% if post.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in post.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {{ post.excerpt }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Newer</a>
+    {% else %}
+    <span>&laquo; Newer</span>
+    {% endif %}
+
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older &raquo;</a>
+    {% else %}
+    <span>Older &raquo;</span>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
