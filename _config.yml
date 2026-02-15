@@ -4,7 +4,7 @@ url: "https://axxdeveloper.github.io"
 baseurl: "/shooeugenesea.github.io"
 
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "dark"
 
 timezone: Asia/Taipei
 encoding: utf-8
