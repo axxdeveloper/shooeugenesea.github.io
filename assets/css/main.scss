@@ -4,6 +4,15 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* --- Engineer-preferred fonts --- */
+html {
+  font-family: "Inter", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+code, kbd, samp, tt, var {
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 /* --- Code blocks: style bare <pre> tags from Blogger posts --- */
 pre {
   background: #1e1e1e;
@@ -11,7 +20,7 @@ pre {
   padding: 1em;
   border-radius: 4px;
   overflow-x: auto;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.85em;
   line-height: 1.6;
 }
