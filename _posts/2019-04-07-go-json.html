@@ -14,19 +14,19 @@ ex. var p = Person{}; json.Marshal(p)
 json.marshal return byte slice contains long string wuthout extraneous
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-0-db76c6a2.png" width="595" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-0-db76c6a2.png" width="595" /></div>
 </li>
 <li><div>
 Ex.data, err =&nbsp;json.MarshalIndent to format jaon. Use fmt.Printf(”%s”,data) to print to string
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-1-655bc661.png" width="641" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-1-655bc661.png" width="641" /></div>
 </li>
 <li><div>
 Only exported fields are marshalled
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-2-77adfea9.png" width="612" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-2-77adfea9.png" width="612" /></div>
 </li>
 <li><div>
 Field tags is a string of meta data associated at compile time with a field of a struct.
@@ -40,7 +40,7 @@ Ex. type S struct {num int `json:“release”`, real bool `json:“ok,omitempty
 omitempty indicate no output value if variable is zero value
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-3-e13d4326.png" width="669" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-3-e13d4326.png" width="669" /></div>
 </li>
 <li><div>
 Unmarshal object. json.Unmarshal
@@ -59,7 +59,7 @@ Ex. type Person struct {Name string}; ps := json.Unmarshal(json)
 var titles []struct{ Title string }; if err := json.Unmarshal(data, &amp;titles);
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-4-7422c59b.png" width="663" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-4-7422c59b.png" width="663" /></div>
 </li>
 </ul>
 </li>
@@ -67,7 +67,7 @@ var titles []struct{ Title string }; if err := json.Unmarshal(data, &amp;titles)
 Field of&nbsp;Struct used to unmarshal json&nbsp;must be capitalized. But map from json to struct is case insensitive
 </div>
 <div>
-<img src="/assets/images/extracted/go-json-5-ec94e004.png" width="647" /></div>
+<img src="/shooeugenesea.github.io/assets/images/extracted/go-json-5-ec94e004.png" width="647" /></div>
 </li>
 </ul>
 
