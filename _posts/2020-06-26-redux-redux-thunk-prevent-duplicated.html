@@ -3,6 +3,7 @@ layout: post
 title: redux - redux thunk - prevent duplicated request
 date: 2020-06-26 18:11:00 +0800
 tags: [redux, javascript]
+lang: en
 ---
 
 <span><div><div><div><b>Commit</b></div><div><a href="https://github.com/shooeugenesea/study-js/commit/6221b2eb518c6bb784e8316d42d4d358693f6ea6">https://github.com/shooeugenesea/study-js/commit/6221b2eb518c6bb784e8316d42d4d358693f6ea6</a></div></div><div><br /></div><div>=================== Prepare ========================</div><ul><li><div>whenever we dispatch a function, redux pick it up and invoke it</div></li></ul><div><div>export const fetchPostsAndUsers = () =&gt; async dispatch =&gt; {</div><div>&nbsp;&nbsp;&nbsp;&nbsp;await // <b><font color="#E30000">need await because invoking an async function and we want to wait until it's done</font></b><br />
