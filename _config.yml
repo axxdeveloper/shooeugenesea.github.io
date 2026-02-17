@@ -47,6 +47,9 @@ tag_archive:
   type: liquid
   path: /tags/
 
+after_footer_scripts:
+  - /assets/js/calendar-widget.js
+
 markdown: kramdown
 kramdown:
   input: GFM

@@ -51,3 +51,116 @@ pre {
   max-width: 100%;
   height: auto;
 }
+
+/* --- Calendar widget --- */
+.sidebar-calendar {
+  margin-bottom: 1.5em;
+  background: #1a1a2e;
+  border-radius: 6px;
+  padding: 0.75em;
+}
+
+.sidebar-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.sidebar-calendar__title {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #e2e2e2;
+}
+
+.sidebar-calendar__nav {
+  background: none;
+  border: none;
+  color: #00adb5;
+  font-size: 1.4em;
+  cursor: pointer;
+  padding: 0 0.3em;
+  line-height: 1;
+}
+
+.sidebar-calendar__nav:hover {
+  color: #fff;
+}
+
+.sidebar-calendar__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.sidebar-calendar__table th {
+  color: #888;
+  font-weight: 400;
+  padding: 0.3em 0;
+}
+
+.sidebar-calendar__table td {
+  padding: 0.35em 0;
+  color: #666;
+}
+
+.sidebar-calendar__day--has-post {
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar-calendar__day--has-post:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sidebar-calendar__day--current {
+  background: #00adb5;
+  border-radius: 50%;
+}
+
+.sidebar-calendar__day--current,
+.sidebar-calendar__day--current a {
+  color: #fff !important;
+}
+
+/* --- Tags widget --- */
+.sidebar-tags {
+  background: #1a1a2e;
+  border-radius: 6px;
+  padding: 0.75em;
+}
+
+.sidebar-tags__title {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #e2e2e2;
+  margin: 0 0 0.5em;
+}
+
+.sidebar-tags__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-tags__list li {
+  margin-bottom: 0.3em;
+}
+
+.sidebar-tags__link {
+  color: #00adb5;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.sidebar-tags__link:hover {
+  color: #fff;
+}
+
+.sidebar-tags__count {
+  color: #666;
+  font-size: 0.9em;
+}
