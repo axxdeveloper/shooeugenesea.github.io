@@ -89,7 +89,9 @@
 
         td.appendChild(a);
       } else {
-        td.textContent = day;
+        var span = document.createElement('span');
+        span.textContent = day;
+        td.appendChild(span);
       }
 
       if (key === postDate) {
