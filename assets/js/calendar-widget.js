@@ -1,14 +1,22 @@
 (function () {
   var postsMap = {};
   var currentYear, currentMonth;
+  var postDate = '';
 
   var calEl = document.querySelector('.sidebar-calendar');
   if (!calEl) return;
 
-  var postDate = calEl.getAttribute('data-post-date');
-  var parts = postDate.split('-');
-  currentYear = parseInt(parts[0], 10);
-  currentMonth = parseInt(parts[1], 10) - 1;
+  var rawDate = calEl.getAttribute('data-post-date');
+  if (rawDate) {
+    postDate = rawDate;
+    var parts = rawDate.split('-');
+    currentYear = parseInt(parts[0], 10);
+    currentMonth = parseInt(parts[1], 10) - 1;
+  } else {
+    var now = new Date();
+    currentYear = now.getFullYear();
+    currentMonth = now.getMonth();
+  }
 
   var baseurl = '';
   var meta = document.querySelector('meta[name="baseurl"]');
@@ -24,6 +32,11 @@
         if (!postsMap[d]) postsMap[d] = [];
         postsMap[d].push(p);
       });
+      if (!rawDate && posts.length > 0) {
+        var latest = posts[0].date.split('-');
+        currentYear = parseInt(latest[0], 10);
+        currentMonth = parseInt(latest[1], 10) - 1;
+      }
       render();
     });
 

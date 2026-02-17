@@ -1,4 +1,4 @@
-<div class="sidebar-calendar" data-post-date="{{ page.date | date: '%Y-%m-%d' }}">
+<div class="sidebar-calendar" data-post-date="{% if page.date %}{{ page.date | date: '%Y-%m-%d' }}{% endif %}">
   <div class="sidebar-calendar__header">
     <button class="sidebar-calendar__nav" id="cal-prev" aria-label="Previous month">&lsaquo;</button>
     <span class="sidebar-calendar__title" id="cal-title"></span>

@@ -1,17 +1,14 @@
 <div class="sidebar-tags">
   <h4 class="sidebar-tags__title">Tags</h4>
   <ul class="sidebar-tags__list">
-    {% for tag in page.tags %}
-      {% assign tag_slug = tag | slugify %}
-      {% assign tag_count = 0 %}
-      {% for t in site.tags %}
-        {% if t[0] == tag %}
-          {% assign tag_count = t[1] | size %}
-        {% endif %}
-      {% endfor %}
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_slug = tag_name | slugify %}
+      {% assign tag_count = tag[1] | size %}
       <li>
         <a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="sidebar-tags__link">
-          {{ tag }}
+          {{ tag_name }}
           <span class="sidebar-tags__count">({{ tag_count }})</span>
         </a>
       </li>
