@@ -11,7 +11,7 @@ encoding: utf-8
 
 permalink: /:year/:month/:day/:title/
 
-paginate: 10
+paginate: 20
 paginate_path: "/page/:num/"
 
 search: true
