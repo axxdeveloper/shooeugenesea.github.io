@@ -74,15 +74,20 @@ h6,
 }
 
 .masthead {
-  background: linear-gradient(180deg, rgba(14, 23, 40, 0.95), rgba(7, 12, 22, 0.88));
-  border-bottom: 1px solid var(--eng-border);
-  backdrop-filter: blur(12px);
+  background: linear-gradient(160deg, rgba(14, 23, 40, 0.96), rgba(9, 15, 28, 0.94));
+  border: 1px solid var(--eng-border);
+  border-top: none;
+  border-radius: 0 0 14px 14px;
+  margin: 0 auto;
+  max-width: 1280px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 28px rgba(2, 8, 19, 0.5);
 }
 
 .site-title {
   color: var(--eng-accent);
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -92,8 +97,16 @@ h6,
   color: var(--eng-accent-strong);
 }
 
+.greedy-nav {
+  background: transparent;
+}
+
 .greedy-nav .visible-links a {
-  color: var(--eng-text);
+  color: var(--eng-text-muted);
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  transition: color 0.18s ease;
 }
 
 .greedy-nav .visible-links a:hover {
