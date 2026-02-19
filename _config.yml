@@ -54,6 +54,7 @@ tag_archive:
 
 after_footer_scripts:
   - /assets/js/calendar-widget.js
+  - /assets/js/code-line-numbers.js
 
 markdown: kramdown
 kramdown:
