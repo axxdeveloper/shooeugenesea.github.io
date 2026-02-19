@@ -16,6 +16,11 @@ paginate_path: "/page/:num/"
 
 search: true
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-0J8SWP88Y4"
+
 author:
   name: "a developer"
 
