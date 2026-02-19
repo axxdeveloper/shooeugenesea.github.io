@@ -74,18 +74,22 @@ h6,
 }
 
 .masthead {
-  background: rgba(7, 12, 22, 0.86);
+  background: linear-gradient(180deg, rgba(14, 23, 40, 0.95), rgba(7, 12, 22, 0.88));
   border-bottom: 1px solid var(--eng-border);
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(12px);
 }
 
 .site-title {
-  color: var(--eng-text-strong);
-  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-  font-size: 0.92rem;
+  color: var(--eng-accent);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.site-title:hover {
+  color: var(--eng-accent-strong);
 }
 
 .greedy-nav .visible-links a {
