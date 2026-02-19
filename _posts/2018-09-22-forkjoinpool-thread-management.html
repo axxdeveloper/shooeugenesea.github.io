@@ -73,7 +73,7 @@ Codes: Thread size exceed parallel level</h3>
 Output</h3>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtb6sIkOUYXByy0h4I_OBfFwxYI52H5ZGYJopIQrybPGDsShyphenhyphenPoe1VBzXjb7ngzyMAoFmgLR1Dne7c2LxcPEufUPVf-FG2hQg-yX59PHgJ0De1KaZYyosbSIHE4yyFlqh6obl6pj_RmQ/s1600/Screen+Shot+2018-09-22+at+10.27.19+PM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="390" data-original-width="1600" height="96" src="/shooeugenesea.github.io/assets/images/blog/Screen-Shot-2018-09-22-at-10.27.19-PM.png" width="400" /></a></div>
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtb6sIkOUYXByy0h4I_OBfFwxYI52H5ZGYJopIQrybPGDsShyphenhyphenPoe1VBzXjb7ngzyMAoFmgLR1Dne7c2LxcPEufUPVf-FG2hQg-yX59PHgJ0De1KaZYyosbSIHE4yyFlqh6obl6pj_RmQ/s1600/Screen+Shot+2018-09-22+at+10.27.19+PM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="390" data-original-width="1600" height="96" src="/assets/images/blog/Screen-Shot-2018-09-22-at-10.27.19-PM.png" width="400" /></a></div>
 <div>
 從印出來的 log 就可以發現: thread 超過 2 個到達 14 個. pool size 實際上也到達 16</div>
 <div>
@@ -92,7 +92,7 @@ Requirement</h3>
 <h3>
 Suggestion: Customized ThreadFactory? (Don't do this)</h3>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhYpH3D5Fa1RPluAHwMvbCTaM9THFIHgRlIMWZKzUOnD3fb0yCwFR7hQwzVmF7i6N9Yx1Il4qf2XKwo7mDyODRWJ3jKVvCTy6U7Fy2rxfgiBfmODjue__d_dv1iqdEOvDZKl4Yx1kL5Q/s1600/Screen+Shot+2018-09-23+at+1.08.56+AM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="508" data-original-width="1084" height="186" src="/shooeugenesea.github.io/assets/images/blog/Screen-Shot-2018-09-23-at-1.08.56-AM.png" width="400" /></a></div>
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhYpH3D5Fa1RPluAHwMvbCTaM9THFIHgRlIMWZKzUOnD3fb0yCwFR7hQwzVmF7i6N9Yx1Il4qf2XKwo7mDyODRWJ3jKVvCTy6U7Fy2rxfgiBfmODjue__d_dv1iqdEOvDZKl4Yx1kL5Q/s1600/Screen+Shot+2018-09-23+at+1.08.56+AM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="508" data-original-width="1084" height="186" src="/assets/images/blog/Screen-Shot-2018-09-23-at-1.08.56-AM.png" width="400" /></a></div>
 <div>
 因為 ForkJoinPool 裡的這段程式, 網路上有人建議是提供自己的 thread factory, <span style="color: red;">如果超過指定的 thread 數量就回傳 null</span>. 如此就被 ForkJoinPool 當成一個錯誤而繼續使用既有的 thread.</div>
 <div>
@@ -162,6 +162,6 @@ Working Code</h3>
 Output</h3>
 </div>
 <div class="separator" style="clear: both; text-align: center;">
-<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3eHPo7ZLfVwXOOThNf3TdRW_k0jtYXjdhBU77uwBu5wHDp0oEnLNH23XOEsgi0af9tMOHVZGAJkq-f6vXOexQ11F5TzUqOV-fr6tHF3lRF1hwBl0rz2HmZ0QXm9kvGzowIKn4z_xV0g/s1600/Screen+Shot+2018-09-23+at+2.32.45+AM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="482" data-original-width="1600" height="120" src="/shooeugenesea.github.io/assets/images/blog/Screen-Shot-2018-09-23-at-2.32.45-AM.png" width="400" /></a></div>
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3eHPo7ZLfVwXOOThNf3TdRW_k0jtYXjdhBU77uwBu5wHDp0oEnLNH23XOEsgi0af9tMOHVZGAJkq-f6vXOexQ11F5TzUqOV-fr6tHF3lRF1hwBl0rz2HmZ0QXm9kvGzowIKn4z_xV0g/s1600/Screen+Shot+2018-09-23+at+2.32.45+AM.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="482" data-original-width="1600" height="120" src="/assets/images/blog/Screen-Shot-2018-09-23-at-2.32.45-AM.png" width="400" /></a></div>
 <div>
 因為呼叫 new ForkJoinPool() 所以 pool size 最多就維持在 8 (我的電腦有 8 core)</div>
