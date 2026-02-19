@@ -74,14 +74,10 @@ h6,
 }
 
 .masthead {
-  background: linear-gradient(160deg, rgba(14, 23, 40, 0.96), rgba(9, 15, 28, 0.94));
-  border: 1px solid var(--eng-border);
-  border-top: none;
-  border-radius: 0 0 14px 14px;
-  margin: 0 auto;
-  max-width: 1280px;
+  background: linear-gradient(180deg, rgba(14, 23, 40, 0.96), rgba(7, 12, 22, 0.92));
+  border-bottom: 2px solid var(--eng-accent);
   backdrop-filter: blur(14px);
-  box-shadow: 0 8px 28px rgba(2, 8, 19, 0.5);
+  box-shadow: 0 4px 20px rgba(2, 8, 19, 0.4);
 }
 
 .site-title {
