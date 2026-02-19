@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   var pres = document.querySelectorAll(".page__content pre");
   pres.forEach(function (pre) {
     if (pre.querySelector(".code-line")) return;
@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .join("");
   });
-});
+})();
