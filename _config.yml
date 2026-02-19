@@ -1,7 +1,7 @@
 title: a developer
 description: A blog about Java, programming, and software development
-url: "https://axxdeveloper.github.io"
-baseurl: "/shooeugenesea.github.io"
+url: "https://www.isaacnote.com"
+baseurl: ""
 
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
