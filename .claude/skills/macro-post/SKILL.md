@@ -104,9 +104,25 @@ From all agent results, pick **four different topics** — one for each style:
 
 **Skip a style if there's no quality topic.** If there's no meaningful political news with economic impact this week, generate 3 posts instead of 4. Never force a weak topic — quality over quantity.
 
-### Step 3: Generate Blog Posts
+### Step 3: Deep Investigation & Post Generation (4 Parallel Agents)
 
-Create files in Traditional Chinese in `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/`:
+Launch **four** parallel agents using the Task tool (subagent_type: `general-purpose`), one for each chosen topic. Each agent independently **researches deeply** then **writes the post**.
+
+Each agent receives:
+- The **broad research context** from Step 1 (relevant bullet points for its topic)
+- Its **assigned style** (A/B/C/D) with the full structure template from this skill
+- The **Content Rules** and **Chart Guidelines** sections below
+- The **target filename** and front matter template
+
+Each agent must:
+1. **Deep research** — run 5-8 additional web searches focused specifically on its topic. Go deeper than Step 1: find primary sources, historical context, contrarian views, specific numbers that Step 1 missed. For example:
+   - Commentary agent: search for analyst reactions, cross-asset correlations, historical parallels
+   - Deep-dive agent: pull the actual government report tables, find revisions to prior data, search for expert commentary on the release
+   - Geopolitics agent: find diplomatic statements, trade flow data, historical precedents for similar political events
+   - AI/Tech agent: find earnings call transcripts, capex breakdowns, adoption surveys, energy consumption data
+2. **Synthesize a thesis** — form a clear, opinionated take based on the deep research
+3. **Write the full post** in Traditional Chinese, following the style template exactly
+4. **Write the file** to `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/` with filename `YYYY-MM-DD-{slug}-zh.md`
 
 **File naming:** `YYYY-MM-DD-{slug}-zh.md`
 
@@ -132,7 +148,7 @@ lang: zh-TW
 ### Content Rules
 
 1. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
-2. **Take a clear position** — each post must have a thesis the author is willing to be wrong about. Name what would prove you wrong.
+2. **Take a clear position** — each post must have a thesis the author is willing to be wrong about. In the 筆記 section, use「持續觀察：」to name specific scenarios that would invalidate the thesis (not「什麼會證明我錯？」).
 2. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
 3. **Quantify the risk/reward** — for every ETF discussed, frame the upside vs downside with approximate numbers.
 4. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
