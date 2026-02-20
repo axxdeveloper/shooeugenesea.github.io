@@ -1,4 +1,4 @@
-title: a developer
+title: Isaac Note
 description: Software engineering, macroeconomics, and ETF investing — Java, Spring Boot, system design, Fed policy, and market analysis
 url: "https://www.isaacnote.com"
 baseurl: ""
@@ -22,7 +22,7 @@ analytics:
     tracking_id: "G-0J8SWP88Y4"
 
 author:
-  name: "a developer"
+  name: "Isaac"
 
 plugins:
   - jekyll-paginate
