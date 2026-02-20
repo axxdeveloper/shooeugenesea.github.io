@@ -208,8 +208,16 @@ Each agent should return a table: `Claim | Blog Value | Actual Value | Source | 
 
 **After fact-check:** Fix any wrong or outdated data before proceeding. If a claim is unverifiable from reliable sources, either remove it or clearly attribute it (e.g., "according to analyst estimates").
 
-### Step 4: Verify Output
+### Step 4: Retrospective — Review Past Posts & Skill
+
+Before finalizing, review the most recent past posts (previous 1-2 dates) in `_posts/` for errors or outdated claims that were not caught at the time:
+
+1. **Scan recent posts** — Read the last batch of macro posts. For each factual claim, check whether subsequent data releases or events have proven it wrong or outdated.
+2. **Reflect corrections in new posts** — If a past post made a prediction or claim that turned out wrong, acknowledge or correct it in today's posts where relevant (e.g., "上期我們提到 Core PCE 為 2.8%，但 12 月數據已修正至 3.0%"). This builds credibility and continuity.
+3. **Update the skill if needed** — If the errors reveal a systematic gap (e.g., agents consistently miss a data source, a chart type doesn't work well, a section is redundant), update this SKILL.md to prevent recurrence. Report any skill changes to the user.
+
+### Step 5: Verify Output
 
 1. Confirm all files exist with correct filenames
 2. Verify each: front matter correct, chart with unique canvas id, sourced data, all claims cited, disclaimer present
-3. Report to user: all filenames, style + topic for each, chart data sources
+3. Report to user: all filenames, style + topic for each, chart data sources, any past-post corrections applied, any skill updates made
