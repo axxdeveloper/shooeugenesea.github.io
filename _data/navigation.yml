@@ -1,8 +1,8 @@
 main:
   - title: "Archive"
     url: /archive/
-  - title: "AI Generated"
-    url: /ai-generated/
+  - title: "Macro"
+    url: /macro/
   - title: "Tags"
     url: /tags/
   - title: "About"
