@@ -4,6 +4,7 @@ title: "CBO 最新預測：美國國債占 GDP 比率將從 101% 飆升至 120%"
 date: 2026-02-20 09:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, bonds]
+description: "CBO 最新報告預測美國國債占 GDP 比率從 101% 飆升至 120%，利息支出膨脹至 2.1 兆美元。分析債務螺旋對 TLT、TIPS、黃金的投資影響。"
 lang: zh-TW
 ---
 

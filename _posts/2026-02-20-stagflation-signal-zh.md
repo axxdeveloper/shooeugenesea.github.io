@@ -4,6 +4,7 @@ title: "停滯性通膨信號浮現：GDP 暴跌至 1.4%，通膨卻死守不退
 date: 2026-02-20 08:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, bonds, volatility]
+description: "Q4 GDP 暴跌至 1.4%，Core PCE 升至 3.0%，停滯性通膨信號浮現。分析聯準會困境、防禦性輪動趨勢，以及 SPY、TLT、GLD 等 ETF 的風險報酬。"
 lang: zh-TW
 ---
 

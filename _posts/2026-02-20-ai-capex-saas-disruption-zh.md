@@ -4,6 +4,7 @@ title: "AI 軍備競賽：6,500 億美元資本支出潮與 SaaS 末日"
 date: 2026-02-20 11:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, ai, technology, semiconductor, cloud]
+description: "科技巨頭 2026 年 AI 資本支出合計 6,500 億美元，傳統 SaaS 市值蒸發超過 1 兆。分析 NVIDIA 財報預覽、半導體供應鏈風險，以及 QQQ、SMH、XLU 等 ETF 影響。"
 lang: zh-TW
 ---
 

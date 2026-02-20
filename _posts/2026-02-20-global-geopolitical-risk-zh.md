@@ -4,6 +4,7 @@ title: "四面楚歌：荷莫茲海峽、日銀升息、歐盟禁俄氣、台海
 date: 2026-02-20 10:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, middleeast, europe, china, taiwan]
+description: "荷莫茲海峽美伊對峙、日銀升息至 30 年新高、歐盟禁俄氣、台海風險同步升溫。四大地緣政治風險的經濟傳導機制與 ETF 投資策略分析。"
 lang: zh-TW
 ---
 

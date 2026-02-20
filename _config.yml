@@ -1,5 +1,5 @@
 title: a developer
-description: A blog about Java, programming, and software development
+description: Software engineering, macroeconomics, and ETF investing — Java, Spring Boot, system design, Fed policy, and market analysis
 url: "https://www.isaacnote.com"
 baseurl: ""
 
@@ -33,6 +33,8 @@ plugins:
 include:
   - _pages
 
+breadcrumbs: true
+
 defaults:
   - scope:
       path: "_pages"
@@ -44,6 +46,8 @@ defaults:
       type: "posts"
     values:
       layout: "single"
+      share: true
+      related: true
 
 category_archive:
   type: liquid
