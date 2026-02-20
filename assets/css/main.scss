@@ -83,10 +83,24 @@ h6,
 .site-title {
   color: var(--eng-accent);
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: none;
+}
+
+.breadcrumbs {
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--eng-text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--eng-accent);
+}
+
+.breadcrumbs .current {
+  color: var(--eng-text);
 }
 
 .site-title:hover {
