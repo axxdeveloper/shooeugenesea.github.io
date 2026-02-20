@@ -1,6 +1,6 @@
 main:
-  - title: "Archive"
-    url: /archive/
+  - title: "Tech"
+    url: /tech/
   - title: "Macro"
     url: /macro/
   - title: "Tags"
