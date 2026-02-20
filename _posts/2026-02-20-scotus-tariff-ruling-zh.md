@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "歷史性裁決：最高法院 6:3 推翻川普 IEEPA 關稅，1,300 億退稅戰開打"
-date: 2026-02-21 08:00:00 +0800
+date: 2026-02-20 20:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, tariff, fiscal]
 description: "美國最高法院以 6:3 裁定川普依據 IEEPA 徵收的對等關稅違法，影響超過 1,300 億美元已徵稅款。S&P 500 漲 0.7%、零售股飆升，但 Section 232 鋼鋁汽車關稅仍在。分析後續法律戰、行政反制路徑，以及 SPY、XRT、TLT、GLD 等 ETF 的風險報酬。"
