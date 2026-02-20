@@ -118,6 +118,7 @@ title: "{Chinese title}"
 date: YYYY-MM-DD HH:MM:SS +0800
 categories: [macro]
 tags: [macro, etf, investing]
+description: "{1-2 sentence Chinese summary with key numbers and ETF tickers — this controls the Google search snippet}"
 lang: zh-TW
 ---
 ```
