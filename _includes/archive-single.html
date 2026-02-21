@@ -24,16 +24,6 @@
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    {% if post.categories.size > 0 %}
-      {% assign cat = post.categories[0] | downcase %}
-      {% if cat == "macro" %}
-        <span class="archive__item-category archive__item-category--macro">總經</span>
-      {% elsif cat == "tech" %}
-        <span class="archive__item-category archive__item-category--tech">Tech</span>
-      {% else %}
-        <span class="archive__item-category">{{ post.categories[0] }}</span>
-      {% endif %}
-    {% endif %}
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
