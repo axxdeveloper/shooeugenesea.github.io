@@ -379,30 +379,40 @@ pre .code-line:last-child::before {
   font-size: 0.72rem;
 }
 
-/* ── Category badge ── */
+/* ── Category label ── */
 .archive__item-category {
   display: inline-block;
-  margin-bottom: 0.3rem;
-  padding: 0.15em 0.6em;
-  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: 4px;
-  line-height: 1.6;
+  margin-bottom: 0.25rem;
+  padding: 0;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  border: none;
+  background: none;
 }
 
 .archive__item-category--macro {
-  color: #ffd866;
-  background: rgba(255, 216, 102, 0.12);
-  border: 1px solid rgba(255, 216, 102, 0.3);
+  color: var(--eng-text-muted);
+}
+
+.archive__item-category--macro::before {
+  content: "◆ ";
+  color: #c8a44e;
+  font-size: 0.55rem;
+  vertical-align: 1px;
 }
 
 .archive__item-category--tech {
+  color: var(--eng-text-muted);
+}
+
+.archive__item-category--tech::before {
+  content: "◆ ";
   color: var(--eng-accent);
-  background: rgba(84, 214, 255, 0.12);
-  border: 1px solid rgba(84, 214, 255, 0.3);
+  font-size: 0.55rem;
+  vertical-align: 1px;
 }
 
 /* ── Wider content: align left edge with masthead site-title ── */
