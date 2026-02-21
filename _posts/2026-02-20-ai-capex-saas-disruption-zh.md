@@ -26,7 +26,7 @@ new Chart(document.getElementById('macroChart4'), {
     datasets: [
       {
         label: '2025 年 Capex（十億美元）',
-        data: [38, 55, 50, 75, 60],
+        data: [72, 89, 91, 131, 60],
         backgroundColor: 'rgba(148, 163, 184, 0.6)',
         borderColor: 'rgba(148, 163, 184, 1)',
         borderWidth: 1
@@ -57,7 +57,7 @@ new Chart(document.getElementById('macroChart4'), {
         ticks: { color: '#94a3b8', callback: function(v) { return '$' + v + 'B'; } },
         grid: { color: 'rgba(255,255,255,0.1)' },
         min: 0,
-        max: 120
+        max: 150
       }
     }
   }

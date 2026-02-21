@@ -15,11 +15,11 @@ lang: zh-TW
 ## 經濟傳導機制
 
 <div style="max-width: 600px; margin: 2em auto;">
-  <canvas id="macroChart1"></canvas>
+  <canvas id="macroChart9"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-new Chart(document.getElementById('macroChart1'), {
+new Chart(document.getElementById('macroChart9'), {
   type: 'bar',
   data: {
     labels: ['IEEPA 對等關稅\n（已推翻）', 'IEEPA 芬太尼關稅\n（已推翻）', 'Section 232\n鋼鋁 50%（仍有效）', 'Section 232\n汽車 25%（仍有效）', 'Section 301\n調查中'],

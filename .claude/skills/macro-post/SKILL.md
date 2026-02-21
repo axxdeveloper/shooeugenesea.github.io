@@ -91,16 +91,56 @@ Launch **six** research agents in parallel using the Task tool (subagent_type: `
 
 Each agent should run 3-5 web searches and return a concise bullet-point summary.
 
+### Step 1.5: Classify the News Day & Read Previous Posts
+
+Before picking topics, do two things:
+
+**1. Read previous posts.** Read the titles, descriptions, and first paragraphs of the most recent 1-3 days of posts in `_posts/`. Build a list of topics and key data points already covered. For example:
+
+```
+Previous posts (2026-02-20):
+- A: Stagflation signal (GDP 1.4%, Core PCE 3.0%, Fed dilemma)
+- B: CBO debt trajectory (debt/GDP 101%→120%)
+- C: Four geopolitical risks (Hormuz, BOJ, EU gas, Taiwan)
+- D: AI capex $6,350B + SaaS disruption
+```
+
+**2. Classify the news day:**
+
+- **Breaking news day**: A major event happened TODAY or YESTERDAY that wasn't covered in previous posts (e.g., surprise rate decision, military action, earnings shock, SCOTUS ruling, unexpected data release). In this case, cover the breaking news — overlap with adjacent topics is acceptable because it's genuinely new.
+- **Quiet day**: No major new events since the last post batch. The same stories from yesterday are still dominating headlines with no material updates. In this case, switch to **discovery mode** — actively seek under-the-radar topics that provide reader value beyond rehashing yesterday's takes.
+
 ### Step 2: Pick Four Topics
 
-From all agent results, pick **four different topics** — one for each style:
+From all agent results, pick **four different topics** — one for each style. The selection strategy depends on the day type from Step 1.5.
 
-1. **Commentary**: The broadest, most market-moving macro story that connects multiple data points
-2. **Deep-dive**: The single government report with the most complete, chartable numbers (5+ data points from BLS, BEA, Fed, Treasury, or CBO)
-3. **Geopolitics**: The international or domestic political development with the clearest economic transmission mechanism and quantifiable market impact. Prefer stories that span multiple countries or have cross-border economic effects.
-4. **AI/Tech**: The technology story with the largest real-economy footprint (capex, jobs, energy, productivity)
+#### For breaking news days:
+
+Cover the breaking event in the most fitting style. Other styles should find angles NOT covered by previous posts — even if they reference the same event, the thesis and primary data must be different.
+
+#### For quiet days (discovery mode):
+
+Apply a priority hierarchy for each style to find topics that provide genuine new value to readers:
+
+1. **New data releases** not yet covered (e.g., a BLS/BEA/Fed report dropped today that wasn't in previous posts)
+2. **Emerging risks** the market is underpricing — things NOT in current headlines (e.g., commercial real estate stress, consumer credit delinquencies rising, a country's bond auction failing, corporate debt refinancing wall)
+3. **Structural/social trends** with economic consequences (e.g., aging demographics impact on labor, student debt burden on consumption, housing affordability crisis, healthcare cost spiral, insurance market stress)
+4. **Contrarian re-evaluation** of a consensus view (e.g., "everyone says stagflation, but here's why the data doesn't support it yet" — only if the contrarian case has real data behind it)
+5. **Cross-market connections** others aren't making (e.g., how Japan's rate hike is affecting EM carry trades, how DOGE spending cuts flow through to specific state economies)
+
+Per-style guidance:
+1. **Commentary**: The broadest macro story with genuine new insight — either a breaking event or a discovery-mode angle
+2. **Deep-dive**: The government report with the most complete, chartable numbers (5+ data points from BLS, BEA, Fed, Treasury, or CBO). On quiet days, look for reports that dropped recently but were overshadowed by bigger news
+3. **Geopolitics**: The political development with the clearest economic transmission mechanism. On quiet days, look for slow-burn geopolitical shifts (trade negotiations, sanctions regime changes, election dynamics) rather than rehashing yesterday's hot takes
+4. **AI/Tech**: The technology story with the largest real-economy footprint. On quiet days, explore structural angles (labor displacement data, energy grid constraints, semiconductor supply chain, regulatory developments) rather than repeating capex headlines
 
 **All four topics must be different.** They can be related but each post must stand alone with its own unique thesis.
+
+**Deduplication rule:** Compare each candidate topic against the previous-posts list from Step 1.5. A topic is **too similar** if it shares >50% of its data points with a post from the last 3 days:
+- **Same data, same angle = skip it.** (e.g., yesterday wrote about GDP 1.4% + Core PCE stagflation → don't write another stagflation post using the same numbers)
+- **Same event, deeper zoom = OK only if the thesis is fundamentally different.** (e.g., yesterday covered Hormuz as 1 of 4 risks → today can deep-dive Hormuz ONLY if the thesis is different, like scenario-based oil price modeling vs. broad risk overview). When building on a previous post, reference it: "上期分析了 AI capex 的 SaaS 衝擊面，本期從現金流角度切入"
+- **Same sector, different story = OK.** (e.g., yesterday wrote AI capex + SaaS disruption → today can write AI labor displacement data, since the thesis and data are entirely different)
+- If a style's best topic overlaps with yesterday, pick the **second-best** topic for that style, or skip the style entirely.
 
 **Skip a style if there's no quality topic.** If there's no meaningful political news with economic impact this week, generate 3 posts instead of 4. Never force a weak topic — quality over quantity.
 
@@ -155,7 +195,19 @@ lang: zh-TW
 5. **Cite everything** — every factual claim needs a source URL as an inline markdown link.
 6. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
 7. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
-8. **Disclaimer** — always include at the bottom:
+8. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
+9. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
+   ```html
+   <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
+   <strong>TERM</strong>：一句話白話解釋。
+   </aside>
+   ```
+   Rules:
+   - Place the `<aside>` immediately before the paragraph where the term is first used in detail
+   - Keep each definition to one sentence
+   - Common terms like ETF, Fed, GDP, CPI do NOT need entries — only terms a casual reader would not know
+   - Descriptive Chinese phrases (e.g., 到期牆、品質遷移) that are already self-explanatory in context do NOT need entries — only true jargon and acronyms
+10. **Disclaimer** — always include at the bottom:
    ```
    *資料來源：[列出來源連結]*
    *市場數據截至：YYYY-MM-DD*
@@ -233,8 +285,18 @@ Before finalizing, review the most recent past posts (previous 1-2 dates) in `_p
 2. **Reflect corrections in new posts** — If a past post made a prediction or claim that turned out wrong, acknowledge or correct it in today's posts where relevant (e.g., "上期我們提到 Core PCE 為 2.8%，但 12 月數據已修正至 3.0%"). This builds credibility and continuity.
 3. **Update the skill if needed** — If the errors reveal a systematic gap (e.g., agents consistently miss a data source, a chart type doesn't work well, a section is redundant), update this SKILL.md to prevent recurrence. Report any skill changes to the user.
 
-### Step 5: Verify Output
+### Step 5: Verify Output & List Posts
 
 1. Confirm all files exist with correct filenames
 2. Verify each: front matter correct, chart with unique canvas id, sourced data, all claims cited, disclaimer present
-3. Report to user: all filenames, style + topic for each, chart data sources, any past-post corrections applied, any skill updates made
+3. **Print a summary table** listing every generated post:
+
+```
+| # | File | Style | Topic | Chart ID |
+|---|------|-------|-------|----------|
+| 1 | `YYYY-MM-DD-slug-zh.md` | A: Commentary | ... | macroChartN |
+| ...
+```
+
+4. List any fact-check corrections applied and any past-post fixes
+5. List any skill updates made
