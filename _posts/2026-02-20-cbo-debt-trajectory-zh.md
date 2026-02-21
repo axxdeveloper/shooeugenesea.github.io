@@ -79,11 +79,11 @@ new Chart(document.getElementById('macroChart2'), {
 });
 </script>
 
-### 債務螺旋的數學
+### 債務擴張的複利效應
 
 CBO 預測的核心問題不是赤字本身，而是利息支出的複利效應。FY2026 聯邦赤字預計為 [1.9 兆美元](https://www.cbo.gov/publication/61882)，其中淨利息預計超過 1 兆美元。到 FY2036，赤字擴大至 3.1 兆，而利息支出膨脹至 2.1 兆。這代表未來新增舉債中，利息再融資的比重將持續提高。
 
-### 為何比看起來更糟
+### 基準預測的保守假設
 
 這些預測仍基於「目前法律不變」的基準情境。若 2025 年減稅法案 (TCJA) 的個人所得稅條款被延長，CBO 估算十年赤字可能額外增加數兆美元（參考 [CBO 基準與替代情境](https://www.cbo.gov/publication/61882)），債務比率路徑可能高於 120%。此外，CBO 假設利率將從目前水平逐步下降；若核心 PCE 維持在 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025) 附近，利率下行幅度將受限，利息負擔可能更高。
 

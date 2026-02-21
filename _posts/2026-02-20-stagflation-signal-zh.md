@@ -10,25 +10,25 @@ lang: zh-TW
 
 ## 總經快照
 
-聯準會 (Fed) 維持利率於 3.5%–3.75% 不變，點陣圖中位數顯示 2026 年僅剩一次降息空間。第四季國內生產毛額 (GDP) 年化成長率僅 [1.4%](https://www.bea.gov/data/gdp/gross-domestic-product)，遠低於市場預期的 3.0%，而核心個人消費支出 (Core PCE) 12 月數據不降反升至 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025)。成長暴跌、通膨加速——停滯性通膨 (stagflation) 的經典劇本正在成形。
+聯準會 (Fed) 維持利率於 3.5%–3.75% 不變，點陣圖中位數顯示 2026 年僅剩一次降息空間。第四季國內生產毛額 (GDP) 年化成長率僅 [1.4%](https://www.bea.gov/data/gdp/gross-domestic-product)，遠低於市場預期的 3.0%，而核心個人消費支出 (Core PCE) 12 月數據不降反升至 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025)。成長放緩、通膨加速——停滯性通膨 (stagflation) 的風險值得留意。
 
 ## 重點發展
 
-### 成長引擎熄火
+### 成長動能放緩
 
-Q4 GDP 從 Q3 的 4.4% 驟降至 1.4%，是 2023 年以來最差的單季表現。消費者支出成長從 3.2% 降至 [1.8%](https://www.bea.gov/data/gdp/gross-domestic-product)，企業固定投資季減 0.3%。值得注意的是，淨出口拖累了 0.7 個百分點——這與美元走強及全球需求疲軟直接相關。歐洲央行 (ECB) 維持利率不變，歐元區 Q4 成長僅 0.1%；日本央行 (BOJ) 則逆勢升息至 [0.75%](https://www.boj.or.jp/en/mopo/mpmdeci/index.htm)，推升日圓、壓縮日本出口，連帶影響亞洲供應鏈需求。全球同步放緩正在發生。
+Q4 GDP 從 Q3 的 4.4% 明顯回落至 1.4%，是 2023 年以來最差的單季表現。消費者支出成長從 3.5% 降至 [2.4%](https://www.bea.gov/data/gdp/gross-domestic-product)，企業固定投資雖年化成長 3.7%，但結構分化明顯（AI 相關強勁、傳統建築與住宅疲弱）。值得注意的是，淨出口拖累了 0.7 個百分點——這與美元走強及全球需求疲軟直接相關。歐洲央行 (ECB) 維持利率不變，歐元區 Q4 成長僅 0.1%；日本央行 (BOJ) 則逆勢升息至 [0.75%](https://www.boj.or.jp/en/mopo/mpmdeci/index.htm)，推升日圓、壓縮日本出口，連帶影響亞洲供應鏈需求。全球經濟面臨同步放緩壓力。
 
-### 通膨的黏性超乎預期
+### 通膨黏性高於預期
 
 消費者物價指數 (CPI) 年增率為 [2.4%](https://www.bls.gov/news.release/cpi.nr0.htm)，看似溫和，但核心 PCE 12 月不降反升至 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025)，重新突破 3% 關卡。住房成本年增 4.1% 仍是最大推手，而食品與能源的壓力正因伊朗荷莫茲海峽危機與歐盟禁俄氣政策而重新升溫。布蘭特原油從 1 月低點 65 美元反彈至 [約 71 美元](https://www.reuters.com/business/energy/)，若荷莫茲海峽封鎖時間延長，能源通膨將再度惡化。這不只是美國的問題——全球能源供給正同時受到地緣政治的多重擠壓。
 
 ### 聯準會的兩難困境
 
-聯準會的處境極為尷尬：降息可能刺激已經頑固的通膨，不降息則讓疲弱的經濟雪上加霜。2 月 [FOMC 會議紀要](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)顯示，多數委員對通膨回落「缺乏信心」，但同時承認經濟下行風險正在累積。市場目前定價 6 月降息機率約 45%，但若 Q1 GDP 持續低迷，這個機率會迅速攀升。問題是——如果通膨同時反彈呢？
+聯準會面臨兩難：降息可能刺激已經頑固的通膨，不降息則讓疲弱的經濟承受更大壓力。2 月 [FOMC 會議紀要](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)顯示，多數委員對通膨回落「缺乏信心」，但同時承認經濟下行風險正在累積。市場目前定價 6 月降息機率約 45%，但若 Q1 GDP 持續低迷，這個機率會迅速攀升。問題是——如果通膨同時反彈呢？
 
 ### 防禦性輪動已經開始
 
-資金正在用腳投票。公用事業類股 ETF (XLU) 本月領漲，而科技股 (XLK) 與非必需消費 (XLY) 明顯落後。債券基金上週流入 [290 億美元](https://www.reuters.com/markets/us/)，國際股票基金流入 160 億美元——資金正從美國成長股流向防禦性資產與海外市場。VIX 雖僅 [19.20](https://www.cboe.com/tradable_products/vix/)，處於歷史低位區間，但這反而令人擔憂：市場的自滿往往在最不該自滿的時候出現。
+資金正在用腳投票。公用事業類股 ETF (XLU) 本月領漲，而科技股 (XLK) 與非必需消費 (XLY) 明顯落後。債券基金上週流入 [290 億美元](https://www.reuters.com/markets/us/)，國際股票基金流入 160 億美元——資金正從美國成長股流向防禦性資產與海外市場。VIX 僅 [19.20](https://www.cboe.com/tradable_products/vix/)，處於歷史低位區間，波動率與當前風險事件數量之間的落差值得留意。
 
 ### 筆記
 
@@ -53,7 +53,7 @@ new Chart(document.getElementById('macroChart1'), {
     datasets: [
       {
         label: 'GDP 年化成長率 (%)',
-        data: [2.4, 2.8, 2.1, 1.4],
+        data: [2.4, 2.8, 4.4, 1.4],
         backgroundColor: 'rgba(59, 130, 246, 0.7)',
         borderColor: 'rgba(59, 130, 246, 1)',
         borderWidth: 1
@@ -84,7 +84,7 @@ new Chart(document.getElementById('macroChart1'), {
         ticks: { color: '#94a3b8' },
         grid: { color: 'rgba(255,255,255,0.1)' },
         min: 0,
-        max: 4
+        max: 5
       }
     }
   }
@@ -112,7 +112,7 @@ new Chart(document.getElementById('macroChart1'), {
 
 ### 替代資產
 
-- **GLD**（黃金 ETF）：金價已飆升至 [$5,061/oz](https://www.reuters.com/markets/commodities/gold/)，52 週漲幅驚人。停滯性通膨 + 地緣風險是黃金的完美風暴。但在這個價位追高風險極大——若地緣緊張緩和，回檔 10–15% 很正常。
+- **GLD**（黃金 ETF）：金價已攀升至 [$5,061/oz](https://www.reuters.com/markets/commodities/gold/)，52 週漲幅顯著。停滯性通膨 + 地緣風險持續支撐金價。但在目前價位進場的風險報酬比需審慎評估——若地緣緊張緩和，回檔 10–15% 屬合理範圍。
 - **DBC**（商品指數 ETF）：能源與農產品在通膨環境中受惠，但全球需求放緩是逆風。中性偏多。
 
 ## 後續觀察重點

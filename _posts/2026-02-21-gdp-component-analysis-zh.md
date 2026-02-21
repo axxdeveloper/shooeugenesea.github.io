@@ -86,7 +86,7 @@ new Chart(document.getElementById('macroChart6'), {
 
 ### 政府支出：最大拖累來源
 
-這是本季最關鍵的數字。政府支出從 Q3 貢獻 +0.39 pp 直接反轉為 Q4 拖累 [-0.93 pp](https://www.bea.gov/news/2026/gdp-advance-estimate-4th-quarter-and-year-2025)。BEA 明確指出，聯邦政府服務的縮減單獨就拖累了 GDP 約 1.0 個百分點。聯邦支出暴跌 16.6%，是 2013 年預算削減 (sequestration) 以來最大的單季聯邦支出萎縮。
+這是本季最關鍵的數字。政府支出從 Q3 貢獻 +0.39 pp 直接反轉為 Q4 拖累 [-0.93 pp](https://www.bea.gov/news/2026/gdp-advance-estimate-4th-quarter-and-year-2025)。BEA 明確指出，聯邦政府服務的縮減單獨就拖累了 GDP 約 1.0 個百分點。聯邦支出大幅下降 16.6%，是 2013 年預算削減 (sequestration) 以來最大的單季聯邦支出萎縮。
 
 造成這次暴跌的主因有二：一是從 10 月 1 日持續至 11 月 12 日的 43 天聯邦政府停擺 (government shutdown)——史上最長的停擺紀錄（[CRS](https://www.congress.gov/crs-product/R48832)）；二是政府效率部 (DOGE) 主導的聯邦裁員潮，約 17 萬聯邦雇員在 Q4 被裁減。哈佛大學經濟學家 Jason Furman [指出](https://stocktwits.com/news-articles/markets/equity/harvard-professor-blames-longest-govt-shutdown-for-lower-than-expected-q4-gdp-growth/cZRNhtaR4xA)，目前仍不確定多少是停擺效應（會在 Q1 反彈）、多少是永久性削減（不會反彈）。
 
@@ -98,7 +98,7 @@ new Chart(document.getElementById('macroChart6'), {
 
 ### 淨出口：從最大推手到拖累
 
-Q3 淨出口貢獻了驚人的 +1.59 pp，主要受惠於出口飆升 9.6% 與進口下滑 4.7%。但 Q4 完全反轉：出口萎縮 0.9%，進口也下降 1.3%，淨出口貢獻僅 -0.07 pp。美元指數維持高位壓制出口競爭力，而全球需求疲軟——歐元區 Q4 成長僅 [0.1%](https://ec.europa.eu/eurostat)、中國人行 (PBoC) 全年僅降息一次 10 bps——進一步限制了出口空間。
+Q3 淨出口貢獻了 +1.59 pp，主要受惠於出口大幅成長 9.6% 與進口下滑 4.7%。但 Q4 完全反轉：出口萎縮 0.9%，進口也下降 1.3%，淨出口貢獻僅 -0.07 pp。美元指數維持高位壓制出口競爭力，而全球需求疲軟——歐元區 Q4 成長僅 [0.1%](https://ec.europa.eu/eurostat)、中國人行 (PBoC) 全年僅降息一次 10 bps——進一步限制了出口空間。
 
 ### 筆記
 

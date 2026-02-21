@@ -72,23 +72,23 @@ new Chart(document.getElementById('macroChart9'), {
 
 但 [Section 232](https://www.cnbc.com/2026/02/20/trump-tariffs-supreme-court-ruling-industry-higher-rates.html) 仍然屹立不搖：鋼鐵與鋁均為 [50%](https://www.congress.gov/crs-product/IN12519)（去年 6 月雙雙調高至 50%）、汽車 25%（部分國家談判降至 10–15%）。此外，至少有 [7 類商品](https://www.cnbc.com/2026/02/20/trump-tariffs-supreme-court-ruling-industry-higher-rates.html)正在進行新的 Section 232 調查，超過 12 項 Section 301 調查也在推進中。換句話說——IEEPA 這扇門被關上了，但行政部門正在拼命打開其他窗戶。
 
-### 對通膨的影響：利多但有限
+### 對通膨的影響：短期利多但幅度有限
 
 IEEPA 關稅推翻對消費者物價有直接的降壓效果。進口商品價格將下降，尤其是消費電子、服裝、家居用品等受對等關稅影響最大的品類。[Tax Policy Center](https://taxpolicycenter.org/taxvox/supreme-court-ruling-ieepa-tariffs-could-ease-cost-burdens-less-you-might-think) 估算，取消 IEEPA 關稅可降低美國家庭年均成本約 $1,200–1,500。配合 1 月 CPI 已降至 [2.4%](https://www.bls.gov/news.release/cpi.nr0.htm)（YoY，為 2025 年 5 月以來最低）、核心 CPI 降至 [2.5%](https://www.cnbc.com/2026/02/13/cpi-inflation-report-january-2026.html)（2021 年 4 月以來最低），通膨降溫趨勢可望加速。
 
-但別高興得太早。Section 232 關稅仍在推升製造業成本；核心個人消費支出 (Core PCE) 12 月數據為 [3.0%](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) YoY（高於預期的 2.9%），且住房通膨仍頑固。更關鍵的是——如果行政部門透過 Section 301 或新的 Section 232 快速重建關稅壁壘，通膨降壓效果可能只是暫時的。
+不過仍需注意幾個對沖因素。Section 232 關稅仍在推升製造業成本；核心個人消費支出 (Core PCE) 12 月數據為 [3.0%](https://www.cnbc.com/2026/02/20/pce-inflation-december-2025.html) YoY（高於預期的 2.9%），且住房通膨仍頑固。此外，如果行政部門透過 Section 301 或新的 Section 232 快速重建關稅壁壘，通膨降壓效果的持續性將有待觀察。
 
 上期我們的觀點文提到 Core PCE 為 3.0%——這個數字現已確認：12 月月度 Core PCE 為 [3.0% YoY](https://tradingeconomics.com/united-states/core-pce-price-index-annual-change)，高於預期的 2.9%。[Q4 GDP 報告中的國內購買物價指數](https://www.bea.gov/news/2026/gdp-advance-estimate-4th-quarter-and-year-2025)則為 +3.7%。方向一致：通膨仍遠高於聯準會 2% 目標。
 
-### 財政炸彈：退稅成本與赤字
+### 財政面：退稅成本與赤字壓力
 
-被忽略的風險在財政面。若法院最終要求全額退還 $1,335–1,750 億的已徵 IEEPA 關稅，這筆支出將直接加大聯邦赤字。CBO 2 月最新報告預估 FY2026 赤字已達 [$1.9 兆](https://www.cbo.gov/publication/61882)，關稅退款將雪上加霜。同時，IEEPA 關稅本來預計 10 年可貢獻約 $3 兆的聯邦收入——這條路現在被堵死了。除非國會立法授權新的關稅機制，否則 CBO 的赤字預測（債務占 GDP [120% by 2036](https://www.cbo.gov/publication/61882)）還要再上修。
+被忽略的風險在財政面。若法院最終要求全額退還 $1,335–1,750 億的已徵 IEEPA 關稅，這筆支出將直接加大聯邦赤字。CBO 2 月最新報告預估 FY2026 赤字已達 [$1.9 兆](https://www.cbo.gov/publication/61882)，關稅退款將進一步推升壓力。同時，IEEPA 關稅本來預計 10 年可貢獻約 $3 兆的聯邦收入——這條路徑已不可行。除非國會立法授權新的關稅機制，否則 CBO 的赤字預測（債務占 GDP [120% by 2036](https://www.cbo.gov/publication/61882)）還要再上修。
 
-### 市場反應：慶祝還是觀望？
+### 市場反應：短期利多與中期不確定性
 
-判決公布後市場迅速反應：盤中 [S&P 500 一度漲 0.7%、Nasdaq 漲超 1%、Dow 漲 0.2%](https://www.cnbc.com/2026/02/19/stock-market-today-live-updates.html)，但漲幅在收盤前明顯收窄——市場在消化短期利多後迅速開始定價「行政反制」的不確定性。零售股大幅飆升——Nike、Target 等[進口依賴型企業直接受惠](https://www.bloomberg.com/news/articles/2026-02-20/retail-stocks-jump-after-supreme-court-strikes-down-us-tariffs)。美元與美國國債同步下跌。Wedbush 分析師 Dan Ives 指出：「[市場很大程度上已預期關稅會被推翻](https://www.cnbc.com/2026/02/19/how-the-stock-market-may-move-on-the-supreme-courts-tariff-decision.html)」。
+判決公布後市場迅速反應：盤中 [S&P 500 一度漲 0.7%、Nasdaq 漲超 1%、Dow 漲 0.2%](https://www.cnbc.com/2026/02/19/stock-market-today-live-updates.html)，但漲幅在收盤前明顯收窄——市場在消化短期利多後開始定價「行政反制」的不確定性。零售股大幅上漲——Nike、Target 等[進口依賴型企業直接受惠](https://www.bloomberg.com/news/articles/2026-02-20/retail-stocks-jump-after-supreme-court-strikes-down-us-tariffs)。美元與美國國債同步下跌。Wedbush 分析師 Dan Ives 指出：「[市場很大程度上已預期關稅會被推翻](https://www.cnbc.com/2026/02/19/how-the-stock-market-may-move-on-the-supreme-courts-tariff-decision.html)」。
 
-值得注意的是，昨日我們指出 VIX 在 14.90 的水位「令人擔憂地自滿」——今天 VIX 跳升至 [20.71](https://finance.yahoo.com/quote/%5EVIX/)，單日漲幅 +5.57%。恐慌指數的跳升反映的不是判決本身（這是利多），而是判決後的不確定性：行政部門的反制行動、退稅法律戰、以及國會是否會介入。
+值得注意的是，昨日我們指出 VIX 在 19.62 的水位偏低——今天 VIX 跳升至 [20.71](https://finance.yahoo.com/quote/%5EVIX/)，單日漲幅 +5.57%。波動率的上升反映的不是判決本身（這是利多），而是判決後的不確定性：行政部門的反制行動、退稅法律戰、以及國會是否會介入。
 
 ### 筆記
 

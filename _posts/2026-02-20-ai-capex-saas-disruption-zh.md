@@ -26,14 +26,14 @@ new Chart(document.getElementById('macroChart4'), {
     datasets: [
       {
         label: '2025 年 Capex（十億美元）',
-        data: [72, 89, 91, 131, 60],
+        data: [65, 80, 75, 105, 55],
         backgroundColor: 'rgba(148, 163, 184, 0.6)',
         borderColor: 'rgba(148, 163, 184, 1)',
         borderWidth: 1
       },
       {
         label: '2026 年 Capex（十億美元）',
-        data: [65, 80, 75, 105, 85],
+        data: [72, 89, 91, 131, 60],
         backgroundColor: 'rgba(59, 130, 246, 0.7)',
         borderColor: 'rgba(59, 130, 246, 1)',
         borderWidth: 1

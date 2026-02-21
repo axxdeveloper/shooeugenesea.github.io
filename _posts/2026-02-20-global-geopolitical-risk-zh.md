@@ -10,7 +10,7 @@ lang: zh-TW
 
 ## 國際政經背景
 
-全球地緣政治風險正在多條戰線同時升溫。伊朗在荷莫茲海峽 (Strait of Hormuz) 進行實彈軍演，美國總統川普隨即發出 [10–15 天最後通牒](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)要求伊朗同意核協議；日本央行 (BOJ) 去年 12 月升息至 [0.75%](https://www.boj.or.jp/en/mopo/mpmdeci/index.htm)；歐盟 (EU) 對俄氣的退場時程已進入執行階段（例如 [短期合約的禁令節點](https://www.consilium.europa.eu/en/press/press-releases/2026/01/26/russian-gas-imports-council-gives-final-greenlight-to-a-stepwise-ban/)）；而台灣海峽的軍事活動頻率仍在高位，為台積電 (TSMC) 的全球半導體供應鏈帶來不確定性。這四條風險線同時存在，而市場的恐慌指數 VIX 仍在 [19.20](https://www.cboe.com/tradable_products/vix/) 附近。
+全球地緣政治風險正在多條戰線同時升溫。伊朗在荷莫茲海峽 (Strait of Hormuz) 進行實彈軍演，美國總統川普隨即發出 [10–15 天最後通牒](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)要求伊朗同意核協議；日本央行 (BOJ) 去年 12 月升息至 [0.75%](https://www.boj.or.jp/en/mopo/mpmdeci/index.htm)；歐盟 (EU) 對俄氣的退場時程已進入執行階段（例如 [短期合約的禁令節點](https://www.consilium.europa.eu/en/press/press-releases/2026/01/26/russian-gas-imports-council-gives-final-greenlight-to-a-stepwise-ban/)）；而台灣海峽的軍事活動頻率仍在高位，為台積電 (TSMC) 的全球半導體供應鏈帶來不確定性。這四條風險線同時存在，而 VIX 仍在 [19.20](https://www.cboe.com/tradable_products/vix/) 附近。
 
 ## 經濟傳導機制
 
@@ -68,7 +68,7 @@ new Chart(document.getElementById('macroChart3'), {
 
 全球約 [20% 的石油](https://www.eia.gov/todayinenergy/)經由荷莫茲海峽運輸，每日通行量約 2,100 萬桶。伊朗 2 月 17 日在海峽進行[實彈演習](https://www.cnbc.com/2026/02/17/iran-us-strait-of-hormuz-oil-nuclear-talks-geneva.html)，短暫關閉部分航道，推升布蘭特原油從 1 月低點 $65 反彈至 [$71](https://www.reuters.com/business/energy/)，WTI 報 $66.70。川普 2 月 19 日發出 [10–15 天最後通牒](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，要求伊朗在期限內同意核協議，否則面臨更嚴厲制裁。若談判破裂且伊朗以全面封鎖反制，布蘭特可能飆至 $90–100，直接推升全球 CPI 0.5–0.8 個百分點。傳導路徑：軍事對峙升級 → 海峽通行風險 → 油價飆升 → 運輸成本激增 → 全球通膨回升 → 央行被迫維持緊縮。
 
-### 日銀升息：套利交易的定時炸彈
+### 日銀升息：套利交易的潛在壓力
 
 BOJ 去年 12 月升息至 0.75%，創 1995 年以來的 [30 年新高](https://www.cnbc.com/2025/12/19/bank-of-japan-boj-rate-cpi-inflation-takaichi-ueda.html)，正式結束長達數十年的超低利率時代。日圓套利交易 (carry trade) 的規模估計超過 [4 兆美元](https://www.reuters.com/markets/currencies/)，而每一次日圓升值都迫使套利部位平倉。2024 年 8 月的「日圓套利交易崩盤」導致全球股市單日暴跌 3%——那時 BOJ 僅升至 0.25%。現在 0.75%，且市場預期 BOJ 年底可能達到 1.0%。傳導路徑：BOJ 升息 → 日圓升值 → 全球套利部位平倉 → 新興市場與高收益資產拋售。
 
@@ -76,9 +76,9 @@ BOJ 去年 12 月升息至 0.75%，創 1995 年以來的 [30 年新高](https://
 
 歐盟對俄羅斯天然氣採取分階段退場，[短期 LNG 與管線合約先行限制、長約再延後收緊](https://www.consilium.europa.eu/en/press/press-releases/2026/01/26/russian-gas-imports-council-gives-final-greenlight-to-a-stepwise-ban/)。雖然歐洲已大幅降低對俄氣依賴（從 2021 年的 40% 降至約 [15%](https://ec.europa.eu/eurostat/web/energy/publications)），但供應再配置仍可能推升歐洲 TTF 天然氣價格並抬高工業成本。德國與義大利等工業比重較高的經濟體受影響較大。傳導路徑：供應重配 → 天然氣價格上行 → 工業成本上升 → 歐元區成長承壓。
 
-### 台海風險：半導體供應鏈的終極威脅
+### 台海風險與半導體供應鏈
 
-中國軍機繞台頻率 2 月來持續升溫，單日最高達 [14 架次](https://www.globalsecurity.org/wmd/library/news/taiwan/2026/taiwan-260215-roc-mnd01.htm)，台灣國防部提高警戒層級。台積電占全球先進製程晶片 [超過 90%](https://www.semiconductors.org/) 的市場份額——任何台海衝突都將造成估計 [2.5 兆美元](https://www.bloomberg.com/news/) 的全球 GDP 損失。即使僅是封鎖演習（類似 2022 年），也足以讓半導體類股暴跌 10–15%，並打斷全球 AI 資本支出計畫。傳導路徑：台海緊張 → 半導體供應恐慌 → 科技股重挫 → AI 投資延遲 → 全球成長下修。
+中國軍機繞台頻率 2 月來持續升溫，單日最高達 [14 架次](https://www.globalsecurity.org/wmd/library/news/taiwan/2026/taiwan-260215-roc-mnd01.htm)，台灣國防部提高警戒層級。台積電占全球先進製程晶片 [超過 90%](https://www.semiconductors.org/) 的市場份額——任何台海衝突都將造成估計 [2.5 兆美元](https://www.bloomberg.com/news/) 的全球 GDP 損失。即使僅是封鎖演習（類似 2022 年），也足以讓半導體類股大幅下跌 10–15%，並打斷全球 AI 資本支出計畫。傳導路徑：台海緊張 → 半導體供應恐慌 → 科技股重挫 → AI 投資延遲 → 全球成長下修。
 
 ### 筆記
 

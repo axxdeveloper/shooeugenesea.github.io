@@ -112,7 +112,7 @@ new Chart(document.getElementById('macroChart7'), {
 
 目前布蘭特報 ~[$71](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，WTI $66.34——市場大致定價在「僵持拖延」的劇本。但遠期曲線透露不同訊號：WTI 2026 年全年期貨合約[已跌破 $60](https://www.indexbox.io/blog/oil-market-braces-for-contango-as-2026-futures-fall-below-shale-breakeven/)，整條曲線從 2026 年初開始進入 contango（期貨溢價），反映市場對 OPEC+ 減產失效與[全球供給過剩 380 萬桶/日](https://www.iea.org/commentaries/as-oil-market-surplus-keeps-rising-something-s-got-to-give)的悲觀預期。換句話說，遠期市場尚未充分反映荷莫茲封鎖情境。EIA 基線預測布蘭特 2026 年均價 [$58](https://www.eia.gov/outlooks/steo/report/global_oil.php)——這個數字假設零地緣政治溢價。[BloombergNEF 估算](https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/)，若伊朗出口完全中斷並持續至年底，布蘭特第四季均價可達 $91。[Lombard Odier 更指出](https://www.thenationalnews.com/business/markets/2026/02/19/us-iran-conflict-to-rattle-everything-from-oil-to-stocks-and-commodities-lombard-odier-says/)，暫時性油價飆至 $100 以上「在其假設下屬可行區間」。與此同時，航運戰爭險保費已從危機前的 0.125% 飆升至[船體價值的 0.35–0.50%](https://www.insurancebusinessmag.com/us/news/breaking-news/shipping-cover-leaps-by-60-as-tensions-rise-539563.aspx)——漲幅達 60%，對照 1980 年代兩伊戰爭「油輪戰爭」時期保費暴漲 300% 的先例，目前的風險定價仍有巨大上行空間。
 
-避險資產方面，黃金 2 月 20 日收 [$5,109/oz (+2.68%)](https://edition.cnn.com/2026/02/19/investing/oil-gold-prices-us-iran-tensions)，驗證了地緣避險需求的持續性。VIX 收於 [19.20](https://www.cboe.com/tradable_products/vix/)——有所反應，但以雙航母打擊群對峙的規模而言，市場仍顯得過於自滿。
+避險資產方面，黃金 2 月 20 日收 [$5,109/oz (+2.68%)](https://edition.cnn.com/2026/02/19/investing/oil-gold-prices-us-iran-tensions)，驗證了地緣避險需求的持續性。VIX 收於 [19.20](https://www.cboe.com/tradable_products/vix/)——有所反應，但以雙航母打擊群對峙的規模而言，波動率與實際風險之間仍存在落差。
 
 ### 筆記
 

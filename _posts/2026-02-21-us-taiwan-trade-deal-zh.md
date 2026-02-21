@@ -39,7 +39,7 @@ lang: zh-TW
 
 國民黨將此定性為[「單向進貢 2.7 兆新台幣」](https://www.taipeitimes.com/News/taiwan/archives/2026/02/14/2003852317)，批評放棄檢驗權等同讓渡食品安全主權。考量到 2021 年萊豬公投的政治記憶，這些條款在立法院審議階段將成為攻防焦點。
 
-## 840 億的數學：填不滿的逆差缺口
+## 848 億的數學：採購承諾與逆差規模
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart5"></canvas>
