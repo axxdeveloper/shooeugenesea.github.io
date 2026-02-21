@@ -1,15 +1,21 @@
 ---
-description: Generate 4 balanced macro/investing blog posts in Traditional Chinese using live web search
+description: Generate macro/investing blog posts in Traditional Chinese — default 4 balanced posts or 1 deep-dive on a user-specified topic
 ---
 
 # /macro-post
 
-Generate **four** blog posts in Traditional Chinese — covering macro commentary, government data deep-dive, politics, and AI/technology — each anchored to their economic and market impact.
+Generate blog posts in Traditional Chinese anchored to economic and market impact. Supports two modes:
+
+- **Default mode** — 4 posts covering macro commentary, government data deep-dive, politics, and AI/technology
+- **Topic mode** — 1 deep-research post on a user-specified topic
 
 ## Usage
 
-- `/macro-post` — auto-select topics based on current data
-- `/macro-post "tariff impact on bonds"` — user-specified topic hint (agents still research broadly)
+- `/macro-post` — default mode: auto-select topics, produce 4 posts (A/B/C/D styles)
+- `/macro-post "tariff impact on bonds"` — default mode with topic hint (still 4 posts)
+- `/macro-post 我想要一篇關於「商業不動產 CMBS 到期牆」的深度研究` — topic mode: 1 deep-research post
+
+**Mode detection rule:** If the user's message explicitly requests a specific topic for a single article (e.g., "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…"), enter **topic mode**. Otherwise, use **default mode**.
 
 ## Editorial Objective (Default)
 
@@ -21,7 +27,7 @@ Default output should prioritize **neutral, evidence-weighted analysis** for **m
 
 ## Post Styles
 
-Every invocation produces **four posts**:
+Default mode produces **four posts** (A/B/C/D). Topic mode produces **one post** (Style E).
 
 ### Style A: Commentary (觀點文)
 
@@ -82,7 +88,36 @@ AI and technology developments that have significant economic impact — capex c
 
 **Word count:** 700-900 words.
 
+### Style E: Topic Research (主題研究文) — Topic Mode Only
+
+General-purpose deep-research style, not constrained to any single category (A/B/C/D). Used when the user specifies a topic for a single deep-dive post.
+
+**Structure:**
+- **主題背景** — 2-3 sentences: what the topic is, why it matters now, what triggered the investigation
+- **深度分析** — Chart.js chart + 4-6 paragraphs covering:
+  - Current state with quantified data
+  - Historical context or trajectory
+  - Key drivers and mechanisms
+  - Risks and opposing views
+  - Cross-market / cross-asset implications
+  - 筆記 (your take): synthesize facts vs inference, balanced assessment of whether the market is over- or under-pricing the thesis
+- **投資影響** — ETF/asset implications with scenario framework (base/upside/downside)
+- **後續觀察** — Monitoring signals and upcoming catalysts
+
+**Word count:** 1000-1400 words.
+
+**Tags:** `[macro, etf, investing]` + topical tags based on the subject.
+
 ## Execution Steps
+
+### Step 0: Mode Detection
+
+Parse the user's input to determine which mode to use:
+
+- If the user explicitly requests a specific topic for a single article (keywords: "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…", or similar phrasing indicating a single deep-dive), enter **Topic Mode** → skip to **Topic Mode Steps** below.
+- Otherwise → **Default Mode** → proceed with Steps 1-5 below.
+
+### Default Mode Steps
 
 ### Step 1: Research via Agents
 
@@ -367,3 +402,74 @@ Before finalizing, review the most recent past posts (previous 1-2 dates) in `_p
 
 4. List any fact-check corrections applied and any past-post fixes
 5. List any skill updates made
+
+### Topic Mode Steps
+
+When **topic mode** is detected in Step 0, use the following steps instead of the default mode Steps 1-5.
+
+#### Topic Step 1: Focused Research via Agents
+
+Launch **four** parallel research agents (subagent_type: `general-purpose`), all focused on the user's specified topic:
+
+| Agent | Task |
+|-------|------|
+| **Core Data Agent** | Search for quantified data directly related to the topic (gov data, industry data, market data). Return actual numbers with dates and source URLs. |
+| **Context & History Agent** | Search for historical context, precedents, trajectory, structural factors related to the topic. Return timeline, key events, and source URLs. |
+| **Market Impact Agent** | Search for market/ETF reactions, analyst commentary, cross-asset implications tied to the topic. Return prices, analyst quotes, and source URLs. |
+| **Contrarian & Risk Agent** | Search for opposing views, risks, implementation gaps, what could go wrong with the consensus view on the topic. Return counterarguments with evidence and source URLs. |
+
+Each agent should run 3-5 web searches and return a concise bullet-point summary.
+
+#### Topic Step 1.5: Read Previous Posts
+
+Same as default mode — read recent posts in `_posts/` to check for overlap. If the topic was recently covered, the new post must offer a substantially different angle or deeper analysis.
+
+#### Topic Step 2: Synthesize Thesis
+
+No topic selection needed (user already specified the topic). Synthesize research from all four agents into:
+- A clear thesis statement
+- Base / upside / downside scenarios with rough probabilities
+- Key data points to anchor the analysis
+- At least one credible opposing interpretation
+
+#### Topic Step 3: Deep Investigation & Post Generation
+
+Launch **1** agent (subagent_type: `general-purpose`) to:
+1. **Deep research** — run 5-8 additional web searches going deeper than Step 1: primary sources, fine print, historical parallels, expert commentary
+2. **Write the post** using **Style E** structure, following all Content Rules and Chart Guidelines
+3. **Save** to `_posts/YYYY-MM-DD-{slug}-zh.md`
+
+The agent receives:
+- All research context from Topic Step 1
+- The synthesized thesis from Topic Step 2
+- The Style E template, Content Rules, and Chart Guidelines
+- The target filename and front matter template
+
+**Front matter** is the same as default mode. Tags: `[macro, etf, investing]` + topical tags based on the subject.
+
+#### Topic Step 3.5: Fact-Check (MANDATORY)
+
+Launch **1** fact-check agent (subagent_type: `general-purpose`) covering all domains (market data, gov data, geopolitics, tech/industry) for the single post. The agent should:
+- Verify all key data points, ETF prices, and statistics against primary sources
+- Verify all Chart.js data against cited sources
+- Return a table: `Claim | Blog Value | Actual Value | Source | Verdict (correct/wrong/outdated)`
+
+Apply the same rejection protocol as default mode Step 3.5.
+
+#### Topic Step 3.6: Bias & Tone QA
+
+Same as default mode Step 3.6.
+
+#### Topic Step 4: Retrospective
+
+Same as default mode Step 4.
+
+#### Topic Step 5: Verify Output
+
+Same as default mode Step 5 but for 1 post. Print a summary table:
+
+```
+| # | File | Style | Topic | Chart ID |
+|---|------|-------|-------|----------|
+| 1 | `YYYY-MM-DD-slug-zh.md` | E: Topic Research | {user's topic} | macroChartN |
+```
