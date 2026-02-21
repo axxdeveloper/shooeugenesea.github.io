@@ -531,7 +531,7 @@ pre .code-line:last-child::before {
 
 .sidebar-calendar__grid th {
   color: var(--eng-text-muted);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-align: center;
   padding: 0.2rem 0;
@@ -543,7 +543,7 @@ pre .code-line:last-child::before {
 .sidebar-calendar__grid td {
   text-align: center;
   padding: 0.18rem 0;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--eng-text-muted);
   border: none;
   background: none;
@@ -600,6 +600,12 @@ pre .code-line:last-child::before {
 .tag-chip--sm {
   padding: 0.15em 0.45em;
   font-size: 0.72rem;
+}
+
+.sidebar-tags .tag-count {
+  opacity: 0.5;
+  font-size: 0.85em;
+  margin-left: 0.15em;
 }
 
 @media (max-width: 48em) {
