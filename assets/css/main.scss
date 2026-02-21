@@ -444,6 +444,9 @@ pre .code-line:last-child::before {
 .archive {
   float: none !important;
   width: 100% !important;
+}
+
+.page {
   padding-inline-end: 0 !important;
 }
 
@@ -484,7 +487,7 @@ pre .code-line:last-child::before {
     clear: none !important;
   }
 
-  .sidebar__right {
+  .page__inner-wrap > .sidebar__right {
     grid-column: 2;
     grid-row: 1 / -1;
     position: sticky !important;
