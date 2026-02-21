@@ -506,6 +506,105 @@ pre .code-line:last-child::before {
   }
 }
 
+/* ── Sidebar Calendar ── */
+.sidebar-calendar {
+  background: linear-gradient(160deg, rgba(15, 27, 47, 0.95), rgba(9, 15, 27, 0.95));
+  border: 1px solid var(--eng-border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.sidebar-calendar__title {
+  margin: 0 0 0.72rem;
+  padding-bottom: 0.58rem;
+  border-bottom: 1px solid var(--eng-border);
+  color: var(--eng-text-strong);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sidebar-calendar__grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.sidebar-calendar__grid th {
+  color: var(--eng-text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.2rem 0;
+  border: none;
+  background: none;
+  white-space: nowrap;
+}
+
+.sidebar-calendar__grid td {
+  text-align: center;
+  padding: 0.18rem 0;
+  font-size: 0.72rem;
+  color: var(--eng-text-muted);
+  border: none;
+  background: none;
+  white-space: nowrap;
+}
+
+.sidebar-calendar__grid td.has-post {
+  background: rgba(84, 214, 255, 0.15);
+  border-radius: 4px;
+}
+
+.sidebar-calendar__grid td.has-post a {
+  color: var(--eng-accent);
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+}
+
+.sidebar-calendar__grid td.has-post a:hover {
+  color: var(--eng-accent-strong);
+}
+
+/* ── Sidebar Tags ── */
+.sidebar-tags {
+  margin-top: 1.2rem;
+  background: linear-gradient(160deg, rgba(15, 27, 47, 0.95), rgba(9, 15, 27, 0.95));
+  border: 1px solid var(--eng-border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.sidebar-tags__title {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--eng-border);
+  color: var(--eng-text-strong);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sidebar-tags__chips + .sidebar-tags__title {
+  margin-top: 0.8rem;
+}
+
+.sidebar-tags__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag-chip--sm {
+  padding: 0.15em 0.45em;
+  font-size: 0.72rem;
+}
+
 @media (max-width: 48em) {
   body {
     background-size: auto, auto, 48px 48px, 48px 48px;

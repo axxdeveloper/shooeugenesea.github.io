@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div id="main" role="main">
-  <div class="archive">
+  <div class="archive page__inner-wrap">
     <div class="page__content">
       {{ content }}
 
@@ -23,5 +23,9 @@ layout: default
 
       {% include paginator.html %}
     </div>
+    <aside class="sidebar__right sticky">
+      {% include sidebar-calendar.html %}
+      {% include sidebar-tags.html %}
+    </aside>
   </div>
 </div>
