@@ -379,6 +379,41 @@ pre .code-line:last-child::before {
   font-size: 0.72rem;
 }
 
+/* ── Category badge ── */
+.archive__item-category {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  padding: 0.15em 0.6em;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.archive__item-category--macro {
+  color: #ffd866;
+  background: rgba(255, 216, 102, 0.12);
+  border: 1px solid rgba(255, 216, 102, 0.3);
+}
+
+.archive__item-category--tech {
+  color: var(--eng-accent);
+  background: rgba(84, 214, 255, 0.12);
+  border: 1px solid rgba(84, 214, 255, 0.3);
+}
+
+/* ── Wider content: align left edge with masthead site-title ── */
+#main {
+  max-width: 1440px;
+}
+
+.masthead__inner-wrap {
+  max-width: 1440px;
+}
+
 @media (max-width: 48em) {
   body {
     background-size: auto, auto, 48px 48px, 48px 48px;

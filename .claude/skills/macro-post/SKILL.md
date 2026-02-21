@@ -114,6 +114,32 @@ Previous posts (2026-02-20):
 
 From all agent results, pick **four different topics** — one for each style. The selection strategy depends on the day type from Step 1.5.
 
+#### Anti-Red-Ocean Rule (Headline Differentiation)
+
+Before finalizing any topic, assess whether the topic is **saturated** — i.e., dozens of news outlets are already running near-identical headlines. Signs of saturation:
+- Multiple major outlets (Reuters, Bloomberg, CNBC, 聯合報, 自由時報) all published articles with overlapping titles in the past 48 hours
+- The story has a single dominant narrative frame that everyone is repeating (e.g., "歷史性突破", "里程碑", "重大進展")
+
+**When a topic is saturated, you MUST go deeper and differentiate on angle AND title.** This is NOT about being contrarian or singing a different tune — it's about providing analysis that mainstream coverage doesn't have time or depth to deliver.
+
+1. **Launch a dedicated deep-research agent** (subagent_type: `general-purpose`) to investigate the saturated topic more thoroughly. The agent should:
+   - Search for **primary sources** (official text of the agreement/ruling/report, not just news summaries)
+   - Find **fine print and hidden clauses** that most coverage ignores (sunset provisions, enforcement mechanisms, poison pills, carve-outs)
+   - Quantify **the math behind the headlines** — does the deal actually add up? What do the numbers look like in context?
+   - Identify **implementation gaps** — what has to happen for the headline promise to become reality (legislative hurdles, infrastructure bottlenecks, timeline risks, who has to approve what)
+   - Research **second-order effects** — who loses, what breaks, what downstream consequences does the headline gloss over
+   - Look for **expert/analyst commentary** that goes beyond the wire service narrative
+
+2. **Title must NOT overlap with mainstream headlines:**
+   - Never use the same framing as wire services (avoid: "歷史性突破", "里程碑協定", "重大進展")
+   - Lead with the deeper insight, not the event itself. Compare:
+     - Bad (red ocean): "歷史性突破：美台簽署對等貿易協定"
+     - Good (blue ocean): "台美協定的隱藏條款：840 億數字背後的地緣鎖定與農業代價"
+     - Good: "840 億買到什麼？拆解台美貿易協定五個沒人提的條件"
+   - Test: if your title could be a Reuters headline, it's too generic. Your title should read like an analyst deep-dive, not a news wire
+
+3. **If no deeper angle can be found even after dedicated research, skip the topic** — it's better to write nothing than to add to the noise. Pick the next-best topic instead.
+
 #### For breaking news days:
 
 Cover the breaking event in the most fitting style. Other styles should find angles NOT covered by previous posts — even if they reference the same event, the thesis and primary data must be different.
