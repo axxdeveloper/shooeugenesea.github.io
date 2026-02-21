@@ -1,25 +1,31 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<div id="main" role="main">
+  <div class="archive page__inner-wrap">
+    <aside class="sidebar__right sticky">
+      {% include recent-posts.html %}
+    </aside>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+    <div class="page__content">
+      {{ content }}
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+      <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
+      {% if paginator %}
+        {% assign posts = paginator.posts %}
+      {% else %}
+        {% assign posts = site.posts %}
+      {% endif %}
 
-<aside class="sidebar__right sticky">
-  {% include recent-posts.html %}
-</aside>
+      {% assign entries_layout = page.entries_layout | default: 'list' %}
 
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
+      <div class="entries-{{ entries_layout }}">
+        {% include documents-collection.html entries=posts type=entries_layout %}
+      </div>
+
+      {% include paginator.html %}
+    </div>
+  </div>
 </div>
-
-{% include paginator.html %}
