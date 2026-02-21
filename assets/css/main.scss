@@ -468,6 +468,7 @@ pre .code-line:last-child::before {
   .page__inner-wrap {
     display: grid !important;
     grid-template-columns: 1fr 200px;
+    grid-template-rows: auto 1fr repeat(3, auto);
     gap: 0 1em;
     float: none !important;
   }

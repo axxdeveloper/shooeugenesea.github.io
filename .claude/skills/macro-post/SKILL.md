@@ -1,5 +1,5 @@
 ---
-description: Generate 4 macro/investing blog posts in Traditional Chinese using live web search
+description: Generate 4 balanced macro/investing blog posts in Traditional Chinese using live web search
 ---
 
 # /macro-post
@@ -11,13 +11,21 @@ Generate **four** blog posts in Traditional Chinese — covering macro commentar
 - `/macro-post` — auto-select topics based on current data
 - `/macro-post "tariff impact on bonds"` — user-specified topic hint (agents still research broadly)
 
+## Editorial Objective (Default)
+
+Default output should prioritize **neutral, evidence-weighted analysis** for **medium/long-term investors**, not short-term fear/greed trading narratives.
+
+- Present both upside and downside mechanisms, not only risk escalation
+- Prefer measurable allocation/rebalancing guidance over aggressive directional calls
+- Use restrained language; avoid sensational framing unless explicitly quoting a source
+
 ## Post Styles
 
 Every invocation produces **four posts**:
 
 ### Style A: Commentary (觀點文)
 
-Broad market analysis with a strong opinionated thesis. Covers multiple data points and ETFs.
+Broad market analysis with an evidence-weighted thesis. Covers multiple data points and ETFs, and must include base/bull/bear interpretation rather than a single directional narrative.
 
 **Structure:**
 - **總經快照** — 2-3 sentences: Fed rate, key data, market backdrop
@@ -137,6 +145,7 @@ Before finalizing any topic, assess whether the topic is **saturated** — i.e.,
      - Good (blue ocean): "台美協定的隱藏條款：840 億數字背後的地緣鎖定與農業代價"
      - Good: "840 億買到什麼？拆解台美貿易協定五個沒人提的條件"
    - Test: if your title could be a Reuters headline, it's too generic. Your title should read like an analyst deep-dive, not a news wire
+   - Also avoid fear-driven or certainty-driven wording in titles (e.g., "末日", "崩盤", "必然") unless it's a direct quote from a cited source
 
 3. **If no deeper angle can be found even after dedicated research, skip the topic** — it's better to write nothing than to add to the noise. Pick the next-best topic instead.
 
@@ -186,7 +195,7 @@ Each agent must:
    - Deep-dive agent: pull the actual government report tables, find revisions to prior data, search for expert commentary on the release
    - Geopolitics agent: find diplomatic statements, trade flow data, historical precedents for similar political events
    - AI/Tech agent: find earnings call transcripts, capex breakdowns, adoption surveys, energy consumption data
-2. **Synthesize a thesis** — form a clear, opinionated take based on the deep research
+2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take based on deep research (include at least one credible opposing interpretation)
 3. **Write the full post** in Traditional Chinese, following the style template exactly
 4. **Write the file** to `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/` with filename `YYYY-MM-DD-{slug}-zh.md`
 
@@ -215,20 +224,24 @@ lang: zh-TW
 
 1. **Use 0050 instead of EWT** — When discussing Taiwan equity ETFs, always use **元大台灣50 (0050)** instead of EWT (iShares MSCI Taiwan ETF). The blog's audience is Taiwanese investors who trade on TWSE; 0050 is the most liquid and well-known Taiwan large-cap ETF they can buy directly. Prices are in NT$, not USD.
 2. **Taiwan stance** — This blog treats Taiwan as an independent, sovereign country. When covering Taiwan-related topics (trade, geopolitics, semiconductor, cross-strait), never adopt framing that implies Taiwan is part of China or that China has legitimate authority over Taiwan. Use "台灣" and "中國" as parallel entities, not "中國大陸" vs "台灣地區". Avoid Beijing's preferred language (e.g., "統一", "台灣問題", "分裂勢力"). This does not mean ignoring China's perspective — analyzing what Beijing might do (military, economic coercion, diplomatic pressure) is essential for investment analysis — but the analytical frame must be from Taiwan's standpoint as an independent actor making sovereign decisions.
-2. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
-2. **Take a clear position with reader-actionable takeaways** — each post must have a thesis the author is willing to be wrong about. The 筆記 section is the most important part of every post — it's what the reader walks away with. It must go beyond "I think the market is mispricing X" and answer: **"So what should the reader actually do with this information?"** Structure every 筆記 as:
-   - **一句話結論** — A single memorable sentence the reader can take away (e.g., "這份協定是買 0050 的理由，但不是追高的理由" or "在 Q1 GDP 出爐前，防禦配置優於進攻")
-   - **情境決策框架** — Give readers a concrete if/then framework tied to portfolio actions, not just thesis invalidation. Example: "如果 Q1 GDP 反彈超過 3.0%，可考慮減碼 TLT、加碼 XLI；如果低於 2.0%，衰退交易將主導市場，SPY 下行風險 5-8%"
-   - **持續觀察** — Name the specific data points, dates, and events to watch, with WHY each matters (not just a list of conditions)
-2. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
-3. **Quantify the risk/reward** — for every ETF discussed, frame the upside vs downside with approximate numbers.
-4. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
-5. **Cite everything** — every factual claim needs a source URL as an inline markdown link.
-6. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
-7. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
-8. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
-9. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline: "有限軍事打擊情境" not "情境 3", "海峽封鎖情境" not "情境 4". Charts may label axes with numbers/letters for space, but prose must always be self-explanatory without cross-referencing.
-10. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
+3. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
+4. **Balanced scenario requirement** — every post must include at least three scenarios: `base case`, `upside case`, and `downside case`, with rough probabilities summing to 100% and one invalidation trigger for each.
+5. **Do not force directional calls** — if confidence is low or evidence is mixed, explicitly state neutral/uncertain stance and focus on monitoring signals instead of hard bullish/bearish calls.
+6. **Tone neutrality requirement** — avoid emotionally loaded or absolutist wording (e.g., "末日", "崩塌", "四面楚歌", "必然", "完全沒有", "歷史性的錯誤定價"), unless it is a direct quote with source attribution.
+7. **Separate facts vs inference** — clearly distinguish verifiable facts from interpretation. A simple marker is enough (e.g., "事實：" / "推論：").
+8. **Reader-actionable takeaways must be long-horizon usable** — each 筆記 section must include:
+   - **一句話結論** — a concise takeaway
+   - **資產配置框架（3-12 個月）** — what to overweight/underweight and why
+   - **再平衡觸發條件（1-3 年）** — specific data/event thresholds that change allocation
+9. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
+10. **Quantify risk/reward with assumptions** — for every ETF discussed, provide upside/downside ranges and the key assumption behind each range.
+11. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
+12. **Cite everything** — every factual claim needs a source URL as an inline markdown link.
+13. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
+14. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
+15. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
+16. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline: "有限軍事打擊情境" not "情境 3", "海峽封鎖情境" not "情境 4". Charts may label axes with numbers/letters for space, but prose must always be self-explanatory without cross-referencing.
+17. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
    ```html
    <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
    <strong>TERM</strong>：一句話白話解釋。
@@ -239,7 +252,7 @@ lang: zh-TW
    - Keep each definition to one sentence
    - Common terms like ETF, Fed, GDP, CPI do NOT need entries — only terms a casual reader would not know
    - Descriptive Chinese phrases (e.g., 到期牆、品質遷移) that are already self-explanatory in context do NOT need entries — only true jargon and acronyms
-10. **Disclaimer** — always include at the bottom:
+18. **Disclaimer** — always include at the bottom:
    ```
    *資料來源：[列出來源連結]*
    *市場數據截至：YYYY-MM-DD*
@@ -321,6 +334,15 @@ Each agent should return a table: `Claim | Blog Value | Actual Value | Source | 
 - **Major errors** (3+ wrong data points, chart data largely fabricated, wrong thesis based on incorrect data): **REJECT the post entirely.** Delete the file and re-launch the Step 3 agent for that post with corrected research data. The regenerated post must pass fact-check again.
 - **Unverifiable claims**: Either remove the claim or clearly attribute it (e.g., "according to analyst estimates"). If >30% of a post's key claims are unverifiable, REJECT and regenerate.
 - A post that fails fact-check twice should be skipped entirely — report to the user that the topic lacked reliable data.
+
+### Step 3.6: Bias & Tone QA (MANDATORY)
+
+Before finalizing each post, run a short editorial QA pass:
+
+1. **Stance balance check** — confirm at least one credible opposing view is presented and not straw-manned.
+2. **Language check** — remove fear-inducing or certainty-inducing wording unless directly quoted from sources.
+3. **Horizon check** — verify takeaways include both near-term (3-12 months) and long-term (1-3 years) utility.
+4. **Reader impact check** — ensure the post does not push reactive overtrading; prefer risk-budgeting and rebalancing logic.
 
 ### Step 4: Retrospective — Review Past Posts & Skill
 
