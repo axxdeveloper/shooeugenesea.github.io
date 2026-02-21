@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "CBO 最新預測：美國國債占 GDP 比率將從 101% 飆升至 120%"
+title: "CBO 財政路徑更新：美國債務比率上行與期限溢價再定價風險"
 date: 2026-02-20 09:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, bonds]
-description: "CBO 最新報告預測美國國債占 GDP 比率從 101% 飆升至 120%，利息支出膨脹至 2.1 兆美元。分析債務螺旋對 TLT、TIPS、黃金的投資影響。"
+description: "CBO 2026 年展望顯示，美國聯邦債務占 GDP 可能由 101% 走向 120%，淨利息支出趨勢持續抬升。本文用基準/上行/下行情境評估 TLT、SHY、TIPS、GLD 的配置邏輯。"
 lang: zh-TW
 ---
 
 ## 總經快照
 
-聯準會 (Fed) 利率維持在 3.5%–3.75%，10 年期公債殖利率 [4.075%](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/)。國會預算辦公室 (CBO) 於 2026 年 1 月發布最新《預算與經濟展望》報告，預測聯邦債務占 GDP 比率將從目前的 101% 在十年內攀升至 [120%](https://www.cbo.gov/publication/60870)，而聯邦淨利息支出已在 FY2025 達到 [9,700 億美元](https://www.cbo.gov/publication/62050)，並將持續膨脹至 2036 年的 2.1 兆美元——這意味著到 2036 年，光是利息就將超過國防支出。
+聯準會 (Fed) 利率維持在 3.5%–3.75%，10 年期公債殖利率 [4.075%](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/)。國會預算辦公室 (CBO) 於 2026 年 2 月發布最新《預算與經濟展望》報告，預測聯邦債務占 GDP 比率將從目前的 101% 在十年內攀升至 [120%](https://www.cbo.gov/publication/61882)，而聯邦淨利息支出已在 FY2025 達到 [9,700 億美元](https://www.cbo.gov/publication/62050)，並將持續膨脹至 2036 年的 2.1 兆美元——這意味著到 2036 年，利息支出可能超過國防支出。
 
 ## 數據解讀
 
@@ -81,11 +81,11 @@ new Chart(document.getElementById('macroChart2'), {
 
 ### 債務螺旋的數學
 
-CBO 預測的核心問題不是赤字本身，而是利息支出的複利效應。FY2026 聯邦赤字預計為 [1.9 兆美元](https://www.cbo.gov/publication/60870)，其中淨利息預計超過 1 兆美元——超過赤字的一半。到 FY2036，赤字擴大至 3.1 兆，而利息支出膨脹至 2.1 兆。換句話說，美國政府每借的 3 美元中，有 2 美元是為了還舊債的利息。
+CBO 預測的核心問題不是赤字本身，而是利息支出的複利效應。FY2026 聯邦赤字預計為 [1.9 兆美元](https://www.cbo.gov/publication/61882)，其中淨利息預計超過 1 兆美元。到 FY2036，赤字擴大至 3.1 兆，而利息支出膨脹至 2.1 兆。這代表未來新增舉債中，利息再融資的比重將持續提高。
 
 ### 為何比看起來更糟
 
-這些預測還是基於「目前法律不變」的基準情境。若 2025 年減稅法案 (TCJA) 的個人所得稅條款被延長（政治上幾乎確定），CBO 估計十年赤字將額外增加 [4–5 兆美元](https://www.cbo.gov/publication/60870)，債務占 GDP 比率可能在 2036 年逼近 130% 而非 120%。此外，CBO 假設利率將從目前水平逐步下降——但如果通膨持續頑固（核心 PCE 最新數據已升至 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025)），利率下降的幅度可能遠小於預期，利息負擔將更加沉重。
+這些預測仍基於「目前法律不變」的基準情境。若 2025 年減稅法案 (TCJA) 的個人所得稅條款被延長，CBO 估算十年赤字可能額外增加數兆美元（參考 [CBO 基準與替代情境](https://www.cbo.gov/publication/61882)），債務比率路徑可能高於 120%。此外，CBO 假設利率將從目前水平逐步下降；若核心 PCE 維持在 [3.0%](https://www.bea.gov/news/2026/personal-income-and-outlays-december-2025) 附近，利率下行幅度將受限，利息負擔可能更高。
 
 ### 全球背景下的美債風險
 
@@ -93,7 +93,18 @@ CBO 預測的核心問題不是赤字本身，而是利息支出的複利效應�
 
 ### 筆記
 
-市場目前對美國財政軌跡的定價令人困惑。10 年期殖利率 4.075% 隱含的實質利率約 1.7%——這個水平假設通膨能回到 2% 目標、且財政風險溢價極低。但 CBO 的數據告訴我們，即使在最樂觀的情境下，利息支出都將吞噬越來越多的財政空間。我認為期限溢價 (term premium) 被嚴重壓縮，10Y 殖利率在年底前有重回 4.5%+ 的風險。持續觀察：如果國會意外通過重大財政緊縮法案，或通膨迅速回落讓聯準會激進降息至 2.5% 以下——這兩者的政治現實機率都極低。
+**事實：** CBO 基準路徑顯示債務比率與淨利息支出同步上升，且利息對赤字的占比擴大。  
+**推論：** 長端利率的期限溢價中樞，未來幾年較難回到超低區間。
+
+**一句話結論：** 財政風險不是短期崩盤敘事，而是中長期折現率中樞抬升。  
+**資產配置框架（3-12 個月）：** 債券採槓鈴配置（`SHY` + 部分 `TLT`），並以 `TIPS` 與 `GLD` 管理通膨與政策不確定性。  
+**再平衡觸發條件（1-3 年）：** 若核心通膨穩定回落至 2.2% 以下且赤字/GDP 連兩年改善，增加長債；若赤字擴張且長端殖利率突破 4.75%，降低長天期部位、提高短債比重。
+
+## 三種情境（12 個月）
+
+- **基準情境（60%）**：赤字維持高位但未失控，10 年期殖利率在 3.9%–4.6% 區間震盪。**失效條件：** 國會通過大規模且可執行的中期財政整頓方案。  
+- **上行情境（20%）**：成長放緩促使市場提前定價降息，長債出現資本利得。**失效條件：** 通膨黏性回升、降息路徑延後。  
+- **下行情境（20%）**：財政與再融資壓力同時上升，期限溢價擴大，長端利率上行。**失效條件：** 海外與本土需求同步回流長天期公債。
 
 ## 投資影響
 
@@ -111,6 +122,6 @@ CBO 預測的核心問題不是赤字本身，而是利息支出的複利效應�
 
 ---
 
-*資料來源：[CBO 2026 年 1 月預算展望](https://www.cbo.gov/publication/60870)、[US Treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/)、[Treasury International Capital](https://home.treasury.gov/data/treasury-international-capital-tic-system)、[Yahoo Finance](https://finance.yahoo.com/)*
+*資料來源：[CBO 2026 年 2 月預算展望](https://www.cbo.gov/publication/61882)、[US Treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/)、[Treasury International Capital](https://home.treasury.gov/data/treasury-international-capital-tic-system)、[Yahoo Finance](https://finance.yahoo.com/)*
 *市場數據截至：2026-02-20*
 *本文僅供參考，不構成投資建議。*

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "十天倒數：美伊對峙升溫，荷莫茲海峽封鎖風險與能源市場衝擊"
+title: "美伊談判期限下的油市風險：荷莫茲供應路徑與通膨敏感度"
 date: 2026-02-21 10:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, middleeast, oil]
-description: "川普對伊朗發出 10 天最後通牒，美軍大規模部署中東，胡塞武裝威脅全面開戰。分析四種情境下的油價走勢與 CPI 衝擊，以及 XLE、GLD、USO 等 ETF 策略。"
+description: "美伊在談判期限內的軍事與外交訊號，正影響油價尾部風險定價。本文以基準/上行/下行情境估算 Brent 與 CPI 傳導，並評估 XLE、USO、GLD、VIXY 的配置角色。"
 lang: zh-TW
 ---
 
@@ -110,23 +110,24 @@ new Chart(document.getElementById('macroChart7'), {
 
 ### 市場定價 vs 實際風險
 
-目前布蘭特報 ~[$71](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，WTI $66.34——市場大致定價在「僵持拖延」的劇本。但遠期曲線透露不同訊號：WTI 2026 年全年期貨合約[已跌破 $60](https://www.indexbox.io/blog/oil-market-braces-for-contango-as-2026-futures-fall-below-shale-breakeven/)，整條曲線從 2026 年初開始進入 contango（期貨溢價），反映市場對 OPEC+ 減產失效與[全球供給過剩 380 萬桶/日](https://www.iea.org/commentaries/as-oil-market-surplus-keeps-rising-something-s-got-to-give)的悲觀預期。換句話說，遠期市場完全沒有為荷莫茲封鎖情境定價。EIA 基線預測布蘭特 2026 年均價 [$58](https://www.eia.gov/outlooks/steo/report/global_oil.php)——這個數字假設零地緣政治溢價。[BloombergNEF 估算](https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/)，若伊朗出口完全中斷並持續至年底，布蘭特第四季均價可達 $91。[Lombard Odier 更指出](https://www.thenationalnews.com/business/markets/2026/02/19/us-iran-conflict-to-rattle-everything-from-oil-to-stocks-and-commodities-lombard-odier-says/)，暫時性油價飆至 $100 以上「完全合理」。與此同時，航運戰爭險保費已從危機前的 0.125% 飆升至[船體價值的 0.35–0.50%](https://www.insurancebusinessmag.com/us/news/breaking-news/shipping-cover-leaps-by-60-as-tensions-rise-539563.aspx)——漲幅達 60%，對照 1980 年代兩伊戰爭「油輪戰爭」時期保費暴漲 300% 的先例，目前的風險定價仍有巨大上行空間。
+目前布蘭特報 ~[$71](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，WTI $66.34——市場大致定價在「僵持拖延」的劇本。但遠期曲線透露不同訊號：WTI 2026 年全年期貨合約[已跌破 $60](https://www.indexbox.io/blog/oil-market-braces-for-contango-as-2026-futures-fall-below-shale-breakeven/)，整條曲線從 2026 年初開始進入 contango（期貨溢價），反映市場對 OPEC+ 減產失效與[全球供給過剩 380 萬桶/日](https://www.iea.org/commentaries/as-oil-market-surplus-keeps-rising-something-s-got-to-give)的悲觀預期。換句話說，遠期市場尚未充分反映荷莫茲封鎖情境。EIA 基線預測布蘭特 2026 年均價 [$58](https://www.eia.gov/outlooks/steo/report/global_oil.php)——這個數字假設零地緣政治溢價。[BloombergNEF 估算](https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/)，若伊朗出口完全中斷並持續至年底，布蘭特第四季均價可達 $91。[Lombard Odier 更指出](https://www.thenationalnews.com/business/markets/2026/02/19/us-iran-conflict-to-rattle-everything-from-oil-to-stocks-and-commodities-lombard-odier-says/)，暫時性油價飆至 $100 以上「在其假設下屬可行區間」。與此同時，航運戰爭險保費已從危機前的 0.125% 飆升至[船體價值的 0.35–0.50%](https://www.insurancebusinessmag.com/us/news/breaking-news/shipping-cover-leaps-by-60-as-tensions-rise-539563.aspx)——漲幅達 60%，對照 1980 年代兩伊戰爭「油輪戰爭」時期保費暴漲 300% 的先例，目前的風險定價仍有巨大上行空間。
 
 避險資產方面，黃金 2 月 20 日收 [$5,109/oz (+2.68%)](https://edition.cnn.com/2026/02/19/investing/oil-gold-prices-us-iran-tensions)，驗證了地緣避險需求的持續性。VIX 收於 [19.20](https://www.cboe.com/tradable_products/vix/)——有所反應，但以雙航母打擊群對峙的規模而言，市場仍顯得過於自滿。
 
 ### 筆記
 
-**油價只反映了「僵持拖延」的劇本，完全沒有為軍事打擊或海峽封鎖定價。**
+**事實：** 期限型外交訊號與軍事部署同時存在，油市近端價格反映緊張，但遠月仍偏向供給寬鬆假設。  
+**推論：** 市場可能低估低機率高衝擊事件，但也可能高估短期軍事訊號的持續性。
 
-當前 contango 曲線反映的是供給過剩敘事，完全忽略了一個事實：美國已將三分之一的現役部署艦隊投向中東，這不是虛張聲勢。伊朗的軍演也不是——他們已經證明可以短暫關閉海峽。阿拉伯國家的[焦慮](https://www.pbs.org/newshour/world/heres-what-we-know-about-the-buildup-of-u-s-military-assets-in-the-middle-east)——既怕伊朗報復、又怕政權崩潰後的混亂——說明連區域內的利害關係方都看不清華府的真正意圖。
+**一句話結論：** 對能源風險的處理應以「機率加權」與「尾部保險」為核心，而不是單邊押注。  
+**資產配置框架（3-12 個月）：** 以 `XLE/USO` 小比例戰術曝險搭配明確停損，`GLD` 作中性避險，`VIXY` 僅限短期事件對沖。  
+**再平衡觸發條件（1-3 年）：** 若中東供應風險反覆上行，維持能源與黃金保險倉；若外交框架穩定且供給恢復，逐步降至中性能源權重。
 
-我的概率估算：外交解決（20%）、僵持拖延（45%）、有限軍事打擊（25%）、海峽封鎖（10%）。期望值指向布蘭特 $72–78——比目前 $71 只有微幅溢價，但海峽封鎖的尾部風險（$100+）完全未被選擇權市場定價。
+## 三種情境（12 個月）
 
-- **若伊朗協議草案被接受為談判基礎、且美軍停止增兵** → 風險溢價快速消退，能源部位應減碼，GLD 可獲利了結
-- **若最後通牒到期且福特號完成部署** → 有限打擊機率大幅上升，XLE 上行 +10–15%，但需嚴格設停損，因外交反轉同樣可能
-- **若海峽實際封鎖（目前概率低但非零）** → 布蘭特 $100+，VIX 衝 35+，這是 GLD 和 VIXY 小額尾部對沖存在的理由
-
-**持續觀察：** (1) 伊朗協議草案（預計 2 月 22–23 日提出）——這是外交窗口最後的測試點；(2) 福特號抵達波斯灣時間（預計 3 月第一週）——雙航母合流 = 打擊能力就緒；(3) IAEA 理事會會議——若報告伊朗違規，將為軍事行動提供國際法基礎。目前福特號仍在前進、軍演仍在進行，兩個降溫條件都不成立。
+- **基準情境（50%）**：談判反覆但未全面失控，Brent 大致在 $65–80 區間。**失效條件：** 出現實質封鎖或主要設施遇襲。  
+- **上行情境（20%）**：外交窗口打開，供應風險溢價回落，油價下緣下移。**失效條件：** 區域代理武裝升級攻擊。  
+- **下行情境（30%）**：有限軍事衝突或航運受阻，油價快速上探並推升通膨預期。**失效條件：** 主要衝突方達成可執行停火與監督機制。
 
 ## 投資影響
 
