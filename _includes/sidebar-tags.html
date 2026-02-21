@@ -18,7 +18,7 @@
   <div class="sidebar-tags__chips">
     {% for tag_name in macro_tags_sorted %}
       {% assign tag_count = site.tags[tag_name] | size %}
-      <span class="tag-chip tag-chip--sm">{{ tag_name }} <span class="tag-count">{{ tag_count }}</span></span>
+      <a href="{{ '/tags/' | relative_url }}#macro-{{ tag_name | slugify }}" class="tag-chip tag-chip--sm">{{ tag_name }} <span class="tag-count">{{ tag_count }}</span></a>
     {% endfor %}
   </div>
 
@@ -41,7 +41,7 @@
   <div class="sidebar-tags__chips">
     {% for tag_name in tech_tags_sorted %}
       {% assign tag_count = site.tags[tag_name] | size %}
-      <span class="tag-chip tag-chip--sm">{{ tag_name }} <span class="tag-count">{{ tag_count }}</span></span>
+      <a href="{{ '/tags/' | relative_url }}#tech-{{ tag_name | slugify }}" class="tag-chip tag-chip--sm">{{ tag_name }} <span class="tag-count">{{ tag_count }}</span></a>
     {% endfor %}
   </div>
 </div>
