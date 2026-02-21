@@ -1,18 +1,45 @@
 ---
 layout: post
-title: "歷史性突破：美台簽署對等貿易協定，關稅降至 15%、近 850 億美元採購承諾重塑經濟版圖"
+title: "840 億買到什麼？台美貿易協定裡的地緣鎖定、農業讓步、與填不滿的逆差缺口"
 date: 2026-02-21 18:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, taiwan, tariff]
-description: "美國與台灣 2 月 13 日簽署對等貿易協定，關稅從 20% 降至 15%，台灣承諾採購 840 億美元美國能源、航空與設備。EWT 逼近 52 週高點，TAIEX 站上歷史新高。"
+description: "台美對等貿易協定細節拆解：第 5.4.6 條鎖定台灣退出兩岸經貿空間、農產品檢驗權讓步比日韓更深、LNG 接收站容量跟不上 444 億承諾、SCOTUS 判決後法律基礎動搖。EWT 投資情境分析。"
 lang: zh-TW
 ---
 
 ## 國際政經背景
 
-2 月 13 日，美國貿易代表 Jamieson Greer 與台灣代表簽署[《美台對等貿易協定》(Agreement on Reciprocal Trade)](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/ambassador-greer-oversees-signing-us-taiwan-agreement-reciprocal-trade)，這是自 1994 年《貿易暨投資架構協定》(TIFA) 以來雙邊經貿關係最大的突破。美國將對台灣商品關稅從 20% 降至 15%（與日本、南韓同級），台灣承諾削減 [99% 的對美關稅壁壘](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)，並在 2025–2029 年間採購逾 840 億美元的美國能源、航空與基礎設施設備。協定尚待台灣立法院審議通過方能生效。
+2 月 13 日，美國貿易代表 Jamieson Greer 與台灣代表簽署[《美台對等貿易協定》(Agreement on Reciprocal Trade)](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/ambassador-greer-oversees-signing-us-taiwan-agreement-reciprocal-trade)，關稅從 20% 降至 15%，台灣承諾四年內採購 848 億美元美國商品。各大媒體的標題清一色是「歷史性突破」——但翻開細則，這份協定的真實代價遠比標題複雜。以下拆解六個多數報導沒有深入的面向。
 
-## 經濟傳導機制
+## 第 5.4.6 條：寫進貿易協定裡的地緣政治枷鎖
+
+<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
+<strong>CPTPP</strong>：跨太平洋全面進步夥伴協定，由 11 國組成的多邊自由貿易協定。台灣與中國均已申請加入。
+</aside>
+
+這份協定最值得關注的不是關稅數字，而是[第 5.4.6 條](https://globaltaiwan.org/2026/02/whats-in-the-new-us-taiwan-agreement-on-reciprocal-trade/)：**若台灣與中國簽訂任何新的雙邊自由貿易或優惠經濟協定，美國有權單方面終止本協定並恢復關稅。** 2010 年的 ECFA 被明確豁免（既有協定不溯及），但任何「新」的安排——包括可能的 CPTPP 框架下的優惠待遇——都在射程範圍內。
+
+第 4.3 條進一步延伸到數位貿易：台灣若與中國簽署數位貿易協定，美國同樣可以終止。第 5.2.7 條則要求台灣在 5G/6G 網路、海底電纜與雲端系統中**逐步淘汰「相關國家」的技術設備**——這是華為/中興禁令被直接嵌入貿易協定的條文。
+
+換言之，這不只是一份貿易協定，而是一份**經濟結盟宣言**。台灣的多邊貿易策略空間被正式壓縮。
+
+## 農業讓步：比日韓都深的檢驗權退讓
+
+<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
+<strong>萊克多巴胺 (Ractopamine)</strong>：一種瘦肉精，用於豬隻飼養。台灣 2021 年曾就美豬進口舉行公投，是高度敏感的政治議題。
+</aside>
+
+日本在談判中[保住了稻米（關稅超過 700%）與牛肉市場](https://www.pbs.org/newshour/show/what-the-new-trade-deal-with-japan-means-for-u-s-businesses-and-consumers)，南韓同樣[守住稻米與牛肉關稅](https://keia.org/the-peninsula/u-s-south-korea-move-to-lock-in-lower-tariff-rate-with-350-billion-deal/)。台灣保住了稻米和雞肉，但在豬肉和牛肉上做了更大的讓步：
+
+- **15 項豬肉產品**關稅三年內[削減 50%](https://globaltaiwan.org/2026/02/whats-in-the-new-us-taiwan-agreement-on-reciprocal-trade/)（基準稅率 12.5%），鵝肉、鴨肉、葡萄、柑橘等 [45 項農產品](https://www.taipeitimes.com/News/taiwan/archives/2026/02/14/2003852319)降至不低於 10%
+- 美國絞牛肉與牛雜獲得市場准入，野牛肉正在審查中
+- **最敏感的不是關稅，而是檢驗制度的改變**：台灣同意終止對美國豬肉和牛肉的 [100% 批次檢驗](https://www.taipeitimes.com/News/taiwan/archives/2026/02/14/2003852317)、降低殘留物檢測標準、放棄赴美國工廠事前查廠的權利
+- 醫療器材與藥品直接接受美國 FDA 核准，[不需經過台灣 TFDA 額外審查](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)
+
+國民黨將此定性為[「單向進貢 2.7 兆新台幣」](https://www.taipeitimes.com/News/taiwan/archives/2026/02/14/2003852317)，批評放棄檢驗權等同讓渡食品安全主權。考量到 2021 年萊豬公投的政治記憶，這些條款在立法院審議階段將成為攻防焦點。
+
+## 840 億的數學：填不滿的逆差缺口
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart5"></canvas>
@@ -22,23 +49,20 @@ lang: zh-TW
 new Chart(document.getElementById('macroChart5'), {
   type: 'bar',
   data: {
-    labels: ['LNG + 原油', '民航機 + 引擎', '電力設備 + 鋼鐵', '合計'],
+    labels: ['2021', '2022', '2023', '2024', '2025'],
     datasets: [
       {
-        label: '採購承諾（十億美元，2025–2029）',
-        data: [44.4, 15.2, 25.2, 84.8],
-        backgroundColor: [
-          'rgba(59, 130, 246, 0.75)',
-          'rgba(34, 197, 94, 0.7)',
-          'rgba(251, 191, 36, 0.7)',
-          'rgba(168, 85, 247, 0.7)'
-        ],
-        borderColor: [
-          'rgba(59, 130, 246, 1)',
-          'rgba(34, 197, 94, 1)',
-          'rgba(251, 191, 36, 1)',
-          'rgba(168, 85, 247, 1)'
-        ],
+        label: '美台商品貿易逆差（十億美元）',
+        data: [25.0, 34.2, 40.8, 64.7, 146.8],
+        backgroundColor: 'rgba(239, 68, 68, 0.7)',
+        borderColor: 'rgba(239, 68, 68, 1)',
+        borderWidth: 1
+      },
+      {
+        label: '協定年均採購額',
+        data: [null, null, null, null, 21.2],
+        backgroundColor: 'rgba(34, 197, 94, 0.7)',
+        borderColor: 'rgba(34, 197, 94, 1)',
         borderWidth: 1
       }
     ]
@@ -48,14 +72,14 @@ new Chart(document.getElementById('macroChart5'), {
     plugins: {
       title: {
         display: true,
-        text: '美台對等貿易協定：台灣採購承諾分項（資料來源：USTR Fact Sheet）',
+        text: '美台商品逆差 vs 協定年均採購額（資料：U.S. Census Bureau、USTR）',
         color: '#e2e8f0',
         font: { size: 12 }
       },
-      legend: { display: false }
+      legend: { labels: { color: '#94a3b8' } }
     },
     scales: {
-      x: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.1)' } },
+      x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
       y: {
         ticks: { color: '#94a3b8', callback: function(v) { return '$' + v + 'B'; } },
         grid: { color: 'rgba(255,255,255,0.1)' }
@@ -65,68 +89,79 @@ new Chart(document.getElementById('macroChart5'), {
 });
 </script>
 
-### 這份協定到底改變了什麼？
+美台商品逆差從 2021 年的 250 億美元暴增至 2025 年的 [1,468 億美元](https://www.census.gov/foreign-trade/balance/c5830.html)——四年間翻了近六倍，主要受 AI 晶片需求驅動的 TSMC 出口推動。848 億美元採購承諾分攤至四年，年均約 212 億美元，僅相當於 2025 年逆差的 **14.4%**。
+
+[美國外交關係委員會 (CFR) 分析](https://www.cfr.org/articles/u-s-taiwan-trade-agreement-leaves-major-questions-open)直言：「難以看出這份協定如何有意義地縮減雙邊貿易逆差」，稱其提供了「可預測性」但本質上是「把問題往後推」。更值得注意的是，USTR 在描述採購承諾時使用的措辭是 **"plans to facilitate"（計劃促成）**——而非具有法律拘束力的 "shall" 或 "commits to"。協定中也[找不到](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)若台灣未達採購目標的自動懲罰機制或關稅回彈條款。
+
+房間裡的大象是匯率：《經濟學人》大麥克指數顯示新台幣被[低估約 60%](https://www.cfr.org/articles/taiwans-backdoor-currency-manipulation)——全球最被低估的貨幣。台灣承諾將外匯干預揭露頻率從半年一次改為季度一次，但 CFR 稱台灣央行透過保險業避險比率調整等手段進行「後門式匯率操縱」。在匯率結構不變的前提下，任何關稅調整的效果都被稀釋。
+
+## LNG 接收站：承諾跑在基建前面
 
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>對等關稅 (Reciprocal Tariff)</strong>：兩國互相對對方商品課徵的關稅。川普政府以此為槓桿要求貿易夥伴降低對美壁壘。
+<strong>mtpa</strong>：百萬噸/年 (million tonnes per annum)，衡量 LNG 接收站處理能力的標準單位。
 </aside>
 
-2025 年 8 月，川普依據國際緊急經濟權力法 (IEEPA) 對台灣商品[課徵 20% 關稅](https://www.cnbc.com/2026/01/16/asia-markets-live-friday-nikkei-225-hang-seng-index-kospi-taiwan-trade-deal-chips-banks.html)——高於日本和南韓的 15%。台灣出口企業在價格上一夕失去競爭力。這份新協定將關稅從 20% 降至 15%，並對約 2,000 項產品予以額外豁免，[有效平均關稅降至約 12.3%](https://www.aplf.com/2026/02/20/trade-us-taiwan-trade-agreement-slashes-tariffs-and-boosts-investment/)。汽車零件與木材從 25% 降至 15%；學名藥、航空零件和美國不生產的天然資源則[直接零關稅](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)。
+444 億美元的 LNG 與原油採購是最大單項承諾。台灣 [98% 能源依賴進口](https://energytracker.asia/taiwan-lng/)，天然氣發電佔比已達 47%（2025 年），能源安全的需求是真實的。但問題在於：**物理上能否接收這些量？**
 
-對台灣而言，衝擊更為深遠——不僅僅是關稅數字。台灣同意[接受美國 FDA 醫療器材與藥品許可](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)、取消汽車進口數量限制、以及大幅放寬農產品市場准入（牛肉、豬肉、家禽、乳製品）。更關鍵的是，根據 [Global Taiwan Institute 分析](https://globaltaiwan.org/2026/02/whats-in-the-new-us-taiwan-agreement-on-reciprocal-trade/)，第 5.4.6 條規定若台灣與中國簽訂新的雙邊貿易協定，美方有權終止本協定——這實質上將經貿協定嵌入了地緣政治框架。
+台灣目前三座 LNG 接收站——[永安](https://www.gem.wiki/Yung-An_LNG_Terminal)（約 12.3 mtpa）、[台中](https://www.gem.wiki/Taichung_LNG_Terminal)（目前約 8 mtpa，三期擴建中 +2 mtpa）、[桃園觀塘](https://www.gem.wiki/Taoyuan_LNG_Terminal)（2025 年 5 月啟用，3 mtpa）——合計現有接收能力約 **23 mtpa**，含在建三期約 **25 mtpa**。台灣 2025 年 LNG 進口量趨勢約 24–26 mtpa，已接近滿載。若美國 LNG 的額外量達 5–8 mtpa，總需求將在 2028–2029 年攀升至 **29–34 mtpa**——超出現有加計劃中容量 **4–9 mtpa**。台中四期（+3 mtpa，目標 2029 年）和永安五期（+1.8 mtpa）都還在提案階段。
 
-### 840 億美元的戰略意義
+關鍵瓶頸是永安站擴建：立委[邱志偉指出](https://energytracker.asia/taiwan-lng/)，該擴建案自 2021 年起因地下儲槽造價過高而停滯，至今未動工。國民黨則諷刺：一邊宣示 2050 淨零碳排，一邊大量採購高碳排化石燃料。
+
+承諾很容易簽，但港口和儲槽不會因為協定就自動長出來。
+
+## SCOTUS 判決後：法律基礎動搖
 
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>LNG（液化天然氣）</strong>：天然氣經冷卻至 −162°C 液化後運輸。台灣進口能源約 98%，LNG 是發電主力。
+<strong>IEEPA</strong>：國際緊急經濟權力法，川普據此對台灣課徵 20% 關稅。最高法院 2 月 20 日以 6:3 裁定此舉違憲。
 </aside>
 
-台灣約 [98% 能源依賴進口](https://energytracker.asia/taiwan-lng/)，這讓 444 億美元的 LNG 與原油採購承諾不僅是貿易讓步，更是能源安全的戰略佈局。台灣目前有三座 LNG 接收站——永安、台中、桃園觀塘——[總接收能力約 1,950 萬噸/年](https://www.gem.wiki/Taichung_LNG_Terminal)，台中四期擴建預計 2029 年完工後，該站總容量將從約 600 萬噸提升至 1,300 萬噸。中油 (CPC) 已與卡達能源簽署[長約](https://jpt.spe.org/taiwan-signs-agreement-with-qatarenergy-as-new-north-field-east-expansion-partner)，美國 LNG 的加入將分散供應來源，降低單一供應商風險。
+2 月 20 日，美國最高法院以 6:3 裁定川普依據 IEEPA [課徵關稅違憲](/2026/02/20/scotus-tariff-ruling-zh/)。這份台美協定的核心前提——避免 20% 的 IEEPA 關稅——瞬間失去法律基礎。國民黨[立即呼籲重新談判](https://focustaiwan.tw/politics/202602210007)，主張「協定的基礎已被動搖」。民眾黨主席黃國昌稱應將判決視為「重新調整的契機」。
 
-152 億美元民航機與引擎採購、252 億美元電力與鋼鐵設備則分別對應台灣的航空業機隊更新需求與電網升級計畫。考量到台灣已確定[無法達成 2025 年 20% 再生能源目標](https://energytracker.asia/taiwan-lng/)，天然氣發電占比勢必持續攀升——這讓能源採購承諾具備真實的經濟基礎，而非純粹的政治姿態。
+川普隨即宣布新的 10% 全球關稅，但使用不同的法律依據。這帶來兩個問題：(1) 台灣原先的 15% 協定稅率是否仍有效？如果 IEEPA 關稅從未合法存在，那麼「從 20% 降到 15%」的讓步意味著什麼？(2) 若新關稅走 Section 301 路徑，程序需要 6–12 個月；若再用行政命令，將再次面臨法律挑戰。
 
-### 貿易逆差的結構性問題
+南韓的前車之鑑值得注意：南韓國會延遲批准類似協定後，美國[將關稅從 15% 回升到 25%](https://keia.org/the-peninsula/u-s-south-korea-move-to-lock-in-lower-tariff-rate-with-350-billion-deal/) 作為懲罰。這份恐懼正是推動立法院加速審議的最大動力。
 
-這份協定的背景是[急速擴大的美台貿易逆差](https://www.census.gov/foreign-trade/balance/c5830.html)。2024 年美國對台商品逆差為 737 億美元，2025 年暴增至 1,468 億美元——幾乎翻倍，主要受 TSMC 晶片出口帶動。840 億美元的採購承諾分攤至四年，年均約 210 億美元，僅相當於 2025 年逆差的 14%。這足以展示政治誠意，但遠不足以「平衡」貿易。
+## 三國比較：台灣拿到的條件如何？
 
-<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>有效平均關稅</strong>：考量所有豁免、例外後，進口商實際負擔的加權平均稅率。比名目稅率更能反映真實成本。
-</aside>
+| 項目 | 台灣 | 日本 | 南韓 |
+|------|------|------|------|
+| 起始關稅 → 協定稅率 | 20% → 15% | 25% → 15% | 25% → 15% |
+| 投資承諾 | $2,500 億（含 TSMC） | [$5,500 億](https://www.pbs.org/newshour/show/what-the-new-trade-deal-with-japan-means-for-u-s-businesses-and-consumers)（政府基金） | [$3,500 億](https://keia.org/the-peninsula/u-s-south-korea-move-to-lock-in-lower-tariff-rate-with-350-billion-deal/)（$2,000 億現金 + $1,500 億造船） |
+| 採購承諾 | $848 億（能源、航空、設備） | 農產品 + 波音 + 軍備 | 330 萬噸/年 LNG |
+| 稻米市場 | 保住 | 配額內增加 75% | 保住 |
+| 牛豬市場 | 開放，降低檢驗 | 未公開大幅讓步 | 保住 |
+| 中國鎖定條款 | 有（第 5.4.6 條） | 未公開確認 | 未公開確認 |
+| 國防支出條件 | GDP 3% | 未公開 | 未公開 |
 
-### 市場定價 vs 實際風險
-
-市場反應迅速且正面。TAIEX 在 2 月 11 日觸及歷史新高 33,605 點，亞洲半導體股在協定簽署後[集體上漲](https://www.cnbc.com/2026/01/16/asia-markets-live-friday-nikkei-225-hang-seng-index-kospi-taiwan-trade-deal-chips-banks.html)。EWT 近 52 週高點 $73.88。但市場可能低估了兩個風險：一、協定仍需[立法院審議通過](https://focustaiwan.tw/business/202602130017)，而國民黨與民眾黨組成的在野聯盟掌握立院多數，已有質疑聲浪認為農產品開放將衝擊台灣農業。二、2 月 20 日[最高法院推翻 IEEPA 關稅](/macro/2026/02/20/scotus-tariff-ruling-zh.html)後，川普宣布新的 10% 全球關稅——如果這波新關稅的法律基礎不同（例如 Section 301），台灣的 15% 協定稅率是否仍然有效，存在不確定性。
+行政院稱這是「最好的關稅協定」——但台灣的起始關稅只有 20%（日韓是 25%），降幅僅 5 個百分點（日韓降了 10 個百分點）。若以「每百分點減稅所付出的投資額」計算：台灣 $500 億/點，日本 $550 億/點，南韓 $350 億/點。南韓的交換條件最划算，而**台灣在農業和檢驗制度上的讓步明顯大於日韓**。
 
 ### 筆記
 
-**這份協定是買 EWT 的理由，但不是追高的理由。**
+**這份協定的價值不在關稅數字，而在地緣政治定位——代價是戰略彈性的永久縮減。**
 
-15% 關稅讓台灣機械業與日韓[站在同一起跑線](https://www.taipeitimes.com/News/biz/archives/2026/01/17/2003850727)——這是真實的競爭力提升，不是政治口號。但 EWT 已從 52 週低點漲了 85%，目前的價格隱含「協定順利通過 + 全球關稅環境穩定 + 台海風平浪靜」的最佳情境。三個情境要分開想：
+15% 稅率讓台灣機械、電子零件與日韓[站在同一起跑線](https://www.taipeitimes.com/News/biz/archives/2026/01/17/2003850727)，這是實質的競爭力提升。但第 5.4.6 條意味著台灣已正式選邊——未來任何兩岸經貿安排都將觸碰美國的終止權。對投資人而言，「美國盟友溢價」與「地緣政治折價」將長期並存。
 
-- **情境 A：立法院 Q2 前通過、SCOTUS 後關稅重建溫和** → EWT 上看 $78–80（+7–10%），台灣出口股（機械、電子零件）明確受惠，可逢回測 $70 加碼
-- **情境 B：立法院拖延至下半年，或附加農業保護條款** → EWT 區間整理 $68–74，不確定性壓抑估值，此時不宜新建倉位
-- **情境 C：新一輪全球關稅（Section 301）使 15% 協定稅率失效，或台海軍事升溫** → EWT 回測 $62–66（-10% 至 -15%），但這也是長線布局台灣半導體的入場點
+- **若立法院 Q2 前通過且全球關稅環境穩定** → EWT 上看 $78–80（+7–10%），台灣出口股（機械、電子零件）明確受惠，逢回測 $70 可考慮加碼
+- **若在野黨附加大量農業保護修正案或拖延至下半年** → EWT 區間整理 $68–74，不確定性壓抑估值
+- **若 SCOTUS 後新關稅架構使 15% 協定稅率失效，或台海軍事升溫** → EWT 回測 $62–66（−10% 至 −15%），但也是長線布局台灣半導體的入場價
 
-這份協定的更大意義不在關稅數字，而在第 5.4.6 條——它將台灣正式鎖入美國經濟圈，限制了兩岸經貿的迴旋空間。對投資人而言，這意味著台灣資產的「地緣政治折價」和「美國盟友溢價」將同時存在且長期化。
-
-**持續觀察：** (1) 立法院院會排審時程（預計 3 月底前是否排入議程）——這決定協定能否在 Q2 生效；(2) 川普新關稅的法律依據（Section 301 需 6-12 個月，若走行政命令將再被法院挑戰）——這決定 15% 稅率的有效性；(3) 3 月台灣出口數據中對美出口金額變化——第一個檢驗協定預期效果的硬數據。
+**持續觀察：** (1) 立法院 [3 月 6 日一讀、3 月 12 日委員會審查](https://www.taipeitimes.com/News/front/archives/2026/02/20/2003852586)——在野黨是否附帶決議或退回重議是關鍵轉折；(2) 川普新 10% 全球關稅的法律依據——若走 Section 301 需時 6–12 個月，若再走行政命令將重蹈 IEEPA 覆轍；(3) 3 月台灣出口數據——對美出口金額是第一個硬指標。
 
 ## 投資影響
 
-- **EWT**（iShares MSCI 台灣 ETF）：現價約 [$72.98](https://finance.yahoo.com/quote/EWT/)，52 週高點 $73.88。關稅降至 15% 直接利多 TSMC（占 EWT 約 22%）與機械類股。若協定順利通過立法院且全球關稅環境穩定，上行至 $78–80（+7–10%）。下行風險：立法院否決或大幅修改、新一輪關稅衝擊，回測 $66–68（-7% 至 -10%）。過去一年[漲幅已達 37.5%](https://www.nasdaq.com/articles/etfs-gain-us-taiwan-sign-trade-deal-reduce-tariffs-15)，追高需審慎。
-- **SMH**（VanEck 半導體 ETF）：台灣協定穩定 TSMC 的出口條件，但 SMH 更受美國半導體政策（CHIPS Act 補貼、出口管制）影響。協定本身對 SMH 為間接利多（+2–3%），主要風險來自全球關稅變局。
-- **SOXX**（iShares 半導體 ETF）：邏輯同 SMH。SOXX 含較高比重的美國設計公司（Nvidia、AMD），這些公司的客戶（包括台灣 IC 設計業）將受惠於關稅降低帶來的終端需求回溫。
-- **USO / UNG**（美國油氣 ETF）：444 億美元的 LNG 與原油採購承諾在 4 年內分批執行，對美國 LNG 出口商（Cheniere、Tellurian）為確定性需求。但全球油氣價格取決於更大的供需面，台灣單一採購對 USO/UNG 影響有限。
+- **EWT**（iShares MSCI 台灣 ETF）：現價約 [$72.98](https://finance.yahoo.com/quote/EWT/)，52 週高點 $73.88。協定直接利多 TSMC（占 EWT 約 22%）與機械類股，但過去一年[漲幅逾 30%](https://finance.yahoo.com/quote/EWT/performance/)，追高風險偏高。上行 $78–80（+7–10%），下行 $62–66（−10% 至 −15%）
+- **SMH / SOXX**（半導體 ETF）：台灣協定穩定 TSMC 出口條件，但 SMH 更受美國半導體政策（CHIPS Act、出口管制）影響。間接利多 +2–3%
+- **USO / UNG**（美國油氣 ETF）：444 億 LNG 與原油採購對 Cheniere 等 LNG 出口商為確定性需求，但全球油氣價格取決於更大的供需面，對 USO/UNG 整體影響有限
 
 ## 後續觀察
 
-1. **立法院審議時程**：台灣七大工商團體已[聯合聲明](https://focustaiwan.tw/business/202602130017)要求加速審議，但在野黨態度是關鍵變數。若拖延至下半年，時間優勢將流失
-2. **SCOTUS 判決後的關稅重建**：川普宣布的新 10% 全球關稅的法律依據為何？若走 Section 301 路徑，程序需 6–12 個月；若再度嘗試 IEEPA，將面臨即刻的法律挑戰
-3. **台灣 Q1 出口數據**：3 月公布的 2 月出口數據將是檢驗協定效果的第一個指標。重點觀察對美出口金額與市占率變化
-4. **台中 LNG 四期擴建進度**：接收能力能否跟上 444 億美元的 LNG 採購承諾，將決定能源安全願景的可行性
+1. **立法院審議**：3 月 6 日一讀、3 月 12 日起委員會審查。七大工商團體已[聯合聲明](https://focustaiwan.tw/business/202602130017)促速審，但南韓延審被懲罰的前例才是真正的催化劑
+2. **SCOTUS 後關稅重建**：川普新 10% 全球關稅的法律基礎為何？若 15% 協定稅率因法律變動而失效，整份協定需要重新校準
+3. **LNG 擴建進度**：台中四期與永安五期能否在 2029 年前解決 4–9 mtpa 的容量缺口，決定 444 億能源承諾的可行性
+4. **3 月台灣出口數據**：對美出口金額變化是檢驗協定預期效果的第一個硬數據
 
 ---
 
-*資料來源：[USTR](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)、[CNBC](https://www.cnbc.com/2026/01/16/asia-markets-live-friday-nikkei-225-hang-seng-index-kospi-taiwan-trade-deal-chips-banks.html)、[Global Taiwan Institute](https://globaltaiwan.org/2026/02/whats-in-the-new-us-taiwan-agreement-on-reciprocal-trade/)、[U.S. Census Bureau](https://www.census.gov/foreign-trade/balance/c5830.html)、[Focus Taiwan](https://focustaiwan.tw/business/202602130017)、[Taipei Times](https://www.taipeitimes.com/News/biz/archives/2026/01/17/2003850727)、[Global Energy Monitor](https://www.gem.wiki/Taichung_LNG_Terminal)、[Yahoo Finance](https://finance.yahoo.com/)*
+*資料來源：[USTR Fact Sheet](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)、[Global Taiwan Institute](https://globaltaiwan.org/2026/02/whats-in-the-new-us-taiwan-agreement-on-reciprocal-trade/)、[CFR](https://www.cfr.org/articles/u-s-taiwan-trade-agreement-leaves-major-questions-open)、[CFR 匯率分析](https://www.cfr.org/articles/taiwans-backdoor-currency-manipulation)、[U.S. Census Bureau](https://www.census.gov/foreign-trade/balance/c5830.html)、[KEIA 南韓協定](https://keia.org/the-peninsula/u-s-south-korea-move-to-lock-in-lower-tariff-rate-with-350-billion-deal/)、[PBS 日本協定](https://www.pbs.org/newshour/show/what-the-new-trade-deal-with-japan-means-for-u-s-businesses-and-consumers)、[Taipei Times](https://www.taipeitimes.com/News/taiwan/archives/2026/02/14/2003852317)、[Focus Taiwan](https://focustaiwan.tw/politics/202602210007)、[Global Energy Monitor](https://www.gem.wiki/Taichung_LNG_Terminal)、[Yahoo Finance](https://finance.yahoo.com/)*
 *市場數據截至：2026-02-21*
 *本文僅供參考，不構成投資建議。*
