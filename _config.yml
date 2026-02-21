@@ -47,7 +47,7 @@ defaults:
     values:
       layout: "single"
       share: true
-      related: true
+      related: false
 
 category_archive:
   type: liquid
