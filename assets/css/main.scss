@@ -524,7 +524,8 @@ pre .code-line:last-child::before {
 }
 
 .sidebar-calendar__grid {
-  width: 100%;
+  display: table !important;
+  width: 100% !important;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -534,20 +535,18 @@ pre .code-line:last-child::before {
   font-size: 0.78rem;
   font-weight: 600;
   text-align: center;
-  padding: 0.2rem 0;
+  padding: 0.25rem 0;
   border: none;
   background: none;
-  white-space: nowrap;
 }
 
 .sidebar-calendar__grid td {
   text-align: center;
-  padding: 0.18rem 0;
+  padding: 0.25rem 0;
   font-size: 0.82rem;
   color: var(--eng-text-muted);
   border: none;
   background: none;
-  white-space: nowrap;
 }
 
 .sidebar-calendar__grid td.has-post {
