@@ -5,8 +5,7 @@ permalink: /tags/
 ---
 
 <div id="main" role="main">
-  <article class="page">
-    <div class="page__content">
+  <div class="archive">
 
       <h2 class="archive__subtitle">Macro</h2>
       {% assign macro_tags = "" | split: "" %}
@@ -90,7 +89,6 @@ permalink: /tags/
         </ul>
       {% endfor %}
 
-    </div>
-  </article>
+  </div>
 </div>
 
