@@ -287,7 +287,8 @@ lang: zh-TW
    - Keep each definition to one sentence
    - Common terms like ETF, Fed, GDP, CPI do NOT need entries — only terms a casual reader would not know
    - Descriptive Chinese phrases (e.g., 到期牆、品質遷移) that are already self-explanatory in context do NOT need entries — only true jargon and acronyms
-18. **Disclaimer** — always include at the bottom:
+18. **Cross-post consistency** — when referencing an event, ruling, data point, or policy already covered in a recent post (past 3 days), read that post first and match its terminology and characterization exactly. Do not paraphrase legal or technical distinctions (e.g., a court ruling described as「違法」in one post must not become「違憲」in another — these are different legal concepts). If the new post needs a different framing, explicitly explain why.
+19. **Disclaimer** — always include at the bottom:
    ```
    *資料來源：[列出來源連結]*
    *市場數據截至：YYYY-MM-DD*

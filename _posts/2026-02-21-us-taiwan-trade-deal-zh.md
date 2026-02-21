@@ -112,10 +112,10 @@ new Chart(document.getElementById('macroChart5'), {
 ## SCOTUS 判決後：法律基礎動搖
 
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>IEEPA</strong>：國際緊急經濟權力法，川普據此對台灣課徵 20% 關稅。最高法院 2 月 20 日以 6:3 裁定此舉違憲。
+<strong>IEEPA</strong>：國際緊急經濟權力法，川普據此對台灣課徵 20% 關稅。最高法院 2 月 20 日以 6:3 裁定此舉違法。
 </aside>
 
-2 月 20 日，美國最高法院以 6:3 裁定川普依據 IEEPA [課徵關稅違憲](/2026/02/20/scotus-tariff-ruling-zh/)。這份台美協定的核心前提——避免 20% 的 IEEPA 關稅——瞬間失去法律基礎。國民黨[立即呼籲重新談判](https://focustaiwan.tw/politics/202602210007)，主張「協定的基礎已被動搖」。民眾黨主席黃國昌稱應將判決視為「重新調整的契機」。
+2 月 20 日，美國最高法院以 6:3 裁定川普依據 IEEPA [課徵關稅違法](/2026/02/20/scotus-tariff-ruling-zh/)。這份台美協定的核心前提——避免 20% 的 IEEPA 關稅——瞬間失去法律基礎。國民黨[立即呼籲重新談判](https://focustaiwan.tw/politics/202602210007)，主張「協定的基礎已被動搖」。民眾黨主席黃國昌稱應將判決視為「重新調整的契機」。
 
 川普隨即宣布新的 10% 全球關稅，但使用不同的法律依據。這帶來兩個問題：(1) 台灣原先的 15% 協定稅率是否仍有效？如果 IEEPA 關稅從未合法存在，那麼「從 20% 降到 15%」的讓步意味著什麼？(2) 若新關稅走 Section 301 路徑，程序需要 6–12 個月；若再用行政命令，將再次面臨法律挑戰。
 
