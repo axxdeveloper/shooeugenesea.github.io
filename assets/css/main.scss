@@ -381,6 +381,64 @@ pre .code-line:last-child::before {
 
 
 
+/* ── Tags page ── */
+.tag-chip {
+  display: inline-block;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  padding: 0.25em 0.65em;
+  background: rgba(15, 27, 47, 0.85);
+  border: 1px solid var(--eng-border);
+  border-radius: 6px;
+  color: var(--eng-text);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.tag-chip:hover {
+  border-color: var(--eng-accent);
+  color: var(--eng-accent-strong);
+}
+
+.tag-count {
+  color: var(--eng-text-muted);
+  font-size: 0.72rem;
+  margin-left: 0.2em;
+}
+
+.tag-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: var(--eng-accent);
+}
+
+.tag-posts {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.tag-posts li {
+  padding: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.tag-posts a {
+  color: var(--eng-text);
+  text-decoration: none;
+}
+
+.tag-posts a:hover {
+  color: var(--eng-accent-strong);
+}
+
+.tag-date {
+  color: var(--eng-text-muted);
+  font-size: 0.78rem;
+  margin-left: 0.5em;
+}
+
 /* ── No left sidebar — article takes full width ── */
 .page,
 .archive {
