@@ -110,21 +110,31 @@ new Chart(document.getElementById('macroChart7'), {
 
 ### 市場定價 vs 實際風險
 
-目前布蘭特報 ~[$71](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，WTI $66.34——市場大致定價在「情境 2：維持現狀」。但遠期曲線透露不同訊號：WTI 2026 年全年期貨合約[已跌破 $60](https://www.indexbox.io/blog/oil-market-braces-for-contango-as-2026-futures-fall-below-shale-breakeven/)，整條曲線從 2026 年初開始進入 contango（期貨溢價），反映市場對 OPEC+ 減產失效與[全球供給過剩 380 萬桶/日](https://www.iea.org/commentaries/as-oil-market-surplus-keeps-rising-something-s-got-to-give)的悲觀預期。換句話說，遠期市場完全沒有為荷莫茲封鎖情境定價。EIA 基線預測布蘭特 2026 年均價 [$58](https://www.eia.gov/outlooks/steo/report/global_oil.php)——這個數字假設零地緣政治溢價。[BloombergNEF 估算](https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/)，若伊朗出口完全中斷並持續至年底，布蘭特第四季均價可達 $91。[Lombard Odier 更指出](https://www.thenationalnews.com/business/markets/2026/02/19/us-iran-conflict-to-rattle-everything-from-oil-to-stocks-and-commodities-lombard-odier-says/)，暫時性油價飆至 $100 以上「完全合理」。與此同時，航運戰爭險保費已從危機前的 0.125% 飆升至[船體價值的 0.35–0.50%](https://www.insurancebusinessmag.com/us/news/breaking-news/shipping-cover-leaps-by-60-as-tensions-rise-539563.aspx)——漲幅達 60%，對照 1980 年代兩伊戰爭「油輪戰爭」時期保費暴漲 300% 的先例，目前的風險定價仍有巨大上行空間。
+目前布蘭特報 ~[$71](https://www.cnbc.com/2026/02/20/oil-prices-trump-us-iran-conflict-strikes-energy.html)，WTI $66.34——市場大致定價在「僵持拖延」的劇本。但遠期曲線透露不同訊號：WTI 2026 年全年期貨合約[已跌破 $60](https://www.indexbox.io/blog/oil-market-braces-for-contango-as-2026-futures-fall-below-shale-breakeven/)，整條曲線從 2026 年初開始進入 contango（期貨溢價），反映市場對 OPEC+ 減產失效與[全球供給過剩 380 萬桶/日](https://www.iea.org/commentaries/as-oil-market-surplus-keeps-rising-something-s-got-to-give)的悲觀預期。換句話說，遠期市場完全沒有為荷莫茲封鎖情境定價。EIA 基線預測布蘭特 2026 年均價 [$58](https://www.eia.gov/outlooks/steo/report/global_oil.php)——這個數字假設零地緣政治溢價。[BloombergNEF 估算](https://about.bnef.com/insights/commodities/oil-can-hit-91-a-barrel-in-late-2026-on-iran-disruption/)，若伊朗出口完全中斷並持續至年底，布蘭特第四季均價可達 $91。[Lombard Odier 更指出](https://www.thenationalnews.com/business/markets/2026/02/19/us-iran-conflict-to-rattle-everything-from-oil-to-stocks-and-commodities-lombard-odier-says/)，暫時性油價飆至 $100 以上「完全合理」。與此同時，航運戰爭險保費已從危機前的 0.125% 飆升至[船體價值的 0.35–0.50%](https://www.insurancebusinessmag.com/us/news/breaking-news/shipping-cover-leaps-by-60-as-tensions-rise-539563.aspx)——漲幅達 60%，對照 1980 年代兩伊戰爭「油輪戰爭」時期保費暴漲 300% 的先例，目前的風險定價仍有巨大上行空間。
 
 避險資產方面，黃金 2 月 20 日收 [$5,109/oz (+2.68%)](https://edition.cnn.com/2026/02/19/investing/oil-gold-prices-us-iran-tensions)，驗證了地緣避險需求的持續性。VIX 收於 [19.20](https://www.cboe.com/tradable_products/vix/)——有所反應，但以雙航母打擊群對峙的規模而言，市場仍顯得過於自滿。
 
 ### 筆記
 
-我認為市場嚴重低估了「情境 3」和「情境 4」的尾部風險。當前 contango 曲線反映的是供給過剩敘事，完全忽略了一個事實：美國已將三分之一的現役部署艦隊投向中東，這不是虛張聲勢。伊朗的軍演也不是——他們已經證明可以短暫關閉海峽。阿拉伯國家的[焦慮](https://www.pbs.org/newshour/world/heres-what-we-know-about-the-buildup-of-u-s-military-assets-in-the-middle-east)——既怕伊朗報復、又怕政權崩潰後的混亂——說明連區域內的利害關係方都看不清華府的真正意圖。概率加權後，我的估算是：情境 1（20%）、情境 2（45%）、情境 3（25%）、情境 4（10%）。期望值指向布蘭特 $72–78——比目前 $71 只有微幅溢價，但尾部風險（$100+）完全未被選擇權市場定價。持續觀察：若伊朗在 2–3 天內提出的協議草案被華府接受為談判基礎、且美軍停止增兵中東——則風險溢價應快速消退。但目前福特號仍在前進，軍演仍在進行，這兩個條件都不成立。
+**油價只反映了「僵持拖延」的劇本，完全沒有為軍事打擊或海峽封鎖定價。**
+
+當前 contango 曲線反映的是供給過剩敘事，完全忽略了一個事實：美國已將三分之一的現役部署艦隊投向中東，這不是虛張聲勢。伊朗的軍演也不是——他們已經證明可以短暫關閉海峽。阿拉伯國家的[焦慮](https://www.pbs.org/newshour/world/heres-what-we-know-about-the-buildup-of-u-s-military-assets-in-the-middle-east)——既怕伊朗報復、又怕政權崩潰後的混亂——說明連區域內的利害關係方都看不清華府的真正意圖。
+
+我的概率估算：外交解決（20%）、僵持拖延（45%）、有限軍事打擊（25%）、海峽封鎖（10%）。期望值指向布蘭特 $72–78——比目前 $71 只有微幅溢價，但海峽封鎖的尾部風險（$100+）完全未被選擇權市場定價。
+
+- **若伊朗協議草案被接受為談判基礎、且美軍停止增兵** → 風險溢價快速消退，能源部位應減碼，GLD 可獲利了結
+- **若最後通牒到期且福特號完成部署** → 有限打擊機率大幅上升，XLE 上行 +10–15%，但需嚴格設停損，因外交反轉同樣可能
+- **若海峽實際封鎖（目前概率低但非零）** → 布蘭特 $100+，VIX 衝 35+，這是 GLD 和 VIXY 小額尾部對沖存在的理由
+
+**持續觀察：** (1) 伊朗協議草案（預計 2 月 22–23 日提出）——這是外交窗口最後的測試點；(2) 福特號抵達波斯灣時間（預計 3 月第一週）——雙航母合流 = 打擊能力就緒；(3) IAEA 理事會會議——若報告伊朗違規，將為軍事行動提供國際法基礎。目前福特號仍在前進、軍演仍在進行，兩個降溫條件都不成立。
 
 ## 投資影響
 
-- **XLE**（能源類股 ETF）：最直接的受惠標的。若情境 3 發生，油價衝至 $80–90，XLE 上行 +10–15%。但若外交突破，回吐 -5–8%。現階段作為地緣對沖的風險/報酬比佳。
+- **XLE**（能源類股 ETF）：最直接的受惠標的。若發生有限軍事打擊，油價衝至 $80–90，XLE 上行 +10–15%。但若外交突破，回吐 -5–8%。現階段作為地緣對沖的風險/報酬比佳。
 - **USO**（原油期貨 ETF）：直接追蹤 WTI 近月期貨。適合短線交易地緣溢價，但 contango 結構會侵蝕長期持有報酬。
-- **GLD**（黃金 ETF）：金價 $5,109 已反映部分風險，但在「情境 4」下，$5,500+ 不無可能。作為尾部風險對沖，配置 5–8% 部位仍合理。
+- **GLD**（黃金 ETF）：金價 $5,109 已反映部分風險，但若海峽封鎖成真，$5,500+ 不無可能。作為尾部風險對沖，配置 5–8% 部位仍合理。
 - **VIXY**（VIX 短期期貨 ETF）：VIX 19.20 → 若海峽封鎖，VIX 衝 35+ 的空間巨大。適合小額尾部對沖，但時間價值衰減快，需短期持有。
-- **EFA / VEA**（國際已開發市場 ETF）：歐洲與日本對中東油價衝擊的曝險高於美國。情境 3–4 下，表現將劣於 S&P 500。
+- **EFA / VEA**（國際已開發市場 ETF）：歐洲與日本對中東油價衝擊的曝險高於美國。若發生軍事打擊或海峽封鎖，表現將劣於 S&P 500。
 - **XLU**（公用事業 ETF）：防禦型資產。若油價飆升推升電力成本，短期受壓，但升息預期降低將支撐估值。
 
 ## 後續觀察

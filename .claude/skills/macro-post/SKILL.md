@@ -188,7 +188,10 @@ lang: zh-TW
 ### Content Rules
 
 1. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
-2. **Take a clear position** — each post must have a thesis the author is willing to be wrong about. In the 筆記 section, use「持續觀察：」to name specific scenarios that would invalidate the thesis (not「什麼會證明我錯？」).
+2. **Take a clear position with reader-actionable takeaways** — each post must have a thesis the author is willing to be wrong about. The 筆記 section is the most important part of every post — it's what the reader walks away with. It must go beyond "I think the market is mispricing X" and answer: **"So what should the reader actually do with this information?"** Structure every 筆記 as:
+   - **一句話結論** — A single memorable sentence the reader can take away (e.g., "這份協定是買 EWT 的理由，但不是追高的理由" or "在 Q1 GDP 出爐前，防禦配置優於進攻")
+   - **情境決策框架** — Give readers a concrete if/then framework tied to portfolio actions, not just thesis invalidation. Example: "如果 Q1 GDP 反彈超過 3.0%，可考慮減碼 TLT、加碼 XLI；如果低於 2.0%，衰退交易將主導市場，SPY 下行風險 5-8%"
+   - **持續觀察** — Name the specific data points, dates, and events to watch, with WHY each matters (not just a list of conditions)
 2. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
 3. **Quantify the risk/reward** — for every ETF discussed, frame the upside vs downside with approximate numbers.
 4. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
@@ -196,7 +199,8 @@ lang: zh-TW
 6. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
 7. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
 8. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
-9. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
+9. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline: "有限軍事打擊情境" not "情境 3", "海峽封鎖情境" not "情境 4". Charts may label axes with numbers/letters for space, but prose must always be self-explanatory without cross-referencing.
+10. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
    ```html
    <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
    <strong>TERM</strong>：一句話白話解釋。
@@ -262,9 +266,11 @@ new Chart(document.getElementById('macroChartN'), {
 - Highlight the key data point that supports the thesis
 - All numbers traceable to a specific source — never fabricate
 
-### Step 3.5: Fact-Check Key Claims
+### Step 3.5: Fact-Check Key Claims (MANDATORY — NEVER SKIP)
 
-Before finalizing, launch **four** fact-check agents in parallel (subagent_type: `general-purpose`) to verify the most important data points across all posts:
+**This step is non-negotiable.** Every post must pass fact-check before it can be considered complete. Do not skip this step due to time pressure, context limits, or any other reason. A post that has not been fact-checked is not a finished post.
+
+Launch **four** fact-check agents in parallel (subagent_type: `general-purpose`) to verify the most important data points across all posts:
 
 | Agent | What to verify |
 |-------|----------------|
@@ -275,7 +281,18 @@ Before finalizing, launch **four** fact-check agents in parallel (subagent_type:
 
 Each agent should return a table: `Claim | Blog Value | Actual Value | Source | Verdict (correct/wrong/outdated)`.
 
-**After fact-check:** Fix any wrong or outdated data before proceeding. If a claim is unverifiable from reliable sources, either remove it or clearly attribute it (e.g., "according to analyst estimates").
+**Chart Data Verification (CRITICAL):** Each fact-check agent must also verify the Chart.js data in its domain:
+- Extract every number from the chart's `data` array and `labels`
+- Cross-reference each number against the cited source
+- Check that the chart type matches the data story (e.g., don't use a line chart for categorical comparisons)
+- Verify axis labels, units, and scale are correct
+- Flag any chart where data is fabricated, rounded beyond reason (>5% deviation), or uses a misleading scale
+
+**After fact-check — Rejection Protocol:**
+- **Minor errors** (1-2 wrong numbers, fixable): Fix the specific numbers in the post and chart. Document what was changed.
+- **Major errors** (3+ wrong data points, chart data largely fabricated, wrong thesis based on incorrect data): **REJECT the post entirely.** Delete the file and re-launch the Step 3 agent for that post with corrected research data. The regenerated post must pass fact-check again.
+- **Unverifiable claims**: Either remove the claim or clearly attribute it (e.g., "according to analyst estimates"). If >30% of a post's key claims are unverifiable, REJECT and regenerate.
+- A post that fails fact-check twice should be skipped entirely — report to the user that the topic lacked reliable data.
 
 ### Step 4: Retrospective — Review Past Posts & Skill
 
