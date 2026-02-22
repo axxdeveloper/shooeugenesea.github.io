@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Framework
+title: 框架
 permalink: /framework/
 ---
 

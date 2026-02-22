@@ -1,12 +1,12 @@
 ---
 layout: single
-title: About
+title: 關於
 permalink: /about/
 ---
 
 A personal blog covering software engineering and macroeconomic investing, with 340+ posts since 2013.
 
-## Tech
+## 技術
 
 - **Go** — concurrency, channels, goroutines, interfaces
 - **Java** — concurrency (ForkJoinPool), Spring Boot, JPA, memory management
@@ -18,7 +18,7 @@ A personal blog covering software engineering and macroeconomic investing, with 
 - **LeetCode** — algorithm problem solutions
 - **LLM / AI** — vLLM benchmarking, Claude Code
 
-## Macro
+## 總經
 
 Thinking frameworks for navigating market uncertainty — structural analysis over predictions, conditional reasoning over directional calls.
 
@@ -27,7 +27,7 @@ Thinking frameworks for navigating market uncertainty — structural analysis ov
 - **失效條件** — specific, verifiable thresholds that invalidate the current framework
 - **修正文** — when assumptions break, we update the framework and explain what we learned
 
-Topics span Fed policy, government data, geopolitics, AI/tech economics, and cross-market connections. See [Framework](/framework/) for the current macro regime view.
+Topics span Fed policy, government data, geopolitics, AI/tech economics, and cross-market connections. See [框架](/framework/) for the current macro regime view.
 
 ## History
 

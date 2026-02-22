@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Tags
+title: 標籤
 permalink: /tags/
 ---
 
 <div id="main" role="main">
   <div class="archive">
 
-      <h2 class="archive__subtitle">Macro</h2>
+      <h2 class="archive__subtitle">總經</h2>
       {% assign macro_tags = "" | split: "" %}
       {% for tag in site.tags %}
         {% assign tag_name = tag[0] %}
@@ -48,7 +48,7 @@ permalink: /tags/
         </ul>
       {% endfor %}
 
-      <h2 class="archive__subtitle" style="margin-top: 3rem;">Tech</h2>
+      <h2 class="archive__subtitle" style="margin-top: 3rem;">技術</h2>
       {% assign tech_tags = "" | split: "" %}
       {% for tag in site.tags %}
         {% assign tag_name = tag[0] %}
@@ -91,4 +91,3 @@ permalink: /tags/
 
   </div>
 </div>
-

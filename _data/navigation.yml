@@ -1,11 +1,11 @@
 main:
-  - title: "Tech"
+  - title: "技術"
     url: /tech/
-  - title: "Macro"
+  - title: "總經"
     url: /macro/
-  - title: "Framework"
+  - title: "框架"
     url: /framework/
-  - title: "Tags"
+  - title: "標籤"
     url: /tags/
-  - title: "About"
+  - title: "關於"
     url: /about/

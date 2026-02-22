@@ -1,6 +1,6 @@
 ---
 layout: category
-title: "Macro"
+title: "總經"
 permalink: /macro/
 taxonomy: macro
 ---

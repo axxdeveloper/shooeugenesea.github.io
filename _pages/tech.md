@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Tech"
+title: "技術"
 permalink: /tech/
 ---
 
