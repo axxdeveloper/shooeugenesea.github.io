@@ -24,6 +24,8 @@ lang: zh-TW
 
 第一個解釋角度是財政擴張的規模與起跑線差異。高市內閣的 FY2026 預算創下 [122.3 兆日圓紀錄](https://www.kurdistan24.net/en/story/883645/japan-cabinet-approves-record-1223-trillion-budget-amid-rising-debt-costs-and-defense-buildup)，較 FY2025 增加 7.1 兆，其中債務還本付息達 31.3 兆日圓——占預算約 25%，這個數字本身就超過經濟刺激方案（21.3 兆）與國防預算（9 兆）的總和。再加上食品消費稅暫停兩年（約 5 兆年稅收缺口）、所得稅減免約 1.2 兆、廢除汽油稅、延續電力與天然氣補貼，[東亞論壇 (East Asia Forum) 直言「Sanaenomics 的財政算術對不起來」](https://eastasiaforum.org/2025/12/08/sanaenomics-fiscal-arithmetic-doesnt-add-up/)。補充預算 18.3 兆日圓規模與 [FY2022 新冠疫情時期相當](https://www.ssga.com/us/en/institutional/insights/sanae-taikichi-and-japan-new-direction)。
 
+<div style="clear: both;"></div>
+
 ### Sanaenomics 的財政帳本
 
 <div style="max-width: 600px; margin: 2em auto;">
@@ -94,6 +96,8 @@ new Chart(document.getElementById('macroChart10'), {
 
 三個角度當中，目前數據最支持的是第一個：財政規模與起跑線差異。安倍時代的低利率環境已不復存在，而 Sanaenomics 的新增財政負荷直接加重在本已膨脹的債務償付壓力之上——122.3 兆預算中超過四分之一用於償還過去的債務，財政乘數能否大於債務成本上升的拖累，歷史上在高債務水準下的勝率並不高。
 
+<div style="clear: both;"></div>
+
 ## 分水嶺
 
 如果 BOJ 維持緩慢升息至年底 1.0%、10 年期 JGB 殖利率維持 2.5% 以下，→「高市交易」屬於溫和正向，名目成長提振足以消化財政擴張的成本，日圓在 150-158 區間穩定，日經在 55,000-62,000 區間整理。這是目前數據支持的路徑：BOJ 2025 年 12 月升至 0.75% 後並未加速，選後利多短暫壓低 10 年期殖利率至約 2.15%。
@@ -101,6 +105,8 @@ new Chart(document.getElementById('macroChart10'), {
 如果企業治理改革持續推進、AI 資本支出帶動實質盈利成長（而非僅靠日圓貶值的匯率效果），→ 日經漲勢有基本面支撐，防衛與半導體類股的外資流入具結構性而非投機性。觀察指標是 4-5 月 Q4 財報季企業實際盈利是否跟上股價漲幅，以及外資淨買入是否從 2025 年的 380 億美元節奏延續。
 
 如果 10 年期 JGB 殖利率突破 2.5% 持續 4 週以上，或中國擴大對日制裁至稀土出口管制，→ 需全面重評「高市交易」的結構。殖利率失控意味債務償付壓力加速惡化（31.3 兆的還本付息只會更高），而稀土制裁將直接衝擊 Rapidus 與防衛產業的供應鏈基礎。日圓若因此崩至 160 以上，將觸發干預危機。
+
+<div style="clear: both;"></div>
 
 ## 結語
 

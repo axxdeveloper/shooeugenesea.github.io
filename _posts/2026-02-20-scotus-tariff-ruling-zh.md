@@ -88,6 +88,8 @@ new Chart(document.getElementById('macroChart9'), {
 
 第三層解釋是財政衝擊與退稅困局共同放大了不確定性。CBP 數據顯示 IEEPA 關稅在 2025 年共徵收約 [$1,420 億](https://budgetlab.yale.edu/research/state-us-tariffs-february-20-2026)，最高法院明確表示政府「[可能被要求退還數十億美元](https://supreme.justia.com/cases/federal/us/607/24-1287/)」，但刻意未指定退稅機制——退稅須經[國際貿易法院](https://www.swlaw.com/publication/supreme-court-strikes-down-ieepa-tariffs-the-refund-process-will-be-messy/)逐案審理，TD Securities 估計整個流程需 [12–18 個月](https://fortune.com/2026/02/21/tariff-refunds-legal-fight-trade-courts-companies-importers-consumers/)，[Fortune 報導](https://fortune.com/2026/02/21/tariff-refunds-legal-fight-trade-courts-companies-importers-consumers/)更直言「美國企業面臨的是長達五年的法律戰」，而退稅對象是進口商，不是消費者——已轉嫁的成本不會自動退回。與此同時，[CRFB 估算](https://www.crfb.org/blogs/scotus-tariff-ruling-could-add-24-trillion-debt)判決將淨減少 $1.9 兆收入、增加 $2.4 兆國債至 FY2036，債務占 GDP 比率將從 CBO 基準的 120% 攀升至 [125%](https://www.crfb.org/blogs/scotus-tariff-ruling-could-add-24-trillion-debt)。CBO 假設 10 年期殖利率降至 3.6% 而市場目前定價 4.1%——若利率假設失準再疊加關稅收入消失，實際債務路徑比官方預測更陡。[Tax Policy Center 估算](https://taxpolicycenter.org/taxvox/supreme-court-ruling-ieepa-tariffs-could-ease-cost-burdens-less-you-might-think)取消 IEEPA 關稅可降低家庭年均成本 $1,200–1,500，但 Section 122 的 15% 立即接力、Section 232 鋼鋁 50%/汽車 25% 完好無損，[Yale Budget Lab](https://budgetlab.yale.edu/research/state-us-tariffs-february-20-2026) 估計剩餘關稅仍使 GDP 永久縮小 0.1%（約 $300 億/年），失業率年底前上升 0.3 個百分點。Pangaea Policy 創辦人 Terry Haines 的[判斷](https://ca.finance.yahoo.com/video/scotus-tariff-ruling-markets-understand-161014286.html)或許最精準：「投資人應準備好面對基於炒作的過度反應，接著很快回落到現實」——因為「關稅哪兒也不會去」(tariffs are here to stay)。
 
+<div style="clear: both;"></div>
+
 ## 分水嶺
 
 如果 Section 122 在 150 天內被法院以「國際收支赤字」定義不成立為由推翻，→ 關稅出現真空窗口，Section 232/301 調查尚未完成、無法接力，進口成本短期顯著下降，但政策混亂升級將推高波動率——這是關稅結構全面重估的信號。
@@ -95,6 +97,8 @@ new Chart(document.getElementById('macroChart9'), {
 如果 150 天倒數期間（約至 7 月 19 日）商務部加速完成 Section 232/301 調查並建立新關稅，→ Section 122 只是過渡工具，長期關稅結構在不同法律基礎上重建。市場短期利多被證明只是過渡，關稅的覆蓋率和稅率可能回升至接近 IEEPA 時期水準——判決的實質效力被程序繞過。
 
 如果國會在 150 天內通過新法案直接授權總統徵收關稅，→ 最高法院判決的法律意義被立法推翻，回到比 IEEPA 更穩固的關稅框架。這是結構性改變最劇烈的路徑——行政權與立法權合流意味著未來的法律挑戰空間大幅壓縮，需要全面重評關稅對通膨和財政的長期影響。
+
+<div style="clear: both;"></div>
 
 ## 結語
 
