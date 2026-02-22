@@ -4,6 +4,7 @@ title: "CBO 利率假設的致命盲點：3.6% 與 4.1% 之間藏著每年兩千
 date: 2026-02-20 09:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, bonds]
+macro_kind: long
 description: "CBO 基準預測假設 10 年期殖利率將於 2027 年降至 3.6%，但市場定價停在 4.1%。這 50 bps 的落差意味著十年利息支出可能被低估 1.5–2 兆美元，而若 TCJA 延長，債務路徑比報告數字再高出 4.6 兆。"
 lang: zh-TW
 ---

@@ -4,6 +4,7 @@ title: "GDP 成分拆解：聯邦支出逆風下的消費韌性與投資分化"
 date: 2026-02-21 09:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, gdp]
+macro_kind: long
 description: "BEA Q4 GDP 為 1.4%，主要受政府支出反轉拖累；消費與企業投資呈現分化。本文用基準/上行/下行情境評估 SPY、XLI、TLT、XLV 的配置調整。"
 lang: zh-TW
 ---

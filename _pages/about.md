@@ -20,11 +20,14 @@ A personal blog covering software engineering and macroeconomic investing, with 
 
 ## Macro
 
-- **Market Commentary** — Fed policy, inflation, GDP, stagflation analysis
-- **Government Data Deep-Dives** — CBO projections, CPI/PCE, yield curve, employment
-- **Geopolitics** — US-China, Middle East, EU/BOJ policy, Taiwan Strait — and their market impact
-- **AI & Technology** — capex cycles, semiconductor supply chains, sector disruption
-- **ETF Analysis** — SPY, TLT, GLD, QQQ, SMH and more — with risk/reward framing
+Thinking frameworks for navigating market uncertainty — structural analysis over predictions, conditional reasoning over directional calls.
+
+- **因果拆解** — multiple explanations with evidence, identifying the most supported path
+- **分水嶺** — observable conditions that would change the structural picture
+- **失效條件** — specific, verifiable thresholds that invalidate the current framework
+- **修正文** — when assumptions break, we update the framework and explain what we learned
+
+Topics span Fed policy, government data, geopolitics, AI/tech economics, and cross-market connections. See [Framework](/framework/) for the current macro regime view.
 
 ## History
 

@@ -1,111 +1,179 @@
 ---
-description: Generate macro/investing blog posts in Traditional Chinese — default 2-4 balanced posts (quality over quantity) or 1 deep-dive on a user-specified topic
+description: Generate macro blog posts in Traditional Chinese — 1 post daily (thinking frameworks, not predictions): Monday long-form, other days short-form or brief
 ---
 
 # /macro-post
 
-Generate blog posts in Traditional Chinese anchored to economic and market impact. Supports two modes:
+Generate blog posts in Traditional Chinese anchored to economic and market impact. The blog sells **thinking frameworks**, not predictions or allocation advice.
 
-- **Default mode** — 2-4 posts (quality over quantity) covering macro commentary, government data deep-dive, politics, and AI/technology. Style A (觀點文) is the portfolio anchor with full ETF analysis; other styles focus on deep analysis with lightweight 筆記 conclusions.
-- **Topic mode** — 1 deep-research post on a user-specified topic
+- **Default mode** — 每日 1 篇。週一固定長篇，其餘日短篇或快報。Every post uses a unified 4-section skeleton.
+- **Topic mode** — 1 deep-research post on a user-specified topic (long-form by default)
 
 ## Usage
 
-- `/macro-post` — default mode: auto-select topics, produce 2-4 posts (A/B/C/D styles, quality over quantity)
-- `/macro-post "tariff impact on bonds"` — default mode with topic hint (2-4 posts)
+- `/macro-post` — 今日 1 篇（自動判斷長篇/短篇/快報）
+- `/macro-post "tariff impact on bonds"` — default mode with topic hint
 - `/macro-post 我想要一篇關於「商業不動產 CMBS 到期牆」的深度研究` — topic mode: 1 deep-research post
 
 **Mode detection rule:** If the user's message explicitly requests a specific topic for a single article (e.g., "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…"), enter **topic mode**. Otherwise, use **default mode**.
 
-## Editorial Objective (Default)
+## Editorial Objective
 
-Default output should prioritize **neutral, evidence-weighted analysis** for **medium/long-term investors**, not short-term fear/greed trading narratives.
+Output should position the blog as a **rational safe haven** readers instinctively turn to during market volatility. Prioritize **neutral, evidence-weighted structural analysis** for readers who want to think clearly, not be told what to do.
 
-- Present both upside and downside mechanisms, not only risk escalation
-- Prefer measurable allocation/rebalancing guidance over aggressive directional calls
-- Use restrained language; avoid sensational framing unless explicitly quoting a source
+- Present causal frameworks with multiple explanations, not single-narrative conclusions
+- Use conditional reasoning (if/then), not probability-weighted scenarios
+- ETF tickers may appear as exposure-mechanism examples, never as allocation advice
+- Prefer restrained language; avoid sensational framing unless explicitly quoting a source
+- Separate what you know from what you infer; make the boundary visible
 
-## Post Styles
+## Post Structure (Unified Skeleton)
 
-Default mode produces **2-4 posts** (from styles A/B/C/D, skipping styles without quality topics). Style A is always included as the portfolio anchor. Topic mode produces **one post** (Style E).
+All posts share a single 4-section skeleton. No style labels. The descriptive title in section 2 and the presentation method (comparison table / counter-evidence / dilemma decomposition) may vary, but the 4-section structure is fixed.
 
-### Style A: Commentary (觀點文) — Portfolio Anchor
+### 1. 開場：市場現象 + 核心疑問
 
-The **only** style that includes full ETF analysis and scenario framework. This post serves as the portfolio-level synthesis: it connects the themes from Style B/C/D posts into a unified investment view. Other styles focus on deep analysis; Style A translates analysis into allocation.
+What is everyone confused about? What single question does this post answer?
+
+State the core question (must end with `？`). All subsequent sections must serve this question — if a paragraph doesn't, delete it or split it to another post.
+
+### 2. [Descriptive Title]：因果拆解（主體）
+
+2-3 possible explanations for the phenomenon, each with evidence. Point out which one is currently most supported by data.
+
+- Chart.js chart (see Chart Guidelines below)
+- Presentation may vary (comparison table / counter-evidence method / dilemma decomposition), but the section structure is fixed
+- The descriptive title must reflect the post's specific content — never reuse the same generic title across posts
+
+### 3. 分水嶺
+
+What conditions, if met or broken, would change the structural picture?
+
+Use conditional reasoning (no probabilities):
+- 如果 [observable condition A]，→ result description（目前數據支持的路徑）
+- 如果 [observable condition B]，→ result description（結構轉變信號）
+- 如果 [observable condition C]，→ result description（需要全面重評）
+
+### 4. 結語
+
+**Core judgment blockquote** (mandatory, placed first in 結語):
+```
+> **核心判斷：** 一句可分享的框架
+```
+
+**Invalidation conditions** (mandatory, standardized table):
+
+| Metric | Threshold | Window | Implication |
+|--------|-----------|--------|-------------|
+| [metric name] | [threshold + continuity requirement] | [observation period + next data point date] | [framework-level reassessment, not trading instruction] |
+
+Rules for invalidation table:
+- 2-4 rows per post (avoid catch-all lists)
+- Threshold must include continuity duration or count (verifiable)
+- Window must include observation period and ideally the next data release date
+- Implication must be a framework-level reassessment, not a trading instruction
+
+**What to watch next** — 2-3 variables
+
+### 三級篇幅制
+
+| 級別 | 字數 | 因果拆解 | 分水嶺 | 圖表 | 失效條件 | 使用時機 |
+|------|------|----------|--------|------|----------|----------|
+| **長篇** | 900-1200 | 3 種解釋 | 完整 3 條 | 必須 | 2-4 條 | 每週一固定；或重大數據日 |
+| **短篇** | 600-800 | 2 種解釋 | 3 條（精簡） | 必須 | 2-3 條 | 有明確題材的一般日 |
+| **快報** | 350-550 | 1 種解釋（最可能的）+ 簡述替代解釋 | 2 條 | 可選 | 1-2 條 | 低新聞日、週末、延續性追蹤 |
+
+**快報的骨架仍是 4 段**（開場→因果拆解→分水嶺→結語），但每段壓縮：
+- 開場：1-2 句 + 核心問題
+- 因果拆解：1 個主要解釋 + 一句帶過替代可能
+- 分水嶺：2 個 if/then
+- 結語：核心判斷 + 1-2 條失效條件 + 1 個觀察變數
+
+**快報的研究深度**：research depth gate 降為 2/5（至少命中 primary source + 一個其他層），允許 fewer web searches（3-5 instead of 5-8）。
+
+### 週節奏
+
+**時間口徑：** 以部落格 timezone `Asia/Taipei` (UTC+8) 決定「今天是週幾」與發文日期，避免跨時區誤判週一。
+
+| 日 | 預設篇幅 | 說明 |
+|----|----------|------|
+| 週一 | 長篇 | 本週框架重設。綜合上週數據與事件，建立本週觀察框架。 |
+| 週二-五 | 短篇 | 當日最值得拆解的一個題材。有題材就短篇，沒有好題材就降為快報。 |
+| 週六-日 | 快報 | 預設快報。除非週末出現重大突發事件才升級為短篇。 |
+| 任一天 | crisis / correction | 取代當日預設（仍只出 1 篇）。 |
+
+**升降級規則：**
+- 重大數據日（Fed 決議、非農、CPI、GDP）：當日預設至少短篇；若在週二-五 → 升級為長篇
+- 短篇日無好題材 → 降級為快報
+- 快報日遇突發事件 → 升級為短篇
+- 任何日 crisis mode 觸發 → 直接產出危機文（500-800 字），取代當日預設
+- Step 0.5 發現失效條件觸發 → 直接修正文取代當日預設
+
+### Tags
+
+- Fixed base tag: `[macro]`
+- Tag order: `[macro, <primary_topic>, ...]` — primary_topic in second position for topic identification
+- Topic tags by content: `fed`, `bonds`, `geopolitics`, `ai`, `semiconductor`, `taiwan`, `gold`, `employment`, `fiscal`, `china`, `tariff`, `energy`, etc.
+- `etf` tag: only when the post specifically discusses ETF mechanisms (not just because a ticker is mentioned)
+- Special tags: `correction` (correction posts), `crisis` (crisis posts)
+
+## Special Post Types
+
+### Correction Post (修正文) — 400-600 words
+
+Triggered when Step 0.5 detects that a recent post's invalidation condition has been triggered by new data. Correction posts take priority over regular posts.
+
+**Tags:** `[macro, correction, <primary_topic>]`
+**Front matter:** `macro_kind: correction`
 
 **Structure:**
-- **總經快照** — 2-3 sentences: Fed rate, key data, market backdrop
-- **重點發展** — 3-5 paragraphs building the thesis across multiple data points. Each paragraph: claim → evidence → implication
-- **市場數據圖表** — Chart.js chart (market data or gov data)
-- **三種情境** — Base / Upside / Downside with probabilities summing to 100%, each with a named invalidation trigger
-- **ETF 影響分析** — Equities, Bonds, Alternatives — each with qualitative risk/reward assessment and the conditions under which the position works or fails (no short-term price targets)
-- **後續觀察重點** — 2-3 upcoming catalysts
 
-**Word count:** 1000-1400 words.
+Core question (opening): 「[Which assumption needs re-examination?]」
 
-### Style B: Deep-Dive (數據文)
+**當初的判斷** — What the original post said, what assumptions it relied on
 
-One government data chart as the centerpiece. Everything explains what the chart shows and why it matters. **No full ETF analysis or scenario framework** — investment implications are handled solely via the 筆記 section.
+**哪個假設失效** — Which invalidation condition was triggered (use standardized table format), what the evidence is
 
-**Structure:**
-- **總經快照** — 2-3 sentences: Fed rate, the specific data release, market context
-- **數據解讀** — Chart.js chart first, then 3-5 paragraphs analyzing the data. Each paragraph: 事實 → 推論
-- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
-- **後續觀察** — Next data releases, what would change the thesis
+**新的結構** — Updated causal framework + new invalidation conditions
 
-**Word count:** 700-900 words.
+**可泛化的教訓** — What methodological lesson this correction teaches
 
-### Style C: Geopolitics (國際政經文)
+> **核心判斷：** [The essence of the correction — placed at the end because the lesson itself is the judgment]
 
-International and domestic political events that directly affect the global economy and markets. Scope includes **US domestic policy, US-China relations, Middle East tensions, EU/UK trade policy, central bank actions worldwide (ECB, BOJ, PBoC), Taiwan Strait, energy geopolitics, and sanctions regimes.** Must connect politics → economic mechanism → market impact. **No full ETF analysis or scenario framework** — investment implications are handled solely via the 筆記 section.
+**Front matter addition** — add this HTML banner at the top of the post body (no layout change needed):
+```html
+<div style="padding: 0.75em 1em; margin-bottom: 1.5em; background: rgba(234,179,8,0.15); border-left: 4px solid rgba(234,179,8,0.6); border-radius: 4px; font-size: 0.95em;">
+⚠️ 本文為修正文，更新先前 <a href="[link to original post]">[original post title]</a> 的判斷框架。
+</div>
+```
 
-**Structure:**
-- **國際政經背景** — 2-3 sentences: what happened, which countries/actors are involved, current status
-- **經濟傳導機制** — Chart.js chart showing the economic data affected, then 3-5 paragraphs. Each paragraph: 事實 → 推論. Must cover:
-  - What is the political event? Which countries are involved?
-  - Through what channel does it affect the global economy? (tariffs → import prices → CPI, sanctions → oil supply → energy prices, geopolitics → supply chain → semiconductor shortage, capital flows → FX → emerging markets, etc.)
-  - How big is the impact? Quantify with data.
-  - What is the market pricing in vs. what could actually happen?
-- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
-- **後續觀察** — Next political milestones: summits, votes, court rulings, military deadlines, elections
+### Crisis Mode (危機文) — 500-800 words
 
-**Word count:** 700-900 words.
+**Trigger conditions (any one):**
+- VIX > 30 sustained for 2+ trading days
+- S&P 500 single-day drop > 3%
+- Major geopolitical escalation (military action, sovereign default, emergency central bank measures)
 
-### Style D: AI & Technology (科技文)
+**Fallback** (if no real-time market data): Use news density from the past 48 hours — if mainstream media headlines densely feature crash/rout/liquidity/emergency central bank measures, or if research agents report a clear shift to panic tone. If the workflow has web fetch, try to get latest VIX and SPX daily change first.
 
-AI and technology developments that have significant economic impact — capex cycles, labor market disruption, productivity gains, energy demand, sector rotation. Must connect tech → economic impact → market implications. **No full ETF analysis or scenario framework** — investment implications are handled solely via the 筆記 section.
+Only produce ONE post. Overrides regular output.
+
+**Tags:** `[macro, crisis, <primary_topic>]`
+**Front matter:** `macro_kind: crisis`
 
 **Structure:**
-- **科技動態** — 2-3 sentences: the key AI/tech development, who's involved, scale of impact
-- **經濟影響分析** — Chart.js chart showing economic data related to the tech story, then 3-5 paragraphs. Each paragraph: 事實 → 推論. Must cover:
-  - What is the technology development? (earnings, capex plans, product launches, adoption data)
-  - How does it affect the real economy? (jobs, productivity, energy demand, capital allocation)
-  - Which sectors are being disrupted and which are benefiting?
-  - How are valuations reflecting (or not) the AI impact?
-- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
-- **後續觀察** — Upcoming earnings, product launches, regulatory decisions
 
-**Word count:** 700-900 words.
+Core question (opening): 「[What type of volatility is this? Has the structure changed?]」
 
-### Style E: Topic Research (主題研究文) — Topic Mode Only
+> **核心判斷：** [One-sentence classification — placed first because this is what readers need in the first second]
 
-General-purpose deep-research style, not constrained to any single category (A/B/C/D). Used when the user specifies a topic for a single deep-dive post.
+**事件分類** — Liquidity event / earnings shock / valuation reset / exogenous shock
 
-**Structure:**
-- **主題背景** — 2-3 sentences: what the topic is, why it matters now, what triggered the investigation
-- **深度分析** — Chart.js chart + 4-6 paragraphs covering:
-  - Current state with quantified data
-  - Historical context or trajectory
-  - Key drivers and mechanisms
-  - Risks and opposing views
-  - Cross-market / cross-asset implications
-  - 筆記 (your take): synthesize facts vs inference, balanced assessment of whether the market is over- or under-pricing the thesis
-- **投資影響** — ETF/asset implications with scenario framework (base/upside/downside)
-- **後續觀察** — Monitoring signals and upcoming catalysts
+**結構是否改變** — Check existing posts' invalidation conditions (standardized table format, item by item): which are triggered, which still hold
 
-**Word count:** 1000-1400 words.
+**現在該看什麼** — 3 variables, ranked by signal-to-noise ratio, each with: current value, threshold, what a breach means
 
-**Tags:** `[macro, etf, investing]` + topical tags based on the subject.
+**不需要做什麼** — Why the structure may still be intact (counter-panic reasoning)
 
 ## Execution Steps
 
@@ -116,20 +184,37 @@ Parse the user's input to determine which mode to use:
 - If the user explicitly requests a specific topic for a single article (keywords: "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…", or similar phrasing indicating a single deep-dive), enter **Topic Mode** → skip to **Topic Mode Steps** below.
 - Otherwise → **Default Mode** → proceed with Steps 1-5 below.
 
+**Crisis mode check:** Before proceeding with either mode, check whether crisis conditions are met (see Special Post Types > Crisis Mode). If crisis conditions are detected, override normal output and produce only a crisis post.
+
 ### Step 0.5: Publication Frequency & Quality Gate (MANDATORY)
 
 Before generating any new posts, assess whether it's the right time to publish. This step prevents quality degradation from over-publishing.
 
-**1. Check publishing cadence.** Count how many macro posts were published in the last 3 days (read `_posts/` filenames). Apply these rules:
-- **≤ 4 posts in last 3 days** → proceed normally
-- **5-8 posts in last 3 days** → proceed only if there's a genuine breaking event or materially new data. On quiet days, skip entirely and tell the user: "最近 3 天已發 N 篇，建議等待新數據或事件再發文。"
-- **> 8 posts in last 3 days** → STOP. Tell the user: "最近 3 天已發 N 篇，密集發文會稀釋品質與讀者注意力。建議下次發文至少間隔 1 天，除非有重大突發事件。" Only proceed if the user explicitly confirms a breaking event justifies it.
+**1. Determine today's format tier (週節奏).** Check what day of the week it is (use `Asia/Taipei` timezone) and set the default format:
+- **週一** → 長篇（框架重設日）。
+- **週二-五** → 短篇。如遇重大數據發布（Fed 決議、非農、CPI、GDP）→ 升級為長篇。無好題材 → 降為快報。
+- **週六-日** → 快報。除非週末出現重大突發事件才升級為短篇。
+- **任何日 crisis mode 觸發** → 危機文（500-800 字），取代當日預設。
+- **任何日失效條件觸發** → 修正文（400-600 字），取代當日預設。
 
-**2. Spot-check existing post quality.** Read the 2-3 most recent posts' 筆記 sections. Check for these quality red flags:
+**週一長篇補缺檢查：** 若今天是週一且未觸發 crisis/correction：
+- 檢查 `_posts/` 中上一個週一日期的 macro 文章是否有 `macro_kind: long`
+- 若舊文缺少 `macro_kind`（尚未回填），以字數 > 900 視為長篇
+- 若上週一未發長篇 → 本週一強制長篇
+
+**2. Check publishing cadence (7-day rolling window).** Count how many macro posts were published in the last 7 days (read `_posts/` filenames, only count files whose `categories` include `macro`). Apply these rules:
+- **≤ 7 posts in last 7 days** → proceed normally (daily pace is the target)
+- **8-9 posts in last 7 days** → proceed only if there's a genuine breaking event or materially new data. Tell the user: "最近 7 天已發 N 篇（超過每日一篇節奏），僅在重大事件時額外發文。"
+- **≥ 10 posts in last 7 days** → STOP. Tell the user: "最近 7 天已發 N 篇，密集發文會稀釋品質與讀者注意力。建議跳過今天，除非有重大突發事件。" Only proceed if the user explicitly confirms a breaking event justifies it.
+- **Same-day duplicate check**: If a macro post was already published TODAY (same date in `_posts/`), skip. 單日永遠只 1 篇 — crisis/correction 會取代當日預設，不加發第二篇。
+
+**3. Check invalidation conditions.** Read the 2-3 most recent posts' invalidation condition tables. Cross-reference against latest available data (use research agents if needed). If any invalidation condition has been triggered by new data, **prioritize producing a correction post** (see Special Post Types > Correction Post).
+
+**4. Spot-check existing post quality.** Read the 2-3 most recent posts. Check for these quality red flags:
 - **Template voice** — bold labels like "**事實：**", "**推論：**", "**一句話結論：**" appearing as fill-in-the-blank fields instead of natural prose
-- **Mechanical ETF lists** — every ETF discussed with identical "持有邏輯是…失效條件是…" structure
-- **Conclusion convergence** — multiple recent posts reaching the same takeaway (e.g., "be cautious, buy GLD")
-- **Generic analysis** — statements an experienced investor would consider obvious (e.g., "SPY faces valuation compression if growth slows")
+- **Directive language** — "建議/應該/加碼/減碼/買進/賣出/佈局/進場" appearing outside of exposure-mechanism context
+- **Conclusion convergence** — multiple recent posts reaching the same takeaway
+- **Generic analysis** — statements an experienced investor would consider obvious
 
 If 2+ red flags are found in recent posts, report them to the user and ask whether to fix existing posts before generating new ones. Quality of existing content should take priority over volume of new content.
 
@@ -137,7 +222,14 @@ If 2+ red flags are found in recent posts, report them to the user and ask wheth
 
 ### Step 1: Research via Agents
 
-Launch **six** research agents in parallel using the Task tool (subagent_type: `general-purpose`):
+For **長篇/短篇**, launch **six** research agents in parallel using the Task tool (subagent_type: `general-purpose`). For **快報**, launch only **three** agents: Macro Data Agent, Market Context Agent, and a third agent selected by the following hardcoded mapping based on the topic's primary_topic tag:
+
+| primary_topic 屬於 | 第三個 agent |
+|---|---|
+| `fed`, `bonds`, `gdp`, `cpi`, `pce`, `employment`, `fiscal` | Gov Reports Agent |
+| `geopolitics`, `tariff`, `china`, `taiwan`, `japan`, `middleeast`, `europe`, `sanctions` | Geopolitics Agent |
+| `ai`, `technology`, `semiconductor`, `cloud`, `energy` | AI/Tech Agent |
+| 其他 / 不確定 | Sector Rotation Agent |
 
 | Agent | Task | What to return |
 |-------|------|----------------|
@@ -168,14 +260,13 @@ If an agent's output contains zero substantive entries under "Primary source fin
 
 Before picking topics, do two things:
 
-**1. Read previous posts.** Read the titles, descriptions, and first paragraphs of the most recent 1-3 days of posts in `_posts/`. Build a list of topics and key data points already covered. For example:
+**1. Read previous posts.** Read the titles, descriptions, tags, and first paragraphs of the most recent 7 days of posts in `_posts/`. Build a list of topics and primary_topic tags already covered. For example:
 
 ```
-Previous posts (2026-02-20):
-- A: Stagflation signal (GDP 1.4%, Core PCE 3.0%, Fed dilemma)
-- B: CBO debt trajectory (debt/GDP 101%→120%)
-- C: Four geopolitical risks (Hormuz, BOJ, EU gas, Taiwan)
-- D: AI capex $6,350B + SaaS disruption
+Previous posts (last 7 days):
+- 2026-02-20: GDP 放緩是需求崩塌還是財政干擾？ [macro, gdp, fiscal]
+- 2026-02-19: 非科技板塊的漲勢是輪動還是溢出？ [macro, rotation, ai]
+- 2026-02-18: 台海半導體風險的真實傳導路徑 [macro, geopolitics, semiconductor, taiwan]
 ```
 
 **2. Classify the news day:**
@@ -183,9 +274,14 @@ Previous posts (2026-02-20):
 - **Breaking news day**: A major event happened TODAY or YESTERDAY that wasn't covered in previous posts (e.g., surprise rate decision, military action, earnings shock, SCOTUS ruling, unexpected data release). In this case, cover the breaking news — overlap with adjacent topics is acceptable because it's genuinely new.
 - **Quiet day**: No major new events since the last post batch. The same stories from yesterday are still dominating headlines with no material updates. In this case, switch to **discovery mode** — actively seek under-the-radar topics that provide reader value beyond rehashing yesterday's takes.
 
-### Step 2: Pick Four Topics
+### Step 2: Pick Today's Topic
 
-From all agent results, pick **four different topics** — one for each style. The selection strategy depends on the day type from Step 1.5.
+From all agent results, pick **one topic** for today's post. The format tier (長篇/短篇/快報) was determined in Step 0.5 — choose a topic whose complexity matches the format. 單日永遠只 1 篇；crisis/correction 取代當日預設，不加發第二篇。The selection strategy depends on the day type from Step 1.5.
+
+**選題需匹配今日篇幅：**
+- **長篇**（週一/重大數據日）：允許更宏觀、更整合的題材，但仍只有一個核心問題
+- **短篇**：題材要能在 600-800 字內自洽
+- **快報**：題材必須是「延續追蹤 / 低新聞日的框架校準」，避免硬湊新故事
 
 #### Anti-Red-Ocean Rule (Headline Differentiation)
 
@@ -216,11 +312,11 @@ Before finalizing any topic, assess whether the topic is **saturated** — i.e.,
 
 #### For breaking news days:
 
-Cover the breaking event in the most fitting style. Other styles should find angles NOT covered by previous posts — even if they reference the same event, the thesis and primary data must be different.
+Cover the breaking event with 1 post. 不出第二篇。
 
 #### For quiet days (discovery mode):
 
-Apply a priority hierarchy for each style to find topics that provide genuine new value to readers:
+Apply a priority hierarchy to find topics that provide genuine new value to readers:
 
 1. **New data releases** not yet covered (e.g., a BLS/BEA/Fed report dropped today that wasn't in previous posts)
 2. **Emerging risks** the market is underpricing — things NOT in current headlines (e.g., commercial real estate stress, consumer credit delinquencies rising, a country's bond auction failing, corporate debt refinancing wall)
@@ -228,38 +324,56 @@ Apply a priority hierarchy for each style to find topics that provide genuine ne
 4. **Contrarian re-evaluation** of a consensus view (e.g., "everyone says stagflation, but here's why the data doesn't support it yet" — only if the contrarian case has real data behind it)
 5. **Cross-market connections** others aren't making (e.g., how Japan's rate hike is affecting EM carry trades, how DOGE spending cuts flow through to specific state economies)
 
-Per-style guidance:
-1. **Commentary**: The broadest macro story with genuine new insight — either a breaking event or a discovery-mode angle
-2. **Deep-dive**: The government report with the most complete, chartable numbers (5+ data points from BLS, BEA, Fed, Treasury, or CBO). On quiet days, look for reports that dropped recently but were overshadowed by bigger news
-3. **Geopolitics**: The political development with the clearest economic transmission mechanism. On quiet days, look for slow-burn geopolitical shifts (trade negotiations, sanctions regime changes, election dynamics) rather than rehashing yesterday's hot takes
-4. **AI/Tech**: The technology story with the largest real-economy footprint. On quiet days, explore structural angles (labor displacement data, energy grid constraints, semiconductor supply chain, regulatory developments) rather than repeating capex headlines
+#### Deduplication rule (replaces style quotas)
 
-**All four topics must be different.** They can be related but each post must stand alone with its own unique thesis.
+Compare each candidate topic's primary_topic tag against the previous-posts list from Step 1.5:
+- **Consecutive topic repeat**: If the candidate's primary_topic matches the primary_topic of the two most recent consecutive posts → switch to a different topic or produce only 1 post
+- **Same data, same angle = skip.** (e.g., a post from the last 7 days already covered GDP 1.4% + Core PCE stagflation → don't write another stagflation post using the same numbers)
+- **Same event, deeper zoom = OK only if the thesis is fundamentally different.** When building on a previous post, reference it: "上期分析了 AI capex 的 SaaS 衝擊面，本期從現金流角度切入"
+- **Same sector, different story = OK.** (e.g., last post wrote AI capex + SaaS disruption → can write AI labor displacement data, since the thesis and data are entirely different)
 
-**Deduplication rule:** Compare each candidate topic against the previous-posts list from Step 1.5. A topic is **too similar** if it shares >50% of its data points with a post from the last 3 days:
-- **Same data, same angle = skip it.** (e.g., yesterday wrote about GDP 1.4% + Core PCE stagflation → don't write another stagflation post using the same numbers)
-- **Same event, deeper zoom = OK only if the thesis is fundamentally different.** (e.g., yesterday covered Hormuz as 1 of 4 risks → today can deep-dive Hormuz ONLY if the thesis is different, like scenario-based oil price modeling vs. broad risk overview). When building on a previous post, reference it: "上期分析了 AI capex 的 SaaS 衝擊面，本期從現金流角度切入"
-- **Same sector, different story = OK.** (e.g., yesterday wrote AI capex + SaaS disruption → today can write AI labor displacement data, since the thesis and data are entirely different)
-- If a style's best topic overlaps with yesterday, pick the **second-best** topic for that style, or skip the style entirely.
+**Aggressively skip weak topics.** Default output is 1 post at the day's format tier. Apply these skip triggers:
+- **No quality topic:** If there's no meaningful news with economic impact today, produce a 快報 on a continuing theme or skip entirely. A day without a post is better than a filler post.
+- **Conclusion convergence:** If considering multiple angles and they'd arrive at the same takeaway, keep only the stronger one.
+- **Daily default:** 1 post. Crisis/correction 取代當日預設，不加發第二篇。
+- Never force a weak topic — consistency over volume.
 
-**Aggressively skip styles without quality topics.** Default output is 2-4 posts, not always 4. Apply these skip triggers:
-- **No quality topic:** If there's no meaningful news with economic impact for a style this week, skip it.
-- **Conclusion convergence:** After picking topics, check if multiple styles would arrive at the same investment conclusion (e.g., all four say "buy GLD, sell tech"). If 3+ styles converge on the same takeaway, keep only the one with the strongest evidence and skip or merge the others.
-- **Quiet day default:** On quiet days (Step 1.5), default to 2-3 posts. Only produce 4 if there are genuinely 4 differentiated topics.
-- Never force a weak topic — 2 excellent posts beat 4 mediocre ones.
+### Step 2.5: Core Question Definition (MANDATORY)
+
+For each selected topic, define **one core question** that the post will answer. The question must:
+- End with `？`
+- Be specific enough that readers can evaluate whether the post answered it
+- Frame the intellectual tension (not just "what happened?" but "what does it mean?")
+
+Examples:
+- 「非科技板塊的漲勢是真的輪動，還是 AI 的溢出效應？」
+- 「GDP 1.4% 代表需求崩塌還是財政干擾？」
+- 「日銀升息對亞洲套利交易的衝擊被低估了嗎？」
+
+Every subsequent paragraph in the post must serve this question. If a paragraph doesn't contribute to answering the core question, delete it or save it for a separate post.
 
 ### Step 3: Deep Investigation & Post Generation (Parallel Agents)
 
-Launch **one agent per chosen topic** (2-4 agents) in parallel using the Task tool (subagent_type: `general-purpose`). Each agent independently **researches deeply** then **writes the post**.
+Launch **one agent per chosen topic** (typically 1 agent) using the Task tool (subagent_type: `general-purpose`). The agent independently **researches deeply** then **writes the post**.
 
-Each agent receives:
+The agent receives:
 - The **broad research context** from Step 1 (relevant bullet points for its topic)
-- Its **assigned style** (A/B/C/D) with the full structure template from this skill
+- The **core question** from Step 2.5
+- The **format tier** determined in Step 0.5 (長篇/短篇/快報)
+- The **unified skeleton** (開場 → 因果拆解 → 分水嶺 → 結語) from this skill
 - The **Content Rules** and **Chart Guidelines** sections below
 - The **target filename** and front matter template
 
-Each agent must:
-1. **Deep research** — run 5-8 additional web searches focused specifically on its topic. The goal is NOT more data points — it's **deeper data points** that wire services don't cover. Specifically:
+**Research depth by format tier:**
+
+| 篇幅 | Research agents | Web searches | Depth gate |
+|------|----------------|--------------|------------|
+| 長篇 | 6 research + 1 deep | 5-8 深度搜尋 | 3/5 必須通過 |
+| 短篇 | 6 research + 1 deep | 5-8 深度搜尋 | 3/5 必須通過 |
+| 快報 | 3 research（Macro Data + Market Context + 最相關的 1 個）| 3-5 搜尋 | 2/5 必須通過 |
+
+The agent must:
+1. **Deep research** — run web searches focused specifically on its topic (5-8 for 長篇/短篇, 3-5 for 快報). The goal is NOT more data points — it's **deeper data points** that wire services don't cover. Specifically:
 
    **Mandatory research layers (every post must hit at least 3 of 5):**
    - **Primary source** — find and read the actual document, not a summary of it (the Fed statement itself, the CBO table, the treaty text, the earnings transcript quote, the court ruling). Cite page/section numbers when possible.
@@ -268,13 +382,12 @@ Each agent must:
    - **Second-order effects** — who loses? What breaks downstream? What unintended consequences does the headline gloss over? Every policy creates winners and losers; most coverage only covers the winners.
    - **Credible opposing view** — find a **named** expert or institution (full name + affiliation) with a **specific reasoning chain backed by data**. Example: "BCA Research 首席策略師 Peter Berezin argues stagflation risk is overblown because services PCE is driven by lagging shelter costs, which leading indicators (Zillow Observed Rent Index down 1.2% YoY) show will decelerate by Q2." Generic hedges ("部分分析師持保守看法") and unnamed sources ("some analysts disagree") do NOT count. Either find a real contrarian with real reasoning, or explicitly state that consensus is unusually unified and explain why that itself is a signal worth noting.
 
-   **Per-style deep research examples:**
-   - Commentary agent: cross-asset correlations, historical parallels with specific date/magnitude comparisons, institutional positioning data (CFTC, fund flows)
-   - Deep-dive agent: actual government report tables (not news summaries), revisions to prior data, methodology notes, expert commentary on what the headline number misses
-   - Geopolitics agent: diplomatic statements (actual quotes, not paraphrased), trade flow data from UN Comtrade / WTO / bilateral statistics, legal text of agreements, historical precedents with outcome comparisons
-   - AI/Tech agent: earnings call transcript quotes (exact words, not summaries), capex breakdowns by category, adoption survey methodology, energy consumption data from EIA / IEA
+   **Deep research examples by topic type:**
+   - Macro/data topics: actual government report tables (not news summaries), revisions to prior data, methodology notes, cross-asset correlations, historical parallels with specific date/magnitude comparisons, institutional positioning data (CFTC, fund flows)
+   - Geopolitics topics: diplomatic statements (actual quotes, not paraphrased), trade flow data from UN Comtrade / WTO / bilateral statistics, legal text of agreements, historical precedents with outcome comparisons
+   - AI/Tech topics: earnings call transcript quotes (exact words, not summaries), capex breakdowns by category, adoption survey methodology, energy consumption data from EIA / IEA
 
-2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take. The thesis must pass the **"Bloomberg terminal test"**: would someone with a Bloomberg terminal and 10 years of market experience learn something new from this post? If the answer is no, the research isn't deep enough — go back and search for another layer.
+2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take anchored to the core question. The thesis must pass the **"Bloomberg terminal test"**: would someone with a Bloomberg terminal and 10 years of market experience learn something new from this post? If the answer is no, the research isn't deep enough — go back and search for another layer.
 
    **Research depth gate (mandatory checkpoint before writing):**
    Before beginning to write, the agent must output a brief checklist:
@@ -285,8 +398,9 @@ Each agent must:
    ✓/✗ Second-order effect: [who loses / what breaks downstream]
    ✓/✗ Named contrarian: [Name at Institution — their specific argument]
    ```
-   **Gate rule:** If fewer than 3 of 5 are marked ✓ with substantive content, the agent must run additional targeted searches before writing. Writing on thin research is the single most common quality failure — deeper research upfront prevents rewrites later.
-3. **Write the full post** in Traditional Chinese, following the style template exactly
+   **Gate rule:** For 長篇/短篇, if fewer than 3 of 5 are marked ✓ with substantive content, the agent must run additional targeted searches before writing. For 快報, the gate is 2 of 5 (at least primary source + one other layer). Writing on thin research is the single most common quality failure — deeper research upfront prevents rewrites later.
+
+3. **Write the full post** in Traditional Chinese, following the unified skeleton exactly
 4. **Write the file** to `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/` with filename `YYYY-MM-DD-{slug}-zh.md`
 
 **File naming:** `YYYY-MM-DD-{slug}-zh.md`
@@ -298,36 +412,33 @@ layout: post
 title: "{Chinese title}"
 date: YYYY-MM-DD HH:MM:SS +0800
 categories: [macro]
-tags: [macro, etf, investing]
-description: "{1-2 sentence Chinese summary with key numbers and ETF tickers — this controls the Google search snippet}"
+tags: [macro, <primary_topic>, ...]
+macro_kind: long | short | brief
+description: "{1-2 sentence Chinese summary with key numbers — this controls the Google search snippet}"
 lang: zh-TW
 ---
 ```
 
-**Tags per style:**
-- Commentary: `[macro, etf, investing]` + topical (`fed`, `bonds`, `gold`, `volatility`)
-- Deep-dive: `[macro, etf, investing]` + data source (`fed`, `bonds`, `employment`)
-- Geopolitics: `[macro, etf, investing, geopolitics]` + topical (`tariff`, `fiscal`, `china`, `middleeast`, `europe`, `taiwan`)
-- AI/Tech: `[macro, etf, investing, ai, technology]` + topical (`semiconductor`, `cloud`, `energy`)
+`macro_kind` values: `long`（長篇）, `short`（短篇）, `brief`（快報）, `correction`（修正文）, `crisis`（危機文）。只要求新文加入，不回填舊文。
 
 ### Content Rules
 
 1. **Use 0050 instead of EWT** — When discussing Taiwan equity ETFs, always use **元大台灣50 (0050)** instead of EWT (iShares MSCI Taiwan ETF). The blog's audience is Taiwanese investors who trade on TWSE; 0050 is the most liquid and well-known Taiwan large-cap ETF they can buy directly. Prices are in NT$, not USD.
 2. **Taiwan stance** — This blog treats Taiwan as an independent, sovereign country. When covering Taiwan-related topics (trade, geopolitics, semiconductor, cross-strait), never adopt framing that implies Taiwan is part of China or that China has legitimate authority over Taiwan. Use "台灣" and "中國" as parallel entities, not "中國大陸" vs "台灣地區". Avoid Beijing's preferred language (e.g., "統一", "台灣問題", "分裂勢力"). This does not mean ignoring China's perspective — analyzing what Beijing might do (military, economic coercion, diplomatic pressure) is essential for investment analysis — but the analytical frame must be from Taiwan's standpoint as an independent actor making sovereign decisions.
-3. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
-4. **Balanced scenario requirement** — **Style A and Style E only.** These posts must include three named scenarios (base/upside/downside) with rough probabilities summing to 100% and one invalidation trigger for each. **Style B/C/D do NOT include scenario sections** — they convey risk awareness through the 筆記 section written as natural prose.
+3. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk.
+4. **Conditional reasoning, not probability scenarios** — Use conditional reasoning (if X then Y) instead of probability-weighted scenarios. Do NOT assign percentages to outcomes or create "base/upside/downside" buckets with probabilities summing to 100%. Instead, describe observable conditions and their structural implications in the 分水嶺 section.
 5. **Do not force directional calls** — if confidence is low or evidence is mixed, explicitly state neutral/uncertain stance and focus on monitoring signals instead of hard bullish/bearish calls.
 6. **Tone neutrality requirement** — avoid emotionally loaded or absolutist wording (e.g., "末日", "崩塌", "四面楚歌", "必然", "完全沒有", "歷史性的錯誤定價"), unless it is a direct quote with source attribution.
 7. **Separate facts vs inference** — clearly distinguish verifiable facts from interpretation through sentence structure and context, NOT through bold labels like "**事實：**" or "**推論：**". The intellectual discipline matters; the formatting template does not. Good examples: "CBO 預測債務比率將升至 120%——這意味著期限溢價中樞很難回到超低區間" (fact flows naturally into inference). Bad examples: "**事實：** CBO 預測… **推論：** 期限溢價…" (mechanical label soup that reads like a form, not an analyst note).
-8. **Reader-actionable takeaways must be long-horizon usable** — each 筆記 section must contain a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call. **But these must be written as natural analyst prose, not as a fill-in-the-blank template.** Do NOT use bold labels like "**一句話結論：**", "**資產配置框架（3-12 個月）：**", "**再平衡觸發條件（1-3 年）：**". Instead, weave these elements into flowing paragraphs that read like a research note a human analyst would write. The same intellectual content, but authored voice instead of template voice.
+8. **結語 must deliver a framework, not advice** — the 結語 section must contain: a core judgment blockquote (see Rule 20), an invalidation conditions table (see Rule 21), and 2-3 variables to watch next. These must be written as natural analyst prose (except the mandatory blockquote and table formats). Do NOT use bold labels like "**一句話結論：**", "**資產配置框架：**", "**再平衡觸發條件：**".
 9. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
-10. **Qualitative risk/reward framing** — **Style A/E:** for ETFs discussed, describe the conditions under which the position works or fails, rather than short-term percentage price targets (e.g., "若消費數據連續兩季惡化，下行風險主導" rather than "上行 $700（+2%），下行 $660（-3%）"). Include current price for context but focus on what-changes-your-mind, not point estimates. **Style B/C/D:** mention ETFs only in the 筆記 section with allocation direction (偏多/中立/偏空/觀察) and the trigger that would change that direction. No price forecasts.
+10. **ETF as exposure-mechanism example only** — ETF tickers are allowed in 分水嶺 and 結語 sections solely to illustrate which variables a common exposure (e.g., TLT, TIPS, SPY) is sensitive to. Use the framing: "這個框架對常見曝險的意義：[ticker] 暴露於 [variable]，而 [ticker] 暴露於 [variable]." Do NOT use directive language ("建議/加碼/減碼/買進/賣出/佈局/進場"). There must be NO standalone ETF analysis section (no `## 配置影響`, no `## ETF 影響分析`).
 11. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
 12. **Cite everything** — every factual claim needs a source URL as an inline markdown link.
 13. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
 14. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
 15. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
-16. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline: "有限軍事打擊情境" not "情境 3", "海峽封鎖情境" not "情境 4". Charts may label axes with numbers/letters for space, but prose must always be self-explanatory without cross-referencing.
+16. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline.
 17. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
    ```html
    <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
@@ -339,19 +450,42 @@ lang: zh-TW
    - Keep each definition to one sentence
    - Common terms like ETF, Fed, GDP, CPI do NOT need entries — only terms a casual reader would not know
    - Descriptive Chinese phrases (e.g., 到期牆、品質遷移) that are already self-explanatory in context do NOT need entries — only true jargon and acronyms
-18. **Cross-post consistency** — when referencing an event, ruling, data point, or policy already covered in a recent post (past 3 days), read that post first and match its terminology and characterization exactly. Do not paraphrase legal or technical distinctions (e.g., a court ruling described as「違法」in one post must not become「違憲」in another — these are different legal concepts). If the new post needs a different framing, explicitly explain why.
+18. **Cross-post consistency** — when referencing an event, ruling, data point, or policy already covered in a recent post (past 7 days), read that post first and match its terminology and characterization exactly. Do not paraphrase legal or technical distinctions (e.g., a court ruling described as「違法」in one post must not become「違憲」in another — these are different legal concepts). If the new post needs a different framing, explicitly explain why.
 19. **Disclaimer** — always include at the bottom:
    ```
    *資料來源：[列出來源連結]*
    *市場數據截至：YYYY-MM-DD*
    *本文僅供參考，不構成投資建議。*
    ```
+20. **Core judgment blockquote (mandatory)** — every post must have exactly one blockquote in this format, placed as the first element of the 結語 section:
+   ```
+   > **核心判斷：** [one shareable framework sentence]
+   ```
+   Rules:
+   - Must be independently understandable without reading the rest of the post
+   - **Forbidden directive words:** 應該、建議、可以加碼、逢低買、減碼、進場、佈局、買進、賣出
+   - **Forbidden predictive conclusions:** 接下來會…、市場將…
+   - **Allowed structural language:** 強勢 ≠ 全面復甦、這是估值壓縮不是盈利崩壞
+   - **Allowed conditional language:** 如果 X 未破壞，則 Y 仍成立
+   - This is the ONLY allowed `> **核心判斷：**` format in any post — Step 3.65 grep should not flag it
+21. **Invalidation conditions table (mandatory)** — every post's 結語 must include a standardized Markdown table:
+   ```
+   | Metric | Threshold | Window | Implication |
+   |--------|-----------|--------|-------------|
+   | [metric] | [threshold + continuity] | [period + next data date] | [framework reassessment] |
+   ```
+   2-4 rows. Threshold must be verifiable (include continuity duration). Window must include next data point date where possible. Implication must be framework-level, not a trading instruction.
+22. **No directive language anywhere** — the following words must NEVER appear in any post except when explicitly quoting a named source: 應該、建議、加碼、減碼、買進、賣出、佈局、進場、逢低買. When describing exposure mechanisms, use structural language instead (e.g., "[ticker] 暴露於 [variable]" not "可以考慮加碼 [ticker]").
 
 ### Chart Guidelines
 
-Every post includes one Chart.js chart. Each post's `<canvas>` must use a **unique id** (e.g., `macroChart1`, `macroChart2`, `macroChart3`, `macroChart4`).
+長篇 and 短篇 must include one Chart.js chart. 快報 charts are optional — include one only if the data story clearly benefits from visualization. **若快報省略 Chart.js，必須在「因果拆解」段提供以下任一作為可視化替代：**
+- 4-8 行 Markdown 表格（含數字與來源），或
+- 3-5 個關鍵數字 bullet（每點附來源）
 
-**For deep-dive posts:** Data must come from official government sources:
+若快報仍使用 Chart.js，則完全遵守下方 Chart rules。Each post's `<canvas>` must use a **unique id** (e.g., `macroChart1`, `macroChart2`).
+
+**Chart data source rule:** If the post's topic centers on government data, chart data must come from official government sources (.gov). For other topics, market data, industry data, or gov data are all acceptable. Must always cite sources.
 
 | Source | Data | URL |
 |---|---|---|
@@ -360,8 +494,6 @@ Every post includes one Chart.js chart. Each post's `<canvas>` must use a **uniq
 | Federal Reserve | Fed funds rate, FOMC projections | federalreserve.gov |
 | US Treasury | Yield curve, treasury rates | home.treasury.gov |
 | CBO | Deficit/debt projections, economic outlook | cbo.gov |
-
-**For commentary/politics/tech posts:** Can use market data, industry data, or gov data. Must cite sources.
 
 **Chart type selection:**
 
@@ -399,7 +531,11 @@ new Chart(document.getElementById('macroChartN'), {
 
 **This step is non-negotiable.** Every post must pass fact-check before it can be considered complete. Do not skip this step due to time pressure, context limits, or any other reason. A post that has not been fact-checked is not a finished post.
 
-Launch **four** fact-check agents in parallel (subagent_type: `general-purpose`) to verify the most important data points across all posts:
+**Fact-check scale by format tier:**
+- **長篇/短篇**: Launch **four** fact-check agents in parallel (as below)
+- **快報**: Launch **one** all-domain fact-check agent covering market data, gov data, geopolitics, and tech/industry in a single pass
+
+For 長篇/短篇, launch **four** fact-check agents in parallel (subagent_type: `general-purpose`) to verify the most important data points:
 
 | Agent | What to verify |
 |-------|----------------|
@@ -423,16 +559,9 @@ Each agent should return a table: `Claim | Blog Value | Actual Value | Source | 
 - **Unverifiable claims**: Either remove the claim or clearly attribute it (e.g., "according to analyst estimates"). If >30% of a post's key claims are unverifiable, REJECT and regenerate.
 - A post that fails fact-check twice should be skipped entirely — report to the user that the topic lacked reliable data.
 
-### Step 3.4: Cross-Post Deduplication (MANDATORY)
+### Step 3.4: Cross-Post Deduplication
 
-After all posts are written and before fact-check, launch **1** agent (subagent_type: `general-purpose`) to read all generated posts and check for cross-post redundancy:
-
-1. **ETF overlap check** — list every ETF mentioned across all posts. If any ETF appears in 3+ posts' 筆記 sections with the same directional call, keep it only in Style A's ETF analysis and the post with the strongest supporting evidence. Remove or reduce mentions in others.
-2. **Data point overlap check** — list key data points (GDP, CPI, PCE, etc.) cited across posts. If the same number appears in 3+ posts, flag it. The number should be cited in the post where it's most relevant and only briefly referenced (not re-analyzed) elsewhere.
-3. **Conclusion convergence check** — if 3+ posts reach the same investment conclusion (e.g., "偏空科技, 偏多防禦"), this is a signal that some posts should be merged or cut. Report to the user before proceeding.
-4. **Cross-reference insertion** — where posts share related themes, add brief inline references (e.g., "詳見今日[半導體地緣分析]") instead of duplicating analysis.
-
-The agent should return a dedup report and make the necessary edits to the post files.
+Skip — 單日永遠只 1 篇，不需要跨文去重。
 
 ### Step 3.6: Bias & Tone QA (MANDATORY)
 
@@ -440,12 +569,13 @@ Before finalizing each post, run a short editorial QA pass:
 
 1. **Stance balance check** — confirm at least one credible opposing view is presented and not straw-manned.
 2. **Language check** — remove fear-inducing or certainty-inducing wording unless directly quoted from sources.
-3. **Horizon check** — verify takeaways include both near-term (3-12 months) and long-term (1-3 years) utility.
-4. **Reader impact check** — ensure the post does not push reactive overtrading; prefer risk-budgeting and rebalancing logic.
-5. **Logical coherence check (CRITICAL)** — for every data point, ETF, or index cited as evidence for an argument, verify the evidence actually supports the stated conclusion:
+3. **Directive language check** — scan for forbidden directive words (Rule 22). Any instance must be rewritten to structural/exposure language.
+4. **ETF placement check** — verify ETF tickers only appear in 分水嶺 and 結語, and only as exposure-mechanism examples (Rule 10). No standalone ETF section should exist.
+5. **Reader impact check** — ensure the post does not push reactive overtrading; the framework should help readers think, not tell them what to do.
+6. **Logical coherence check (CRITICAL)** — for every data point, ETF, or index cited as evidence for an argument, verify the evidence actually supports the stated conclusion:
    - **Composition check**: Before using any ETF/index as evidence, identify its top holdings and sector weights. An ETF's performance must be attributed to its actual drivers, not assumed from its label. Example: 0050 is ~50% TSMC — its gains are AI-driven and cannot be cited as evidence of "non-AI rotation." EEM has heavy Taiwan/Korea weighting — its performance may reflect AI supply chain strength, not broad EM recovery.
    - **Causal chain tracing**: Do NOT stop at sector labels or top holdings. Trace the actual demand driver behind each piece of evidence back to its root cause. Many assets that appear "non-AI" on the surface are indirectly driven by AI-related demand channels. Examples: Korean memory stocks rising → because HBM demand → because AI training; copper prices surging → partially because data center construction → because AI infrastructure buildout; XLU (utilities) outperforming → partially because power demand → because AI data centers; IYT (transport) rising → partially because logistics for hardware shipments → because AI supply chain. When an asset has mixed drivers (both AI-adjacent and genuinely independent forces like fiscal spending or monetary policy), explicitly acknowledge both rather than attributing performance to only one. The key question is always: "What is the actual demand driver, and does it support or undermine my argument?"
-   - **Internal consistency**: The same asset must not be described with contradictory attributions in different sections of the same post (e.g., using 0050 as evidence of broad rotation in one section, then correctly calling it AI-driven in another).
+   - **Internal consistency**: The same asset must not be described with contradictory attributions in different sections of the same post.
    - **Argument direction**: Each piece of evidence must logically point in the direction the argument claims. If evidence actually supports the opposite thesis, it must be removed or reframed with explicit acknowledgment.
    - **Thesis re-evaluation**: If removing flawed evidence weakens the thesis significantly, do not just patch the evidence — re-evaluate whether the core thesis needs reframing. A thesis built on misattributed evidence may itself be wrong or need a different angle. It is better to rewrite a thesis than to prop up a weak one with fewer data points.
 
@@ -459,69 +589,81 @@ Before launching quality review agents, run a **deterministic grep scan** across
 |-----------------|-----------------|
 | `**事實：**` | Remove — rewrite as natural prose transition |
 | `**推論：**` | Remove — rewrite as natural prose transition |
-| `**一句話結論：**` | Remove — merge into 筆記 prose |
-| `**資產配置框架` | Remove — merge into 筆記 prose |
-| `**再平衡觸發條件` | Remove — merge into 筆記 prose |
-| `### 股票類` or `### 債券類` or `### 替代資產` | Rewrite parent section as flowing prose — these subheaders create mechanical template feel |
+| `**一句話結論：**` | Remove — merge into 結語 prose |
+| `**資產配置框架` | Remove — merge into 結語 prose |
+| `**再平衡觸發條件` | Remove — merge into 結語 prose |
+| `## 配置影響` | Remove — no standalone ETF/allocation sections allowed |
+| `## ETF 影響分析` | Remove — no standalone ETF/allocation sections allowed |
+| `## 三種情境` | Remove — replace with conditional 分水嶺 |
+| `## 總經快照` | Rewrite — use 開場 skeleton instead |
+| `## 筆記` | Rewrite — use 結語 skeleton instead |
+| `### 股票類` or `### 債券類` or `### 替代資產` | Remove — these subheaders create mechanical template feel |
+| `建議` or `應該` or `加碼` or `減碼` or `買進` or `賣出` or `佈局` or `進場` or `逢低買` | Remove or rewrite — forbidden directive words (unless inside a `>` blockquote citing a named source) |
 
-**Also verify structural rules:**
-- Style B/C/D posts must NOT have a standalone `## ETF 影響分析` section (allocation guidance belongs in 筆記)
-- Style E posts must NOT have `### 股票類` / `### 債券類` / `### 替代資產` subheaders — rewrite as natural prose paragraphs
-- Check for any ETF discussed with identical sentence structure repeated 3+ times (e.g., "持有邏輯是…失效條件是…" pattern) — rewrite each with a unique observation
+**Also verify required structural elements:**
+- Each post MUST contain `> **核心判斷：**` — this is the one allowed bold blockquote format. If missing, add it.
+- Each post MUST contain an invalidation conditions table (`| Metric | Threshold | Window | Implication |`). If missing, add it.
+- Each post MUST have a 分水嶺 section using conditional reasoning (`如果`...`→`). If it uses probability percentages instead, rewrite.
 
 **Why this step exists:** LLM-based quality review agents can overlook mechanical patterns because they focus on content quality, not surface-level formatting. A simple grep catches 100% of known anti-patterns that agents miss. Fix all flagged issues before proceeding to Step 3.7.
 
-### Step 3.7: Multi-Angle Quality Review (MANDATORY)
+### Step 3.7: Multi-Angle Quality Review (MANDATORY for 長篇/短篇)
 
-After all QA passes, launch **2** agents in parallel (subagent_type: `general-purpose`) to evaluate ALL generated posts from different perspectives. This multi-angle approach catches blind spots that a single-perspective review misses.
+**Quality review scale by format tier:**
+- **長篇**: Launch **2** agents in parallel (as below)
+- **短篇**: Launch **1** agent covering both perspectives
+- **快報**: Skip this step — 快報 is already compressed, and pattern scan (Step 3.65) + bias & tone QA (Step 3.6) provide sufficient quality assurance
+
+For 長篇, launch **2** agents in parallel (subagent_type: `general-purpose`) to evaluate the post from different perspectives. For 短篇, launch **1** agent covering both perspectives. This multi-angle approach catches blind spots that a single-perspective review misses.
 
 **Agent 1: Reader & Investor Perspective.** The agent reads all post files as a whole and answers:
 
-1. **Value test** — "If I'm a busy investor who reads this blog weekly, what do I take away from today's batch? Can I articulate the key investment thesis in one sentence after reading all posts?" If the answer is unclear or fragmented, the posts need a stronger unifying thread or Style A needs to better synthesize the themes.
+1. **Value test** — "If I'm a busy investor who reads this blog weekly, what do I take away from today's batch? Can I articulate the core framework in one sentence after reading?" If the answer is unclear, the 核心判斷 needs strengthening.
 2. **Noise test** — "Is any post telling me something I could get from reading Reuters or Bloomberg headlines?" If yes, that post needs a deeper angle or should be cut.
-3. **Durability test** — "Will this post still be worth reading in 3 months?" Posts that are purely event-reactive (a court ruling, a single earnings report) with no structural insight should be flagged for cutting or reframing.
-4. **Repetition test** — "Am I reading the same conclusion wrapped in different data?" After the cross-post dedup in Step 3.4, this is a final human-perspective check. Even if the specific ETFs and numbers are different, if the emotional takeaway is identical across posts (e.g., "everything is uncertain, be cautious"), flag it.
-5. **Actionability test** — "Do the 筆記 sections give me a clear framework for what to do and when to change my mind?" The 筆記 is the core value delivery — it must be specific, falsifiable, and distinct across posts.
+3. **Durability test** — "Will this post still be worth reading in 3 months?" Posts that are purely event-reactive with no structural insight should be flagged for cutting or reframing.
+4. **Repetition test** — "Am I reading the same framework wrapped in different data?" Even if the specific data is different, if the 核心判斷 sentences are thematically identical across posts, flag it.
+5. **Framework test** — "Does the post help me THINK about future situations, or does it only tell me about THIS situation?" The best posts teach a transferable analytical frame.
 6. **Research depth test** — For each post, answer three specific questions:
    - (a) **"What specific finding came from reading a primary source that wire services didn't report?"** The answer must cite a specific document, table, clause, or transcript quote. If the answer is vague ("used CBO data") or absent, the post fails.
    - (b) **"Is the contrarian view named, specific, and falsifiable?"** The contrarian must have a name, an institution, and a data-backed argument. "Some analysts are cautious" or "risks exist on both sides" fails this test.
-   - (c) **"What second-order effect is quantified?"** At least one downstream consequence must have a number attached (e.g., "退稅成本 $1,335–1,750 億將使 FY2026 赤字額外增加 7–9%"). Vague "ripple effects" without quantification fail.
-   A post that fails 2+ of these 3 tests should be flagged for rewrite or cutting — it's adding noise, not signal, to the reader's information diet.
+   - (c) **"What second-order effect is quantified?"** At least one downstream consequence must have a number attached. Vague "ripple effects" without quantification fail.
+   A post that fails 2+ of these 3 tests should be flagged for rewrite or cutting — it's adding noise, not signal.
 
 **Agent 2: Writing Quality & Voice Perspective.** The agent reads all post files and evaluates:
 
-1. **Template detection** — Scan the ENTIRE post (analysis body, ETF sections, AND 筆記) for any residual bold-label templates or mechanical formatting. Step 3.65 should have caught these programmatically, but this is the human-judgment backstop. Every section should read like a human analyst wrote it, not like a form was filled in.
-2. **Mechanical pattern detection** — Flag any section where multiple ETFs are discussed with identical sentence structure (e.g., "持有邏輯是…失效條件是…" repeated for each ETF). Each ETF discussion should have a unique observation tied to the post's specific thesis.
-3. **Voice consistency** — Does each post sound like it was written by the same thoughtful analyst? Or do some posts feel like they were generated from a template while others feel authored? Flag inconsistencies.
-4. **Insight density** — For each paragraph in the 筆記 and ETF sections, ask: "Does this sentence tell the reader something they didn't already know or couldn't have guessed?" Flag generic statements that an experienced investor would find obvious (e.g., "黃金在通膨環境中受惠" without any post-specific context).
-5. **Structural redundancy** — Within each post, check if the 筆記 section merely summarizes what was already said in the analysis sections. The 筆記 should add NEW synthesis or a unique angle, not just compress earlier paragraphs.
+1. **Template detection** — Scan the ENTIRE post for any residual bold-label templates or mechanical formatting. Step 3.65 should have caught these programmatically, but this is the human-judgment backstop. Every section should read like a human analyst wrote it.
+2. **Skeleton compliance** — Verify each post follows the 4-section skeleton (開場 → 因果拆解 → 分水嶺 → 結語). Flag any post with extra sections, missing sections, or sections in wrong order.
+3. **Core question alignment** — Does every paragraph in the post serve the core question stated in the 開場? Flag paragraphs that drift.
+4. **Voice consistency** — Does each post sound like it was written by the same thoughtful analyst? Flag inconsistencies.
+5. **Insight density** — For each paragraph, ask: "Does this sentence tell the reader something they didn't already know or couldn't have guessed?" Flag generic statements.
+6. **Invalidation table quality** — Are the invalidation conditions specific, verifiable, and framework-level? Flag any that are vague ("if things get worse") or that sound like trading instructions.
 
 **Output from each agent:** A brief report (5-10 sentences) with:
 - Overall assessment
 - Specific posts to cut, merge, or rewrite (if any)
 - Suggested edits to strengthen weak posts
 
-**Action:** If either agent recommends cutting or merging posts, do so before proceeding. If they recommend rewrites, make the edits. If both agents pass the batch, proceed to Step 4. Prioritize Agent 2's template/voice findings — template-feel is the most common quality failure mode.
+**Action:** If either agent recommends cutting or merging posts, do so before proceeding. If they recommend rewrites, make the edits. If both agents pass the batch, proceed to Step 4.
 
 ### Step 4: Retrospective — Review Past Posts & Skill
 
-Before finalizing, review the most recent past posts (previous 1-2 dates) in `_posts/` for errors or outdated claims that were not caught at the time:
+Before finalizing, review the most recent past posts (previous 7 days) in `_posts/` for errors or outdated claims that were not caught at the time:
 
 1. **Scan recent posts** — Read the last batch of macro posts. For each factual claim, check whether subsequent data releases or events have proven it wrong or outdated.
-2. **Reflect corrections in new posts** — If a past post made a prediction or claim that turned out wrong, acknowledge or correct it in today's posts where relevant (e.g., "上期我們提到 Core PCE 為 2.8%，但 12 月數據已修正至 3.0%"). This builds credibility and continuity.
-3. **Update the skill if needed** — If the errors reveal a systematic gap (e.g., agents consistently miss a data source, a chart type doesn't work well, a section is redundant), update this SKILL.md to prevent recurrence. Report any skill changes to the user.
+2. **Reflect corrections in new posts** — If a past post made a claim that turned out wrong, acknowledge or correct it in today's posts where relevant (e.g., "上期我們提到 Core PCE 為 2.8%，但最新數據已修正至 3.0%"). This builds credibility and continuity.
+3. **Check invalidation conditions** — Review past posts' invalidation tables against current data. If any condition has been triggered, flag it for a future correction post (or produce one now if Step 0.5 didn't already catch it).
+4. **Update the skill if needed** — If the errors reveal a systematic gap, update this SKILL.md to prevent recurrence. Report any skill changes to the user.
 
 ### Step 5: Verify Output & List Posts
 
 1. Confirm all files exist with correct filenames
-2. Verify each: front matter correct, chart with unique canvas id, sourced data, all claims cited, disclaimer present
+2. Verify each: front matter correct (tags start with `[macro, <primary_topic>]`, `macro_kind` present and matches format tier), chart with unique canvas id (or table/bullet fallback for 快報), sourced data, all claims cited, disclaimer present, 核心判斷 blockquote present, invalidation table present
 3. **Print a summary table** listing every generated post:
 
 ```
-| # | File | Style | Topic | Chart ID |
-|---|------|-------|-------|----------|
-| 1 | `YYYY-MM-DD-slug-zh.md` | A: Commentary | ... | macroChartN |
-| ...
+| # | File | Topic | Core Question | Format Tier | Chart ID |
+|---|------|-------|---------------|-------------|----------|
+| 1 | `YYYY-MM-DD-slug-zh.md` | ... | ...？ | 長篇 / 短篇 / 快報 | macroChartN |
 ```
 
 4. List any fact-check corrections applied and any past-post fixes
@@ -539,7 +681,7 @@ Launch **four** parallel research agents (subagent_type: `general-purpose`), all
 |-------|------|
 | **Core Data Agent** | Search for quantified data directly related to the topic (gov data, industry data, market data). Return actual numbers with dates and source URLs. |
 | **Context & History Agent** | Search for historical context, precedents, trajectory, structural factors related to the topic. Return timeline, key events, and source URLs. |
-| **Market Impact Agent** | Search for market/ETF reactions, analyst commentary, cross-asset implications tied to the topic. Return prices, analyst quotes, and source URLs. |
+| **Market Impact Agent** | Search for market reactions, cross-asset implications, analyst commentary tied to the topic. Return data and source URLs. |
 | **Contrarian & Risk Agent** | Search for opposing views, risks, implementation gaps, what could go wrong with the consensus view on the topic. Return counterarguments with evidence and source URLs. |
 
 Each agent should run 3-5 web searches and return a concise bullet-point summary. The same **source quality hierarchy** from default mode Step 1 applies: primary sources first, expert analysis second, wire services last. Each agent must return at least 2 primary sources.
@@ -548,11 +690,11 @@ Each agent should run 3-5 web searches and return a concise bullet-point summary
 
 Same as default mode — read recent posts in `_posts/` to check for overlap. If the topic was recently covered, the new post must offer a substantially different angle or deeper analysis.
 
-#### Topic Step 2: Synthesize Thesis
+#### Topic Step 2: Synthesize Thesis & Core Question
 
-No topic selection needed (user already specified the topic). Synthesize research from all four agents into:
-- A clear thesis statement
-- Base / upside / downside scenarios with rough probabilities
+Define the **core question** (must end with `？`) and synthesize research from all four agents into:
+- A clear thesis statement anchored to the core question
+- Conditional reasoning framework (if X then Y, not probability scenarios)
 - Key data points to anchor the analysis
 - At least one credible opposing interpretation
 
@@ -560,21 +702,23 @@ No topic selection needed (user already specified the topic). Synthesize researc
 
 Launch **1** agent (subagent_type: `general-purpose`) to:
 1. **Deep research** — run 5-8 additional web searches going deeper than Step 1: primary sources, fine print, historical parallels, expert commentary
-2. **Write the post** using **Style E** structure, following all Content Rules and Chart Guidelines
+2. **Write the post** using the **unified skeleton** (開場 → 因果拆解 → 分水嶺 → 結語), following all Content Rules and Chart Guidelines
 3. **Save** to `_posts/YYYY-MM-DD-{slug}-zh.md`
 
 The agent receives:
 - All research context from Topic Step 1
-- The synthesized thesis from Topic Step 2
-- The Style E template, Content Rules, and Chart Guidelines
+- The core question and synthesized thesis from Topic Step 2
+- The unified skeleton, Content Rules, and Chart Guidelines
 - The target filename and front matter template
 
-**Front matter** is the same as default mode. Tags: `[macro, etf, investing]` + topical tags based on the subject.
+**Front matter** is the same as default mode. Tags: `[macro, <primary_topic>, ...]` + topical tags based on the subject.
+
+**Length:** Long-form (900-1200 words) by default for topic mode, as user-specified topics typically warrant deeper treatment.
 
 #### Topic Step 3.5: Fact-Check (MANDATORY)
 
 Launch **1** fact-check agent (subagent_type: `general-purpose`) covering all domains (market data, gov data, geopolitics, tech/industry) for the single post. The agent should:
-- Verify all key data points, ETF prices, and statistics against primary sources
+- Verify all key data points and statistics against primary sources
 - Verify all Chart.js data against cited sources
 - Return a table: `Claim | Blog Value | Actual Value | Source | Verdict (correct/wrong/outdated)`
 
@@ -586,15 +730,17 @@ Same as default mode Step 3.6.
 
 #### Topic Step 3.65: Automated Pattern Scan
 
-Same as default mode Step 3.65 but for the single generated post file. Run Grep for all known anti-patterns and fix before proceeding.
+Same as default mode Step 3.65 but for the single generated post file. Run Grep for all known anti-patterns and verify required structural elements. Fix before proceeding.
 
 #### Topic Step 3.7: Multi-Angle Quality Review
 
 Same as default mode Step 3.7 but for a single post. Launch **1** agent (instead of 2) that covers both the reader/investor perspective and the writing quality perspective. The agent evaluates:
-- Does this post provide a structural insight that a reader would still find valuable in 3 months?
-- Is the 筆記 section specific, actionable, and written as natural prose (not template)?
+- Does this post provide a structural framework that a reader would still find valuable in 3 months?
+- Does the 結語 have a clear 核心判斷 and specific invalidation conditions?
 - Could the reader get equivalent value from a Reuters summary? If yes, the post needs more depth.
-- Are there any template-feel patterns (bold labels, mechanical ETF lists, generic statements)?
+- Does the post follow the unified skeleton (開場 → 因果拆解 → 分水嶺 → 結語)?
+- Are there any template-feel patterns (bold labels, directive language, generic statements)?
+- Does every paragraph serve the core question?
 
 #### Topic Step 4: Retrospective
 
@@ -605,7 +751,7 @@ Same as default mode Step 4.
 Same as default mode Step 5 but for 1 post. Print a summary table:
 
 ```
-| # | File | Style | Topic | Chart ID |
-|---|------|-------|-------|----------|
-| 1 | `YYYY-MM-DD-slug-zh.md` | E: Topic Research | {user's topic} | macroChartN |
+| # | File | Topic | Core Question | Length | Chart ID |
+|---|------|-------|---------------|--------|----------|
+| 1 | `YYYY-MM-DD-slug-zh.md` | {user's topic} | ...？ | 長篇 | macroChartN |
 ```

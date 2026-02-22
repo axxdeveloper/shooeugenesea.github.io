@@ -3,6 +3,8 @@ main:
     url: /tech/
   - title: "Macro"
     url: /macro/
+  - title: "Framework"
+    url: /framework/
   - title: "Tags"
     url: /tags/
   - title: "About"

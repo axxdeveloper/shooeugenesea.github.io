@@ -4,6 +4,7 @@ title: "Roberts 的六個字封殺 IEEPA 關稅，但 Section 122 的 150 天倒
 date: 2026-02-20 20:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, tariff, fiscal]
+macro_kind: long
 description: "最高法院 6:3 裁定 IEEPA 關稅違法，但白宮當天動用 Section 122 重建 15% 全球關稅——150 天後到期、法律基礎存疑。$1,420 億退稅無自動機制，CRFB 估計判決將增加 $2.4 兆國債。真正的交易不是判決本身，而是 150 天倒數計時裡的關稅工具重組。"
 lang: zh-TW
 ---

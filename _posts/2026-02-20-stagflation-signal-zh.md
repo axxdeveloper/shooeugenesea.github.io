@@ -4,6 +4,7 @@ title: "GDP 平減指數與 PCE 的裂口：這次不是 1974 年，但 VIX 19 �
 date: 2026-02-20 08:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, fed, bonds, volatility]
+macro_kind: long
 description: "Q4 GDP 1.4% 與 Core PCE 3.0% 的組合看似停滯性通膨，但 GDP 平減指數僅 2.2% 揭露的故事完全不同：這是財政撤退衝擊被誤讀為需求萎縮。VIX 19 定價了「停滯性通膨」這個詞，卻沒定價實際的機率分布。評估 SPY、TLT、TIPS、GLD、XLU。"
 lang: zh-TW
 ---

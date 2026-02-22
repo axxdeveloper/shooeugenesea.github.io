@@ -4,6 +4,7 @@ title: "高市早苗的豪賭：122 兆預算、JGB 殖利率飆升與「Sanaeno
 date: 2026-02-22 08:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, japan, boj, yen, defense]
+macro_kind: long
 description: "高市早苗大選壓勝後推出 122.3 兆日圓預算與 21.3 兆刺激方案，10 年期 JGB 殖利率飆至 1999 年以來新高 2.38%。本文拆解 Sanaenomics 的財政算術、BOJ 獨立性風險與中日摩擦，評估 DXJ、EWJ、0050、GLD 的基準/上行/下行情境。"
 lang: zh-TW
 ---

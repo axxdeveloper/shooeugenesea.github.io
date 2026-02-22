@@ -4,6 +4,7 @@ title: "848 億美元承諾如何落地？台美貿易協定的條款、容量�
 date: 2026-02-21 18:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, geopolitics, taiwan, tariff]
+macro_kind: long
 description: "本文逐條拆解台美對等貿易協定：Article 5.4 第 6 款與 4.3 的限制條件、農業與檢驗制度調整、LNG 基建容量，以及 SCOTUS 後關稅法律路徑。附 0050 情境配置。"
 lang: zh-TW
 ---

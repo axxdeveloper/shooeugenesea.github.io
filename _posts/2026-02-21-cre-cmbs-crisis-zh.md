@@ -4,6 +4,7 @@ title: "商業不動產壓力測試：辦公室 CMBS 違約率創高與再融資
 date: 2026-02-21 08:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, cre, cmbs, reit, regional-bank]
+macro_kind: long
 description: "辦公室 CMBS 違約率 1 月升至 12.3%，到期牆與再融資成本差構成主要壓力。本文以基準/上行/下行情境拆解 VNQ、XLRE、KRE、TLT、GLD 的中期配置邏輯。"
 lang: zh-TW
 ---

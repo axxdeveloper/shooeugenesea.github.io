@@ -4,6 +4,7 @@ title: "六千五百億美元的利潤缺口：四大科技巨頭 2026 年 AI �
 date: 2026-02-20 11:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, ai, technology, semiconductor, cloud]
+macro_kind: long
 description: "Meta、Alphabet、Amazon、Microsoft 合計 2026 年 AI capex 達 $635-665B，年增 67-74%。Goldman Sachs 估算需 $1T 年利潤才能維持歷史回報率，但共識預估僅 $450B。SaaS 板塊 48 小時蒸發 $285B。"
 lang: zh-TW
 ---

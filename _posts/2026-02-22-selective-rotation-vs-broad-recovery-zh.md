@@ -4,6 +4,7 @@ title: "選擇性復甦的真相：AI 溢出效應與財政支出撐起投資端
 date: 2026-02-22 12:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, sector-rotation, ai, manufacturing]
+macro_kind: long
 description: "看似「非 AI 板塊在輪動」（IWM +6.2%、銅價 +27%、RSP 跑贏 SPY），但深究因果鏈：銅價受 data center 建設推動、工業股受 CHIPS Act 支撐、公用事業受 AI 電力需求拉動。真正的分裂不是 AI vs 非 AI，而是投資/生產端（受 AI 溢出與財政支出驅動）vs 消費端（GDP 1.4%、信心十年新低）。評估 SPY、RSP、IWM、SMH、XLI、GLD 的情境配置。"
 lang: zh-TW
 ---
