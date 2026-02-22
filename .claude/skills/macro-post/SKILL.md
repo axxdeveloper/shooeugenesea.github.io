@@ -110,7 +110,7 @@ Rules for invalidation table:
 
 | 日 | 預設篇幅 | 說明 |
 |----|----------|------|
-| 週一 | 長篇 | 本週框架重設。綜合上週數據與事件，建立本週觀察框架。 |
+| 週一 | 長篇 | 固定長篇。 |
 | 週二-五 | 短篇 | 當日最值得拆解的一個題材。有題材就短篇，沒有好題材就降為快報。 |
 | 週六-日 | 快報 | 預設快報。除非週末出現重大突發事件才升級為短篇。 |
 | 任一天 | crisis / correction | 取代當日預設（仍只出 1 篇）。 |
@@ -204,7 +204,7 @@ Parse the user's input to determine which mode to use:
 Before generating any new posts, assess whether it's the right time to publish. This step prevents quality degradation from over-publishing.
 
 **1. Determine today's format tier (週節奏).** Check what day of the week it is (use `Asia/Taipei` timezone) and set the default format:
-- **週一** → 長篇（框架重設日）。
+- **週一** → 長篇。
 - **週二-五** → 短篇。如遇重大數據發布（Fed 決議、非農、CPI、GDP）→ 升級為長篇。無好題材 → 降為快報。
 - **週六-日** → 快報。除非週末出現重大突發事件才升級為短篇。
 - **任何日 crisis mode 觸發** → 危機文（500-800 字），取代當日預設。
@@ -292,7 +292,7 @@ Previous posts (last 7 days):
 From all agent results, pick **one topic** for today's post. The format tier (長篇/短篇/快報) was determined in Step 0.5 — choose a topic whose complexity matches the format. 單日永遠只 1 篇；crisis/correction 取代當日預設，不加發第二篇。The selection strategy depends on the day type from Step 1.5.
 
 **選題需匹配今日篇幅：**
-- **長篇**（週一/重大數據日）：允許更宏觀、更整合的題材，但仍只有一個核心問題
+- **長篇**（週一 / 重大數據日）：允許更宏觀、更整合的題材，但仍只有一個核心問題
 - **短篇**：題材要能在 600-800 字內自洽
 - **快報**：題材必須是「延續追蹤 / 低新聞日的框架校準」，避免硬湊新故事
 
