@@ -11,17 +11,19 @@ lang: zh-TW
 
 ## 開場：協定簽了，但數字對不上
 
-<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>CPTPP</strong>：跨太平洋全面進步夥伴協定，由 11 國組成的多邊自由貿易協定。台灣與中國均已申請加入。
-</aside>
-
 美國貿易代表署 (USTR) 於 [2 月 12 日發布簽署聲明](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/ambassador-greer-oversees-signing-us-taiwan-agreement-reciprocal-trade)，由 Jamieson Greer 與台灣代表完成[《美台對等貿易協定》(Agreement on Reciprocal Trade)](https://ustr.gov/sites/default/files/files/agreements/2026-02-12_US-TW_Reciprocal_Trade_Agreement.pdf)簽署。848 億美元採購承諾分攤至四年，年均約 212 億美元，僅覆蓋 2025 年美台商品逆差 [1,468 億美元](https://www.census.gov/foreign-trade/balance/c5830.html)的 14.4%；USTR 描述採購時使用的措辭是 "plans to facilitate"（計劃促成），而非具有法律拘束力的 "shall" 或 "commits to"。[美國外交關係委員會 (CFR) 的分析](https://www.cfr.org/articles/u-s-taiwan-trade-agreement-leaves-major-questions-open)直言：「難以看出這份協定如何有意義地縮減雙邊貿易逆差。」
 
 數字覆蓋率偏低、承諾措辭缺乏法律拘束力、SCOTUS 2 月 20 日又推翻了 IEEPA 關稅的合法性——這份協定的真正價值與代價是什麼？
 
+<div style="clear: both;"></div>
+
 ## 地緣鎖定、農業退讓與執行缺口：因果拆解
 
 ### 地緣鎖定的價值：條文裡的經濟結盟宣言
+
+<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
+<strong>CPTPP</strong>：跨太平洋全面進步夥伴協定，由 11 國組成的多邊自由貿易協定。台灣與中國均已申請加入。
+</aside>
 
 這份協定最值得關注的，不只是關稅數字，而是 [Article 5.4 第 6 款](https://ustr.gov/sites/default/files/files/agreements/2026-02-12_US-TW_Reciprocal_Trade_Agreement.pdf)：若台灣與被定義為 covered nation 的對象簽署新的自由貿易協定或優惠經濟安排，美方可終止本協定。2010 年的 ECFA 被明確豁免（既有協定不溯及），但任何「新」安排都可能落入審查範圍。第 4.3 條進一步延伸到數位貿易：台灣若與中國簽署數位貿易協定，美國同樣可以終止。第 5.2.7 條則要求台灣在 5G/6G 網路、海底電纜與雲端系統中逐步淘汰「相關國家」的技術設備——這是華為/中興禁令被直接嵌入貿易協定的條文。
 
@@ -54,6 +56,8 @@ lang: zh-TW
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
 <strong>mtpa</strong>：百萬噸/年 (million tonnes per annum)，衡量 LNG 接收站處理能力的標準單位。
 </aside>
+
+<div style="clear: both;"></div>
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart5"></canvas>
@@ -113,6 +117,8 @@ new Chart(document.getElementById('macroChart5'), {
 
 法律基礎的動搖是第三重風險。2 月 20 日，美國最高法院以 6:3 裁定川普依據 IEEPA [課徵關稅違法](/2026/02/20/scotus-tariff-ruling-zh/)。這份台美協定的核心前提——避免 20% 的 IEEPA 關稅——瞬間失去法律基礎。國民黨[立即呼籲重新談判](https://focustaiwan.tw/politics/202602210007)，主張「協定的基礎已被動搖」。川普隨即宣布新的 10% 全球關稅（使用不同的法律依據），但如果 IEEPA 關稅從未合法存在，那麼「從 20% 降到 15%」的讓步在法律上意味著什麼？若新關稅走 Section 301 路徑，程序需要 6–12 個月；若再用行政命令，將再次面臨法律挑戰。南韓的前車之鑑值得注意：南韓國會延遲批准類似協定後，美國[將關稅從 15% 回升到 25%](https://keia.org/the-peninsula/u-s-south-korea-move-to-lock-in-lower-tariff-rate-with-350-billion-deal/) 作為懲罰——這份恐懼正是推動立法院加速審議的最大動力。
 
+<div style="clear: both;"></div>
+
 ## 分水嶺
 
 如果立法院在 3 月底前完成審議且 SCOTUS 後的關稅法律框架穩定下來，→ 協定進入執行期，台灣出口鏈的可預期性改善，0050 的半導體權重受益於關稅確定性（目前數據支持的路徑）
@@ -120,6 +126,8 @@ new Chart(document.getElementById('macroChart5'), {
 如果 LNG 接收站擴建持續停滯（台中四期或永安五期未能在 2028 年前動工），→ 444 億能源承諾的可行性受到根本質疑，4–9 mtpa 的容量缺口意味著承諾無法物理兌現，協定的執行信譽將被削弱（結構轉變信號）
 
 如果 Section 122 的 15% 全球關稅在法院被推翻、且 Section 301 調查未能在 150 天窗口內建立替代關稅基礎，→ 台灣 15% 協定稅率失去對照基準，整份協定的經濟邏輯需要全面重評（需要全面重評）
+
+<div style="clear: both;"></div>
 
 ## 結語
 
