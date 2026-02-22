@@ -131,18 +131,18 @@ new Chart(document.getElementById('macroChart5'), {
 
 ### 股票類
 
-- **VNQ**（Vanguard 不動產 ETF）：現價約 [$94.41](https://finance.yahoo.com/quote/VNQ/)，52 週範圍 $76.92–$95.56，逼近年度高點。VNQ 涵蓋數據中心、工業、住宅等多元 REIT，辦公室權重已大幅下降，但仍間接暴露於辦公室物業減值對 REIT 整體估值的拖累。若 CMBS 違約潮在下半年加速，VNQ 可能回測 $85–88（-7% 至 -10%）。若 Fed 降息且空置率改善，上行至 $98–100（+4% 至 +6%）。風險報酬比偏弱。
-- **XLRE**（Real Estate Select Sector SPDR ETF）：現價約 [$43.37](https://finance.yahoo.com/quote/XLRE/)，52 週範圍 $35.76–$43.97，同樣逼近高點。費用率僅 0.08%，聚焦 S&P 500 中的大型 REIT。與 VNQ 類似，辦公室直接曝險有限但不為零。在當前估值水位追高的下行風險 > 上行空間。
-- **KRE**（SPDR S&P 區域銀行 ETF）：現價約 [$71.96](https://finance.yahoo.com/quote/KRE/)，52 週範圍 $47.06–$74.08，年初至今漲幅已逾兩位數。市場定價反映的是利差擴大與獲利回升，但 CRE 曝險仍是[實質性懸掛風險](https://seekingalpha.com/article/4860355-kre-stabilization-with-a-cre-overhang)。若出現個別區域銀行因 CRE 損失被接管的事件，KRE 可能單日下跌 5–8%，重現類似 2023 年 3 月的壓力情境。
+- **VNQ**（Vanguard 不動產 ETF）：涵蓋數據中心、工業、住宅等多元 REIT，辦公室權重已大幅下降，但仍間接暴露於辦公室物業減值對 REIT 整體估值的拖累。目前逼近年度高點，估值已反映數據中心與工業 REIT 的強勢。若 Fed 降息且辦公空置率改善，VNQ 可進一步受益；若 CMBS 違約潮在下半年加速觸發強制清算，廣泛 REIT 估值將被連帶壓縮。在當前價位風險報酬比偏弱。
+- **XLRE**（Real Estate Select Sector SPDR ETF）：費用率僅 0.08%，聚焦 S&P 500 中的大型 REIT，流動性優於 VNQ。辦公室直接曝險有限但不為零。同樣逼近高點，追高的下行風險大於上行空間；適合在回檔時逢低建立核心 REIT 配置。
+- **KRE**（SPDR S&P 區域銀行 ETF）：市場定價反映的是利差擴大與獲利回升，但 CRE 曝險仍是[實質性懸掛風險](https://seekingalpha.com/article/4860355-kre-stabilization-with-a-cre-overhang)。若 CRE 損失維持在可控範圍且利差環境持續有利，KRE 的盈利回升邏輯成立；但若出現個別區域銀行因 CRE 損失被接管的事件，可能重現類似 2023 年 3 月的恐慌性拋售。
 
 ### 債券類
 
-- **TLT**（iShares 20 年以上美國國債 ETF）：現價約 [$89.62](https://finance.yahoo.com/quote/TLT/)，52 週範圍 $83.30–$94.09。若 CRE 危機觸發避險情緒，長債受益，TLT 上行至 $93–95（+4% 至 +6%）。在當前不確定性環境下，長債是 CRE 尾部風險的天然對沖。
+- **TLT**（iShares 20 年以上美國國債 ETF）：CRE 尾部風險的天然對沖工具。若違約潮觸發避險情緒或迫使 Fed 提前降息，長債將受益；但若通膨黏著導致 Fed 維持高利率更久，長債本身也承受久期壓力。適合作為 REIT 和區域銀行部位的對沖配對。
 - **LQD**（iShares 投資級公司債 ETF）：投資級 REIT 發行的公司債包含在 LQD 中。若 CRE 違約潮蔓延至投資級領域（目前仍以投機級為主），信用利差擴大將壓低 LQD 價格。目前風險可控，但值得監測。
 
 ### 替代資產
 
-- **GLD**（SPDR 黃金 ETF）：現價約 [$459.56](https://finance.yahoo.com/quote/GLD/)，52 週範圍 $261.25–$509.70。作為系統性風險的終極避險工具，若 CRE 危機從 CMBS 蔓延至區域銀行體系，黃金將再次受益。但在當前 $459 的價位，上行空間已部分被地緣風險溢價佔據。
+- **GLD**（SPDR 黃金 ETF）：若 CRE 危機從 CMBS 蔓延至區域銀行體系引發系統性恐慌，黃金看多。
 - **O**（Realty Income, 月配息 REIT）：淨租賃 (net lease) 模式以零售與工業物業為主，辦公室曝險極低。在 CRE 壓力擴大時可能被連帶拖累，反而提供逆向布局機會。殖利率約 5.5%，具防禦性。
 
 ## 後續觀察重點
