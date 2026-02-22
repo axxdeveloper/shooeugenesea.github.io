@@ -31,7 +31,9 @@ Output should position the blog as a **rational safe haven** readers instinctive
 
 All posts share a single 4-section skeleton. No style labels. The descriptive title in section 2 and the presentation method (comparison table / counter-evidence / dilemma decomposition) may vary, but the 4-section structure is fixed.
 
-### 1. 開場：市場現象 + 核心疑問
+### 1. 開場（內部標籤，不要用作 heading）
+
+The `##` heading must be a descriptive title that reflects this post's specific content — never use generic labels like「開場：市場現象 + 核心疑問」. Good examples:「紀要中的六個字」、「協定簽了，但數字對不上」.
 
 What is everyone confused about? What single question does this post answer?
 
@@ -40,11 +42,7 @@ State the core question (must end with `？`). All subsequent sections must serv
 **New reader retention (mandatory):** In the first ~60 seconds, a new reader should understand (a) what happened, (b) what you will explain, (c) why it matters. To enforce this:
 - **First paragraph**: 1–2 sentences, describe the observable phenomenon with at most **2** key numbers.
 - **Core question**: one sentence ending with `？` (no sub-questions).
-- **Immediately after the core question**, add a 3-bullet mini TL;DR:
-  - `你會得到什麼：`（3 bullets）
-    - 一個可重複使用的框架（不是結論口號）
-    - 一個可驗證的關鍵指標/門檻（對應分水嶺或失效條件）
-    - 一個「下一個資料點/日期」(例如：下次央行會議、下次數據公布)
+- **Immediately after the core question**, use 1-2 sentences of natural prose to preview what the reader will take away: a reusable framework, the key metric/threshold to watch, and the next data point or date. Do NOT use bullet lists, bold labels, or the phrase「你會得到什麼」— weave the preview into the opening narrative.
 
 **Link hygiene in 開場：** Keep inline links minimal to avoid forcing early click-outs:
 - In section 1, prefer **1–2 source links per paragraph** (bundle multiple sources at the end of the paragraph if needed).

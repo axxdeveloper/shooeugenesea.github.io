@@ -9,7 +9,7 @@ description: "高市早苗大選壓勝後推出 122.3 兆日圓預算，10 年�
 lang: zh-TW
 ---
 
-## 開場：市場現象 + 核心疑問
+## 122 兆預算與 JGB 的代價
 
 高市早苗 (Takaichi Sanae) 於 2025 年 10 月 4 日擊敗小泉進次郎，在自民黨總裁決選中以 [185 票對 156 票勝出](https://www.cfr.org/blog/prime-minister-takaichi-sanae-takes-charge)，10 月 21 日就任日本首位女性首相。公明黨結束長達 26 年的聯合執政，高市轉與日本維新會結盟，並於 2026 年 1 月 23 日宣布提前大選。2 月 8 日自民黨取得[眾議院三分之二絕對多數](https://www.cnbc.com/2026/02/09/japan-stocks-set-to-soar-after-takaichi-secures-historic-mandate.html)——史上最大國會多數。選後首個交易日日經 225 指數突破 57,000 點，2 月 10 日再上攻 58,000 點，均為歷史新高。
 

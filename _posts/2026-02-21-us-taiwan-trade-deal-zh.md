@@ -9,7 +9,7 @@ description: "本文逐條拆解台美對等貿易協定：Article 5.4 第 6 款
 lang: zh-TW
 ---
 
-## 開場：協定簽了，但數字對不上
+## 協定簽了，但數字對不上
 
 美國貿易代表署 (USTR) 於 [2 月 12 日發布簽署聲明](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/ambassador-greer-oversees-signing-us-taiwan-agreement-reciprocal-trade)，由 Jamieson Greer 與台灣代表完成[《美台對等貿易協定》(Agreement on Reciprocal Trade)](https://ustr.gov/sites/default/files/files/agreements/2026-02-12_US-TW_Reciprocal_Trade_Agreement.pdf)簽署。848 億美元採購承諾分攤至四年，年均約 212 億美元，僅覆蓋 2025 年美台商品逆差 [1,468 億美元](https://www.census.gov/foreign-trade/balance/c5830.html)的 14.4%；USTR 描述採購時使用的措辭是 "plans to facilitate"（計劃促成），而非具有法律拘束力的 "shall" 或 "commits to"。[美國外交關係委員會 (CFR) 的分析](https://www.cfr.org/articles/u-s-taiwan-trade-agreement-leaves-major-questions-open)直言：「難以看出這份協定如何有意義地縮減雙邊貿易逆差。」
 
