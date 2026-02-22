@@ -3,8 +3,6 @@ main:
     url: /tech/
   - title: "總經"
     url: /macro/
-  - title: "框架"
-    url: /framework/
   - title: "標籤"
     url: /tags/
   - title: "關於"
