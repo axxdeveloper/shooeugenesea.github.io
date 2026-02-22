@@ -450,12 +450,12 @@ pre .code-line:last-child::before {
 
 /* ── Wider content: align left edge with masthead site-title ── */
 #main {
-  max-width: 1440px;
+  max-width: 1280px;
 }
 
 .masthead__inner-wrap,
 .breadcrumbs {
-  max-width: 1440px;
+  max-width: 1280px;
 }
 
 /* Breadcrumbs: remove left-sidebar offset */
@@ -468,7 +468,7 @@ pre .code-line:last-child::before {
 @media (min-width: 64em) {
   .page__inner-wrap {
     display: grid !important;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: minmax(0, 920px) 200px;
     grid-template-rows: auto 1fr repeat(3, auto);
     gap: 0 1em;
     float: none !important;
@@ -500,8 +500,103 @@ pre .code-line:last-child::before {
 
 @media (min-width: 80em) {
   .page__inner-wrap {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: minmax(0, 920px) 300px;
   }
+}
+
+/* ── Post Continue / CTA ── */
+.post-continue {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: linear-gradient(160deg, rgba(15, 27, 47, 0.95), rgba(9, 15, 27, 0.95));
+  border: 1px solid var(--eng-border);
+  border-radius: 12px;
+  box-shadow: var(--eng-shadow);
+}
+
+.post-continue__title {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.post-continue__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+@media (min-width: 64em) {
+  .post-continue__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.post-continue__card {
+  border: 1px solid var(--eng-border);
+  border-radius: 10px;
+  padding: 0.85rem 0.9rem;
+  background: rgba(14, 23, 40, 0.55);
+}
+
+.post-continue__card-title {
+  margin: 0 0 0.6rem;
+  color: var(--eng-text-muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.post-continue__nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.post-continue__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.post-continue__date {
+  display: block;
+  color: var(--eng-text-muted);
+  font-size: 0.78rem;
+  margin-top: 0.1rem;
+}
+
+.post-continue__link {
+  color: var(--eng-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.post-continue__link:hover {
+  color: var(--eng-accent-strong);
+}
+
+.post-continue__muted {
+  color: var(--eng-text-muted);
+  font-size: 0.9rem;
+}
+
+.post-continue__rss {
+  margin-top: 0.9rem;
+  color: var(--eng-text-muted);
+  font-size: 0.9rem;
+}
+
+.post-continue__rss a {
+  color: var(--eng-accent);
+  text-decoration: none;
+}
+
+.post-continue__rss a:hover {
+  color: var(--eng-accent-strong);
 }
 
 /* ── Sidebar Calendar ── */
