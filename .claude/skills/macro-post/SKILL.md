@@ -37,6 +37,19 @@ What is everyone confused about? What single question does this post answer?
 
 State the core question (must end with `？`). All subsequent sections must serve this question — if a paragraph doesn't, delete it or split it to another post.
 
+**New reader retention (mandatory):** In the first ~60 seconds, a new reader should understand (a) what happened, (b) what you will explain, (c) why it matters. To enforce this:
+- **First paragraph**: 1–2 sentences, describe the observable phenomenon with at most **2** key numbers.
+- **Core question**: one sentence ending with `？` (no sub-questions).
+- **Immediately after the core question**, add a 3-bullet mini TL;DR:
+  - `你會得到什麼：`（3 bullets）
+    - 一個可重複使用的框架（不是結論口號）
+    - 一個可驗證的關鍵指標/門檻（對應分水嶺或失效條件）
+    - 一個「下一個資料點/日期」(例如：下次央行會議、下次數據公布)
+
+**Link hygiene in 開場：** Keep inline links minimal to avoid forcing early click-outs:
+- In section 1, prefer **1–2 source links per paragraph** (bundle multiple sources at the end of the paragraph if needed).
+- Avoid putting more than **3** inline links in the first ~180 words.
+
 ### 2. [Descriptive Title]：因果拆解（主體）
 
 2-3 possible explanations for the phenomenon, each with evidence. Point out which one is currently most supported by data.
@@ -422,6 +435,11 @@ lang: zh-TW
 `macro_kind` values: `long`（長篇）, `short`（短篇）, `brief`（快報）, `correction`（修正文）, `crisis`（危機文）。只要求新文加入，不回填舊文。
 
 ### Content Rules
+
+0. **Open strong, then earn complexity** — The opening must be scannable for a first-time reader:
+   - Section 1 must include the 3-bullet `你會得到什麼` TL;DR (see Post Structure §1).
+   - No long glossary asides in section 1; put jargon `<aside>` boxes in section 2 near first use.
+   - Paragraph discipline: keep paragraphs short (2–4 sentences). If a paragraph mixes >1 claim, split it.
 
 1. **Use 0050 instead of EWT** — When discussing Taiwan equity ETFs, always use **元大台灣50 (0050)** instead of EWT (iShares MSCI Taiwan ETF). The blog's audience is Taiwanese investors who trade on TWSE; 0050 is the most liquid and well-known Taiwan large-cap ETF they can buy directly. Prices are in NT$, not USD.
 2. **Taiwan stance** — This blog treats Taiwan as an independent, sovereign country. When covering Taiwan-related topics (trade, geopolitics, semiconductor, cross-strait), never adopt framing that implies Taiwan is part of China or that China has legitimate authority over Taiwan. Use "台灣" and "中國" as parallel entities, not "中國大陸" vs "台灣地區". Avoid Beijing's preferred language (e.g., "統一", "台灣問題", "分裂勢力"). This does not mean ignoring China's perspective — analyzing what Beijing might do (military, economic coercion, diplomatic pressure) is essential for investment analysis — but the analytical frame must be from Taiwan's standpoint as an independent actor making sovereign decisions.
