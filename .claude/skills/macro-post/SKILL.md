@@ -50,7 +50,7 @@ One government data chart as the centerpiece. Everything explains what the chart
 **Structure:**
 - **總經快照** — 2-3 sentences: Fed rate, the specific data release, market context
 - **數據解讀** — Chart.js chart first, then 3-5 paragraphs analyzing the data. Each paragraph: 事實 → 推論
-- **筆記** — 一句話結論 → 資產配置框架（3-12 個月，directional only: 偏多/中立/偏空/觀察）→ 再平衡觸發條件（1-3 年）
+- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
 - **後續觀察** — Next data releases, what would change the thesis
 
 **Word count:** 700-900 words.
@@ -66,7 +66,7 @@ International and domestic political events that directly affect the global econ
   - Through what channel does it affect the global economy? (tariffs → import prices → CPI, sanctions → oil supply → energy prices, geopolitics → supply chain → semiconductor shortage, capital flows → FX → emerging markets, etc.)
   - How big is the impact? Quantify with data.
   - What is the market pricing in vs. what could actually happen?
-- **筆記** — 一句話結論 → 資產配置框架（3-12 個月，directional only: 偏多/中立/偏空/觀察）→ 再平衡觸發條件（1-3 年）
+- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
 - **後續觀察** — Next political milestones: summits, votes, court rulings, military deadlines, elections
 
 **Word count:** 700-900 words.
@@ -82,7 +82,7 @@ AI and technology developments that have significant economic impact — capex c
   - How does it affect the real economy? (jobs, productivity, energy demand, capital allocation)
   - Which sectors are being disrupted and which are benefiting?
   - How are valuations reflecting (or not) the AI impact?
-- **筆記** — 一句話結論 → 資產配置框架（3-12 個月，directional only: 偏多/中立/偏空/觀察）→ 再平衡觸發條件（1-3 年）
+- **筆記** — Natural prose (NOT bold-label template). Must contain: a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call — but written as flowing analyst commentary, not fill-in-the-blank fields.
 - **後續觀察** — Upcoming earnings, product launches, regulatory decisions
 
 **Word count:** 700-900 words.
@@ -115,6 +115,23 @@ Parse the user's input to determine which mode to use:
 
 - If the user explicitly requests a specific topic for a single article (keywords: "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…", or similar phrasing indicating a single deep-dive), enter **Topic Mode** → skip to **Topic Mode Steps** below.
 - Otherwise → **Default Mode** → proceed with Steps 1-5 below.
+
+### Step 0.5: Publication Frequency & Quality Gate (MANDATORY)
+
+Before generating any new posts, assess whether it's the right time to publish. This step prevents quality degradation from over-publishing.
+
+**1. Check publishing cadence.** Count how many macro posts were published in the last 3 days (read `_posts/` filenames). Apply these rules:
+- **≤ 4 posts in last 3 days** → proceed normally
+- **5-8 posts in last 3 days** → proceed only if there's a genuine breaking event or materially new data. On quiet days, skip entirely and tell the user: "最近 3 天已發 N 篇，建議等待新數據或事件再發文。"
+- **> 8 posts in last 3 days** → STOP. Tell the user: "最近 3 天已發 N 篇，密集發文會稀釋品質與讀者注意力。建議下次發文至少間隔 1 天，除非有重大突發事件。" Only proceed if the user explicitly confirms a breaking event justifies it.
+
+**2. Spot-check existing post quality.** Read the 2-3 most recent posts' 筆記 sections. Check for these quality red flags:
+- **Template voice** — bold labels like "**事實：**", "**推論：**", "**一句話結論：**" appearing as fill-in-the-blank fields instead of natural prose
+- **Mechanical ETF lists** — every ETF discussed with identical "持有邏輯是…失效條件是…" structure
+- **Conclusion convergence** — multiple recent posts reaching the same takeaway (e.g., "be cautious, buy GLD")
+- **Generic analysis** — statements an experienced investor would consider obvious (e.g., "SPY faces valuation compression if growth slows")
+
+If 2+ red flags are found in recent posts, report them to the user and ask whether to fix existing posts before generating new ones. Quality of existing content should take priority over volume of new content.
 
 ### Default Mode Steps
 
@@ -263,14 +280,11 @@ lang: zh-TW
 1. **Use 0050 instead of EWT** — When discussing Taiwan equity ETFs, always use **元大台灣50 (0050)** instead of EWT (iShares MSCI Taiwan ETF). The blog's audience is Taiwanese investors who trade on TWSE; 0050 is the most liquid and well-known Taiwan large-cap ETF they can buy directly. Prices are in NT$, not USD.
 2. **Taiwan stance** — This blog treats Taiwan as an independent, sovereign country. When covering Taiwan-related topics (trade, geopolitics, semiconductor, cross-strait), never adopt framing that implies Taiwan is part of China or that China has legitimate authority over Taiwan. Use "台灣" and "中國" as parallel entities, not "中國大陸" vs "台灣地區". Avoid Beijing's preferred language (e.g., "統一", "台灣問題", "分裂勢力"). This does not mean ignoring China's perspective — analyzing what Beijing might do (military, economic coercion, diplomatic pressure) is essential for investment analysis — but the analytical frame must be from Taiwan's standpoint as an independent actor making sovereign decisions.
 3. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk; a commentary should weave in global macro.
-4. **Balanced scenario requirement** — **Style A and Style E only.** These posts must include three named scenarios (base/upside/downside) with rough probabilities summing to 100% and one invalidation trigger for each. **Style B/C/D do NOT include scenario sections** — they convey risk awareness through the 筆記 structure (事實 → 推論 → 一句話結論 → 資產配置框架 → 再平衡觸發條件). This prevents the scenario template from becoming formulaic when repeated across every post.
+4. **Balanced scenario requirement** — **Style A and Style E only.** These posts must include three named scenarios (base/upside/downside) with rough probabilities summing to 100% and one invalidation trigger for each. **Style B/C/D do NOT include scenario sections** — they convey risk awareness through the 筆記 section written as natural prose.
 5. **Do not force directional calls** — if confidence is low or evidence is mixed, explicitly state neutral/uncertain stance and focus on monitoring signals instead of hard bullish/bearish calls.
 6. **Tone neutrality requirement** — avoid emotionally loaded or absolutist wording (e.g., "末日", "崩塌", "四面楚歌", "必然", "完全沒有", "歷史性的錯誤定價"), unless it is a direct quote with source attribution.
-7. **Separate facts vs inference** — clearly distinguish verifiable facts from interpretation. A simple marker is enough (e.g., "事實：" / "推論：").
-8. **Reader-actionable takeaways must be long-horizon usable** — each 筆記 section must include:
-   - **一句話結論** — a concise takeaway
-   - **資產配置框架（3-12 個月）** — what to overweight/underweight and why
-   - **再平衡觸發條件（1-3 年）** — specific data/event thresholds that change allocation
+7. **Separate facts vs inference** — clearly distinguish verifiable facts from interpretation through sentence structure and context, NOT through bold labels like "**事實：**" or "**推論：**". The intellectual discipline matters; the formatting template does not. Good examples: "CBO 預測債務比率將升至 120%——這意味著期限溢價中樞很難回到超低區間" (fact flows naturally into inference). Bad examples: "**事實：** CBO 預測… **推論：** 期限溢價…" (mechanical label soup that reads like a form, not an analyst note).
+8. **Reader-actionable takeaways must be long-horizon usable** — each 筆記 section must contain a concise takeaway, allocation direction with reasoning, and specific triggers that would change the call. **But these must be written as natural analyst prose, not as a fill-in-the-blank template.** Do NOT use bold labels like "**一句話結論：**", "**資產配置框架（3-12 個月）：**", "**再平衡觸發條件（1-3 年）：**". Instead, weave these elements into flowing paragraphs that read like a research note a human analyst would write. The same intellectual content, but authored voice instead of template voice.
 9. **Argue with logic chains, not adjectives** — each paragraph: claim → evidence → implication.
 10. **Qualitative risk/reward framing** — **Style A/E:** for ETFs discussed, describe the conditions under which the position works or fails, rather than short-term percentage price targets (e.g., "若消費數據連續兩季惡化，下行風險主導" rather than "上行 $700（+2%），下行 $660（-3%）"). Include current price for context but focus on what-changes-your-mind, not point estimates. **Style B/C/D:** mention ETFs only in the 筆記 section with allocation direction (偏多/中立/偏空/觀察) and the trigger that would change that direction. No price forecasts.
 11. **No AI-generation mentions** — do not reference that the post was auto-generated or written by AI.
@@ -400,9 +414,11 @@ Before finalizing each post, run a short editorial QA pass:
    - **Argument direction**: Each piece of evidence must logically point in the direction the argument claims. If evidence actually supports the opposite thesis, it must be removed or reframed with explicit acknowledgment.
    - **Thesis re-evaluation**: If removing flawed evidence weakens the thesis significantly, do not just patch the evidence — re-evaluate whether the core thesis needs reframing. A thesis built on misattributed evidence may itself be wrong or need a different angle. It is better to rewrite a thesis than to prop up a weak one with fewer data points.
 
-### Step 3.7: Reader & Investor Perspective Review (MANDATORY)
+### Step 3.7: Multi-Angle Quality Review (MANDATORY)
 
-After all QA passes, launch **1** agent (subagent_type: `general-purpose`) to read ALL generated posts as a whole and evaluate them from the reader's and investor's perspective. The agent receives all post files and answers these questions:
+After all QA passes, launch **2** agents in parallel (subagent_type: `general-purpose`) to evaluate ALL generated posts from different perspectives. This multi-angle approach catches blind spots that a single-perspective review misses.
+
+**Agent 1: Reader & Investor Perspective.** The agent reads all post files as a whole and answers:
 
 1. **Value test** — "If I'm a busy investor who reads this blog weekly, what do I take away from today's batch? Can I articulate the key investment thesis in one sentence after reading all posts?" If the answer is unclear or fragmented, the posts need a stronger unifying thread or Style A needs to better synthesize the themes.
 2. **Noise test** — "Is any post telling me something I could get from reading Reuters or Bloomberg headlines?" If yes, that post needs a deeper angle or should be cut.
@@ -410,12 +426,20 @@ After all QA passes, launch **1** agent (subagent_type: `general-purpose`) to re
 4. **Repetition test** — "Am I reading the same conclusion wrapped in different data?" After the cross-post dedup in Step 3.4, this is a final human-perspective check. Even if the specific ETFs and numbers are different, if the emotional takeaway is identical across posts (e.g., "everything is uncertain, be cautious"), flag it.
 5. **Actionability test** — "Do the 筆記 sections give me a clear framework for what to do and when to change my mind?" The 筆記 is the core value delivery — it must be specific, falsifiable, and distinct across posts.
 
-**Output:** A brief report (5-10 sentences) with:
-- Overall assessment: does this batch serve the reader well?
+**Agent 2: Writing Quality & Voice Perspective.** The agent reads all post files and evaluates:
+
+1. **Template detection** — Flag any instance of bold-label templates ("**事實：**", "**推論：**", "**一句話結論：**", "**資產配置框架：**", "**再平衡觸發條件：**") that should have been written as natural prose. Every 筆記 section should read like a human analyst wrote it, not like a form was filled in.
+2. **Mechanical pattern detection** — Flag any section where multiple ETFs are discussed with identical sentence structure (e.g., "持有邏輯是…失效條件是…" repeated for each ETF). Each ETF discussion should have a unique observation tied to the post's specific thesis.
+3. **Voice consistency** — Does each post sound like it was written by the same thoughtful analyst? Or do some posts feel like they were generated from a template while others feel authored? Flag inconsistencies.
+4. **Insight density** — For each paragraph in the 筆記 and ETF sections, ask: "Does this sentence tell the reader something they didn't already know or couldn't have guessed?" Flag generic statements that an experienced investor would find obvious (e.g., "黃金在通膨環境中受惠" without any post-specific context).
+5. **Structural redundancy** — Within each post, check if the 筆記 section merely summarizes what was already said in the analysis sections. The 筆記 should add NEW synthesis or a unique angle, not just compress earlier paragraphs.
+
+**Output from each agent:** A brief report (5-10 sentences) with:
+- Overall assessment
 - Specific posts to cut, merge, or rewrite (if any)
 - Suggested edits to strengthen weak posts
 
-**Action:** If the agent recommends cutting or merging posts, do so before proceeding. If it recommends rewrites, make the edits. If the batch passes, proceed to Step 4.
+**Action:** If either agent recommends cutting or merging posts, do so before proceeding. If they recommend rewrites, make the edits. If both agents pass the batch, proceed to Step 4. Prioritize Agent 2's template/voice findings — template-feel is the most common quality failure mode.
 
 ### Step 4: Retrospective — Review Past Posts & Skill
 
@@ -498,12 +522,13 @@ Apply the same rejection protocol as default mode Step 3.5.
 
 Same as default mode Step 3.6.
 
-#### Topic Step 3.7: Reader & Investor Perspective Review
+#### Topic Step 3.7: Multi-Angle Quality Review
 
-Same as default mode Step 3.7, but for a single post. The agent evaluates:
+Same as default mode Step 3.7 but for a single post. Launch **1** agent (instead of 2) that covers both the reader/investor perspective and the writing quality perspective. The agent evaluates:
 - Does this post provide a structural insight that a reader would still find valuable in 3 months?
-- Is the 筆記 section specific and actionable?
+- Is the 筆記 section specific, actionable, and written as natural prose (not template)?
 - Could the reader get equivalent value from a Reuters summary? If yes, the post needs more depth.
+- Are there any template-feel patterns (bold labels, mechanical ETF lists, generic statements)?
 
 #### Topic Step 4: Retrospective
 
