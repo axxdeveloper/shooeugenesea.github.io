@@ -414,6 +414,28 @@ Before finalizing each post, run a short editorial QA pass:
    - **Argument direction**: Each piece of evidence must logically point in the direction the argument claims. If evidence actually supports the opposite thesis, it must be removed or reframed with explicit acknowledgment.
    - **Thesis re-evaluation**: If removing flawed evidence weakens the thesis significantly, do not just patch the evidence — re-evaluate whether the core thesis needs reframing. A thesis built on misattributed evidence may itself be wrong or need a different angle. It is better to rewrite a thesis than to prop up a weak one with fewer data points.
 
+### Step 3.65: Automated Pattern Scan (MANDATORY)
+
+Before launching quality review agents, run a **deterministic grep scan** across ALL generated post files to catch known anti-patterns. This is a programmatic check, not an LLM judgment call — it catches issues that subjective review will miss.
+
+**Run Grep for each pattern across all generated post files:**
+
+| Pattern to grep | Action if found |
+|-----------------|-----------------|
+| `**事實：**` | Remove — rewrite as natural prose transition |
+| `**推論：**` | Remove — rewrite as natural prose transition |
+| `**一句話結論：**` | Remove — merge into 筆記 prose |
+| `**資產配置框架` | Remove — merge into 筆記 prose |
+| `**再平衡觸發條件` | Remove — merge into 筆記 prose |
+| `### 股票類` or `### 債券類` or `### 替代資產` | Rewrite parent section as flowing prose — these subheaders create mechanical template feel |
+
+**Also verify structural rules:**
+- Style B/C/D posts must NOT have a standalone `## ETF 影響分析` section (allocation guidance belongs in 筆記)
+- Style E posts must NOT have `### 股票類` / `### 債券類` / `### 替代資產` subheaders — rewrite as natural prose paragraphs
+- Check for any ETF discussed with identical sentence structure repeated 3+ times (e.g., "持有邏輯是…失效條件是…" pattern) — rewrite each with a unique observation
+
+**Why this step exists:** LLM-based quality review agents can overlook mechanical patterns because they focus on content quality, not surface-level formatting. A simple grep catches 100% of known anti-patterns that agents miss. Fix all flagged issues before proceeding to Step 3.7.
+
 ### Step 3.7: Multi-Angle Quality Review (MANDATORY)
 
 After all QA passes, launch **2** agents in parallel (subagent_type: `general-purpose`) to evaluate ALL generated posts from different perspectives. This multi-angle approach catches blind spots that a single-perspective review misses.
@@ -428,7 +450,7 @@ After all QA passes, launch **2** agents in parallel (subagent_type: `general-pu
 
 **Agent 2: Writing Quality & Voice Perspective.** The agent reads all post files and evaluates:
 
-1. **Template detection** — Flag any instance of bold-label templates ("**事實：**", "**推論：**", "**一句話結論：**", "**資產配置框架：**", "**再平衡觸發條件：**") that should have been written as natural prose. Every 筆記 section should read like a human analyst wrote it, not like a form was filled in.
+1. **Template detection** — Scan the ENTIRE post (analysis body, ETF sections, AND 筆記) for any residual bold-label templates or mechanical formatting. Step 3.65 should have caught these programmatically, but this is the human-judgment backstop. Every section should read like a human analyst wrote it, not like a form was filled in.
 2. **Mechanical pattern detection** — Flag any section where multiple ETFs are discussed with identical sentence structure (e.g., "持有邏輯是…失效條件是…" repeated for each ETF). Each ETF discussion should have a unique observation tied to the post's specific thesis.
 3. **Voice consistency** — Does each post sound like it was written by the same thoughtful analyst? Or do some posts feel like they were generated from a template while others feel authored? Flag inconsistencies.
 4. **Insight density** — For each paragraph in the 筆記 and ETF sections, ask: "Does this sentence tell the reader something they didn't already know or couldn't have guessed?" Flag generic statements that an experienced investor would find obvious (e.g., "黃金在通膨環境中受惠" without any post-specific context).
@@ -521,6 +543,10 @@ Apply the same rejection protocol as default mode Step 3.5.
 #### Topic Step 3.6: Bias & Tone QA
 
 Same as default mode Step 3.6.
+
+#### Topic Step 3.65: Automated Pattern Scan
+
+Same as default mode Step 3.65 but for the single generated post file. Run Grep for all known anti-patterns and fix before proceeding.
 
 #### Topic Step 3.7: Multi-Angle Quality Review
 
