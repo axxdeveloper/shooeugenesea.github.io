@@ -27,7 +27,7 @@ Thinking frameworks for navigating market uncertainty — structural analysis ov
 - **失效條件** — specific, verifiable thresholds that invalidate the current framework
 - **修正文** — when assumptions break, we update the framework and explain what we learned
 
-Topics span Fed policy, government data, geopolitics, AI/tech economics, and cross-market connections. See [框架](/framework/) for the current macro regime view.
+Topics span Fed policy, government data, geopolitics, AI/tech economics, and cross-market connections.
 
 ## History
 
