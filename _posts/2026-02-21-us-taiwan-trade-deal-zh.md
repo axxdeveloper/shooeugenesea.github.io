@@ -29,6 +29,8 @@ lang: zh-TW
 
 換言之，協定的核心資產不是關稅讓步，而是台灣多邊貿易策略空間被正式壓縮後換來的可預期性。
 
+<div style="clear: both;"></div>
+
 ### 農業與檢驗讓步的代價：比日韓都深
 
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
@@ -51,13 +53,9 @@ lang: zh-TW
 
 台灣的起始關稅只有 20%（日韓是 25%），降幅僅 5 個百分點（日韓降了 10 個百分點）。若以「每百分點減稅所付出的投資額」計算：台灣 $500 億/點，日本 $550 億/點，南韓 $350 億/點——台灣在農業和檢驗制度上的讓步明顯大於日韓。
 
-### 執行風險：數字、容量與法律基礎三重缺口
-
-<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>mtpa</strong>：百萬噸/年 (million tonnes per annum)，衡量 LNG 接收站處理能力的標準單位。
-</aside>
-
 <div style="clear: both;"></div>
+
+### 執行風險：數字、容量與法律基礎三重缺口
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart5"></canvas>
@@ -108,6 +106,10 @@ new Chart(document.getElementById('macroChart5'), {
 </script>
 
 美台商品逆差從 2021 年的 250 億美元暴增至 2025 年的 [1,468 億美元](https://www.census.gov/foreign-trade/balance/c5830.html)——四年間翻了近六倍，主要受 AI 晶片需求驅動的 TSMC 出口推動。協定中也[找不到](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)若台灣未達採購目標的自動懲罰機制或關稅回彈條款。匯率是另一個結構變數：《經濟學人》大麥克指數顯示新台幣被[低估約 60%](https://www.cfr.org/articles/taiwans-backdoor-currency-manipulation)，CFR 稱台灣央行透過保險業避險比率調整等手段進行「後門式匯率操縱」。在匯率結構不變的前提下，任何關稅調整的效果都被稀釋。
+
+<aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
+<strong>mtpa</strong>：百萬噸/年 (million tonnes per annum)，衡量 LNG 接收站處理能力的標準單位。
+</aside>
 
 444 億美元的 LNG 與原油採購是最大單項承諾。台灣 [98% 能源依賴進口](https://energytracker.asia/taiwan-lng/)，天然氣發電佔比已達 47%（2025 年），能源安全的需求是真實的。但台灣目前三座 LNG 接收站——[永安](https://www.gem.wiki/Yung-An_LNG_Terminal)（約 12.3 mtpa）、[台中](https://www.gem.wiki/Taichung_LNG_Terminal)（目前約 8 mtpa，三期擴建中 +2 mtpa）、[桃園觀塘](https://www.gem.wiki/Taoyuan_LNG_Terminal)（2025 年 5 月啟用，3 mtpa）——合計現有接收能力約 23 mtpa，含在建三期約 25 mtpa。2025 年 LNG 進口量趨勢約 24–26 mtpa，已接近滿載。若美國 LNG 的額外量達 5–8 mtpa，總需求將在 2028–2029 年攀升至 29–34 mtpa——超出現有加計劃中容量 4–9 mtpa。台中四期（+3 mtpa，目標 2029 年）和永安五期（+1.8 mtpa）都還在提案階段，而立委[邱志偉指出](https://energytracker.asia/taiwan-lng/)永安站擴建案自 2021 年起因地下儲槽造價過高而停滯，至今未動工。
 
