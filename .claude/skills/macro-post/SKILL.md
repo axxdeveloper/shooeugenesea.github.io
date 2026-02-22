@@ -494,6 +494,18 @@ lang: zh-TW
    ```
    2-4 rows. Threshold must be verifiable (include continuity duration). Window must include next data point date where possible. Implication must be framework-level, not a trading instruction.
 22. **No directive language anywhere** — the following words must NEVER appear in any post except when explicitly quoting a named source: 應該、建議、加碼、減碼、買進、賣出、佈局、進場、逢低買. When describing exposure mechanisms, use structural language instead (e.g., "[ticker] 暴露於 [variable]" not "可以考慮加碼 [ticker]").
+23. **Bold & highlight discipline** — Bold is a scarce resource; overuse trains readers to skim past it. Rules:
+   - **Allowed bold uses:**
+     - Key numbers that anchor the argument or beat/miss expectations (e.g., "Core PCE 升至 **2.8%**，高於市場預期的 2.6%")
+     - Turning-point concepts that define the post's analytical frame (e.g., "關鍵在於這是 **結構性** 而非 **週期性** 的放緩")
+     - The `> **核心判斷：**` blockquote (Rule 20)
+     - Named sources or institutions when introducing a contrarian view for the first time (e.g., "**BCA Research 的 Peter Berezin** 認為…")
+   - **Forbidden bold uses:**
+     - Template-style labels inside prose ("**事實：**", "**推論：**", "**結論：**" — already covered by Rule 7)
+     - Entire sentences — if a full sentence matters, let the argument carry it, not the formatting
+     - Emotional emphasis ("**絕對不可能**", "**史無前例**") — this is adjectival inflation, not information
+   - **Density cap:** No more than **3-4 bold instances per section** (開場/因果拆解/分水嶺/結語 each count as one section). If everything is highlighted, nothing is. When in doubt, remove the bold — the sentence structure and evidence should do the work.
+   - **No other inline highlight mechanisms** — no `<mark>`, no colored text, no ALL CAPS for emphasis. The blog's visual hierarchy comes from the 4-section skeleton, the `>` blockquote, `<aside>` glossary boxes, and Markdown tables — not inline formatting tricks.
 
 ### Chart Guidelines
 
@@ -590,7 +602,8 @@ Before finalizing each post, run a short editorial QA pass:
 3. **Directive language check** — scan for forbidden directive words (Rule 22). Any instance must be rewritten to structural/exposure language.
 4. **ETF placement check** — verify ETF tickers only appear in 分水嶺 and 結語, and only as exposure-mechanism examples (Rule 10). No standalone ETF section should exist.
 5. **Reader impact check** — ensure the post does not push reactive overtrading; the framework should help readers think, not tell them what to do.
-6. **Logical coherence check (CRITICAL)** — for every data point, ETF, or index cited as evidence for an argument, verify the evidence actually supports the stated conclusion:
+6. **Bold density check** — count bold instances per section (開場/因果拆解/分水嶺/結語). If any section exceeds 3-4 bold spans, remove the weakest ones. Verify no entire sentences are bolded and no emotional-emphasis bold exists (Rule 23).
+7. **Logical coherence check (CRITICAL)** — for every data point, ETF, or index cited as evidence for an argument, verify the evidence actually supports the stated conclusion:
    - **Composition check**: Before using any ETF/index as evidence, identify its top holdings and sector weights. An ETF's performance must be attributed to its actual drivers, not assumed from its label. Example: 0050 is ~50% TSMC — its gains are AI-driven and cannot be cited as evidence of "non-AI rotation." EEM has heavy Taiwan/Korea weighting — its performance may reflect AI supply chain strength, not broad EM recovery.
    - **Causal chain tracing**: Do NOT stop at sector labels or top holdings. Trace the actual demand driver behind each piece of evidence back to its root cause. Many assets that appear "non-AI" on the surface are indirectly driven by AI-related demand channels. Examples: Korean memory stocks rising → because HBM demand → because AI training; copper prices surging → partially because data center construction → because AI infrastructure buildout; XLU (utilities) outperforming → partially because power demand → because AI data centers; IYT (transport) rising → partially because logistics for hardware shipments → because AI supply chain. When an asset has mixed drivers (both AI-adjacent and genuinely independent forces like fiscal spending or monetary policy), explicitly acknowledge both rather than attributing performance to only one. The key question is always: "What is the actual demand driver, and does it support or undermine my argument?"
    - **Internal consistency**: The same asset must not be described with contradictory attributions in different sections of the same post.
