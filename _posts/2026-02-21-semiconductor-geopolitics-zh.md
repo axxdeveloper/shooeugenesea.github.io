@@ -4,7 +4,7 @@ title: "半導體地緣再平衡：CHIPS 量產進度、中國替代路線與供
 date: 2026-02-21 11:00:00 +0800
 categories: [macro]
 tags: [macro, etf, investing, ai, technology, semiconductor, geopolitics, chips-act, tsmc]
-description: "CHIPS Act 補貼進入執行期，TSMC 海外擴產與中國替代供應鏈同步推進。本文以事實與推論分離，評估 SMH、SOXX、TSM、KWEB 的基準/上行/下行情境。"
+description: "CHIPS Act $330 億補貼進入執行期，TSMC 亞利桑那 3nm 廠 2027 量產在即，華為 Ascend 910C 產量翻倍至 60 萬顆——半導體供應鏈的去全球化從口號變成產線佈局。"
 lang: zh-TW
 ---
 

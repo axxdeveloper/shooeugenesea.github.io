@@ -157,6 +157,13 @@ Each agent should run 3-5 web searches and return a concise bullet-point summary
 
 Each agent must return **at least 2 primary sources** in its results. If an agent cannot find primary sources, it must flag this — the topic may not be ready for a post.
 
+**Agent output format (mandatory):**
+Each agent must structure its output with two clearly labeled sections:
+1. **Primary source findings** (minimum 2 per agent) — For each primary source, include: source name + URL, and one sentence starting with "**Insight beyond wire coverage:**" describing the specific finding not available in Reuters/Bloomberg summaries. Example: "CBO Budget Outlook Table 1-3 ([URL]) — **Insight beyond wire coverage:** CBO assumes 10Y yield declines to 3.6% by 2027; if rates stay at current 4.1%, net interest projections are understated by ~$200B/year."
+2. **Supporting context** — Wire-level data points and quotes for background.
+
+If an agent's output contains zero substantive entries under "Primary source findings," the topic's research depth is insufficient — either send the agent back for deeper searches or flag the topic for potential skipping.
+
 ### Step 1.5: Classify the News Day & Read Previous Posts
 
 Before picking topics, do two things:
@@ -259,7 +266,7 @@ Each agent must:
    - **Fine print & hidden mechanics** — what do most articles skip? Sunset clauses, enforcement mechanisms, methodology changes, carve-outs, phase-in schedules, conditionality. This is where the real story often lives.
    - **The math behind the headline** — does the number actually add up? Put it in context: as % of GDP, per capita, vs historical average, vs peer countries, vs market expectations. A "$840B trade deal" means nothing without knowing current trade volume, tariff baselines, and implementation timeline.
    - **Second-order effects** — who loses? What breaks downstream? What unintended consequences does the headline gloss over? Every policy creates winners and losers; most coverage only covers the winners.
-   - **Credible opposing view** — find a named expert or institution that disagrees with the consensus narrative, and explain WHY they disagree with specific reasoning (not just "some analysts are cautious"). A straw-man opposing view is worse than none.
+   - **Credible opposing view** — find a **named** expert or institution (full name + affiliation) with a **specific reasoning chain backed by data**. Example: "BCA Research 首席策略師 Peter Berezin argues stagflation risk is overblown because services PCE is driven by lagging shelter costs, which leading indicators (Zillow Observed Rent Index down 1.2% YoY) show will decelerate by Q2." Generic hedges ("部分分析師持保守看法") and unnamed sources ("some analysts disagree") do NOT count. Either find a real contrarian with real reasoning, or explicitly state that consensus is unusually unified and explain why that itself is a signal worth noting.
 
    **Per-style deep research examples:**
    - Commentary agent: cross-asset correlations, historical parallels with specific date/magnitude comparisons, institutional positioning data (CFTC, fund flows)
@@ -268,6 +275,17 @@ Each agent must:
    - AI/Tech agent: earnings call transcript quotes (exact words, not summaries), capex breakdowns by category, adoption survey methodology, energy consumption data from EIA / IEA
 
 2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take. The thesis must pass the **"Bloomberg terminal test"**: would someone with a Bloomberg terminal and 10 years of market experience learn something new from this post? If the answer is no, the research isn't deep enough — go back and search for another layer.
+
+   **Research depth gate (mandatory checkpoint before writing):**
+   Before beginning to write, the agent must output a brief checklist:
+   ```
+   ✓/✗ Primary source: [document name + specific finding]
+   ✓/✗ Fine print: [hidden mechanic or overlooked detail]
+   ✓/✗ Math in context: [key calculation that reframes the headline]
+   ✓/✗ Second-order effect: [who loses / what breaks downstream]
+   ✓/✗ Named contrarian: [Name at Institution — their specific argument]
+   ```
+   **Gate rule:** If fewer than 3 of 5 are marked ✓ with substantive content, the agent must run additional targeted searches before writing. Writing on thin research is the single most common quality failure — deeper research upfront prevents rewrites later.
 3. **Write the full post** in Traditional Chinese, following the style template exactly
 4. **Write the file** to `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/` with filename `YYYY-MM-DD-{slug}-zh.md`
 
@@ -464,7 +482,11 @@ After all QA passes, launch **2** agents in parallel (subagent_type: `general-pu
 3. **Durability test** — "Will this post still be worth reading in 3 months?" Posts that are purely event-reactive (a court ruling, a single earnings report) with no structural insight should be flagged for cutting or reframing.
 4. **Repetition test** — "Am I reading the same conclusion wrapped in different data?" After the cross-post dedup in Step 3.4, this is a final human-perspective check. Even if the specific ETFs and numbers are different, if the emotional takeaway is identical across posts (e.g., "everything is uncertain, be cautious"), flag it.
 5. **Actionability test** — "Do the 筆記 sections give me a clear framework for what to do and when to change my mind?" The 筆記 is the core value delivery — it must be specific, falsifiable, and distinct across posts.
-6. **Research depth test** — "Does each post contain at least one insight I couldn't get from a Bloomberg terminal or a Reuters wire?" Check for: (a) primary source citations (actual report tables, treaty text, transcript quotes — not just news summaries), (b) at least one "fine print" observation that mainstream coverage skips, (c) at least one quantified second-order effect. If a post is built entirely on wire-service-level information, flag it for deeper research or cutting.
+6. **Research depth test** — For each post, answer three specific questions:
+   - (a) **"What specific finding came from reading a primary source that wire services didn't report?"** The answer must cite a specific document, table, clause, or transcript quote. If the answer is vague ("used CBO data") or absent, the post fails.
+   - (b) **"Is the contrarian view named, specific, and falsifiable?"** The contrarian must have a name, an institution, and a data-backed argument. "Some analysts are cautious" or "risks exist on both sides" fails this test.
+   - (c) **"What second-order effect is quantified?"** At least one downstream consequence must have a number attached (e.g., "退稅成本 $1,335–1,750 億將使 FY2026 赤字額外增加 7–9%"). Vague "ripple effects" without quantification fail.
+   A post that fails 2+ of these 3 tests should be flagged for rewrite or cutting — it's adding noise, not signal, to the reader's information diet.
 
 **Agent 2: Writing Quality & Voice Perspective.** The agent reads all post files and evaluates:
 
