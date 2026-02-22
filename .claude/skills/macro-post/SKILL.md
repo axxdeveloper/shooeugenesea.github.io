@@ -150,6 +150,13 @@ Launch **six** research agents in parallel using the Task tool (subagent_type: `
 
 Each agent should run 3-5 web searches and return a concise bullet-point summary.
 
+**Source quality hierarchy (applies to ALL research agents):**
+1. **Primary sources first** — official reports (.gov), earnings transcripts, court filings, treaty text, central bank statements, regulatory filings (SEC EDGAR, BOJ minutes). These are the foundation.
+2. **Expert analysis second** — research notes from named analysts (Goldman, JPMorgan, SemiAnalysis, Brookings, CSIS), academic papers, specialized industry data providers (Trepp, FactSet, TrendForce).
+3. **News wire last** — Reuters, Bloomberg, CNBC are useful for context and quotes, but a post built entirely on wire service summaries will lack depth. Wire services summarize; this blog must analyze.
+
+Each agent must return **at least 2 primary sources** in its results. If an agent cannot find primary sources, it must flag this — the topic may not be ready for a post.
+
 ### Step 1.5: Classify the News Day & Read Previous Posts
 
 Before picking topics, do two things:
@@ -245,12 +252,22 @@ Each agent receives:
 - The **target filename** and front matter template
 
 Each agent must:
-1. **Deep research** — run 5-8 additional web searches focused specifically on its topic. Go deeper than Step 1: find primary sources, historical context, contrarian views, specific numbers that Step 1 missed. For example:
-   - Commentary agent: search for analyst reactions, cross-asset correlations, historical parallels
-   - Deep-dive agent: pull the actual government report tables, find revisions to prior data, search for expert commentary on the release
-   - Geopolitics agent: find diplomatic statements, trade flow data, historical precedents for similar political events
-   - AI/Tech agent: find earnings call transcripts, capex breakdowns, adoption surveys, energy consumption data
-2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take based on deep research (include at least one credible opposing interpretation)
+1. **Deep research** — run 5-8 additional web searches focused specifically on its topic. The goal is NOT more data points — it's **deeper data points** that wire services don't cover. Specifically:
+
+   **Mandatory research layers (every post must hit at least 3 of 5):**
+   - **Primary source** — find and read the actual document, not a summary of it (the Fed statement itself, the CBO table, the treaty text, the earnings transcript quote, the court ruling). Cite page/section numbers when possible.
+   - **Fine print & hidden mechanics** — what do most articles skip? Sunset clauses, enforcement mechanisms, methodology changes, carve-outs, phase-in schedules, conditionality. This is where the real story often lives.
+   - **The math behind the headline** — does the number actually add up? Put it in context: as % of GDP, per capita, vs historical average, vs peer countries, vs market expectations. A "$840B trade deal" means nothing without knowing current trade volume, tariff baselines, and implementation timeline.
+   - **Second-order effects** — who loses? What breaks downstream? What unintended consequences does the headline gloss over? Every policy creates winners and losers; most coverage only covers the winners.
+   - **Credible opposing view** — find a named expert or institution that disagrees with the consensus narrative, and explain WHY they disagree with specific reasoning (not just "some analysts are cautious"). A straw-man opposing view is worse than none.
+
+   **Per-style deep research examples:**
+   - Commentary agent: cross-asset correlations, historical parallels with specific date/magnitude comparisons, institutional positioning data (CFTC, fund flows)
+   - Deep-dive agent: actual government report tables (not news summaries), revisions to prior data, methodology notes, expert commentary on what the headline number misses
+   - Geopolitics agent: diplomatic statements (actual quotes, not paraphrased), trade flow data from UN Comtrade / WTO / bilateral statistics, legal text of agreements, historical precedents with outcome comparisons
+   - AI/Tech agent: earnings call transcript quotes (exact words, not summaries), capex breakdowns by category, adoption survey methodology, energy consumption data from EIA / IEA
+
+2. **Synthesize a thesis** — form a clear, falsifiable, and balanced take. The thesis must pass the **"Bloomberg terminal test"**: would someone with a Bloomberg terminal and 10 years of market experience learn something new from this post? If the answer is no, the research isn't deep enough — go back and search for another layer.
 3. **Write the full post** in Traditional Chinese, following the style template exactly
 4. **Write the file** to `/Users/isaac.l/projects/shooeugenesea.github.io/_posts/` with filename `YYYY-MM-DD-{slug}-zh.md`
 
@@ -447,6 +464,7 @@ After all QA passes, launch **2** agents in parallel (subagent_type: `general-pu
 3. **Durability test** — "Will this post still be worth reading in 3 months?" Posts that are purely event-reactive (a court ruling, a single earnings report) with no structural insight should be flagged for cutting or reframing.
 4. **Repetition test** — "Am I reading the same conclusion wrapped in different data?" After the cross-post dedup in Step 3.4, this is a final human-perspective check. Even if the specific ETFs and numbers are different, if the emotional takeaway is identical across posts (e.g., "everything is uncertain, be cautious"), flag it.
 5. **Actionability test** — "Do the 筆記 sections give me a clear framework for what to do and when to change my mind?" The 筆記 is the core value delivery — it must be specific, falsifiable, and distinct across posts.
+6. **Research depth test** — "Does each post contain at least one insight I couldn't get from a Bloomberg terminal or a Reuters wire?" Check for: (a) primary source citations (actual report tables, treaty text, transcript quotes — not just news summaries), (b) at least one "fine print" observation that mainstream coverage skips, (c) at least one quantified second-order effect. If a post is built entirely on wire-service-level information, flag it for deeper research or cutting.
 
 **Agent 2: Writing Quality & Voice Perspective.** The agent reads all post files and evaluates:
 
@@ -502,7 +520,7 @@ Launch **four** parallel research agents (subagent_type: `general-purpose`), all
 | **Market Impact Agent** | Search for market/ETF reactions, analyst commentary, cross-asset implications tied to the topic. Return prices, analyst quotes, and source URLs. |
 | **Contrarian & Risk Agent** | Search for opposing views, risks, implementation gaps, what could go wrong with the consensus view on the topic. Return counterarguments with evidence and source URLs. |
 
-Each agent should run 3-5 web searches and return a concise bullet-point summary.
+Each agent should run 3-5 web searches and return a concise bullet-point summary. The same **source quality hierarchy** from default mode Step 1 applies: primary sources first, expert analysis second, wire services last. Each agent must return at least 2 primary sources.
 
 #### Topic Step 1.5: Read Previous Posts
 
