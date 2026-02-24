@@ -1,17 +1,17 @@
 ---
-description: Generate macro blog posts in Traditional Chinese — 1 post daily (thinking frameworks, not predictions): Monday long-form, other days short-form or brief
+description: Generate macro blog posts in Traditional Chinese (thinking frameworks, not predictions): Monday long-form, other days short-form or brief, multiple posts per day allowed
 ---
 
 # /macro-post
 
 Generate blog posts in Traditional Chinese anchored to economic and market impact. The blog sells **thinking frameworks**, not predictions or allocation advice.
 
-- **Default mode** — 每日 1 篇。週一固定長篇，其餘日短篇或快報。Every post uses a unified 4-section skeleton.
+- **Default mode** — 根據當日新聞量自動決定篇數。週一至少一篇長篇，其餘日短篇或快報。Every post uses a unified 4-section skeleton.
 - **Topic mode** — 1 deep-research post on a user-specified topic (long-form by default)
 
 ## Usage
 
-- `/macro-post` — 今日 1 篇（自動判斷長篇/短篇/快報）
+- `/macro-post` — 今日文章（自動判斷篇數與篇幅）
 - `/macro-post "tariff impact on bonds"` — default mode with topic hint
 - `/macro-post 我想要一篇關於「商業不動產 CMBS 到期牆」的深度研究` — topic mode: 1 deep-research post
 
@@ -111,7 +111,7 @@ Rules for invalidation table:
 | 週一 | 長篇 | 固定長篇。 |
 | 週二-五 | 短篇 | 當日最值得拆解的一個題材。有題材就短篇，沒有好題材就降為快報。 |
 | 週六-日 | 快報 | 預設快報。除非週末出現重大突發事件才升級為短篇。 |
-| 任一天 | crisis / correction | 取代當日預設（仍只出 1 篇）。 |
+| 任一天 | crisis / correction | 優先產出，可與當日其他文章並存。 |
 
 **升降級規則：**
 - 重大數據日（Fed 決議、非農、CPI、GDP）：當日預設至少短篇；若在週二-五 → 升級為長篇
@@ -214,10 +214,10 @@ Before generating any new posts, assess whether it's the right time to publish. 
 - 若上週一未發長篇 → 本週一強制長篇
 
 **2. Check publishing cadence (7-day rolling window).** Count how many macro posts were published in the last 7 days (read `_posts/` filenames, only count files whose `categories` include `macro`). Apply these rules:
-- **≤ 7 posts in last 7 days** → proceed normally (daily pace is the target)
-- **8-9 posts in last 7 days** → proceed only if there's a genuine breaking event or materially new data. Tell the user: "最近 7 天已發 N 篇（超過每日一篇節奏），僅在重大事件時額外發文。"
-- **≥ 10 posts in last 7 days** → STOP. Tell the user: "最近 7 天已發 N 篇，密集發文會稀釋品質與讀者注意力。建議跳過今天，除非有重大突發事件。" Only proceed if the user explicitly confirms a breaking event justifies it.
-- **Same-day duplicate check**: If a macro post was already published TODAY (same date in `_posts/`), skip. 單日永遠只 1 篇 — crisis/correction 會取代當日預設，不加發第二篇。
+- **≤ 14 posts in last 7 days** → proceed normally
+- **15-20 posts in last 7 days** → warn the user: "最近 7 天已發 N 篇，注意品質可能稀釋。" Proceed if each topic passes the research depth gate.
+- **≥ 21 posts in last 7 days** → STOP. Tell the user: "最近 7 天已發 N 篇，密集發文會稀釋品質與讀者注意力。" Only proceed if the user explicitly confirms.
+- **Same-day duplicate check**: If the exact same primary_topic was already published TODAY (same date and same primary_topic tag in `_posts/`), skip that topic. Different topics on the same day are allowed.
 
 **3. Check invalidation conditions.** Read the 2-3 most recent posts' invalidation condition tables. Cross-reference against latest available data (use research agents if needed). If any invalidation condition has been triggered by new data, **prioritize producing a correction post** (see Special Post Types > Correction Post).
 
@@ -287,7 +287,7 @@ Previous posts (last 7 days):
 
 ### Step 2: Pick Today's Topic
 
-From all agent results, pick **one topic** for today's post. The format tier (長篇/短篇/快報) was determined in Step 0.5 — choose a topic whose complexity matches the format. 單日永遠只 1 篇；crisis/correction 取代當日預設，不加發第二篇。The selection strategy depends on the day type from Step 1.5.
+From all agent results, pick the best topics for today's posts. The format tier (長篇/短篇/快報) was determined in Step 0.5 — choose topics whose complexity matches the format. Each topic must have a distinct primary_topic tag and a distinct core question. The selection strategy depends on the day type from Step 1.5.
 
 **選題需匹配今日篇幅：**
 - **長篇**（週一 / 重大數據日）：允許更宏觀、更整合的題材，但仍只有一個核心問題
@@ -323,7 +323,7 @@ Before finalizing any topic, assess whether the topic is **saturated** — i.e.,
 
 #### For breaking news days:
 
-Cover the breaking event with 1 post. 不出第二篇。
+Cover the breaking event. If multiple unrelated breaking events occurred, each can be a separate post.
 
 #### For quiet days (discovery mode):
 
@@ -346,7 +346,7 @@ Compare each candidate topic's primary_topic tag against the previous-posts list
 **Aggressively skip weak topics.** Default output is 1 post at the day's format tier. Apply these skip triggers:
 - **No quality topic:** If there's no meaningful news with economic impact today, produce a 快報 on a continuing theme or skip entirely. A day without a post is better than a filler post.
 - **Conclusion convergence:** If considering multiple angles and they'd arrive at the same takeaway, keep only the stronger one.
-- **Daily default:** 1 post. Crisis/correction 取代當日預設，不加發第二篇。
+- **Quality over quantity:** Only produce posts that pass the research depth gate. Never force a weak topic to fill a quota.
 - Never force a weak topic — consistency over volume.
 
 ### Step 2.5: Core Question Definition (MANDATORY)
@@ -365,7 +365,7 @@ Every subsequent paragraph in the post must serve this question. If a paragraph 
 
 ### Step 3: Deep Investigation & Post Generation (Parallel Agents)
 
-Launch **one agent per chosen topic** (typically 1 agent) using the Task tool (subagent_type: `general-purpose`). The agent independently **researches deeply** then **writes the post**.
+Launch **one agent per chosen topic** using the Task tool (subagent_type: `general-purpose`). Multiple topic agents can run in parallel. Each agent independently **researches deeply** then **writes the post**.
 
 The agent receives:
 - The **broad research context** from Step 1 (relevant bullet points for its topic)
@@ -589,7 +589,11 @@ Each agent should return a table: `Claim | Blog Value | Actual Value | Source | 
 
 ### Step 3.4: Cross-Post Deduplication
 
-Skip — 單日永遠只 1 篇，不需要跨文去重。
+When producing multiple posts on the same day, verify:
+- No two posts share the same primary_topic tag
+- No two posts arrive at the same core judgment (conclusion convergence)
+- If two posts reference the same data point, they must use it to support different theses
+- Cross-reference 分水嶺 sections: one post's invalidation condition should not contradict another post's core judgment
 
 ### Step 3.6: Bias & Tone QA (MANDATORY)
 
