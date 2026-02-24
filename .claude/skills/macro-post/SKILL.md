@@ -265,6 +265,14 @@ Each agent must structure its output with two clearly labeled sections:
 1. **Primary source findings** (minimum 2 per agent) — For each primary source, include: source name + URL, and one sentence starting with "**Insight beyond wire coverage:**" describing the specific finding not available in Reuters/Bloomberg summaries. Example: "CBO Budget Outlook Table 1-3 ([URL]) — **Insight beyond wire coverage:** CBO assumes 10Y yield declines to 3.6% by 2027; if rates stay at current 4.1%, net interest projections are understated by ~$200B/year."
 2. **Supporting context** — Wire-level data points and quotes for background.
 
+**Temporal status tagging (mandatory):**
+Every data point returned by a research agent must be tagged with one of:
+- **[ACTUAL]** — already published/released (e.g., "CPI January 2026: 2.4% [ACTUAL, BLS 2/12]")
+- **[ESTIMATE]** — consensus forecast or analyst expectation for an unreleased event (e.g., "NVIDIA Q4 EPS: $1.53 [ESTIMATE, consensus, reports 2/25]")
+- **[PROJECTED]** — forward-looking model output (e.g., "CBO 2027 debt/GDP: 120% [PROJECTED, CBO Jan 2026 report]")
+
+This tagging prevents the writing agent from treating unreleased estimates as confirmed facts. The writing agent must use future tense and attribution language (「市場共識預期」「分析師預估」) for any data tagged [ESTIMATE] or [PROJECTED].
+
 If an agent's output contains zero substantive entries under "Primary source findings," the topic's research depth is insufficient — either send the agent back for deeper searches or flag the topic for potential skipping.
 
 ### Step 1.5: Classify the News Day & Read Previous Posts
@@ -453,7 +461,7 @@ lang: zh-TW
 12. **Cite everything** — every factual claim needs a source URL as an inline markdown link.
 13. **Use real numbers** — never write "inflation is rising" when you can write "CPI rose to 2.4% YoY".
 14. **Traditional Chinese only** — parenthetically gloss English abbreviations on first use, e.g.「消費者物價指數 (CPI)」
-15. **Date every event** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened.
+15. **Date every event & distinguish actual vs. expected** — when referencing a policy decision, data release, ruling, or any event that didn't happen on the post's publication date, include the specific date (e.g., "聯準會 1 月 28 日以 10:2 投票維持利率不變" not "聯準會以 10:2 投票維持利率不變"). Readers should never have to guess *when* something happened. **Critical: clearly distinguish between data that has already been published and data that is a forward-looking estimate or consensus forecast.** Use past tense + definitive language for published data (e.g., "CPI 1 月升至 2.4%"). Use future tense + attribution for unreleased data (e.g., "NVIDIA 將於 2 月 25 日公佈財報，市場共識預期 EPS $1.53"). Never write unreleased estimates as if they are confirmed results — this is a credibility-destroying error.
 16. **No abstract references** — never refer to scenarios, sections, or items by number/letter alone (e.g., "情境 3", "第二點"). Readers don't memorize numbering. Always use descriptive names inline.
 17. **Jargon glossary** — when a post uses domain-specific terms that a general reader would not immediately understand (e.g., CMBS, NOI, carry trade, REIT, credit spread), add a small inline aside box near where the term **first appears**. Float it to the right of the paragraph so it sits alongside the relevant text. Each term is explained only once per post. Group terms that first appear in the same section into one box.
    ```html
@@ -573,6 +581,12 @@ For 長篇/短篇, launch **four** fact-check agents in parallel (subagent_type:
 | **Tech/Industry Checker** | Verify all tech/industry claims: capex numbers, market cap changes (single day vs multi-day), adoption stats. Flag timeframe errors. |
 
 Each agent should return a table: `Claim | Blog Value | Actual Value | Source | Verdict (correct/wrong/outdated)`.
+
+**Temporal accuracy check (CRITICAL):**
+Each fact-check agent must verify the **temporal status** of every data point:
+- Is the event/data already published as of the post's publication date? If yes, past tense is correct.
+- Is it a forward-looking estimate or consensus forecast for an unreleased event? If yes, the post MUST use future tense and attribution (「市場共識預期」「分析師預估」). Flag any instance where an unreleased estimate is written as a confirmed fact.
+- Common trap: earnings reports (e.g., "NVIDIA reported EPS $1.53" when the report date is tomorrow). Always cross-check the event date against the post's publication date.
 
 **Chart Data Verification (CRITICAL):** Each fact-check agent must also verify the Chart.js data in its domain:
 - Extract every number from the chart's `data` array and `labels`
