@@ -5,37 +5,34 @@ date: 2025-02-24 18:00:00 +0800
 categories: [macro]
 tags: [macro, rotation, ai, energy]
 macro_kind: long
-description: "截至 2025-02-24，軟體與能源板塊績效裂口逼近 50 個百分點。重點不在 2/3 的單日波動，而在三週後仍未收斂的三條獨立因果鏈。"
+description: "改用 2025-02-24 當天可驗證資料重寫：同一個市場畫面，為何軟體走弱、能源抗跌，卻又沒有全面風險崩盤？"
 lang: zh-TW
 ---
 
-## 裂口不是 2/3 的瞬間，而是 2/24 的存量
+## 同一天收盤，為什麼軟體與能源像在兩個市場？
 
-2 月 3 日是觸發點，但不是終點。到了 **2025-02-24**，軟體與能源的相對績效裂口仍接近 **50 個百分點**，而且發生在大盤並未同步崩跌的背景下（[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)、[IGV](https://finance.yahoo.com/quote/IGV/)、[XLE](https://finance.yahoo.com/quote/XLE/)）。
+截至 **2025-02-24** 收盤，iShares 北美軟體 ETF（IGV）在 2/14 到 2/24 這段短窗由 **106.76** 回落到 **99.20**，同期能源板塊 ETF（XLE）由 **45.03** 升到 **45.47**，兩者方向明顯分離（[IGV 歷史價格](https://uk.finance.yahoo.com/quote/IGV/history/)、[XLE 歷史價格](https://uk.finance.yahoo.com/quote/XLE/history/)）。
 
-這道裂口，究竟是 AI 商業模式被重估、利率驅動的估值均值回歸，還是地緣風險把能源防禦溢價推到極端？
+這是 AI 敘事被重新折現、利率與通膨預期在重定價，還是地緣與油價把資金推向防禦板塊？
 
-這篇重寫版只回答這一個問題：把同一個價格現象拆成三條互不相依的因果鏈，並用可驗證的觀察門檻判斷哪一條鏈正在主導。下一個關鍵驗證點不是評論，而是後續財報與利率路徑是否同時支持當前定價。
+這篇只做一件事：用 2/24 當下已公開資料，把同一個價格現象拆成三條獨立因果鏈，並給出可驗證的分水嶺。關鍵不是預測誰會贏，而是辨識哪一條鏈先失效、哪一條鏈還在主導。
 
-## 同一條價格裂縫，三條互不相依的因果鏈
+## 三條獨立因果鏈：AI 折現、利率重估、防禦溢價
 
 <aside style="float: right; width: 220px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>離散度 (Dispersion)</strong>：衡量板塊與個股之間報酬差距。離散度愈高，選板塊比猜大盤更重要。<br>
-<strong>座位壓縮 (Seat Compression)</strong>：AI agent 取代部分人力工作流，壓縮 SaaS 以「人頭授權」為核心的營收增長。<br>
-<strong>P/S（市銷率）</strong>：市場願意為每 1 元營收付出的估值倍數。
+<strong>離散度 (Dispersion)</strong>：個股與板塊報酬差異的程度。離散度高時，選對板塊比猜大盤方向更重要。<br>
+<strong>折現率重估</strong>：當利率或風險溢價改變時，市場對未來現金流現值重新定價。<br>
+<strong>防禦溢價</strong>：在不確定性升高時，資金願意為「相對穩定現金流」支付額外估值。
 </aside>
 
-**第一條鏈：AI 座位壓縮的預期定價。**  
-市場擔心的不是「AI 讓軟體消失」，而是「AI 讓同一份工作需要更少 seat」，使 SaaS 以人頭計價的成長斜率下修。這條鏈目前最像「預期先行」：價格先反應，營收數據後驗證。觀察重點不是單一產品發表，而是企業採購行為是否同時出現三件事：  
-1. 新增 seat 是否放緩。  
-2. 續約價格是否被壓。  
-3. 套餐升級是否從「加人頭」改成「加算力」。  
+**第一條鏈：AI 相關資產先被估值壓縮。**
+2 月 24 日 Cboe 的波動週報指出，SPX 隱含波動上升、VIX 回到 **18.2**，而且離散度在財報季末仍偏高，顯示市場不是在交易單一總體恐慌，而是在交易「哪些現金流需要更高折現率」([Cboe 2025-02-24](https://www.cboe.com/insights/posts/spx-option-volumes-hit-record-high-as-volatility-picks-up/))。在這個框架下，IGV 的回落更像高久期成長資產的再定價，而不必然等於需求立即崩塌。
 
-**第二條鏈：利率環境下的估值均值回歸。**  
-這條鏈不需要戲劇性新聞就會發生。只要長端殖利率維持高位（[UST 10Y](https://fred.stlouisfed.org/series/DGS10)），高久期板塊就會被更高折現率壓縮，而現金流可見度較高、資本支出紀律更穩定的板塊（如能源）容易獲得相對估值支持。這能同時解釋軟體被壓估值與能源被給溢價，而且最不依賴單一敘事。
+**第二條鏈：利率與通膨的組合，讓估值分化加劇。**
+聯準會在 **2025-01-29** 維持聯邦基金利率目標區間 **4.25%-4.50%** ([Fed Implementation Note](https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a1.htm))；BLS 在 **2025-02-13** 公布 1 月 CPI 年增 **3.0%** ([BLS](https://www.bls.gov/opub/ted/2025/the-consumer-price-index-rose-3-0-percent-from-january-2024-to-january-2025.htm))。高利率與仍具黏性的通膨組合，通常會壓抑長久期估值，對軟體這類高估值板塊形成更直接壓力。
 
-**第三條鏈：地緣事件推升能源安全溢價。**  
-能源股的超額報酬有一部分來自風險溢價而非純粹供需基本面。當油價因地緣事件維持強勢（[Brent](https://finance.yahoo.com/quote/BZ%3DF/)），資金會把能源視為「事件期現金流避風港」。但這也是三條鏈中最短週期的一條：一旦風險降溫，溢價可在短時間內回吐。
+**第三條鏈：能源的防禦屬性暫時強於成長屬性。**
+IEA 在 **2025-02-13** 的月報指出，Brent 在 1 月曾衝高後回落到約 **77 美元**，且 2025 年非 OPEC+ 供給增量高於需求增量（供給 +1.6 mb/d、需求 +1.1 mb/d）([IEA OMR Feb 2025](https://www.iea.org/reports/oil-market-report-february-2025))。這代表能源上漲不完全是「需求爆發」，更可能包含在高不確定環境下的防禦性配置。
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart50"></canvas>
@@ -43,47 +40,44 @@ lang: zh-TW
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 new Chart(document.getElementById('macroChart50'), {
-  type: 'bar',
+  type: 'line',
   data: {
-    labels: ['能源 (XLE)', '工業 (XLI)', 'S&P 500', '科技 (XLK)', '軟體 (IGV)'],
-    datasets: [{
-      label: 'YTD 2025 績效 (%)',
-      data: [22.8, 11.9, 1.1, -4.2, -26.7],
-      backgroundColor: [
-        'rgba(74, 222, 128, 0.8)',
-        'rgba(59, 130, 246, 0.8)',
-        'rgba(156, 163, 175, 0.7)',
-        'rgba(250, 204, 21, 0.7)',
-        'rgba(239, 68, 68, 0.8)'
-      ],
-      borderColor: [
-        'rgba(74, 222, 128, 1)',
-        'rgba(59, 130, 246, 1)',
-        'rgba(156, 163, 175, 1)',
-        'rgba(250, 204, 21, 1)',
-        'rgba(239, 68, 68, 1)'
-      ],
-      borderWidth: 1
-    }]
+    labels: ['2/14', '2/18', '2/19', '2/20', '2/21', '2/24'],
+    datasets: [
+      {
+        label: 'IGV（2/14=100）',
+        data: [100.00, 101.00, 99.23, 97.41, 94.09, 92.92],
+        borderColor: 'rgba(239, 68, 68, 0.9)',
+        backgroundColor: 'rgba(239, 68, 68, 0.15)',
+        tension: 0.25,
+        fill: false
+      },
+      {
+        label: 'XLE（2/14=100）',
+        data: [100.00, 101.38, 102.18, 103.11, 100.98, 100.98],
+        borderColor: 'rgba(34, 197, 94, 0.9)',
+        backgroundColor: 'rgba(34, 197, 94, 0.15)',
+        tension: 0.25,
+        fill: false
+      }
+    ]
   },
   options: {
-    indexAxis: 'y',
     responsive: true,
     plugins: {
       title: {
         display: true,
-        text: '2025 YTD 板塊績效：50 個百分點的裂縫（來源：Yahoo Finance, 截至 2/24）',
+        text: '2/14–2/24 相對績效：IGV vs XLE（來源：Yahoo Finance 歷史價格）',
         color: '#e2e8f0',
         font: { size: 11 }
       },
-      legend: { display: false }
+      legend: {
+        labels: { color: '#94a3b8' }
+      }
     },
     scales: {
       x: {
-        ticks: {
-          color: '#94a3b8',
-          callback: function(v) { return v + '%'; }
-        },
+        ticks: { color: '#94a3b8' },
         grid: { color: 'rgba(255,255,255,0.1)' }
       },
       y: {
@@ -95,30 +89,30 @@ new Chart(document.getElementById('macroChart50'), {
 });
 </script>
 
-截至 2025-02-24，三條鏈裡最被數據支持的是第二條。理由是它最少假設、可重複驗證，且與利率路徑高度一致。第一條不是錯，而是仍在等財報與採購數據完成驗證；第三條不是弱，而是事件驅動特性使其可持續性最低。這也是為什麼同一個市場裂口，不能只用單一敘事解釋。
+若只看 2/14 到 2/24 的短窗，裂口約 **8 個百分點**，而不是 50。這反而是更重要的訊號：市場當下正在交易「定價機制分化」而非「全面風險單向崩盤」。也因此，後續要追的是哪一條因果鏈先被資料否證，而不是把所有價格變動塞進同一個敘事。
 
 ## 分水嶺
 
-如果軟體公司在後續兩季財報同時呈現「續約率穩定 + AI 帶來新增 ARPU」，→ 第一條鏈會從折價敘事轉為再成長敘事，軟體估值壓縮有機會收斂。  
+如果 IGV 在後續財報季出現「營收指引下修 + 續約率走弱」，→ 第一條鏈（AI 折現壓縮）會從估值問題延伸成基本面問題，軟體折價可能延長。
 
-如果 10 年期殖利率中樞回落並維持數週，→ 第二條鏈開始鬆動，長久期板塊估值修復速度可能快於能源。  
+如果通膨持續高於 2% 目標且政策利率維持高檔更久，→ 第二條鏈（利率重估）持續主導，長久期板塊的估值修復會被延後。
 
-如果油價風險溢價在無供需崩壞下快速回吐，→ 第三條鏈先失速，能源相對優勢將明顯下降，板塊裂口會先由價格端收斂。  
+如果 Brent 在供給增加下仍維持高位，或地緣事件再次推高風險溢價，→ 第三條鏈（防禦溢價）延續，能源相對抗跌結構不易鬆動。
 
 ## 結語
 
-> **核心判斷：** 50 個百分點的板塊裂口不是單一事件，而是三條獨立因果鏈的疊加定價；目前最穩的是估值均值回歸，最需要後續驗證的是 AI 座位壓縮。
+> **核心判斷：** 2/24 的市場訊號不是單一故事，而是三條獨立因果鏈同時作用；真正該追蹤的不是「誰漲誰跌」，而是哪一條鏈先被新資料推翻。
 
 | Metric | Threshold | Window | Implication |
 |--------|-----------|--------|-------------|
-| 軟體板塊續約與 ARPU | 連續兩季「續約率不降且 AI 相關 ARPU 年增轉正」 | 下一個兩季財報窗口（Q1、Q2） | 第一條鏈由折價轉為成長驗證，軟體估值壓縮邏輯需重估 |
-| 10 年期公債殖利率 | 跌破 4.0% 並連續維持 4 週 | 4-8 週觀察 + 下次 FOMC 前 | 第二條鏈轉弱，久期估值修復的機率提升 |
-| Brent 風險溢價 | 油價回落且連續 3 週未回升 | 1-2 個月 + 下次 OPEC+ 會議後 | 第三條鏈鬆動，能源防禦溢價需重估 |
+| IGV 相對 XLE 的短窗走勢 | IGV 再跌且 XLE 持平/上行，連續 3 週 | 下一個月（每週收盤） | 第一條鏈仍強，市場繼續懲罰高久期成長現金流 |
+| 美國 CPI 年增率 | 連續 2 個月高於 3.0% | 3 月與 4 月 CPI 發布日 | 第二條鏈延續，利率折現壓力難以緩解 |
+| Brent 油價與供需指引 | 在 IEA 供給增長預期下仍高位震盪 4 週 | 下次 IEA/OPEC+ 更新前後 | 第三條鏈（防禦溢價）仍在，能源相對估值維持支撐 |
 
-關鍵觀察變數：（一）企業軟體採購是增加 seat 還是增加 token/算力；（二）長端利率是否脫離高位平台；（三）油價中的地緣溢價比例是否下降。
+關鍵觀察變數：（一）軟體財報中的續約與指引；（二）核心通膨回落速度是否快於市場預期；（三）油價高位是供需驅動還是風險溢價驅動。
 
 ---
 
-*資料來源：[Yahoo Finance](https://finance.yahoo.com/)、[IGV](https://finance.yahoo.com/quote/IGV/)、[XLE](https://finance.yahoo.com/quote/XLE/)、[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/)、[Brent](https://finance.yahoo.com/quote/BZ%3DF/)、[Cboe DSPX](https://www.cboe.com/tradable_products/sp_500/sp_500_options/dispersion/)、[FRED 10Y Yield](https://fred.stlouisfed.org/series/DGS10)*
+*資料來源：[IGV 歷史價格](https://uk.finance.yahoo.com/quote/IGV/history/)、[XLE 歷史價格](https://uk.finance.yahoo.com/quote/XLE/history/)、[Cboe 2025-02-24 市場波動週報](https://www.cboe.com/insights/posts/spx-option-volumes-hit-record-high-as-volatility-picks-up/)、[Fed 2025-01-29 Implementation Note](https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a1.htm)、[BLS 2025-02-13 CPI](https://www.bls.gov/opub/ted/2025/the-consumer-price-index-rose-3-0-percent-from-january-2024-to-january-2025.htm)、[IEA Oil Market Report Feb 2025](https://www.iea.org/reports/oil-market-report-february-2025)*
 *市場數據截至：2025-02-24*
 *本文僅供參考，不構成投資建議。*
