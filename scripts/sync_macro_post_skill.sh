@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SRC_FILE="$ROOT_DIR/.claude/skills/macro-post/SKILL.md"
-CODEX_HOME_DIR="${CODEX_HOME:-$HOME/.codex}"
+CODEX_HOME_DIR="$ROOT_DIR/.codex"
 DEST_DIR="$CODEX_HOME_DIR/skills/macro-post"
 DEST_FILE="$DEST_DIR/SKILL.md"
 
