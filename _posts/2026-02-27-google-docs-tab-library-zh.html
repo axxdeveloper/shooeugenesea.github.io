@@ -72,17 +72,76 @@ lang: zh-TW
   <li>刪除範圍用 <code>startIndex=1</code> 到 <code>endIndex-1</code>，保留結構性換行避免壞格式</li>
 </ul>
 
-<p><strong>deleteTab 的坑：</strong></p>
+<h3>關鍵程式片段 1：指定 tab 寫入（tabId / tabTitle）</h3>
 
-<p>一開始直覺會想「先 deleteTab 再重建」，但這個做法很容易踩雷：</p>
+<p>重點是「先解析目標 tab，再把寫入 request 帶上 tabId」。如果 <code>tabId</code> 與 <code>tabTitle</code> 都沒給，就直接報錯，避免誤寫到主 tab。</p>
 
-<ul>
-  <li><code>deleteTab</code> 是結構操作，不是清空內容</li>
-  <li>tab 被刪掉重建後，<code>tabId</code> 會變，既有 mapping 會失效</li>
-  <li>在某些文件狀態下（例如只剩主要 tab）會碰到 precondition 類型錯誤</li>
-</ul>
+<pre><code>def resolve_target_tab(flat_tabs, tab_id=None, tab_title=None):
+    if tab_id:
+        for t in flat_tabs:
+            if t["tabId"] == tab_id:
+                return t
+        raise ValueError(f"tabId not found: {tab_id}")
 
-<p>所以最後策略改成：<strong>盡量保持 tab 身分（tabId）不變，只更新內容。</strong></p>
+    if tab_title:
+        for t in flat_tabs:
+            if t["title"] == tab_title:
+                return t
+        raise ValueError(f"tabTitle not found: {tab_title}")
+
+    raise ValueError("請至少提供 tabId 或 tabTitle")
+
+
+def build_write_requests(target_tab_id, text, end_index):
+    return [
+        {
+            "deleteContentRange": {
+                "range": {
+                    "segmentId": "",
+                    "tabId": target_tab_id,
+                    "startIndex": 1,
+                    "endIndex": max(1, end_index - 1)
+                }
+            }
+        },
+        {
+            "insertText": {
+                "location": {
+                    "index": 1,
+                    "tabId": target_tab_id
+                },
+                "text": text
+            }
+        }
+    ]</code></pre>
+
+<h3>關鍵程式片段 2：deleteTab 正確 request（對比錯誤 deleteDocumentTab）</h3>
+
+<p>這次最容易中招的是 request 名稱打錯。<code>deleteDocumentTab</code> 不是可用 request，會直接噴 invalid JSON payload / unknown field。</p>
+
+<pre><code># ❌ 錯誤：不存在的 request 類型
+{
+  "requests": [
+    {
+      "deleteDocumentTab": {
+        "tabId": "t.abc123"
+      }
+    }
+  ]
+}
+
+# ✅ 正確：使用 deleteTab
+{
+  "requests": [
+    {
+      "deleteTab": {
+        "tabId": "t.abc123"
+      }
+    }
+  ]
+}</code></pre>
+
+<p>另外，<code>deleteTab</code> 是結構操作，不是清空內容。實務上如果只是更新內容，優先用 <code>deleteContentRange + insertText</code>，避免 tabId 改變造成 mapping 失效。</p>
 
 <hr />
 
@@ -117,6 +176,56 @@ lang: zh-TW
   --us-stock-file /tmp/us_stock.txt \
   --tw-stock-file /tmp/tw_stock.txt \
   --mode replace</code></pre>
+
+<hr />
+
+<h2>一般人最常遇到的 5 個坑</h2>
+
+<ol>
+  <li><strong>沒開 <code>includeTabsContent=true</code></strong>：抓到的文件內容不完整，會以為 tab 不見。</li>
+  <li><strong>把 tabTitle 當唯一鍵</strong>：同名 tab 或改名後就會對不到，正式環境建議固定用 <code>tabId</code>。</li>
+  <li><strong>replace 直接從 index=0 開始刪</strong>：容易破壞結構，建議保留邊界（常見做法是 1 到 endIndex-1）。</li>
+  <li><strong>用 deleteTab 取代清空內容</strong>：會改變 tab 身分，後續腳本 mapping 全壞。</li>
+  <li><strong>錯把 request 名稱寫成 <code>deleteDocumentTab</code></strong>：這不是有效 request，會直接報 unknown field。</li>
+</ol>
+
+<hr />
+
+<h2>gog 遇到的限制與 workaround</h2>
+
+<ul>
+  <li><strong><code>gog docs write</code> 目前不支援 <code>--tab</code></strong>：只能對文件主體操作，不能指定 Docs tab。</li>
+  <li><strong>Google Tasks</strong>：目前情境下 <code>list/create task list</code> 可用，但 <code>delete task list</code> 不支援。</li>
+</ul>
+
+<p>我的實務 workaround：</p>
+
+<ul>
+  <li>如果只是快速寫一段到單一文件（不分 tab），先用 <code>gog docs write</code> 提升效率。</li>
+  <li>一旦進入「多 tab、指定 tab、批次更新」場景，就改走 Google Docs API（自己控制 <code>tabId</code> / request payload）。</li>
+  <li>Tasks 需求若包含 task list 刪除、批次維護、生命週期管理，直接改用 Google Tasks API（不要卡在 CLI 能力邊界）。</li>
+</ul>
+
+<p><strong>簡單判斷：</strong>CLI 能解決 80% 就先用 CLI；只要碰到 tab 精準控制或 Tasks 進階管理，立刻切 API，避免把 workaround 疊成技術債。</p>
+
+<hr />
+
+<h2>可直接複製的 troubleshooting checklist</h2>
+
+<pre><code># Google Docs Tabs Troubleshooting Checklist
+
+[ ] 1. 先確認拿文件時有 includeTabsContent=true
+[ ] 2. 先跑 list-tabs，確認 tabId / tabTitle 存在且對得上
+[ ] 3. 寫入前印出 target_tab_id（log）避免寫錯 tab
+[ ] 4. replace 模式確認 range: startIndex=1, endIndex=endIndex-1
+[ ] 5. 若 API 噴 unknown field，先檢查 request 名稱（deleteTab 不是 deleteDocumentTab）
+[ ] 6. 若 precondition failed，確認是否在刪唯一主要 tab、或文件狀態不允許該操作
+[ ] 7. 若 mapping 常失效，避免 deleteTab 重建，改用 deleteContentRange + insertText
+[ ] 8. 自動化前先 dry-run / 小文件驗證，再上正式文件
+
+# 建議最小驗證流程
+python3 scripts/google_docs_tab_write.py --doc-id &lt;DOC_ID&gt; --list-tabs
+python3 scripts/google_docs_tab_write.py --doc-id &lt;DOC_ID&gt; --tab-id &lt;TAB_ID&gt; --text "smoke test" --mode append</code></pre>
 
 <hr />
 
