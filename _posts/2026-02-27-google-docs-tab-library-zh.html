@@ -18,6 +18,8 @@ lang: zh-TW
 
 <p><strong>這次的目標很單純：把 tab 操作做成可指定、可批次、可驗證。</strong></p>
 
+<p><strong>痛點：</strong>一開始我其實想直接用 OpenClaw + <code>gog</code> 來管理 Google Doc 的 tab，流程看起來最省事；但實測後發現當時 <code>gog docs write</code> 還不能指定 <code>--tab</code>，只能讀 tab、無法精準寫到指定 tab。為了把「指定 tab 寫入」這件事做穩，最後就改成自己寫一層 script，直接用 Google Docs API 控制 request 與 <code>tabId</code>。</p>
+
 <hr />
 
 <h2>這次解決的痛點（為何要做）</h2>
