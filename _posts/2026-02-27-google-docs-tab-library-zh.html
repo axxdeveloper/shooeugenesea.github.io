@@ -1,0 +1,132 @@
+---
+layout: post
+title: 新增 Google Docs tab 存取 library 的一些心得
+date: 2026-02-27 22:05:00 +0800
+tags: [google docs, automation, python, gog]
+lang: zh-TW
+---
+
+<p>今天把 Google Docs 的 tab 操作整理成一套可以重複用的 library，順手做了三支 script：</p>
+
+<ul>
+  <li><code>google_docs_tab_write.py</code></li>
+  <li><code>google_docs_update_four_tabs.py</code></li>
+  <li><code>google_docs_create_tab_mvt.py</code></li>
+</ul>
+
+<p>原本只是想把固定內容寫進文件，但文件一長、tab 一多，就開始出現「寫錯 tab」、「要手動補 tab」和「四個區塊更新不同步」這些問題。</p>
+
+<p><strong>這次的目標很單純：把 tab 操作做成可指定、可批次、可驗證。</strong></p>
+
+<hr />
+
+<h2>這次解決的痛點（為何要做）</h2>
+
+<ul>
+  <li>同一份文件有多個 tab，人工貼上很容易貼錯位置</li>
+  <li>每天固定要更新四個 tab（最近行程 / AI 新聞 / 美股 / 台股），手動流程太碎</li>
+  <li>有時候 tab 還沒建立，流程就會卡住</li>
+  <li>缺少 dry-run 與一致的回傳格式，不好追錯</li>
+</ul>
+
+<p>如果要把這些流程交給排程跑，沒有穩定的 tab API 抽象會非常痛苦。</p>
+
+<hr />
+
+<h2>核心能力</h2>
+
+<p><strong>1) 指定 tab 寫入（title 或 tabId）</strong></p>
+
+<ul>
+  <li>可用 <code>--tab-title</code> 或 <code>--tab-id</code> 鎖定目標</li>
+  <li>支援 <code>replace</code> / <code>append</code> 兩種模式</li>
+  <li>支援 <code>--text</code> 與 <code>--file</code> 兩種輸入來源</li>
+</ul>
+
+<p><strong>2) 新增 tab</strong></p>
+
+<ul>
+  <li>透過 <code>addDocumentTab</code> 建立新 tab</li>
+  <li>可帶 <code>parentTabId</code>、<code>index</code>、<code>iconEmoji</code></li>
+  <li>建立後會再讀一次文件驗證 tab 是否真的存在</li>
+</ul>
+
+<p><strong>3) 批次四 tab 更新</strong></p>
+
+<ul>
+  <li>一次餵四個檔案，更新四個固定 tab</li>
+  <li>可選 <code>--continue-on-error</code>，避免一個失敗就全停</li>
+  <li>每個 tab 都有獨立結果，方便觀察哪一塊失敗</li>
+</ul>
+
+<hr />
+
+<h2>關鍵 API / 實作重點（含 deleteTab 的坑）</h2>
+
+<p>幾個這次覺得最關鍵的點：</p>
+
+<ul>
+  <li>讀文件時加上 <code>includeTabsContent=true</code>，才能完整拿到 tabs 與內容</li>
+  <li>tab 有巢狀結構，先 flatten 再做 title / id 查找</li>
+  <li><code>replace</code> 模式不是直接砍 tab，而是用 <code>deleteContentRange</code> + <code>insertText</code></li>
+  <li>刪除範圍用 <code>startIndex=1</code> 到 <code>endIndex-1</code>，保留結構性換行避免壞格式</li>
+</ul>
+
+<p><strong>deleteTab 的坑：</strong></p>
+
+<p>一開始直覺會想「先 deleteTab 再重建」，但這個做法很容易踩雷：</p>
+
+<ul>
+  <li><code>deleteTab</code> 是結構操作，不是清空內容</li>
+  <li>tab 被刪掉重建後，<code>tabId</code> 會變，既有 mapping 會失效</li>
+  <li>在某些文件狀態下（例如只剩主要 tab）會碰到 precondition 類型錯誤</li>
+</ul>
+
+<p>所以最後策略改成：<strong>盡量保持 tab 身分（tabId）不變，只更新內容。</strong></p>
+
+<hr />
+
+<h2>使用範例（實際指令）</h2>
+
+<p>列出文件裡所有 tab：</p>
+
+<pre><code>python3 scripts/google_docs_tab_write.py \
+  --doc-id &lt;DOC_ID&gt; \
+  --list-tabs</code></pre>
+
+<p>指定 tab 寫入（replace）：</p>
+
+<pre><code>python3 scripts/google_docs_tab_write.py \
+  --doc-id &lt;DOC_ID&gt; \
+  --tab-title "最近行程" \
+  --file /tmp/recent.txt \
+  --mode replace</code></pre>
+
+<p>新增 tab（MVT）：</p>
+
+<pre><code>python3 scripts/google_docs_create_tab_mvt.py \
+  --doc-id &lt;DOC_ID&gt; \
+  --title "測試-自動新增tab-$(date +%Y%m%d-%H%M%S)"</code></pre>
+
+<p>一次更新四個 tab：</p>
+
+<pre><code>python3 scripts/google_docs_update_four_tabs.py \
+  --doc-id &lt;DOC_ID&gt; \
+  --recent-file /tmp/recent.txt \
+  --ai-news-file /tmp/ai_news.txt \
+  --us-stock-file /tmp/us_stock.txt \
+  --tw-stock-file /tmp/tw_stock.txt \
+  --mode replace</code></pre>
+
+<hr />
+
+<h2>後續 TODO</h2>
+
+<ul>
+  <li>補上整包 tab library 的單元測試與 mock 回歸測試</li>
+  <li>把四 tab 更新做成更通用的 YAML 設定（不只固定四個）</li>
+  <li>加入 retry/backoff 與更明確的錯誤分類（quota / auth / precondition）</li>
+  <li>補一支「同步 tab 結構」工具（建立缺的、標記多的）</li>
+</ul>
+
+<p>今天先把「能穩定寫、能批次更新、能新增 tab」這三件事落地。接下來再把可觀測性和可維護性補齊。</p>
