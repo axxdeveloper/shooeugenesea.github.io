@@ -227,15 +227,3 @@ def build_write_requests(target_tab_id, text, end_index):
 python3 scripts/google_docs_tab_write.py --doc-id &lt;DOC_ID&gt; --list-tabs
 python3 scripts/google_docs_tab_write.py --doc-id &lt;DOC_ID&gt; --tab-id &lt;TAB_ID&gt; --text "smoke test" --mode append</code></pre>
 
-<hr />
-
-<h2>後續 TODO</h2>
-
-<ul>
-  <li>補上整包 tab library 的單元測試與 mock 回歸測試</li>
-  <li>把四 tab 更新做成更通用的 YAML 設定（不只固定四個）</li>
-  <li>加入 retry/backoff 與更明確的錯誤分類（quota / auth / precondition）</li>
-  <li>補一支「同步 tab 結構」工具（建立缺的、標記多的）</li>
-</ul>
-
-<p>今天先把「能穩定寫、能批次更新、能新增 tab」這三件事落地。接下來再把可觀測性和可維護性補齊。</p>
