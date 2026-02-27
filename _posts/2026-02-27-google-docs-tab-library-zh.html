@@ -14,6 +14,8 @@ lang: zh-TW
   <li><code>google_docs_create_tab_mvt.py</code></li>
 </ul>
 
+<p>這套工具主要只用 Python 標準庫（<code>urllib</code> / <code>json</code> / <code>argparse</code> / <code>pathlib</code> / <code>tempfile</code>，加上 <code>subprocess</code>）。</p>
+
 <p>起因很實際：同一份文件有多個 tab，每天又要固定更新四塊內容（最近行程 / AI 新聞 / 美股 / 台股），手動貼上很容易貼錯、漏貼，最後還要回頭對帳。</p>
 
 <hr />
@@ -53,6 +55,40 @@ lang: zh-TW
 </ul>
 
 <p>這樣做的好處是：流程可預期、錯誤可定位、排程可穩定跑。</p>
+
+<hr />
+
+<h2>如果用 curl 打 Google Docs API 會長怎樣</h2>
+
+<p>下面放兩個最小可讀範例，重點是先看懂 request 形狀，不先陷入太多細節。</p>
+
+<p>1) 讀文件（<code>documents.get</code>，帶 <code>includeTabsContent=true</code>）：</p>
+
+<pre><code>curl -sS \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  "https://docs.googleapis.com/v1/documents/$DOC_ID?includeTabsContent=true"</code></pre>
+
+<p>2) 寫入內容（<code>documents.batchUpdate</code>，這裡示範 <code>insertText</code>）：</p>
+
+<pre><code>curl -sS -X POST \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  "https://docs.googleapis.com/v1/documents/$DOC_ID:batchUpdate" \
+  -d '{
+    "requests": [
+      {
+        "insertText": {
+          "location": {
+            "tabId": "TAB_ID",
+            "index": 1
+          },
+          "text": "Hello from curl\\n"
+        }
+      }
+    ]
+  }'</code></pre>
+
+<p>實務上我在 Python 裡做的事，就是把上面這兩種 request 包成可重複呼叫的流程，讓 tab 更新可以穩定跑。</p>
 
 <hr />
 
