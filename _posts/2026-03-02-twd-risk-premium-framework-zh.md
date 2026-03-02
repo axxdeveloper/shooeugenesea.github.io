@@ -26,7 +26,7 @@ lang: zh-TW
 
 第二個解釋是「成長下修 vs 通膨黏著」的拉扯。這個拉扯會讓股票估值變得更脆弱：成長預期下修會壓 EPS 想像，通膨風險又讓降息預期不會一次到位。以美國短端政策利率來看，Effective Fed Funds 仍在 3.64（FRED 最新觀測值截至 2026-02-26），而 10Y 公債殖利率仍在 4.02（FRED 最新觀測值截至 2026-02-26），代表貼現率中樞還在相對高檔區（[FRED DFF](https://fred.stlouisfed.org/series/DFF)、[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)）。當風險事件把「成本上修」又加回來，估值的緩衝墊就會變薄。
 
-第三個解釋才是對台灣投資人最關鍵的：台股指數不是純「內需籃子」，而是全球供應鏈的現金流折現器。所以加權指數下跌，不必然等於基本面已經轉壞；它也可能是「全球風險資本成本」先上調。這也是為什麼同一天 0050 收 80.35（前收 81.15），中鋼收 20.25（前收 20.75），跌幅結構不同但方向一致：前者對全球估值與外資風險偏好更敏感，後者對景氣循環與成本壓力更敏感（[TWSE MIS 0050/2002](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw%7Ctse_2002.tw&json=1&delay=0)）。
+第三個解釋才是對台灣投資人最關鍵的：台股指數不是純「內需籃子」，而是全球供應鏈的現金流折現器。所以加權指數下跌，不必然等於基本面已經轉壞；它也可能是「全球風險資本成本」先上調。這也是為什麼同一天 0050 收 80.35（前收 81.15），與加權指數方向一致：大型權值股曝險通常對全球估值與外資風險偏好更敏感（[TWSE MIS 0050](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw&json=1&delay=0)）。
 
 <div style="max-width: 600px; margin: 2em auto;">
   <canvas id="macroChart1"></canvas>
@@ -36,23 +36,21 @@ lang: zh-TW
 new Chart(document.getElementById('macroChart1'), {
   type: 'bar',
   data: {
-    labels: ['TAIEX', 'USD/TWD', 'Gold (XAU/USD)', '0050', '中鋼(2002)'],
+    labels: ['TAIEX', 'USD/TWD', 'Gold (XAU/USD)', '0050'],
     datasets: [{
       label: '2026-03-02 單日變動 (%)',
-      data: [-0.90, 0.73, 2.35, -0.99, -2.41],
+      data: [-0.90, 0.73, 2.35, -0.99],
       backgroundColor: [
         'rgba(59,130,246,0.75)',
         'rgba(249,115,22,0.75)',
         'rgba(234,179,8,0.75)',
-        'rgba(16,185,129,0.75)',
-        'rgba(239,68,68,0.75)'
+        'rgba(16,185,129,0.75)'
       ],
       borderColor: [
         'rgba(59,130,246,1)',
         'rgba(249,115,22,1)',
         'rgba(234,179,8,1)',
-        'rgba(16,185,129,1)',
-        'rgba(239,68,68,1)'
+        'rgba(16,185,129,1)'
       ],
       borderWidth: 1
     }]
@@ -110,6 +108,6 @@ new Chart(document.getElementById('macroChart1'), {
 
 ---
 
-*資料來源：[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)、[TWSE MIS 0050/2002](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw%7Ctse_2002.tw&json=1&delay=0)、[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)、[FRED DFF](https://fred.stlouisfed.org/series/DFF)*
+*資料來源：[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)、[TWSE MIS 0050](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw&json=1&delay=0)、[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)、[FRED DFF](https://fred.stlouisfed.org/series/DFF)*
 *市場數據截至：2026-03-02 20:30（UTC+8）*
 *本文僅供參考，不構成投資建議。*
