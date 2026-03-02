@@ -118,3 +118,10 @@ new Chart(document.getElementById('macroChart1'), {
 *資料來源：[EIA Strait of Hormuz](https://www.eia.gov/todayinenergy/detail.php?id=61002)、[CSIS Hormuz Analysis](https://www.csis.org/analysis/strait-hormuz)、[IAEA Reports](https://www.iaea.org/)、[Goldman Sachs Oil Outlook](https://www.goldmansachs.com/insights/pages/oil-outlook.html)、[Arms Control Association](https://www.armscontrol.org/)、[Lloyd's War Risk](https://www.lloyds.com/)*
 *市場數據截至：2026-02-28*
 *本文僅供參考，不構成投資建議。*
+
+
+## 口徑聲明（算術修訂）
+
+- **總流量口徑**（原油 + 成品油/LNG）：`20.0 - 3.7 = 16.3`（百萬桶/日）
+- **僅原油口徑**：`15.0 - 3.7 = 11.3`（百萬桶/日）
+- 本文後續若使用缺口推導，應明確標示使用哪個口徑；避免在同一段推導中混用分母。
