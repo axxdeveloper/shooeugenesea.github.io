@@ -5,13 +5,15 @@ date: 2026-03-02 20:30:00 +0800
 categories: [macro]
 tags: [macro, taiwan, geopolitics, gold]
 macro_kind: long
-description: "3/2 台股下跌 0.90%、USD/TWD 單日升 0.72%、金價漲 2.35%。重點不在單一市場漲跌，而在跨資產是否開始同時反映『成長下修 + 成本上修』的新風險溢價框架。"
+description: "3/2 台股下跌 0.90%、USD/TWD 單日升 0.73%、金價漲 2.35%。重點不在單一市場漲跌，而在跨資產是否開始同時反映『成長下修 + 成本上修』的新風險溢價框架。"
 lang: zh-TW
 ---
 
 ## 同一天裡，三個價格在說同一件事
 
-3 月 2 日，台股加權指數收在 35,095.09、單日下跌 0.90%，同時 USD/TWD 升到 31.5504、黃金（XAU/USD）升到 5,388.795，兩個避險訊號在同一天明顯放大（[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)）。
+3 月 2 日，台股加權指數收在 35,095.09、單日下跌 0.90%，同時 USD/TWD 升到 31.5504、黃金（XAU/USD）截至本文時間升到約 5,389，兩個避險訊號在同一天明顯放大（[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)）。
+
+註：本文的「單日變動」以各資產資料源的前一個交易日收盤為基準；不同市場交易時段/休市日可能造成時間窗不完全一致。黃金與匯率若取盤中報價，請以文末「市場數據截至時間」為準。
 
 核心問題是：**這是短期風險事件的單日情緒，還是亞洲資產正在進入「風險溢價重新定錨」的早期階段？**
 
@@ -19,9 +21,9 @@ lang: zh-TW
 
 ## 不是單一事件，而是「風險資本成本」的三段傳導
 
-第一個解釋是最直觀的：地緣事件升溫先推高避險需求，資金先往美元與黃金移動。這條路徑目前最有即時數據支持：USD/TWD 單日 +0.72%，XAU/USD 單日 +2.35%，同步出現在同一交易日，代表市場不是只在交易台灣本地因素，而是把全球風險事件打包進亞洲資產折現（[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)）。
+第一個解釋是最直觀的：地緣事件升溫先推高避險需求，資金先往美元與黃金移動。這條路徑目前最有即時數據支持：USD/TWD 單日 +0.73%，XAU/USD 單日 +2.35%，同步出現在同一交易日，代表市場不是只在交易台灣本地因素，而是把全球風險事件打包進亞洲資產折現（[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)）。
 
-第二個解釋是「成長下修 vs 通膨黏著」的拉扯。這個拉扯會讓股票估值變得更脆弱：成長預期下修會壓 EPS 想像，通膨風險又讓降息預期不會一次到位。以美國短端政策利率來看，Effective Fed Funds 仍在 3.64（2/26），而 10Y 公債殖利率仍在 4.02（2/26），代表貼現率中樞還在相對高檔區（[FRED DFF](https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF)、[FRED DGS10](https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10)）。當風險事件把「成本上修」又加回來，估值的緩衝墊就會變薄。
+第二個解釋是「成長下修 vs 通膨黏著」的拉扯。這個拉扯會讓股票估值變得更脆弱：成長預期下修會壓 EPS 想像，通膨風險又讓降息預期不會一次到位。以美國短端政策利率來看，Effective Fed Funds 仍在 3.64（FRED 最新觀測值截至 2026-02-26），而 10Y 公債殖利率仍在 4.02（FRED 最新觀測值截至 2026-02-26），代表貼現率中樞還在相對高檔區（[FRED DFF](https://fred.stlouisfed.org/series/DFF)、[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)）。當風險事件把「成本上修」又加回來，估值的緩衝墊就會變薄。
 
 第三個解釋才是對台灣投資人最關鍵的：台股指數不是純「內需籃子」，而是全球供應鏈的現金流折現器。所以加權指數下跌，不必然等於基本面已經轉壞；它也可能是「全球風險資本成本」先上調。這也是為什麼同一天 0050 收 80.35（前收 81.15），中鋼收 20.25（前收 20.75），跌幅結構不同但方向一致：前者對全球估值與外資風險偏好更敏感，後者對景氣循環與成本壓力更敏感（[TWSE MIS 0050/2002](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw%7Ctse_2002.tw&json=1&delay=0)）。
 
@@ -36,7 +38,7 @@ new Chart(document.getElementById('macroChart1'), {
     labels: ['TAIEX', 'USD/TWD', 'Gold (XAU/USD)', '0050', '中鋼(2002)'],
     datasets: [{
       label: '2026-03-02 單日變動 (%)',
-      data: [-0.90, 0.72, 2.35, -0.99, -2.41],
+      data: [-0.90, 0.73, 2.35, -0.99, -2.41],
       backgroundColor: [
         'rgba(59,130,246,0.75)',
         'rgba(249,115,22,0.75)',
@@ -85,6 +87,8 @@ new Chart(document.getElementById('macroChart1'), {
 
 ## 分水嶺
 
+以下門檻為觀察用的簡化設定（可視為短期警戒線），後續可用歷史分位數或事件期回測再校準。
+
 如果 USD/TWD 在接下來 5 個交易日回落到 31.30 以下，且黃金無法維持在 5,300 上方，→ 這次較像事件驅動的一次性避險脈衝，風險溢價未必重設。（目前數據尚未支持此路徑）
 
 如果 USD/TWD 連續 3 個交易日維持在 31.50 附近或更弱區間，且黃金維持高檔，→ 市場正在把「不確定性常態化」寫進亞洲資產定價，台股估值彈性會先受限。（結構轉變信號）
@@ -105,6 +109,6 @@ new Chart(document.getElementById('macroChart1'), {
 
 ---
 
-*資料來源：[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)、[TWSE MIS 0050/2002](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw%7Ctse_2002.tw&json=1&delay=0)、[FRED DGS10](https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10)、[FRED DFF](https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF)*
-*市場數據截至：2026-03-02*
+*資料來源：[Stooq TAIEX](https://stooq.com/q/d/l/?s=%5Etwse&i=d)、[Stooq USD/TWD](https://stooq.com/q/d/l/?s=usdtwd&i=d)、[Stooq XAU/USD](https://stooq.com/q/d/l/?s=xauusd&i=d)、[TWSE MIS 0050/2002](https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_0050.tw%7Ctse_2002.tw&json=1&delay=0)、[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)、[FRED DFF](https://fred.stlouisfed.org/series/DFF)*
+*市場數據截至：2026-03-02 20:30（UTC+8）*
 *本文僅供參考，不構成投資建議。*
