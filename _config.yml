@@ -1,6 +1,7 @@
 title: Isaac Note
 description: Software engineering, macroeconomics, and ETF investing — Java, Spring Boot, system design, Fed policy, and market analysis
 url: "https://www.isaacnote.com"
+og_image: "/assets/images/social/og-default.jpg"
 baseurl: ""
 
 remote_theme: mmistakes/minimal-mistakes

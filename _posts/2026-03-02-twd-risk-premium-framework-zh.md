@@ -6,6 +6,7 @@ categories: [macro]
 tags: [macro, taiwan, geopolitics, gold]
 macro_kind: long
 description: "3/2 台股下跌 0.90%、USD/TWD 單日升 0.73%、金價漲 2.35%。重點不在單一市場漲跌，而在跨資產是否開始同時反映『成長下修 + 成本上修』的新風險溢價框架。"
+image: /assets/images/social/twd-risk-premium-zh.jpg
 lang: zh-TW
 ---
 
