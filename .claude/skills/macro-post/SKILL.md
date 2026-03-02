@@ -716,6 +716,12 @@ Before finalizing, review the most recent past posts (previous 7 days) in `_post
 4. List any fact-check corrections applied and any past-post fixes
 5. List any skill updates made
 
+### Notification style rule (for cron/user delivery)
+
+When reporting daily research results to end users, use plain language and actionable conclusions only.
+- Allowed: topic recommendation, core question, key data signals, what to watch next.
+- Avoid internal workflow jargon in user-facing summaries (e.g., `Step 0.5`, `crisis/correction gate`, `agent pipeline`, `workflow`).
+
 ### Topic Mode Steps
 
 When **topic mode** is detected in Step 0, use the following steps instead of the default mode Steps 1-5.
