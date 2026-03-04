@@ -18,6 +18,22 @@ Generate blog posts in Traditional Chinese anchored to economic and market impac
 
 **Mode detection rule:** If the user's message explicitly requests a specific topic for a single article (e.g., "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…"), enter **topic mode**. Otherwise, use **default mode**.
 
+### Market-close brief mode（盤後經濟摘要）
+
+When task context explicitly asks for TW/US market close economic brief (e.g., `tw-market-close-brief`, `us-market-close-brief`), use this mode instead of long-form blog writing.
+
+Output format (fixed, Traditional Chinese):
+1. 標題與日期時間（Asia/Taipei）
+2. 主要市場數據（日漲跌）
+3. 持股關注（TW: 0050/中鋼；US: QQQ/VT/VTI/VGSH/VGIT）
+4. 核心概念 → 問題背景 → 傳導機制 → 關鍵拉扯 → 觀察重點
+5. 來源連結（至少 3 條，優先非 wire primary/official）
+
+Hard rules:
+- 禁止技術分析語言（K線、均線、支撐壓力、KD/RSI/MACD、波浪等）。
+- 用「經濟因子」講因果，不給買賣建議。
+- 若主要指數單日絕對漲跌 >= 1.5%，必須加「大漲/大跌經濟原因拆解」（至少 3 點）。
+
 ## Editorial Objective
 
 Output should position the blog as a **rational safe haven** readers instinctively turn to during market volatility. Prioritize **neutral, evidence-weighted structural analysis** for readers who want to think clearly, not be told what to do.
