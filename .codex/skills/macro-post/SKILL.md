@@ -25,9 +25,15 @@ When task context explicitly asks for TW/US market close economic brief (e.g., `
 Output format (fixed, Traditional Chinese):
 1. 標題與日期時間（Asia/Taipei）
 2. 主要市場數據（日漲跌）
-3. 持股關注（TW: 0050/中鋼；US: QQQ/VT/VTI/VGSH/VGIT）
+3. 持股關注（依市場）
+   - TW mode: 0050 / 中鋼
+   - US mode: QQQ / VT / VTI / VGSH / VGIT
 4. 核心概念 → 問題背景 → 傳導機制 → 關鍵拉扯 → 觀察重點
 5. 來源連結（至少 3 條，優先非 wire primary/official）
+
+Mode mapping:
+- `tw-market-close-brief` → TW mode
+- `us-market-close-brief` → US mode
 
 Hard rules:
 - 禁止技術分析語言（K線、均線、支撐壓力、KD/RSI/MACD、波浪等）。
