@@ -373,6 +373,26 @@ Compare each candidate topic's primary_topic tag against the previous-posts list
 - **Quality over quantity:** Only produce posts that pass the research depth gate. Never force a weak topic to fill a quota.
 - Never force a weak topic — consistency over volume.
 
+### Step 1.6: Major Risk Coverage Check (MANDATORY)
+
+Before final topic lock, run a **major-risk scan** to prevent missing high-impact events.
+
+Must check these buckets every day:
+1. **Geopolitics shock** — war/escalation/sanctions/oil chokepoints (e.g., US-Iran/Israel-Middle East escalations)
+2. **Financial accident** — defaults, fraud, forced liquidation, liquidity runs (e.g., private-credit failures such as MFS / rehypothecation allegations)
+3. **Policy shock** — surprise central-bank, fiscal, regulatory actions with cross-asset impact
+
+Rules:
+- If any bucket has a materially new development in the last 24-48h, it must appear in candidate topics or be explicitly listed as "not selected" with reason.
+- Do not rely on a single local media article for accident headlines. Require at least **2 independent sources** and at least **1 primary/regulatory/court/company source** when available.
+- For ambiguous acronyms (e.g., MFS), define full name in the report and list rejected meanings.
+
+Daily report requirement (mandatory):
+Add a short subsection named `重大事件覆蓋檢查` including:
+- covered events (if any)
+- omitted events + reason
+- source links used for the decision
+
 ### Step 2.5: Core Question Definition (MANDATORY)
 
 For each selected topic, define **one core question** that the post will answer. The question must:
