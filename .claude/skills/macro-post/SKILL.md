@@ -258,6 +258,21 @@ Each agent should run 3-5 web searches and return a concise bullet-point summary
 2. **Expert analysis second** — research notes from named analysts (Goldman, JPMorgan, SemiAnalysis, Brookings, CSIS), academic papers, specialized industry data providers (Trepp, FactSet, TrendForce).
 3. **News wire last** — Reuters, Bloomberg, CNBC are useful for context and quotes, but a post built entirely on wire service summaries will lack depth. Wire services summarize; this blog must analyze.
 
+**Seed source registry (credible, multi-region; use these as first search seeds):**
+
+- **Global / Cross-region (primary first):** IMF, BIS, OECD, World Bank, WTO, UNCTAD, IEA, OPEC, FSB
+- **US / Americas:** Federal Reserve, U.S. Treasury, BLS, BEA, CBO, SEC/EDGAR, FRED, EIA, BOC (Canada), Banxico
+- **Europe / UK:** ECB, EBA, ESMA, Eurostat, European Commission, BoE, UK ONS, Deutsche Bundesbank, Banque de France
+- **Asia-Pacific:** BOJ, Japan MOF, Cabinet Office (Japan), PBoC, NBS China, SAFE, HKMA, MAS, FSC Taiwan, CBC Taiwan,主計總處（DGBAS）, 韓國銀行（BOK）, 澳洲央行（RBA）
+- **Market infrastructure / pricing:** ICE, CME, LME, S&P DJI, MSCI, STOXX, FTSE Russell
+- **High-quality research institutions (secondary, named authors preferred):** Brookings, Bruegel, Peterson Institute (PIIE), CEPR, CSIS, Chatham House, NBER
+- **Wire/media (context only, not thesis backbone):** Reuters, Bloomberg, Financial Times, WSJ, Nikkei Asia, The Economist
+
+**Regional diversity rule (for every 長篇/短篇):**
+- At least **1 source from Asia**, **1 from Europe**, **1 from the Americas** in the combined research set.
+- At least **2 primary sources** must be non-wire (official institutions, filings, or exchanges).
+- If a topic is region-specific and cannot satisfy 3-region coverage, explicitly state why and still include at least 1 cross-region benchmark source (IMF/BIS/OECD/World Bank).
+
 Each agent must return **at least 2 primary sources** in its results. If an agent cannot find primary sources, it must flag this — the topic may not be ready for a post.
 
 **Agent output format (mandatory):**
