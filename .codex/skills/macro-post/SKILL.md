@@ -276,6 +276,15 @@ Each agent should run 3-5 web searches and return a concise bullet-point summary
 
 Each agent must return **at least 2 primary sources** in its results. If an agent cannot find primary sources, it must flag this — the topic may not be ready for a post.
 
+**Anti-bias multi-source rule (mandatory, all modes including topic mode):**
+- Never finalize a thesis from a single source cluster.
+- Minimum evidence set per final topic: **6+ sources total** with:
+  - **2+ primary/official sources**
+  - **2+ independent media/research sources** (not the same parent wire rewrite)
+  - **3-region coverage** (Asia + Europe + Americas) when topic scope is global.
+- For each core claim, require at least **2 independent citations** (one can be primary).
+- If the evidence set is below threshold, output `資料不足，延後定稿` rather than forcing a conclusion.
+
 **Agent output format (mandatory):**
 Each agent must structure its output with two clearly labeled sections:
 1. **Primary source findings** (minimum 2 per agent) — For each primary source, include: source name + URL, and one sentence starting with "**Insight beyond wire coverage:**" describing the specific finding not available in Reuters/Bloomberg summaries. Example: "CBO Budget Outlook Table 1-3 ([URL]) — **Insight beyond wire coverage:** CBO assumes 10Y yield declines to 3.6% by 2027; if rates stay at current 4.1%, net interest projections are understated by ~$200B/year."
