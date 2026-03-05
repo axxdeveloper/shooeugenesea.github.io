@@ -35,6 +35,10 @@ Gold trend rule (mandatory):
 - Add one sentence on economic meaning (risk-off, real yield, USD linkage, or inflation hedge narrative).
 - If gold data is missing, state `黃金資料暫缺` and explain impact on confidence.
 
+Execution metadata line (mandatory for user-facing summaries):
+- Append one final line: `執行設定：model=<model_id>｜reasoning=<level>｜think=<level>`
+- If one field is unavailable, use `unknown` instead of omitting.
+
 ## Editorial Objective
 
 Output should position the blog as a **rational safe haven** readers instinctively turn to during market volatility. Prioritize **neutral, evidence-weighted structural analysis** for readers who want to think clearly, not be told what to do.
