@@ -198,6 +198,15 @@ Parse the user's input to determine which mode to use:
 
 **Crisis mode check:** Before proceeding with either mode, check whether crisis conditions are met (see Special Post Types > Crisis Mode). If crisis conditions are detected, override normal output and produce only a crisis post.
 
+### Step 0.3: News Triage (MANDATORY)
+
+Before topic selection, build a 24-48 hour candidate pool and rank it:
+- Collect up to 50 candidate stories from major/primary sources.
+- De-duplicate same-core stories across outlets.
+- Rank by: (1) cross-source citation frequency, (2) source authority, (3) implementation/market impact.
+- Keep a short ranked list as evidence for why the final topic was selected.
+- If a new ByteByteGo post appears in the top-50 pool and is still relevant, prioritize it.
+
 ### Step 0.5: Publication Frequency & Quality Gate (MANDATORY)
 
 Before generating any new posts, assess whether it's the right time to publish. This step prevents quality degradation from over-publishing.
