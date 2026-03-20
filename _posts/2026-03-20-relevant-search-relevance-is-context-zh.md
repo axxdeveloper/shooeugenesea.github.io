@@ -8,8 +8,8 @@ description: "Relevant Search 開頭章節重點：排序目標、訊號設計�
 lang: zh-TW
 ---
 
-這篇整理 Relevant Search 開頭章節的實作重點，聚焦在排序目標、訊號設計、與團隊協作三個面向。
-內容範圍對應到搜尋系統早期建置階段，適合用來建立第一版 relevance baseline。
+Relevant Search 開頭這段直接落在三件實作工作：定義排序目標、設計可計分訊號、把團隊協作流程先對齊。
+這組做法可直接用在搜尋系統第一版上線前的 baseline 設計。
 
 ## 產品目標會直接改變排序答案
 
