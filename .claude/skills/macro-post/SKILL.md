@@ -28,7 +28,7 @@ Output should position the blog as a **rational safe haven** readers instinctive
 - Do not use rhetorical contrast templates.
 
 Forbidden phrase patterns (rewrite if found):
-- 「這篇要講…」「接下來…」「重點在…」「這段重點…」「關鍵是…」「最重要的是…」
+- 「這篇要講…」「本文將…」「我會先…」「接下來…」「重點在…」「這段重點…」「關鍵是…」「最重要的是…」
 - 「不是…而是…」「不只…更…」「同一…不同…」
 - standalone rhetorical questions that only restate the thesis
 
