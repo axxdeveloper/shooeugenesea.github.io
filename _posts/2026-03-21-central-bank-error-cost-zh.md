@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "三家央行同週按住不動：被重定價的不是方向，而是政策容錯率"
+title: "三家央行同週按住不動：政策容錯率與寬鬆門檻同步上修"
 date: 2026-03-21 17:22:00 +0800
 categories: [macro]
 tags: [macro, fed, bonds, energy, japan, europe]
 macro_kind: brief
-description: "48 小時內，Fed 把利率維持在 3.5%-3.75%，英國央行維持 3.75%，日銀維持 0.75%。真正同步的不是誰先升誰先降，而是中東能源 shock 讓各家央行都先提高了犯錯成本與寬鬆門檻。"
+description: "48 小時內，Fed 維持 3.5%-3.75%，英國央行維持 3.75%，日銀維持 0.75%。中東能源 shock 讓三家央行同步提高政策容錯率要求與寬鬆門檻。"
 lang: zh-TW
 ---
 
@@ -23,7 +23,7 @@ lang: zh-TW
 | 英國央行 | 3 月 19 日維持 **3.75%** | BOE 估 3 月 CPI 已接近 **3.5%**，而且若高油價持續，2026Q3 光能源直接效果就可能多出約 **0.75 個百分點**。[BOE March summary](https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/march-2026) |
 | 日銀 | 3 月 19 日維持 **0.75%** | 它沒有因油價 shock 搶先加速，但也明寫若 outlook 成立仍會繼續升息；反對票的高田創甚至主張直接到 **1%**。[BOJ statement](https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260319a.pdf) |
 
-這三家的共同點，不是一起轉鷹，而是一起承認「現在太快動，犯錯成本很高」。IMF 3 月 9 日在東京的演講把這個共同分母講得很清楚：若今年大部分時間油價每再高 **10%**，全球 headline inflation 可能多約 **40 bps**，全球產出少約 **0.1%-0.2%**；而荷莫茲航運已較常態下滑約 **90%**。[IMF](https://www.imf.org/en/news/articles/2026/03/09/sp030926-coping-and-thriving-in-a-fluid-world)
+這三家的共同點是同步承認「現在太快動，犯錯成本很高」。IMF 3 月 9 日在東京的演講提供了量化背景：若今年大部分時間油價每再高 **10%**，全球 headline inflation 可能多約 **40 bps**，全球產出少約 **0.1%-0.2%**；荷莫茲航運已較常態下滑約 **90%**。[IMF](https://www.imf.org/en/news/articles/2026/03/09/sp030926-coping-and-thriving-in-a-fluid-world)
 
 反方也不能省。英國央行委員 **Alan Taylor** 直說，若這只是較溫和、短命的能源 shock，央行仍可能在今年稍晚更快降息；Powell 也承認，標準教科書本來就傾向 `look through` 能源 shock，只是現在那個前提比過去嚴很多了。[BOE March summary](https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/march-2026)、[Powell press conference](https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260318.htm)
 
@@ -42,7 +42,7 @@ lang: zh-TW
 | Brent + 央行會後文字 | Brent `<85` 連 10 個交易日，且 Fed / BOE / BOJ 下一輪聲明淡化能源 shock | 觀察至 2026-04-27/28 BOJ、2026-04-28/29 Fed、2026-04-30 BOE | 代表 3 月的 hold 主要是事件型風險管理，全球寬鬆門檻未被結構性抬高 |
 | Brent + 第二輪傳導措辭 | Brent `>95` 延續至下輪會議前，且聲明仍強調 inflation expectations / second-round effects | 觀察至 2026-04-27/28 BOJ、2026-04-28/29 Fed、2026-04-30 BOE | 代表市場應把 2026 政策路徑理解為「先延後、後分化」，而不是快速重啟寬鬆 |
 
-接下來最值得看的三個變數是：第一，Brent 能不能離開高檔；第二，4 月底三家央行還會不會把能源與通膨預期放在聲明核心；第三，美國 10 年債與信用利差是否在「利率沒動」的情況下繼續先行收緊金融條件。[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)、[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)
+三個觀察變數可直接追蹤：Brent 是否離開高檔、4 月底三家央行是否持續把能源與通膨預期放在聲明核心、美國 10 年債與信用利差是否在「利率沒動」下繼續先行收緊金融條件。[FRED DGS10](https://fred.stlouisfed.org/series/DGS10)、[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)
 
 ---
 
