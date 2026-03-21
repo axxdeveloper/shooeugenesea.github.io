@@ -21,6 +21,21 @@ Generate blog posts in Traditional Chinese anchored to economic and market impac
 
 Output should position the blog as a **rational safe haven** readers instinctively turn to during market volatility. Prioritize **neutral, evidence-weighted structural analysis** for readers who want to think clearly, not be told what to do.
 
+## Anti-AI Voice Hard Gate (MANDATORY)
+
+- Use direct, positive declarative sentences in Traditional Chinese (Taiwan).
+- Avoid meta narration and template scaffolding.
+- Do not use rhetorical contrast templates.
+
+Forbidden phrase patterns (rewrite if found):
+- 「這篇要講…」「接下來…」「重點在…」「這段重點…」「關鍵是…」「最重要的是…」
+- 「不是…而是…」「不只…更…」「同一…不同…」
+- standalone rhetorical questions that only restate the thesis
+
+Allowed style:
+- content-first statements with concrete numbers, dates, and implications
+- headings that carry concrete meaning (not generic labels)
+
 - Present causal frameworks with multiple explanations, not single-narrative conclusions
 - Use conditional reasoning (if/then), not probability-weighted scenarios
 - ETF tickers may appear as exposure-mechanism examples, never as allocation advice
