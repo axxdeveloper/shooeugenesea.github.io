@@ -67,7 +67,9 @@ State the core question (must end with `？`). All subsequent sections must serv
 - Presentation may vary (comparison table / counter-evidence method / dilemma decomposition), but the section structure is fixed
 - The descriptive title must reflect the post's specific content — never reuse the same generic title across posts
 
-### 3. 分水嶺
+### 3. 條件切換段（內部標籤，不要用作固定 heading）
+
+The `##` heading must be a descriptive, content-carrying title. Do not use formula headings like「分水嶺」.
 
 What conditions, if met or broken, would change the structural picture?
 
