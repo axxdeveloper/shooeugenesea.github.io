@@ -42,6 +42,17 @@ Allowed style:
 - Prefer restrained language; avoid sensational framing unless explicitly quoting a source
 - Separate what you know from what you infer; make the boundary visible
 
+## Anti-AI Voice Hard Gate (MANDATORY)
+
+- Start directly with facts/judgment; never describe what the writer is about to do.
+- Use positive declarative sentences (主詞 + 動詞 + 結果).
+- Avoid process narration and rhetorical scaffolding.
+
+Forbidden phrase patterns (rewrite if found):
+- 「這篇要講…」「本文將…」「我會先…」「接下來…」「下圖只回答一件事…」「重點在…」「這段重點…」「關鍵是…」「最重要的是…」
+- 「不是…而是…」「不只…更…」「同一…不同…」
+- standalone rhetorical questions that only restate the thesis
+
 ## Post Structure (Unified Skeleton)
 
 All posts share a single 4-section skeleton. No style labels. The descriptive title in section 2 and the presentation method (comparison table / counter-evidence / dilemma decomposition) may vary, but the 4-section structure is fixed.
@@ -71,7 +82,9 @@ State the core question (must end with `？`). All subsequent sections must serv
 - Presentation may vary (comparison table / counter-evidence method / dilemma decomposition), but the section structure is fixed
 - The descriptive title must reflect the post's specific content — never reuse the same generic title across posts
 
-### 3. 分水嶺
+### 3. 條件切換段（內部標籤，不要用作固定 heading）
+
+The `##` heading must be a descriptive, content-carrying title. Do not use formula headings like「分水嶺」.
 
 What conditions, if met or broken, would change the structural picture?
 
