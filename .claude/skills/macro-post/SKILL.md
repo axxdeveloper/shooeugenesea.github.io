@@ -27,6 +27,17 @@ Output should position the blog as a **rational safe haven** readers instinctive
 - Prefer restrained language; avoid sensational framing unless explicitly quoting a source
 - Separate what you know from what you infer; make the boundary visible
 
+## Anti-AI Voice Hard Gate (MANDATORY)
+
+- Start directly with facts/judgment; never describe what the writer is about to do.
+- Use positive declarative sentences (主詞 + 動詞 + 結果).
+- Avoid process narration and rhetorical scaffolding.
+
+Forbidden phrase patterns (rewrite if found):
+- 「這篇要講…」「本文將…」「我會先…」「接下來…」「下圖只回答一件事…」「重點在…」「這段重點…」「關鍵是…」「最重要的是…」
+- 「不是…而是…」「不只…更…」「同一…不同…」
+- standalone rhetorical questions that only restate the thesis
+
 ## Post Structure (Unified Skeleton)
 
 All posts share a single 4-section skeleton. No style labels. The descriptive title in section 2 and the presentation method (comparison table / counter-evidence / dilemma decomposition) may vary, but the 4-section structure is fixed.
