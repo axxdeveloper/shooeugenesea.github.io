@@ -1,35 +1,36 @@
 ---
 layout: post
-title: "全球 2.9% 為何還守得住：AI 投資撐住成長，4.0% 通膨把降息留在後面？"
+title: "全球 2.9% 的支撐點：AI 投資撐住成長，4.0% 通膨延後降息時鐘"
 date: 2026-03-27 21:30:00 +0800
 categories: [macro]
 tags: [macro, ai, energy, geopolitics, semiconductor, bonds]
 macro_kind: short
-description: "OECD 3 月 interim report 把 2026 全球 GDP growth 留在 2.9%，卻把 G20 headline inflation 上修到 4.0%。TSMC、Alphabet 與 Microsoft 的 AI 資本支出正在撐住成長，能源 shock 仍把利率留在高位。"
+description: "OECD 3 月 interim report 將 2026 全球 GDP growth 維持在 2.9%，將 G20 headline inflation 上修到 4.0%。TSMC、Alphabet 與 Microsoft 的 AI 資本支出撐住成長基線，能源 shock 將降息時鐘往後推。"
 lang: zh-TW
 ---
 
-## 2.9% 守住了，4.0% 也跟著留下
+## 2.9% 與 4.0% 寫出同一個第二季
 
-OECD 3 月 interim report 把 **2026 全球 GDP growth 留在 2.9%**，同時把 **G20 headline inflation 上修到 4.0%**。[OECD interim report](https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-march-2026_d4623013-en.html)
+OECD 3 月 interim report 將 **2026 全球 GDP growth 維持在 2.9%**，將 **G20 headline inflation 上修到 4.0%**。[OECD interim report](https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-march-2026_d4623013-en.html)
 
-**全球成長守在 2.9%，這輪韌性會由 AI 投資續撐，還是由能源 shock 把通膨與利率一起留在高位？**
+**全球 2.9% 的成長基線由 AI 投資支撐，4.0% 的通膨路徑由能源 shock 維持，第二季由哪條線主導資產定價？**
 
-OECD、IEA、TSMC、Alphabet 與 Microsoft 已經把答案收斂成一條線。**2026-03-31** 與 **2026-04-07** 的 EIA weekly data，外加 **2026-04-10** 的 TSMC 3 月營收，會直接決定 2.9% 與 4.0% 哪一個更接近第二季的真實世界。[IEA update](https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026)、[TSMC financial calendar](https://investor.tsmc.com/english/financial-calendar)
+這個框架把全球定價拆成成長線與通膨線。**2026-03-31** 與 **2026-04-07** 的 EIA weekly data，外加 **2026-04-10** 的 TSMC 3 月營收，會先回答能源線與 AI 線誰先擴大影響力。[IEA update](https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026)、[TSMC financial calendar](https://investor.tsmc.com/english/financial-calendar)
 
-## 2.9% 靠 AI 硬體鏈撐住，4.0% 由油價與電力瓶頸留在場上
+## AI 資本支出托住成長，油價與電力瓶頸抬高通膨
 
 | 解釋 | 主要證據 | 目前支持度 |
 |---|---|---|
-| AI 資本支出把全球成長留在 2.9% | OECD 直接把 `strong technology-related investment and production` 放進主情境；TSMC 預估 **2026 foundry 2.0 成長 14%**、全年美元營收接近 **30%**；Alphabet 2026 CapEx 指引 **1750 億至 1850 億美元**；Microsoft 當季 capex **375 億美元**，需求仍高於供給 | 很高 |
-| 能源 shock 把 4.0% 通膨留在上方 | OECD 把 G20 inflation 2026 上修到 **4.0%**；IEA 寫出 **400 million barrels** 釋油與供給干擾；FRED Brent 最新仍在 **103.79** | 很高 |
-| AI 採用集中度會決定這條韌性能撐多久 | Marcello Estevão 指出 AI 若仍集中在 hyperscalers，returns 會提早 plateau；OECD 也把 `lower than expected returns from AI investment` 列成下行風險 | 中 |
+| AI 資本支出托住全球成長基線 | OECD 將 `strong technology-related investment and production` 列為 2026 baseline 支撐；TSMC 預估 2026 foundry 2.0 成長 `14%` 與全年美元營收接近 `30%` 成長；Alphabet 2026 CapEx 指引 `1750 億至 1850 億美元`；Microsoft 當季 capex `375 億美元`；TrendForce 預估 AI server 2026 出貨成長超過 `28%` | 很高 |
+| 能源 shock 抬高全球通膨路徑 | OECD 將 G20 inflation 2026 上修到 `4.0%`；IEA 啟動 `400 million barrels` 協同行動；Brent 最新仍在 `103.79` | 很高 |
 
-目前最被數字支持的版本，是 **AI 投資先把全球成長留在 2.9%，油價與電力瓶頸再把 4.0% 的通膨留在上方**。OECD 把這個結構寫得很直白：中東衝突會提高成本、壓低需求，但 `strong technology-related investment and production`、`lower effective tariff rates` 與 2025 carry-over momentum 仍在撐住景氣。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf) 這代表全球景氣的支撐點已經從廣泛需求擴張，轉到少數高資本支出部門。
+目前最被數字支持的版本很清楚。AI 投資先托住成長基線，能源 shock 再把通膨與降息時鐘一起往後推。OECD 將 2026 全球 GDP growth 維持在 **2.9%**，同時將 G20 inflation 拉到 **4.0%**，這代表全球景氣的支撐點已經從廣泛需求擴張，移向少數高資本支出部門與政策緩衝。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf)
 
-企業端也在同步證明這件事。TSMC 把 **2026 capital budget** 拉到 **520 億至 560 億美元**，並把 **2026 foundry 2.0 成長率**寫成 **14%**；2026 前兩個月累計營收已年增 **29.9%**。[TSMC transcript](https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf)、[TSMC monthly revenue](https://investor.tsmc.com/english/monthly-revenue/2026) Alphabet 把 2026 年 CapEx 指引提到 **1750 億至 1850 億美元**，Google Cloud backlog 來到 **2400 億美元**；Microsoft 當季 capex **375 億美元**，新增接近 **1 gigawatt** 容量，並直接承認 demand 仍高於 supply。[Alphabet call](https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx)、[Microsoft call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2) TrendForce 又把這條線往外推一步，預估 **2026 全球 AI server 出貨年增逾 28%**，整體 server 出貨也有 **12.8%** 成長。[TrendForce](https://www.trendforce.com/presscenter/news/20260120-12887.html)
+企業文件把這條成長線寫得更具體。TSMC 2026 capital budget 落在 **520 億至 560 億美元**，2026 foundry 2.0 industry growth 為 **14%**，前兩個月累計營收年增 **29.9%**。[TSMC transcript](https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf)、[TSMC monthly revenue](https://investor.tsmc.com/english/monthly-revenue/2026) Alphabet 將 2026 CapEx 指引拉到 **1750 億至 1850 億美元**，Google Cloud backlog 升到 **2400 億美元**；Microsoft 當季 capex 為 **375 億美元**，並表示客戶需求持續高於供給。[Alphabet call](https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx)、[Microsoft call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2) TrendForce 又把實體供應鏈的速度寫成另一組數字：**2026 全球 server 出貨成長 12.8%**，**AI server 出貨成長超過 28%**。[TrendForce](https://www.trendforce.com/presscenter/news/20260120-12887.html) 這代表 AI server 的出貨成長速度約為 OECD 全球成長基線的 **9.7 倍**，AI investment 對總體的支撐已經進入量化階段。
 
-另一條線把寬鬆留在後面。IEA 3 月報告把這次事件定義成全球油市史上最大供給干擾，並寫出 **400 million barrels** emergency reserves 只是 stop-gap measure，真正的關鍵仍是荷莫茲海峽能否恢復正常航運。[IEA OMR](https://www.iea.org/reports/oil-market-report-march-2026)、[IEA update](https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026) OECD 也把 **G20 inflation 2026 上修到 4.0%**，把美國 **2026 headline inflation** 寫成 **4.2%**、英國 **4.0%**、歐元區 **2.6%**，並明寫 medium-term inflation expectations 已上升。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf) 這組組合說明了一件事：成長沒有塌，通膨也沒有退場。
+能源線同樣具體。IEA 3 月報告將這次中東衝突定義成全球油市史上最大供給干擾，並將 emergency reserves 的協同行動寫成 **400 million barrels**。[IEA OMR](https://www.iea.org/reports/oil-market-report-march-2026)、[IEA update](https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026) 這組釋油安排呈現清楚的區域時點差：Asia Oceania 先接上緩衝，Americas 與 Europe 在 3 月底接力。OECD 同時將 G20 inflation 2026 上修到 **4.0%**，並把美國 2026 headline inflation 寫成 **4.2%**、英國 **4.0%**、歐元區 **2.6%**。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf) 這條線表示全球經濟維持低位擴張，通膨黏性同步續留。
+
+Marcello Estevão 也給出這套框架的集中度門檻。AI 採用若集中在 hyperscalers 與 specialized service providers，回報平台期會提早到來，成長支撐會轉成市場重新排序的壓力。[IMF F&D](https://www.imf.org/en/publications/fandd/issues/2026/03/point-of-view-ai-can-lift-global-growth-marcello-estevao) OECD 也將 `lower than expected returns from AI investment` 直接列入 downside 條目。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf) 這表示第二季的主軸集中在兩個速度比對：AI 投資延續速度，以及能源成本與金融條件的收縮速度。
 
 <div style="max-width: 640px; margin: 2em auto;">
   <canvas id="macroChart20260327AiEnergyBalance"></canvas>
@@ -65,7 +66,7 @@ new Chart(document.getElementById('macroChart20260327AiEnergyBalance'), {
     plugins: {
       title: {
         display: true,
-        text: '全球成長守在 2.9%，AI 硬體鏈仍快於總體，4.0% 通膨把利率留在高位（資料來源：OECD / TSMC / TrendForce）'
+        text: 'AI 硬體鏈的成長速度明顯快於總體，能源線將通膨維持在高位（資料來源：OECD / TSMC / TrendForce）'
       },
       legend: { display: false }
     },
@@ -81,28 +82,25 @@ new Chart(document.getElementById('macroChart20260327AiEnergyBalance'), {
 });
 </script>
 
-Marcello Estevão 也把反方向寫得很清楚。AI 若仍集中在 hyperscalers 與少數 service providers，returns 會提早 plateau，growth 對 AI 的依賴會從支撐變成脆弱點。[IMF F&D](https://www.imf.org/en/publications/fandd/issues/2026/03/point-of-view-ai-can-lift-global-growth-marcello-estevao) OECD 甚至把 `lower than expected returns from AI investment` 直接列成可能引發 broader repricing 的風險。[OECD PDF](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/03/oecd-economic-outlook-interim-report-march-2026_254a8d56/d4623013-en.pdf) 這條成長線因此有韌性，也有集中度風險。
+## Brent、TSMC 與信用價差決定第二季節奏
 
-## Brent、TSMC 與 VIX 會把第二季翻成哪一種宏觀節奏
+如果 **Brent 回到 90 美元下方並連續 10 個交易日站穩**，**2026-03-31** 與 **2026-04-07** 的 EIA weekly data 也帶動油品壓力同步回落，→ OECD 的 4.0% 通膨路徑會降權，央行等待期會縮短。
 
-如果 **Brent 回到 90 美元下方並連續 10 個交易日站穩**，**2026-03-31** 與 **2026-04-07** 的 EIA weekly data 又把油品壓力一起帶下來，→ OECD 的 4.0% 通膨風險會降權，央行等待期會縮短。
+如果 **2026-04-10** 的 TSMC 3 月營收將 2026 累計年增率維持在 **25%** 上方，4 月下旬的 hyperscaler 財報窗口也延續高 CapEx 語氣，→ AI 投資會繼續托住全球 2.9% 成長基線。
 
-如果 **2026-04-10** 的 TSMC 3 月營收把 2026 累計年增率維持在 **25%** 上方，4 月下旬的 hyperscaler 財報窗口也維持高 CapEx 語氣，→ AI 投資仍會先撐住全球成長，2.9% 的 baseline 續留。
-
-如果 **Brent 站上 110 美元並連續 5 個交易日續留**，同時 **VIX >30** 連 2 日或 **HY OAS >3.50** 連 10 個交易日，→ AI buffer 會被金融條件收緊吃掉，全球框架會轉向「成長更弱、價格更黏」。
+如果 **Brent 站上 110 美元並連續 5 個交易日續留**，同時 **VIX >30** 連 2 日或 **HY OAS >3.50** 連 10 個交易日，→ 能源與金融條件會共同主導第二季定價，全球框架會轉向更高通膨與更緊金融條件。
 
 ## 結語
 
-> **核心判斷：** 全球 2.9% 的韌性正由 AI 資本支出撐住，4.0% 的通膨正由油價與供給瓶頸留在場上；成長沒有失速，寬鬆也沒有提早到來。
+> **核心判斷：** 全球 2.9% 的成長基線由 AI 資本支出托住，4.0% 的通膨路徑由能源價格維持；第二季資產定價會在這兩條線的強弱排序中展開。
 
 | Metric | Threshold | Window | Implication |
 |--------|-----------|--------|-------------|
-| TSMC 月營收 | 2026 累計營收年增 `>=25%`，且 3 月營收年增 `>=25%` | 觀察 2026-04-10（3 月營收）與 2026-05-08（4 月營收） | AI 製造鏈仍在撐住總體成長，OECD 2.9% 基線續留 |
-| TSMC 月營收 | 3 月與 4 月營收年增都 `<20%` | 觀察 2026-04-10 與 2026-05-08 | AI buffer 顯著轉弱，全球成長結構需要重讀 |
-| Brent + EIA weekly | Brent `<90` 連 10 個交易日 | 觀察即日起至 2026-04-07（兩次 EIA weekly window） | 能源 shock 降權，4.0% 通膨風險開始回落 |
-| VIX + HY OAS | VIX `>30` 連 2 日，且 HY OAS `>3.50` 連 10 個交易日 | 每日檢查；下一個高訊號窗口為 2026-04-10 | 題材由「窄成長 + 高通膨」轉向金融條件收緊 |
+| TSMC 月營收 | 2026 累計營收年增 `>=25%`，且 3 月營收年增 `>=25%` | 觀察 2026-04-10（3 月營收）與 2026-05-08（4 月營收） | AI 製造鏈持續擴張，OECD 2.9% 成長基線續留 |
+| Brent + EIA weekly | Brent `<90` 連 10 個交易日 | 觀察即日起至 2026-04-07（兩次 EIA weekly window） | 能源線降溫，4.0% 通膨路徑開始降權 |
+| Brent + VIX + HY OAS | Brent `>110` 連 5 個交易日，且 VIX `>30` 連 2 日或 HY OAS `>3.50` 連 10 個交易日 | 每日檢查；下一個高訊號窗口為 2026-04-10 | 能源 shock 與金融條件同時升級，第二季主軸轉向通膨黏性與估值壓縮 |
 
-後續最值得看的三個點很清楚。第一個點是 **2026-03-31** 與 **2026-04-07** 的 EIA weekly data，這兩個節點會告訴市場 400 million barrels 的釋油能不能先把油品壓力降下來。第二個點是 **2026-04-10** 的 TSMC 3 月營收，這個數字會直接驗證 AI 投資是否仍在替全球成長墊底。第三個點是 **2026 年 4 月下旬** 的 Alphabet 與 Microsoft 財報窗口，這兩場會把 hyperscaler 的高 CapEx 語氣延續多久說清楚。
+後續最值得看的三個點很直接。**2026-03-31** 與 **2026-04-07** 的 EIA weekly data 會先回答 4 億桶釋油能否把油品壓力從高位往下拉。**2026-04-10** 的 TSMC 3 月營收會直接驗證 AI 投資是否仍在替全球成長墊底。**2026 年 4 月下旬** 的 Alphabet 與 Microsoft 財報窗口會把 hyperscaler 的高 CapEx 語氣延續多久說清楚。
 
 ---
 
