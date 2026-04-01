@@ -1,58 +1,49 @@
 ---
 layout: post
-title: "30.61 的 VIX、2.5% 的通膨、17 的 Tankan：能源 shock 先抬高風險溢價"
-date: 2026-04-01 20:42:00 +0800
+title: "30.61 的 VIX、2.5% 的 HICP、17 的 Tankan：市場先把中東 shock 留在重定價"
+date: 2026-04-01 21:03:41 +0800
 categories: [macro]
 tags: [macro, crisis, energy, inflation, geopolitics, japan]
 macro_kind: crisis
-description: "FRED 顯示 VIX 連兩個交易日高於 30，Eurostat 把歐元區 3 月 HICP 拉到 2.5%，energy 年增率翻到 4.9%；日本銀行 4 月 1 日公布的 Tankan 則把大型製造業 DI 留在 17。外生能源 shock 已經抬高風險溢價，信用與內生通膨仍把市場留在重定價階段。"
+description: "FRED 顯示 VIX 連兩個交易日高於 30，Eurostat 把歐元區 3 月 HICP 拉到 2.5%，日本銀行 4 月 1 日公布的 Tankan 則把大型製造業 DI 留在 17。外生能源 shock 已經抬高風險溢價，信用價差與內生通膨把市場留在重定價階段。"
 lang: zh-TW
 ---
 
-## 30.61、2.5% 與 17 把四月開局寫成能源 shock
+## 30.61、2.5% 與 17 把四月開局鎖在重定價
 
-FRED 把 VIX 留在 **30.61**，Eurostat 把歐元區 3 月 HICP 拉到 **2.5%**。[FRED VIX](https://fred.stlouisfed.org/series/VIXCLS)、[Eurostat inflation](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap)
+VIX 連兩個交易日高於 30。Eurostat 把歐元區 3 月 HICP flash estimate 拉到 2.5%。[FRED VIX](https://fred.stlouisfed.org/series/VIXCLS) [Eurostat](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap)
 
-VIX 連兩個交易日高於 30、歐元區 3 月通膨升到 2.5% 時，市場正在交易什麼型態的波動？
+VIX 連兩個交易日高於 30、歐元區 headline inflation 回到 2.5% 時，市場在交易外生能源 shock，還是更廣的信用事故？
 
-這個框架會把 shock 分成三層。第一層看波動率與信用價差是否一起跨門檻，第二層看能源是否開始推動更廣的內生價格，第三層看亞洲企業景氣如何吸收這波成本與外需變化；最直接的驗證日期落在 **2026-04-16** 的完整 HICP 與每日更新的 HY OAS。[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)、[Eurostat inflation](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap)
+HY OAS 會回答信用鏈條是否接手，4 月 16 日完整 HICP 會回答第二輪價格傳導是否成形，6 月 Tankan 會回答亞洲實體景氣是否接手走弱。這三個節點把今天的波動分類從新聞敘事拉回可驗證框架。
 
-> **核心判斷：** 外生能源 shock 已經抬高波動率與 headline inflation，信用與內生通膨仍把市場留在重定價階段。
-
-## 波動率先升，信用與內生通膨仍留在觀察窗
+## 能源把 headline 推上去，信用價差留在門檻內
 
 | 指標 | 最新值 | 目前訊號 |
 |---|---:|---|
-| VIX | `30.61` | 風險溢價已進入危機門檻 |
-| HY OAS | `3.46` | 信用鏈條仍留在觀察窗 |
-| 歐元區 HICP / ex-energy / services | `2.5%` / `2.3%` / `3.2%` | headline 上跳，內生價格鏈條維持放緩 |
+| VIX | `31.05`、`30.61` | 風險溢價已經進入危機區 |
+| HY OAS | `3.46` | 信用鏈條留在觀察窗 |
+| 歐元區 HICP / ex-energy / services | `2.5%` / `2.3%` / `3.2%` | headline 上跳由外生能源主導 |
 
-<aside style="float: right; width: 235px; margin: 0 0 1em 1.5em; padding: 0.75em 1em; background: rgba(100,116,139,0.15); border-left: 3px solid rgba(100,116,139,0.4); font-size: 0.82em; line-height: 1.6; border-radius: 4px;">
-<strong>VIX</strong>：標普 500 期權隱含波動率指數，數值升高代表市場先把風險保費拉高。<br>
-<strong>HY OAS</strong>：高收益債選擇權調整利差，數值升高代表信用融資成本同步墊高。
-</aside>
+Eurostat 把歐元區 3 月 HICP 由 `1.9%` 拉到 `2.5%`，energy 由 `-3.1%` 轉為 `4.9%`，services 由 `3.4%` 回到 `3.2%`，all-items excluding energy 由 `2.4%` 回到 `2.3%`。[Eurostat](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap) headline 的上跳集中在能源，內生價格鏈條同步走緩，shock 的第一層分類因此落在外生能源。
 
-Eurostat 把歐元區 3 月 HICP 由 **1.9%** 拉到 **2.5%**，energy 由 **-3.1%** 轉為 **4.9%**，services 由 **3.4%** 回到 **3.2%**，all-items excluding energy 由 **2.4%** 回到 **2.3%**。[Eurostat inflation](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap) headline 的上跳由能源翻正帶動，內生價格鏈條同步維持降溫，這個組合先把 shock 定義成外生。
+ECB 3 月 19 日把政策函數寫得很清楚。ECB staff projections 把 2026 年 headline inflation 放在 `2.6%`，inflation excluding energy and food 放在 `2.3%`，growth 放在 `0.9%`；聲明也直接寫出 war in the Middle East 會透過 higher energy prices 推高 near-term inflation，並把 growth risk 壓向 downside。[ECB statement](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260319~93b1cbad97.en.html) 央行口徑把今天的 market move 與總體資料放進同一個架構。
 
-ECB 在 3 月 19 日把政策函數寫得很直接。ECB 維持利率，並把 2026 年 headline inflation 估在 **2.6%**、inflation excluding energy and food 估在 **2.3%**、growth 估在 **0.9%**；聲明也明寫 higher energy prices owing to the war 會把 inflation 推回 2% 上方，risks to growth are tilted to the downside。[ECB statement](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260319~93b1cbad97.en.html) ECB 的視覺版又把同一件事壓成一句話：war in the Middle East is pushing up inflation and dampening growth。[ECB visual statement](https://www.ecb.europa.eu/press/press_conference/visual-mps/2026/html/mopo_statement_explained_march.en.html)
+IEA 的 3 月 Oil Market Report 讓供給 shock 的尺寸更具體。報告把 3 月全球油市供給下滑寫成 `8 mb/d`，把 3 月 11 日應急儲油寫成 `400 mb`，同時指出 Brent 一度貼近 `120` 美元後回到約 `92` 美元。[IEA](https://www.iea.org/reports/oil-market-report-march-2026) 歐洲實體面也已經開始吸收這層壓力。Eurostat 3 月 20 日公布的 1 月貨品貿易資料顯示，歐元區 balance 由 `2025-12` 的 `€11.2 bn` 順差轉為 `2026-01` 的 `-€1.9 bn` 逆差，machinery and vehicles surplus 由 `€13.2 bn` 掉到 `€1.6 bn`。[Eurostat trade](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/6-20032026-ap) shock 現在壓在偏弱的成長底盤上。
 
-IEA 的 3 月 Oil Market Report 也把供給 shock 定義得很清楚。報告把 3 月全球油市供給下滑寫成 **8 mb/d**，並把 3 月 11 日成員國同意釋出 **400 mb** 應急儲油列為第一層緩衝。[IEA](https://www.iea.org/reports/oil-market-report-march-2026) 這組官方數字讓今天的文章可以把能源 shock、風險溢價與政策觀察期接成同一條線。
+日本銀行 4 月 1 日公布的 Tankan 則補上亞洲對照。大型製造業 DI 由 `16` 升到 `17`，大型非製造業 DI 維持 `36`，6 月預測分別落在 `14` 與 `29`。[BOJ Tankan](https://www.boj.or.jp/en/statistics/tk/yoshi/tk2603.htm) ING 首席歐元區經濟學家 Bert Colijn 也指出，這輪 eurozone inflation 上跳完整來自能源，core 回到 `2.3%` 讓 temporary shock 的解讀成立。[ING](https://think.ing.com/articles/eurozone-inflation-surges-to-25-as-middle-east-shock-starts-to-bite/) 這個反方把全面信用事故的判斷往後推，並把焦點留在 shock 是否擴散。
 
-第二層傳導也已經開始落在實體經濟。Eurostat 3 月 20 日公布的 1 月貨品貿易資料顯示，歐元區 balance 由 2025 年 12 月的 **€11.2 bn** 順差轉為 **-€1.9 bn** 逆差，machinery and vehicles surplus 由 **€13.2 bn** 降到 **€1.6 bn**。[Eurostat trade](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/6-20032026-ap) shock 因此已經壓在偏弱的成長底盤上。
+## 3.50、110 與 4 月 16 日會改寫分類
 
-日本銀行 4 月 1 日公布的 Tankan 補上了亞洲對照。大型製造業 DI 由 **16** 升到 **17**，大型非製造業 DI 維持 **36**，6 月預測則分別回到 **14** 與 **29**。[BOJ Tankan](https://www.boj.or.jp/en/statistics/tk/yoshi/tk2603.htm) 亞洲企業現況仍留在擴張區，前瞻預期已把能源成本與外需風險寫進去。**Ifo 的 Timo Wollmershauser** 也透過 AP 指出，能源 shock 會壓住德國復甦，但國防與基建支出仍會讓擴張續留。[AP](https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7) 這個反方讓今天的分類留在重定價層，並把全面收縮的判斷交回後續資料驗證。
+3 月 27 日的全球成長文已經命中 `VIX >30` 連 2 日這一格；3 月 29 日的美國家庭文仍有 `JOLTS 6.882m` 與 `ICSA 210k` 緩衝；3 月 30 日的台灣程序文則進入 `4 月 15 日` 與 `5 月 5 日` 的制度觀察窗。
 
-## 三個既有框架維持續留，信用門檻決定是否升級
+如果 HY OAS `>3.50` 且連 `10` 個交易日 → 市場分類會由 risk repricing 升級成 credit tightening。  
+如果 Brent `>110` 且連 `5` 個交易日 → headline inflation 會停在高檔，成長放慢與利率壓力會同步升權。  
+如果 4 月 16 日完整 HICP 把 ex-energy `>=2.3%`、services `>=3.2%` 留住或上修 → 外生 shock 會開始進入第二輪價格傳導。  
 
-| 既有框架 | 最新觀察 | 目前判定 |
-|---|---|---|
-| 3 月 27 日全球成長與能源文 | VIX 連 2 個交易日 `>30`，HY OAS `3.46`，Brent 最新可見值 `103.79`，前一段高點 `118.42` | 能源壓力升權，信用事故仍留在門外 |
-| 3 月 29 日美國家庭文 | JOLTS `6.882m`，initial claims `210k` | 勞動市場緩衝續留 |
-| 3 月 30 日台灣輸美文 | `2026-04-15` 書面意見與 `2026-05-05` 聽證會位於前方 | 制度題框架續留 |
+## 市場先重定價，下一步看信用與第二輪通膨
 
-FRED 把 VIX 由 **25.33** 拉到 **31.05**，再留在 **30.61**；HY OAS 則由 **3.17** 升到 **3.46**。[FRED VIX](https://fred.stlouisfed.org/series/VIXCLS)、[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2) 風險溢價擴張已經發生，信用鏈條仍留在確認前的觀察窗。BLS 3 月 31 日公布的 JOLTS job openings 仍在 **6.882 million**，initial claims 留在 **210k**，美國就業鏈條繼續提供外部緩衝。[BLS JOLTS](https://www.bls.gov/news.release/pdf/jolts.pdf)、[FRED ICSA](https://fred.stlouisfed.org/series/ICSA)
-
-## 3.50、110、2.3 會決定 shock 的下一段
+> **核心判斷：** 外生能源 shock 已經抬高波動率與 headline inflation，信用價差與內生通膨把市場留在重定價階段。
 
 | Metric | Threshold | Window | Implication |
 |--------|-----------|--------|-------------|
@@ -61,10 +52,10 @@ FRED 把 VIX 由 **25.33** 拉到 **31.05**，再留在 **30.61**；HY OAS 則�
 | 歐元區 ex-energy HICP / services | `>=2.3%` / `>=3.2%` 且在 2026-04-16 完整數據續留或上修 | 觀察 2026-04-16 的 Eurostat 完整 HICP | 外生 shock 會開始進入更廣的內生價格傳導，ECB 的觀察期會拉長 |
 | 日本大型製造業 / 非製造業 DI | `<=14` / `<=29` 且在 2026-06-30 的下一輪 Tankan 再次走弱 | 觀察 2026-06-30 的 BOJ Tankan | 亞洲實體景氣會接手能源 shock，全球景氣放慢的證據鏈會更完整 |
 
-後續三個觀察變數最有訊號。第一個變數是 **HY OAS**，它會回答市場是否把能源 shock 往信用層傳。第二個變數是 **Brent**，它會回答 headline inflation 是否維持高檔。第三個變數是 **2026-04-16** 的完整 HICP，這個日期會回答外生 shock 是否開始推動更廣的內生價格鏈條。
+下一個觀察變數有三個。HY OAS 會回答 shock 是否轉進融資事故，Brent 會回答 headline 通膨壓力是否延長，4 月 16 日完整 HICP 會回答第二輪傳導是否成形。
 
 ---
 
-*資料來源：[FRED VIX](https://fred.stlouisfed.org/series/VIXCLS)、[FRED SP500](https://fred.stlouisfed.org/series/SP500)、[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)、[FRED Brent](https://fred.stlouisfed.org/series/DCOILBRENTEU)、[Eurostat inflation](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap)、[Eurostat trade](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/6-20032026-ap)、[ECB statement](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260319~93b1cbad97.en.html)、[ECB visual statement](https://www.ecb.europa.eu/press/press_conference/visual-mps/2026/html/mopo_statement_explained_march.en.html)、[IEA](https://www.iea.org/reports/oil-market-report-march-2026)、[BOJ Tankan](https://www.boj.or.jp/en/statistics/tk/yoshi/tk2603.htm)、[BLS JOLTS](https://www.bls.gov/news.release/pdf/jolts.pdf)、[FRED ICSA](https://fred.stlouisfed.org/series/ICSA)、[AP](https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7)*
-*市場與官方數據截至：2026-03-31（S&P 500、BLS JOLTS、Eurostat 3 月 flash HICP） / 2026-03-30（VIX、HY OAS） / 2026-03-23（Brent 最新可見值） / 2026-04-01（BOJ Tankan）*
-*本文僅供參考，不構成投資建議。*
+*資料來源：[FRED VIX](https://fred.stlouisfed.org/series/VIXCLS)、[FRED HY OAS](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)、[FRED SP500](https://fred.stlouisfed.org/series/SP500)、[FRED Brent](https://fred.stlouisfed.org/series/DCOILBRENTEU)、[Eurostat inflation](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-31032026-ap)、[Eurostat trade](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/6-20032026-ap)、[ECB statement](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260319~93b1cbad97.en.html)、[IEA](https://www.iea.org/reports/oil-market-report-march-2026)、[BOJ Tankan](https://www.boj.or.jp/en/statistics/tk/yoshi/tk2603.htm)、[ING](https://think.ing.com/articles/eurozone-inflation-surges-to-25-as-middle-east-shock-starts-to-bite/)、[FRED JOLTS](https://fred.stlouisfed.org/series/JTSJOL)、[FRED ICSA](https://fred.stlouisfed.org/series/ICSA)*
+*市場與官方數據截至：2026-03-31（S&P 500、Eurostat 3 月 flash HICP、JOLTS 發布） / 2026-03-30（VIX、HY OAS） / 2026-03-23（Brent 最新可見值） / 2026-04-01（BOJ Tankan）*
+*本文提供研究框架與資料整理，讀者可自行評估適用情境。*
