@@ -110,4 +110,4 @@ new Chart(document.getElementById('macroChart20260409FedExpectationsCurve'), {
 
 *資料來源：[FOMC minutes](https://www.federalreserve.gov/monetarypolicy/fomcminutes20260318.htm)、[H.15](https://www.federalreserve.gov/releases/h15/)、[New York Fed SCE](https://www.newyorkfed.org/newsevents/news/research/2026/20260407)、[Williams speech](https://www.newyorkfed.org/newsevents/speeches/2026/wil260330)、[ECB account](https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg260305~4a9b7afe1c.en.html)、[BOJ summary](https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260319.pdf)、[BLS CPI schedule](https://www.bls.gov/schedule/news_release/cpi.htm)、[FOMC calendars](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)*
 *市場與官方數據截至：2026-04-09（FOMC 紀要） / 2026-04-08（H.15 release date） / 2026-04-07（New York Fed SCE） / 2026-03-30（Williams、BOJ） / 2026-03-05（ECB account）*
-*本文提供研究框架與資料整理。*
+*本文僅供參考，不構成投資建議。*
