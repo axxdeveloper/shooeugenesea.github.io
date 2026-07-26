@@ -5,20 +5,79 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>金門四天三夜｜兩大兩小慢遊版</title>
 <style>
-:root{--bg:#f3f0e9;--paper:#fff;--ink:#24282d;--muted:#69737d;--line:#ddd5c8;--accent:#765139;--soft:#eee3d7;--food:#fff5df;--spot:#edf4f3;--drive:#f2eff8}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}header{background:#253239;color:#fff;padding:32px 18px}.wrap,main{max-width:980px;margin:auto}h1{margin:0 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.15}header p{margin:0;color:#d5dde0}main{padding:18px 14px 56px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{border:1px solid var(--line);border-radius:13px;padding:11px}.metric b{display:block;color:var(--accent)}.notice{background:#fff3cd;border:1px solid #e8cf84;border-radius:12px;padding:12px;margin:12px 0}.day{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.day h2{margin:0}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent);font-weight:700;font-size:13px}.route{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:12px 0}.node{border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 9px;font-size:14px}.map{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}.timeline{list-style:none;padding:0;margin:12px 0}.timeline li{display:grid;grid-template-columns:70px 1fr;gap:10px;margin:10px 0}.time{font-weight:800;color:var(--accent);padding-top:12px}.event{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff}.food{background:var(--food)}.spot{background:var(--spot)}.drive{background:var(--drive)}.event h3{margin:0;font-size:19px}.meta{color:var(--muted);font-size:14px}.details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.details div{background:rgba(255,255,255,.65);padding:9px;border-radius:10px}.details b{color:var(--accent)}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}footer{color:var(--muted);font-size:13px;margin-top:18px}@media(max-width:760px){.grid,.details{grid-template-columns:1fr}.timeline li{grid-template-columns:58px 1fr}.card{padding:14px}}
+:root{--bg:#f3f0e9;--paper:#fff;--ink:#24282d;--muted:#69737d;--line:#ddd5c8;--accent:#765139;--soft:#eee3d7;--food:#fff5df;--spot:#edf4f3;--drive:#f2eff8;--warn:#fff3cd;--info:#eaf3ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}header{background:#253239;color:#fff;padding:32px 18px}.wrap,main{max-width:980px;margin:auto}h1{margin:0 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.15}header p{margin:0;color:#d5dde0}main{padding:18px 14px 56px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{border:1px solid var(--line);border-radius:13px;padding:11px}.metric b{display:block;color:var(--accent)}.notice,.info{border-radius:12px;padding:12px;margin:12px 0}.notice{background:var(--warn);border:1px solid #e8cf84}.info{background:var(--info);border:1px solid #bdd4ed}.day{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.day h2{margin:0}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--accent);font-weight:700;font-size:13px}.route{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:12px 0}.node{border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 9px;font-size:14px}.map,.official{display:inline-block;padding:9px 13px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;margin:3px 5px 3px 0}.official{background:#415c6b}.timeline{list-style:none;padding:0;margin:12px 0}.timeline li{display:grid;grid-template-columns:70px 1fr;gap:10px;margin:10px 0}.time{font-weight:800;color:var(--accent);padding-top:12px}.event{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff}.food{background:var(--food)}.spot{background:var(--spot)}.drive{background:var(--drive)}.event h3{margin:0;font-size:19px}.meta{color:var(--muted);font-size:14px}.details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.details div{background:rgba(255,255,255,.72);padding:9px;border-radius:10px}.details b{color:var(--accent)}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}footer{color:var(--muted);font-size:13px;margin-top:18px}@media(max-width:760px){.grid,.details{grid-template-columns:1fr}.timeline li{grid-template-columns:58px 1fr}.card{padding:14px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><h1>金門四天三夜｜兩大兩小慢遊版</h1><p>2026/7/29（三）～8/1（六）｜自駕｜每天 2～3 個主景點＋完整餐食</p></div></header>
+<header><div class="wrap"><h1>金門四天三夜｜兩大兩小慢遊版</h1><p>2026/7/29（三）～8/1（六）｜自駕｜潮汐、導覽、砲操與預約資訊已核對</p></div></header>
 <main>
-<section class="card"><div class="grid"><div class="metric"><b>Day 1</b>中午抵達，金城／水頭</div><div class="metric"><b>Day 2</b>小金門烈嶼整天</div><div class="metric"><b>Day 3</b>建功嶼＋戰地坑道</div><div class="metric"><b>Day 4</b>山后＋砲操＋機場</div></div><div class="notice"><b>行程節奏：</b>每個主景點約 60～90 分鐘，午餐至少 75 分鐘，下午保留休息與彈性。8/1 先按傍晚班機規劃；若班機早於 16:30，刪除陳景蘭洋樓。</div></section>
-<section class="card"><div class="day"><div><span class="tag">Day 1｜7/29（三）</span><h2>水頭僑鄉＋金城市區</h2></div><span class="meta">主景點 2 個</span></div><div class="route"><span class="node">尚義機場</span>→<span class="node">永春廣東粥</span>→<span class="node">水頭聚落</span>→<span class="node">總兵署</span>→<span class="node">晚餐</span></div><a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門尚義機場&destination=金城鎮&waypoints=永春廣東粥|水頭聚落|得月樓|清金門鎮總兵署&travelmode=driving">開啟 Day 1 Google Maps</a><ol class="timeline"><li><div class="time">12:00</div><div class="event drive"><h3>抵達、取車</h3><p class="meta">預留 45～60 分鐘領行李與租車。</p></div></li><li><div class="time">13:00</div><div class="event food"><h3>午餐｜永春廣東粥</h3><p>先吃金門代表性的廣東粥，搭配油條，孩子也較容易入口。</p></div></li><li><div class="time">14:30</div><div class="event spot"><h3>水頭聚落＋得月樓</h3><div class="details"><div><b>歷史背景</b><br>水頭是金門重要僑鄉，居民赴南洋經商後返鄉興建閩南與洋樓混合建築。</div><div><b>為什麼去</b><br>得月樓像住宅堡壘，可看厚牆、射口與防盜匪設計。</div></div></div></li><li><div class="time">18:00</div><div class="event spot"><h3>清金門鎮總兵署</h3><p>補上金門在近代戰地之前的清代海防與地方軍政歷史。</p></div></li><li><div class="time">19:15</div><div class="event food"><h3>晚餐｜金城牛肉料理</h3><p>以住宿附近溫體牛肉湯、牛肉麵或炒飯為主。</p></div></li></ol></section>
-<section class="card"><div class="day"><div><span class="tag">Day 2｜7/30（四）</span><h2>小金門烈嶼整天</h2></div><span class="meta">主景點 3 組</span></div><div class="notice"><b>週四安排小金門：</b>和記油條週四公休，獅山砲操通常週四停演，因此這天留給烈嶼最合理。</div><div class="route"><span class="node">金門大橋</span>→<span class="node">九宮坑道</span>→<span class="node">湖井頭</span>→<span class="node">芋頭餐</span>→<span class="node">勇士堡／鐵漢堡</span></div><a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金城鎮&destination=金城鎮&waypoints=九宮坑道|湖井頭戰史館|三層樓芋頭餐館|勇士堡|鐵漢堡&travelmode=driving">開啟 Day 2 Google Maps</a><ol class="timeline"><li><div class="time">09:15</div><div class="event spot"><h3>九宮坑道</h3><p>昔日軍事運補與小艇掩蔽坑道，能直接走入戰地地下空間。</p></div></li><li><div class="time">11:15</div><div class="event spot"><h3>湖井頭戰史館</h3><p>從烈嶼前線位置理解兩岸距離、砲戰與觀測環境。</p></div></li><li><div class="time">12:30</div><div class="event food"><h3>午餐｜三層樓芋頭餐館</h3><p>安排芋頭料理與芋頭冰，一次完成小金門特色餐與甜點。</p></div></li><li><div class="time">15:00</div><div class="event spot"><h3>勇士堡＋鐵漢堡</h3><p>兩座堡壘與地下通道形成完整防禦系統。</p></div></li></ol></section>
-<section class="card"><div class="day"><div><span class="tag">Day 3｜7/31（五）</span><h2>建功嶼＋翟山坑道＋石蚵</h2></div><span class="meta">主景點 3 個</span></div><div class="notice"><b>建功嶼建議登島時段：06:49～07:49，乾潮約 07:19。</b>建議 06:25 前抵達，穿包腳防滑鞋，仍以現場封鎖線與天候為準。</div><div class="route"><span class="node">和記油條</span>→<span class="node">建功嶼</span>→<span class="node">翟山坑道</span>→<span class="node">石蚵之家</span>→<span class="node">古寧頭戰史館</span></div><a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=和記油條&destination=金城鎮&waypoints=建功嶼|翟山坑道|石蚵之家|古寧頭戰史館&travelmode=driving">開啟 Day 3 Google Maps</a><ol class="timeline"><li><div class="time">05:40</div><div class="event food"><h3>和記油條外帶</h3><p>先外帶油條與雙胞胎，避免錯過潮汐。</p></div></li><li><div class="time">06:25</div><div class="event spot"><h3>建功嶼</h3><p>退潮時石板路露出，可步行登島，看潮間帶、軌條砦與戰地景觀。</p></div></li><li><div class="time">10:00</div><div class="event spot"><h3>翟山坑道</h3><p>1960 年代開鑿的 A 字形地下水道，可供小艇與軍事補給使用。</p></div></li><li><div class="time">12:15</div><div class="event food"><h3>午餐｜石蚵之家</h3><p>推薦石蚵麵線、蚵仔煎、蚵嗲或石蚵套餐。</p></div></li><li><div class="time">14:15</div><div class="event spot"><h3>古寧頭戰史館</h3><p>透過模型與戰況圖理解 1949 年古寧頭戰役。</p></div></li></ol></section>
-<section class="card"><div class="day"><div><span class="tag">Day 4｜8/1（六）</span><h2>山后聚落＋獅山砲操＋回程</h2></div><span class="meta">主景點 2～3 個</span></div><div class="notice"><b>砲操常見場次：</b>10:00、11:00、13:50、14:50、15:50、16:50；本版鎖定 11:00，至少提前 25～30 分鐘抵達。</div><div class="route"><span class="node">傳記廣東粥</span>→<span class="node">山后民俗村</span>→<span class="node">獅山砲操</span>→<span class="node">王阿婆午餐</span>→<span class="node">陳景蘭洋樓</span>→<span class="node">機場</span></div><a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金城鎮&destination=金門尚義機場&waypoints=傳記廣東粥|山后民俗文化村|獅山砲陣地|王阿婆小吃店|陳景蘭洋樓&travelmode=driving">開啟 Day 4 Google Maps</a><ol class="timeline"><li><div class="time">07:30</div><div class="event food"><h3>早餐｜傳記廣東粥</h3><p>早一點出發，避開中午東半島車流與排隊。</p></div></li><li><div class="time">09:00</div><div class="event spot"><h3>山后民俗文化村</h3><p>欣賞保存完整的閩南傳統聚落與燕尾屋脊。</p></div></li><li><div class="time">10:25</div><div class="event drive"><h3>前往獅山砲陣地</h3><p>提前抵達，預留停車與入場時間。</p></div></li><li><div class="time">11:00</div><div class="event spot"><h3>獅山砲操</h3><p>近距離觀看戰地砲操演示，實際場次以現場公告為準。</p></div></li><li><div class="time">12:10</div><div class="event food"><h3>午餐｜王阿婆小吃店</h3><p>以在地家常菜、蚵料理或麵食為主。</p></div></li><li><div class="time">14:00</div><div class="event spot"><h3>陳景蘭洋樓</h3><p>若班機時間充裕，再安排這座代表性僑鄉洋樓與周邊海景。</p></div></li><li><div class="time">16:00</div><div class="event drive"><h3>還車、前往機場</h3><p>國內線建議至少提前 90 分鐘抵達機場。</p></div></li></ol></section>
-<section class="card"><h2>出發前檢查</h2><table><thead><tr><th>項目</th><th>建議</th></tr></thead><tbody><tr><td>建功嶼</td><td>再次確認潮汐、天候與現場開放狀況。</td></tr><tr><td>獅山砲操</td><td>出發前確認當日場次與是否停演。</td></tr><tr><td>餐廳</td><td>熱門店家先電話確認營業日與候位時間。</td></tr><tr><td>裝備</td><td>防曬、帽子、飲水、防滑包鞋、兒童備用衣物。</td></tr><tr><td>機場</td><td>依實際班機時間倒推還車與最後景點。</td></tr></tbody></table></section>
-<footer>本頁為行程規劃版本；潮汐、砲操、餐廳營業與交通時間請以出發前最新公告為準。</footer>
+<section class="card">
+<div class="grid"><div class="metric"><b>Day 1</b>中午抵達＋水頭＋後浦夜遊</div><div class="metric"><b>Day 2</b>小金門烈嶼整天</div><div class="metric"><b>Day 3</b>建功嶼＋翟山＋古寧頭</div><div class="metric"><b>Day 4</b>山后＋11:00 砲操＋機場</div></div>
+<div class="notice"><b>本版重要調整：</b>7/29 中午抵達，無法配合當日建功嶼 05:40～06:40；改排 7/31 06:49～07:49。Day 1 晚上加入 19:30「後浦美麗小鎮」免費導覽。</div>
+</section>
+
+<section class="card">
+<h2>需要先處理的預約與定時活動</h2>
+<table><thead><tr><th>項目</th><th>時間／方式</th><th>行程安排</th></tr></thead><tbody>
+<tr><td><b>建功嶼</b></td><td>7/31 建議登島 06:49～07:49，乾潮約 07:19；不需預約，依現場管制與天候為準。</td><td>排在 Day 3，建議 06:25～06:35 抵達入口。</td></tr>
+<tr><td><b>後浦美麗小鎮導覽</b></td><td>每日 19:30，由清金門鎮總兵署出發；免費，現場報名，官方諮詢電話 082-371717。</td><td>排在 Day 1。建議 19:10 前到總兵署，導覽約 2 小時；兩位小朋友若太累可改成總兵署自由參觀。</td></tr>
+<tr><td><b>獅山砲操</b></td><td>常見場次 10:00、11:00、13:50、14:50、15:50、16:50；每週二、四停演。</td><td>8/1（六）正常日，鎖定 11:00，建議 10:30 前到。</td></tr>
+<tr><td><b>擎天廳</b></td><td>需事先線上申請，且僅開放持中華民國身分證旅客；2026/6/1 起全面採線上申請。</td><td>目前未硬排，避免壓縮親子行程。若預約成功，可替換 Day 4 的陳景蘭洋樓或部分東半島景點。</td></tr>
+</tbody></table>
+<a class="official" target="_blank" href="https://www.kinmen.travel/zh-tw/guide/jiangongyu-islet-tidal">建功嶼官方潮汐</a>
+<a class="official" target="_blank" href="https://kinmen.travel/zh-tw/discover/tour/22">後浦導覽官方資訊</a>
+<a class="official" target="_blank" href="https://kinmen.travel/zh-tw/guide/travel-tips">金門行前與預約提醒</a>
+</section>
+
+<section class="card"><div class="day"><div><span class="tag">Day 1｜7/29（三）</span><h2>水頭僑鄉＋後浦夜間導覽</h2></div><span class="meta">中午抵達，不排清晨潮汐景點</span></div>
+<div class="route"><span class="node">尚義機場</span>→<span class="node">午餐</span>→<span class="node">水頭聚落</span>→<span class="node">金城晚餐</span>→<span class="node">總兵署 19:30 導覽</span></div>
+<a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門尚義機場&destination=清金門鎮總兵署&waypoints=永春廣東粥|水頭聚落|得月樓|金城鎮&travelmode=driving">開啟 Day 1 Google Maps</a>
+<ol class="timeline">
+<li><div class="time">12:00</div><div class="event drive"><h3>抵達、取車</h3><p class="meta">預留 45～60 分鐘領行李與租車。</p></div></li>
+<li><div class="time">13:00</div><div class="event food"><h3>午餐｜永春廣東粥</h3><p>廣東粥搭配油條，孩子通常較容易入口；若班機延誤，直接改住宿附近用餐。</p></div></li>
+<li><div class="time">14:30</div><div class="event spot"><h3>水頭聚落＋得月樓</h3><p>看金門僑鄉建築、洋樓與防禦式住宅。建議停留 90～120 分鐘。</p></div></li>
+<li><div class="time">17:30</div><div class="event food"><h3>金城提早吃晚餐</h3><p>後浦導覽約兩小時，晚餐不要排到導覽之後；建議選總兵署步行範圍內餐廳。</p></div></li>
+<li><div class="time">19:10</div><div class="event spot"><h3>清金門鎮總兵署集合</h3><div class="details"><div><b>報名</b><br>現場報名，無需事先預約；建議提早 20 分鐘。</div><div><b>正式出發</b><br>19:30，免費導覽，步行走訪後浦歷史街區，約 2 小時。</div></div></div></li>
+</ol></section>
+
+<section class="card"><div class="day"><div><span class="tag">Day 2｜7/30（四）</span><h2>小金門烈嶼整天</h2></div><span class="meta">週四避開砲操停演日</span></div>
+<div class="notice"><b>安排理由：</b>獅山砲操每週四停演，因此把週四完整留給烈嶼最順；自駕可走金門大橋，不必配合渡輪班次。</div>
+<div class="route"><span class="node">九宮坑道</span>→<span class="node">湖井頭</span>→<span class="node">芋頭餐</span>→<span class="node">勇士堡／鐵漢堡</span></div>
+<a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金城鎮&destination=金城鎮&waypoints=九宮坑道|湖井頭戰史館|三層樓芋頭餐館|勇士堡|鐵漢堡&travelmode=driving">開啟 Day 2 Google Maps</a>
+<ol class="timeline">
+<li><div class="time">09:15</div><div class="event spot"><h3>九宮坑道</h3><p>昔日軍事運補與小艇掩蔽坑道，坑道內較涼，孩子可帶薄外套。</p></div></li>
+<li><div class="time">11:15</div><div class="event spot"><h3>湖井頭戰史館</h3><p>從烈嶼前線位置理解兩岸距離、砲戰與觀測環境。</p></div></li>
+<li><div class="time">12:30</div><div class="event food"><h3>午餐｜烈嶼芋頭料理</h3><p>安排芋頭料理與芋頭冰，午餐保留至少 75 分鐘。</p></div></li>
+<li><div class="time">15:00</div><div class="event spot"><h3>勇士堡＋鐵漢堡</h3><p>兩座堡壘與地下通道形成完整防禦系統；留意階梯與濕滑路面。</p></div></li>
+</ol></section>
+
+<section class="card"><div class="day"><div><span class="tag">Day 3｜7/31（五）</span><h2>建功嶼＋翟山坑道＋古寧頭</h2></div><span class="meta">本趟唯一適合且不影響班機的潮汐日</span></div>
+<div class="notice"><b>官方潮汐：</b>乾潮約 07:19，建議登島 06:49～07:49。建議 06:25～06:35 抵達，穿包腳防滑鞋；不要超過現場公告的回程時間。</div>
+<div class="route"><span class="node">早餐外帶</span>→<span class="node">建功嶼</span>→<span class="node">回飯店休息</span>→<span class="node">翟山坑道</span>→<span class="node">石蚵午餐</span>→<span class="node">古寧頭</span></div>
+<a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金城鎮&destination=金城鎮&waypoints=建功嶼|翟山坑道|石蚵之家|古寧頭戰史館&travelmode=driving">開啟 Day 3 Google Maps</a>
+<ol class="timeline">
+<li><div class="time">06:10</div><div class="event food"><h3>早餐簡單外帶</h3><p>不要把時間押在排隊名店；前一晚先準備麵包、飲料或確認早開早餐店。</p></div></li>
+<li><div class="time">06:30</div><div class="event spot"><h3>建功嶼</h3><p>約 06:49 開始進入官方建議時段；實際仍依天候、潮位及現場封鎖線。</p></div></li>
+<li><div class="time">08:15</div><div class="event drive"><h3>回住宿休息／正式早餐</h3><p>親子行程刻意留 90 分鐘緩衝，不直接塞下一個景點。</p></div></li>
+<li><div class="time">10:30</div><div class="event spot"><h3>翟山坑道</h3><p>A 字形地下水道與戰地運補設施；坑道內較涼且部分地面濕滑。</p></div></li>
+<li><div class="time">12:15</div><div class="event food"><h3>午餐｜石蚵料理</h3><p>石蚵麵線、蚵仔煎、蚵嗲或套餐。</p></div></li>
+<li><div class="time">14:30</div><div class="event spot"><h3>古寧頭戰史館與周邊</h3><p>理解 1949 年古寧頭戰役；若孩子疲累，只保留戰史館主體即可。</p></div></li>
+</ol></section>
+
+<section class="card"><div class="day"><div><span class="tag">Day 4｜8/1（六）</span><h2>山后聚落＋獅山砲操＋回程</h2></div><span class="meta">砲操固定鎖定 11:00</span></div>
+<div class="notice"><b>砲操資訊：</b>常見場次為 10:00、11:00、13:50、14:50、15:50、16:50；週二、週四停演。8/1 是週六，安排 11:00 場，10:30 前抵達較穩妥，仍以當日公告為準。</div>
+<div class="route"><span class="node">早餐</span>→<span class="node">山后民俗村</span>→<span class="node">獅山砲陣地</span>→<span class="node">午餐</span>→<span class="node">彈性景點</span>→<span class="node">機場</span></div>
+<a class="map" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金城鎮&destination=金門尚義機場&waypoints=山后民俗文化村|獅山砲陣地|王阿婆小吃店|陳景蘭洋樓&travelmode=driving">開啟 Day 4 Google Maps</a>
+<ol class="timeline">
+<li><div class="time">08:30</div><div class="event spot"><h3>山后民俗文化村</h3><p>完整閩南傳統聚落，早上較不熱；建議停留約 75～90 分鐘。</p></div></li>
+<li><div class="time">10:30</div><div class="event spot"><h3>獅山砲陣地報到</h3><p>先進坑道與展區，等待 11:00 砲操；表演聲響較大，對聲音敏感的孩子可準備耳塞。</p></div></li>
+<li><div class="time">11:00</div><div class="event spot"><h3>砲操表演</h3><p>不需預約；若當日臨時停演，直接改為坑道與榴砲展示。</p></div></li>
+<li><div class="time">12:15</div><div class="event food"><h3>東半島午餐</h3><p>午餐後依班機時間決定是否增加陳景蘭洋樓。</p></div></li>
+<li><div class="time">14:00</div><div class="event drive"><h3>彈性景點／前往機場</h3><p>若班機早於 16:30，直接刪除陳景蘭洋樓，至少於起飛前 90 分鐘抵達機場。</p></div></li>
+</ol></section>
+
+<section class="card"><h2>出發前 48 小時再確認</h2><ul><li>建功嶼潮汐與現場開放狀態。</li><li>後浦夜遊是否因天候或活動臨時調整。</li><li>獅山砲操當日是否停演或更換場次。</li><li>餐廳公休日與是否接受訂位。</li><li>回程班機時間，據此決定 Day 4 彈性景點。</li></ul></section>
+<footer>更新日期：2026/7/26。潮汐資料以金門觀光旅遊網及中央氣象署為準；導覽、砲操、開館與預約規則可能臨時調整，請以現場及官方最新公告為準。</footer>
 </main>
 </body>
 </html>
