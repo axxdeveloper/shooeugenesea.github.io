@@ -6,157 +6,25 @@
 <title>金門四天三夜｜兩大兩小慢遊攻略</title>
 <style>
 :root{--bg:#eeeae2;--paper:#fffdf8;--ink:#25292d;--muted:#68727a;--line:#d8cfc2;--accent:#744d35;--spot:#eaf4f1;--food:#fff2d5;--drive:#eeeafa;--info:#e8f2ff;--warn:#fff2c9;--danger:#fde7e5;--ok:#e7f4e9}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}
-header{background:#26343b;color:#fff;padding:30px 18px}.wrap,main{max-width:1050px;margin:auto}
-h1{margin:0 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.15}header p{margin:0;color:#d7dfe2}
-main{padding:18px 14px 60px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 2px 0 rgba(65,52,40,.04)}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fff}.metric b{display:block;color:var(--accent)}
-.notice,.info,.danger,.ok{border-radius:12px;padding:12px;margin:12px 0}.notice{background:var(--warn);border:1px solid #e3ca7e}.info{background:var(--info);border:1px solid #bdd4ec}.danger{background:var(--danger);border:1px solid #e5aaa7}.ok{background:var(--ok);border:1px solid #aecdb3}
-.day{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.day h2{margin:2px 0}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:#eee2d6;color:var(--accent);font-weight:800;font-size:13px}.meta{color:var(--muted);font-size:14px}
-.btn{display:inline-block;padding:9px 13px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:750;margin:3px 5px 3px 0}.btn.alt{background:#415d6c}
-.timeline{list-style:none;padding:0;margin:12px 0}.timeline li{display:grid;grid-template-columns:74px 1fr;gap:10px;margin:10px 0}.time{font-weight:850;color:var(--accent);padding-top:12px}
-.event{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff}.event h3{margin:0;font-size:18px}.event p{margin:4px 0 0}.food{background:var(--food)}.spot{background:var(--spot)}.drive{background:var(--drive)}
-table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{white-space:nowrap}
-.mapbox{margin:16px 0;background:#fdfbf4;border:2px solid #343a40;border-radius:15px;padding:10px;box-shadow:4px 5px 0 #d2cabd;overflow-x:auto}.map-title{font-family:"Comic Sans MS","Marker Felt","Noto Sans TC",sans-serif;font-weight:900;margin:0 0 5px}.map-note{color:var(--muted);font-size:13px;margin:0 0 6px}.mapbox svg{display:block;width:100%;min-width:760px;height:auto}
-.sea{fill:#e5f2f7}.island{fill:#f3ead8;stroke:#343a40;stroke-width:3;stroke-linejoin:round}.rough{fill:none;stroke:#343a40;stroke-width:1.2;stroke-dasharray:9 5;opacity:.6}.route-line{fill:none;stroke:#c5523c;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10 7}.point{fill:#fff8d8;stroke:#343a40;stroke-width:3}.point.start{fill:#f7b267}.map-label{font-size:15px;font-weight:800;fill:#25292d;font-family:"Comic Sans MS","Marker Felt","Noto Sans TC",sans-serif}.base-label{font-size:14px;font-weight:800;fill:#66757d}.label-bg{fill:#fffdf7;stroke:#343a40;stroke-width:1.5}
-.review-pass{font-weight:800;color:#27623a}.review-exception{font-weight:800;color:#9a4f24}.review-skip{color:#8a4c4c}.small{font-size:13px;color:var(--muted)}footer{color:var(--muted);font-size:13px;margin-top:18px}
-@media(max-width:760px){.grid{grid-template-columns:1fr}.timeline li{grid-template-columns:58px 1fr}.card{padding:14px}table{font-size:14px}th,td{padding:7px}.mapbox{padding:7px}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.65}header{background:#26343b;color:#fff;padding:30px 18px}.wrap,main{max-width:1050px;margin:auto}h1{margin:0 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.15}header p{margin:0;color:#d7dfe2}main{padding:18px 14px 60px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 2px 0 rgba(65,52,40,.04)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fff}.metric b{display:block;color:var(--accent)}.notice,.info,.danger,.ok{border-radius:12px;padding:12px;margin:12px 0}.notice{background:var(--warn);border:1px solid #e3ca7e}.info{background:var(--info);border:1px solid #bdd4ec}.danger{background:var(--danger);border:1px solid #e5aaa7}.ok{background:var(--ok);border:1px solid #aecdb3}.day{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.day h2{margin:2px 0}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:#eee2d6;color:var(--accent);font-weight:800;font-size:13px}.meta{color:var(--muted);font-size:14px}.btn{display:inline-block;padding:9px 13px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:750;margin:3px 5px 3px 0}.timeline{list-style:none;padding:0;margin:12px 0}.timeline li{display:grid;grid-template-columns:74px 1fr;gap:10px;margin:10px 0}.time{font-weight:850;color:var(--accent);padding-top:12px}.event{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff}.event h3{margin:0;font-size:18px}.event p{margin:4px 0 0}.food{background:var(--food)}.spot{background:var(--spot)}.drive{background:var(--drive)}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{white-space:nowrap}.mapbox{margin:16px 0;background:#fdfbf4;border:2px solid #343a40;border-radius:15px;padding:10px;box-shadow:4px 5px 0 #d2cabd;overflow-x:auto}.map-title{font-weight:900;margin:0 0 5px}.map-note{color:var(--muted);font-size:13px;margin:0 0 6px}.mapbox svg{display:block;width:100%;min-width:760px;height:auto}.sea{fill:#e5f2f7}.island{fill:#f3ead8;stroke:#343a40;stroke-width:3;stroke-linejoin:round}.rough{fill:none;stroke:#343a40;stroke-width:1.2;stroke-dasharray:9 5;opacity:.6}.route-line{fill:none;stroke:#c5523c;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10 7}.point{fill:#fff8d8;stroke:#343a40;stroke-width:3}.point.start{fill:#f7b267}.map-label{font-size:15px;font-weight:800;fill:#25292d}.base-label{font-size:14px;font-weight:800;fill:#66757d}.label-bg{fill:#fffdf7;stroke:#343a40;stroke-width:1.5}.review-pass{font-weight:800;color:#27623a}.review-exception{font-weight:800;color:#9a4f24}.review-skip{color:#8a4c4c}.small{font-size:13px;color:var(--muted)}footer{color:var(--muted);font-size:13px;margin-top:18px}@media(max-width:760px){.grid{grid-template-columns:1fr}.timeline li{grid-template-columns:58px 1fr}.card{padding:14px}table{font-size:14px}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><h1>金門四天三夜｜兩大兩小慢遊攻略</h1><p>2026/7/29（三）～8/1（六）｜自駕｜住宿：微醺民宿 Tipsy Hotel</p></div></header>
 <main>
-<section class="card">
-<div class="grid">
-<div class="metric"><b>Day 1</b>金城市區＋後浦夜遊</div>
-<div class="metric"><b>Day 2</b>小金門＋古寧頭＋莒光樓夜景</div>
-<div class="metric"><b>Day 3</b>歐厝＋太武山＋金東經典線＋沙美</div>
-<div class="metric"><b>Day 4</b>建功嶼＋翟山＋採買還車</div>
-</div>
-<div class="ok"><b>新版篩選原則：</b>一般景點優先保留 Google Maps 評論數至少 1,000 的知名景點；餐廳不套用此門檻，改以順路、營業日、冷氣與家庭用餐為主。</div>
-<div class="notice"><b>明確例外：</b>金城民防坑道是已定導覽；歐厝海岸、太武山／毋忘在莒、八二三戰史館是你指定要去，因此即使評論數不足、分散或無法可靠核對，仍保留。</div>
-<div class="info"><b>這版已刪：</b>烈嶼遊客中心、鐵漢堡、勇士堡與水頭聚落夜遊不列主行程。北山播音牆目前查不到可靠的 Google Maps 評論總數，先降為古寧頭同區備選，不占固定時間。</div>
-</section>
-<section class="card">
-<h2>Google Maps 人氣篩選</h2>
-<table><thead><tr><th>景點</th><th>查得評論數</th><th>處理</th></tr></thead><tbody>
-<tr><td>莒光樓</td><td>約 10,130</td><td class="review-pass">保留</td></tr>
-<tr><td>翟山坑道</td><td>約 10,477</td><td class="review-pass">保留</td></tr>
-<tr><td>山后民俗文化村</td><td>約 7,800</td><td class="review-pass">保留</td></tr>
-<tr><td>獅山砲陣地</td><td>約 5,700</td><td class="review-pass">保留</td></tr>
-<tr><td>古寧頭戰史館</td><td>約 4,833</td><td class="review-pass">保留</td></tr>
-<tr><td>沙美老街</td><td>約 4,562</td><td class="review-pass">新增</td></tr>
-<tr><td>建功嶼</td><td>約 3,062</td><td class="review-pass">保留</td></tr>
-<tr><td>馬山觀測所</td><td>約 2,900</td><td class="review-pass">保留</td></tr>
-<tr><td>沙溪堡</td><td>約 2,700</td><td class="review-pass">保留</td></tr>
-<tr><td>九宮坑道</td><td>約 2,491</td><td class="review-pass">保留</td></tr>
-<tr><td>歐厝海岸</td><td>約 693</td><td class="review-exception">你指定必去，例外保留</td></tr>
-<tr><td>水頭聚落</td><td>約 761</td><td class="review-skip">低於門檻，移出主行程</td></tr>
-</tbody></table>
-<p class="small">評論數會持續變動，本表是規劃時的快照。沙美摩洛哥不另外排點，走沙美老街時順路看到即可。</p>
-</section>
-<section class="card">
-<div class="day"><div><span class="tag">Day 1｜7/29（三）</span><h2>金城民防坑道、金城老街、後浦夜間導覽</h2></div><span class="meta">已定調｜市區步行為主</span></div>
-<div class="mapbox" data-map="day1"><p class="map-title">Day 1｜金門相對位置手繪路線</p><p class="map-note">機場 → 民宿 → 金城市區；下午到晚上集中步行。</p></div>
-<a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門尚義機場&destination=清金門鎮總兵署&waypoints=金門微醺民宿TipsyHotel|金城民防坑道|金門模範街|良金牧場貞節牌坊店&travelmode=driving">Day 1 導航</a>
-<ol class="timeline">
-<li><div class="time">12:00</div><div class="event drive"><h3>抵達金門、取車</h3></div></li>
-<li><div class="time">12:30</div><div class="event drive"><h3>微醺民宿寄放行李</h3><p>地址：金門城 68-3 號。</p></div></li>
-<li><div class="time">14:15</div><div class="event spot"><h3>抵達金城民防坑道</h3><p>預留報到與洗手間時間。</p></div></li>
-<li><div class="time">14:30</div><div class="event spot"><h3>金城民防坑道定時導覽</h3><p>午後安排地下坑道，避開最曬時段。</p></div></li>
-<li><div class="time">15:30</div><div class="event spot"><h3>模範街、後浦16藝文特區、貞節牌坊、總兵署</h3><p>停好車後一路步行，不反覆移車。</p></div></li>
-<li><div class="time">17:00</div><div class="event food"><h3>良金牧場貞節牌坊店晚餐</h3><p>既有 17:00 安排。</p></div></li>
-<li><div class="time">18:00</div><div class="event spot"><h3>金城老街自由散步</h3></div></li>
-<li><div class="time">19:15</div><div class="event spot"><h3>總兵署集合</h3></div></li>
-<li><div class="time">19:30</div><div class="event spot"><h3>後浦美麗小鎮夜間導覽</h3></div></li>
-</ol>
-</section>
-<section class="card">
-<div class="day"><div><span class="tag">Day 2｜7/30（四）</span><h2>小金門經典＋古寧頭戰史館＋莒光樓夜景</h2></div><span class="meta">坑道與戰史館避暑｜刪除烈嶼遊客中心</span></div>
-<div class="mapbox" data-map="day2"><p class="map-title">Day 2｜烈嶼西南 → 金門西北 → 金城</p><p class="map-note">上午戶外、午後戰史館、晚上莒光樓；不排低人氣的水頭夜遊。</p></div>
-<a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門微醺民宿TipsyHotel&destination=莒光樓&waypoints=九宮坑道|沙溪堡|黃厝三層樓芋頭餐館|古寧頭戰史館|金門牛家莊&travelmode=driving">Day 2 導航</a>
-<ol class="timeline">
-<li><div class="time">07:30</div><div class="event food"><h3>民宿早餐</h3></div></li>
-<li><div class="time">08:30</div><div class="event drive"><h3>自駕走金門大橋前往烈嶼</h3><p>金門大橋只作交通，不列景點門檻。</p></div></li>
-<li><div class="time">09:15</div><div class="event spot"><h3>九宮坑道</h3><p>只參觀坑道，不排烈嶼遊客中心；預留約 60～75 分鐘。</p></div></li>
-<li><div class="time">10:40</div><div class="event spot"><h3>沙溪堡</h3><p>趁接近中午前完成戶外段，停留約 45 分鐘。</p></div></li>
-<li><div class="time">11:45</div><div class="event food"><h3>三層樓芋頭餐館午餐</h3><p>星期四營業 09:00～18:00；用餐兼休息，特色芋頭料理適合小金門行程。</p></div></li>
-<li><div class="time">13:10</div><div class="event drive"><h3>返回大金門</h3></div></li>
-<li><div class="time">14:20</div><div class="event spot"><h3>古寧頭戰史館</h3><p>午後排室內展館，停留約 75～90 分鐘。</p></div></li>
-<li><div class="time">16:00</div><div class="event drive"><h3>北山播音牆：同區備選</h3><p>未取得可靠的 Google Maps 評論總數，先不列主景點。全家仍有精神時才短停 15～20 分鐘。</p></div></li>
-<li><div class="time">17:30</div><div class="event food"><h3>金門牛家莊晚餐</h3><p>每日 17:00～21:30；有冷氣，可預約，適合兩大兩小點合菜。</p></div></li>
-<li><div class="time">19:00</div><div class="event spot"><h3>莒光樓夜間參觀</h3><p>把熱門地標移到晚上，避暑也減輕 Day 4。</p></div></li>
-<li><div class="time">20:15</div><div class="event drive"><h3>返回民宿</h3></div></li>
-</ol>
-</section>
-<section class="card">
-<div class="day"><div><span class="tag">Day 3｜7/31（五）</span><h2>歐厝、太武山、八二三、山后、獅山、馬山、沙美</h2></div><span class="meta">東線經典日｜中午以冷氣展館為主</span></div>
-<div class="mapbox" data-map="day3"><p class="map-title">Day 3｜金門南岸 → 中東部 → 東北角 → 沙美</p><p class="map-note">保留你指定的太武山 → 毋忘在莒 → 金東戰地線；沙美老街排在傍晚。</p></div>
-<a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門微醺民宿TipsyHotel&destination=沙美老街&waypoints=歐厝沙灘|太武山登山口|毋忘在莒勒石|成功鍋貼館|八二三戰史館|山后民俗文化村|獅山砲陣地|馬山觀測所&travelmode=driving">Day 3 導航</a>
-<div class="danger"><b>這天是全程最滿的一天：</b>山后民俗文化村是高人氣景點，但若孩子在太武山後已累，優先縮短山后，不刪固定砲操、馬山與沙美。</div>
-<ol class="timeline">
-<li><div class="time">06:40</div><div class="event spot"><h3>歐厝海岸</h3><p>你指定必去。清晨較不曬；仍須依潮汐、風浪與現場安全決定是否靠近沙灘。</p></div></li>
-<li><div class="time">07:40</div><div class="event food"><h3>回民宿早餐</h3><p>早餐供應 07:30～09:00。</p></div></li>
-<li><div class="time">08:40</div><div class="event spot"><h3>太武山 → 毋忘在莒</h3><p>從玉章路登山口步行，帶水、帽子；控制在上午完成主要步行。</p></div></li>
-<li><div class="time">11:30</div><div class="event food"><h3>成功鍋貼館午餐</h3><p>星期五 11:30～14:00；用餐後稍作冷氣休息。</p></div></li>
-<li><div class="time">12:40</div><div class="event spot"><h3>八二三戰史館</h3><p>暑期開放至 18:00，將最熱時段留給室內展館。</p></div></li>
-<li><div class="time">14:05</div><div class="event spot"><h3>山后民俗文化村</h3><p>高人氣代表景點；以 35～40 分鐘精華參觀為主。</p></div></li>
-<li><div class="time">14:40</div><div class="event spot"><h3>抵達獅山砲陣地</h3><p>星期五有砲操，提早入場；怕巨響的孩子準備耳罩。</p></div></li>
-<li><div class="time">14:50</div><div class="event spot"><h3>獅山砲操</h3></div></li>
-<li><div class="time">15:35</div><div class="event spot"><h3>馬山觀測所</h3><p>抓 45～50 分鐘，避免接近閉館才抵達。</p></div></li>
-<li><div class="time">16:45</div><div class="event spot"><h3>沙美老街</h3><p>Google Maps 約 4,562 則評論。傍晚走訪萬安堂、老街巷弄；沙美摩洛哥只順路看，不另算景點。</p></div></li>
-<li><div class="time">17:45</div><div class="event food"><h3>沙美／金湖晚餐</h3><p>保留彈性：當日看孩子體力，就近選有冷氣的餐廳，不為指定名店繞路。</p></div></li>
-<li><div class="time">19:15</div><div class="event drive"><h3>返回民宿</h3></div></li>
-</ol>
-</section>
-<section class="card">
-<div class="day"><div><span class="tag">Day 4｜8/1（六）</span><h2>建功嶼、金門早餐、翟山坑道、午餐、買酒還車</h2></div><span class="meta">潮汐與 18:00 還車為硬限制</span></div>
-<div class="mapbox" data-map="day4"><p class="map-title">Day 4｜西南區收尾</p><p class="map-note">莒光樓已移到 Day 2 晚上，避免最後一天再橫跨東西兩側。</p></div>
-<a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門微醺民宿TipsyHotel&destination=金門尚義機場&waypoints=建功嶼|傳記廣東粥|和記油條|翟山坑道|阡湖餐廳|金門酒廠職工福利委員會&travelmode=driving">Day 4 導航</a>
-<div class="danger"><b>時間底線：</b>建功嶼不要等到官方建議時段結束才折返；16:30 前完成採買，17:15 前往租車公司，最晚 18:00 完成還車。</div>
-<ol class="timeline">
-<li><div class="time">06:35</div><div class="event drive"><h3>退房、行李上車</h3></div></li>
-<li><div class="time">07:10</div><div class="event spot"><h3>抵達建功嶼入口</h3><p>穿包腳防滑鞋，先看現場風浪與開放公告。</p></div></li>
-<li><div class="time">07:21</div><div class="event spot"><h3>建功嶼登島</h3><p>官方建議時段 07:21～08:21；建議 07:50～08:00 開始折返。</p></div></li>
-<li><div class="time">08:20</div><div class="event food"><h3>傳記廣東粥＋和記油條</h3><p>油條可能提早售完，前一天再電話或 Google Maps 確認臨時公休。</p></div></li>
-<li><div class="time">09:45</div><div class="event spot"><h3>翟山坑道</h3><p>最後一天的代表性大景點，坑道內較涼；停留約 75～90 分鐘。</p></div></li>
-<li><div class="time">11:30</div><div class="event food"><h3>阡湖餐廳午餐</h3><p>星期六 11:30～13:30；離民宿與翟山近，建議預約。</p></div></li>
-<li><div class="time">13:15</div><div class="event drive"><h3>室內休息／彈性採買</h3><p>下午不再增加曝曬景點。</p></div></li>
-<li><div class="time">14:30</div><div class="event drive"><h3>買金門高粱酒與伴手禮</h3><p>一般購酒以官方職工福利通路或大型特產店比價；金五酒窖／經武酒窖偏向參觀品酒體驗，不等同最低價通路。</p></div></li>
-<li><div class="time">16:30</div><div class="event drive"><h3>完成採買、整理行李</h3></div></li>
-<li><div class="time">16:45</div><div class="event drive"><h3>依租車契約加油</h3></div></li>
-<li><div class="time">17:15</div><div class="event drive"><h3>前往租車公司</h3></div></li>
-<li><div class="time">18:00</div><div class="event danger"><h3>最晚完成還車、前往機場</h3></div></li>
-</ol>
-</section>
-<section class="card">
-<h2>先不排的景點</h2>
-<table><tbody>
-<tr><td><b>烈嶼遊客中心</b></td><td>依你的要求刪除；九宮坑道仍保留。</td></tr>
-<tr><td><b>水頭聚落</b></td><td>Google Maps 約 761 則評論，低於目前 1,000 門檻。</td></tr>
-<tr><td><b>鐵漢堡／勇士堡</b></td><td>即使部分點接近或略過門檻，第一次去仍先讓位給九宮、沙溪、古寧頭、山后、獅山與沙美。</td></tr>
-<tr><td><b>北山播音牆</b></td><td>查不到可靠且可核對的 Google Maps 評論總數；留作古寧頭後的短停備選，不算主行程。</td></tr>
-<tr><td><b>湖井頭戰史館</b></td><td>此前公告僅稱預計七月底重開，未看到正式重開公告前不硬排。</td></tr>
-</tbody></table>
-</section>
-<section class="card">
-<h2>出發前 48 小時再確認</h2>
-<ul>
-<li>建功嶼官方潮汐、歐厝海岸風浪與現場安全。</li>
-<li>九宮坑道、八二三戰史館、翟山坑道、莒光樓及馬山觀測所是否有臨時休館。</li>
-<li>7/31 獅山砲操 14:50 場是否照常演出。</li>
-<li>三層樓、成功鍋貼、金門牛家莊、阡湖餐廳、傳記廣東粥與和記油條是否臨時公休；需要時先訂位。</li>
-<li>班機、租車公司位置、加油規則及 18:00 還車流程。</li>
-</ul>
-<p class="small">營業與評論資料規劃核對日：2026-07-27。Google Maps 評論數與店家營業時間可能隨時變動。</p>
-</section>
-<footer>地圖以金門本島與烈嶼的手繪輪廓、方位及相對位置為框架，供快速理解當日移動區域；不是精確海岸線、距離或道路。實際導航仍以 Google Maps 與現場標示為準。</footer>
+<section class="card"><div class="grid"><div class="metric"><b>Day 1</b>金城市區＋後浦夜遊</div><div class="metric"><b>Day 2</b>小金門＋古寧頭</div><div class="metric"><b>Day 3</b>歐厝＋太武山＋金東經典線＋沙美</div><div class="metric"><b>Day 4</b>建功嶼＋翟山＋水頭聚落＋莒光樓</div></div><div class="ok"><b>規劃原則：</b>以「停一次車、步行串多個景點」為優先；單一景點評論數不再是唯一判斷，聚落型景點可視為一個完整 Hub。</div></section>
+<section class="card"><h2>Google Maps 人氣與群聚價值</h2><table><thead><tr><th>景點</th><th>查得評論數</th><th>處理</th></tr></thead><tbody><tr><td>莒光樓</td><td>約 10,130</td><td class="review-pass">保留，移至 Day 4</td></tr><tr><td>翟山坑道</td><td>約 10,477</td><td class="review-pass">保留</td></tr><tr><td>山后民俗文化村</td><td>約 7,800</td><td class="review-pass">保留</td></tr><tr><td>獅山砲陣地</td><td>約 5,700</td><td class="review-pass">保留</td></tr><tr><td>古寧頭戰史館</td><td>約 4,833</td><td class="review-pass">保留</td></tr><tr><td>沙美老街</td><td>約 4,562</td><td class="review-pass">保留</td></tr><tr><td>建功嶼</td><td>約 3,062</td><td class="review-pass">保留</td></tr><tr><td>馬山觀測所</td><td>約 2,900</td><td class="review-pass">保留</td></tr><tr><td>沙溪堡</td><td>約 2,700</td><td class="review-pass">保留</td></tr><tr><td>九宮坑道</td><td>約 2,491</td><td class="review-pass">保留</td></tr><tr><td>歐厝海岸</td><td>約 693</td><td class="review-exception">指定必去</td></tr><tr><td>水頭聚落</td><td>約 761</td><td class="review-exception">以聚落 Hub 例外保留：得月樓、金水國小、僑鄉文化展示館可一起逛</td></tr></tbody></table></section>
+<section class="card"><div class="day"><div><span class="tag">Day 1｜7/29（三）</span><h2>金城民防坑道、金城老街、後浦夜間導覽</h2></div><span class="meta">已定案，不修改</span></div><div class="mapbox" data-map="day1"><p class="map-title">Day 1｜金門相對位置手繪路線</p><p class="map-note">機場 → 民宿 → 金城市區。</p></div><ol class="timeline"><li><div class="time">12:00</div><div class="event drive"><h3>抵達金門、取車</h3></div></li><li><div class="time">12:30</div><div class="event drive"><h3>微醺民宿寄放行李</h3></div></li><li><div class="time">14:30</div><div class="event spot"><h3>金城民防坑道定時導覽</h3></div></li><li><div class="time">15:30</div><div class="event spot"><h3>模範街、後浦16、貞節牌坊、總兵署</h3></div></li><li><div class="time">17:00</div><div class="event food"><h3>良金牧場貞節牌坊店晚餐</h3></div></li><li><div class="time">19:30</div><div class="event spot"><h3>後浦美麗小鎮夜間導覽</h3></div></li></ol></section>
+<section class="card"><div class="day"><div><span class="tag">Day 2｜7/30（四）</span><h2>小金門經典＋古寧頭聚落群</h2></div><span class="meta">僅移出莒光樓，其餘不動</span></div><div class="mapbox" data-map="day2"><p class="map-title">Day 2｜烈嶼西南 → 金門西北</p><p class="map-note">上午小金門，下午古寧頭與北山聚落群。</p></div><ol class="timeline"><li><div class="time">07:30</div><div class="event food"><h3>民宿早餐</h3></div></li><li><div class="time">08:30</div><div class="event drive"><h3>金門大橋前往烈嶼</h3></div></li><li><div class="time">09:15</div><div class="event spot"><h3>九宮坑道</h3></div></li><li><div class="time">10:40</div><div class="event spot"><h3>沙溪堡</h3></div></li><li><div class="time">11:45</div><div class="event food"><h3>三層樓芋頭餐館午餐</h3></div></li><li><div class="time">14:20</div><div class="event spot"><h3>古寧頭戰史館</h3></div></li><li><div class="time">16:00</div><div class="event spot"><h3>北山播音牆、北山聚落順遊</h3><p>停一次車後步行串聯，不把播音牆當成獨立拉車景點。</p></div></li><li><div class="time">17:30</div><div class="event food"><h3>金門牛家莊晚餐</h3></div></li><li><div class="time">19:00</div><div class="event drive"><h3>返回民宿休息</h3></div></li></ol></section>
+<section class="card"><div class="day"><div><span class="tag">Day 3｜7/31（五）</span><h2>歐厝、太武山、八二三、山后、獅山、馬山、沙美</h2></div><span class="meta">維持原安排</span></div><div class="mapbox" data-map="day3"><p class="map-title">Day 3｜金門南岸 → 中東部 → 東北角 → 沙美</p></div><ol class="timeline"><li><div class="time">06:40</div><div class="event spot"><h3>歐厝海岸</h3></div></li><li><div class="time">07:40</div><div class="event food"><h3>回民宿早餐</h3></div></li><li><div class="time">08:40</div><div class="event spot"><h3>太武山 → 毋忘在莒</h3></div></li><li><div class="time">11:30</div><div class="event food"><h3>成功鍋貼館午餐</h3></div></li><li><div class="time">12:40</div><div class="event spot"><h3>八二三戰史館</h3></div></li><li><div class="time">14:05</div><div class="event spot"><h3>山后民俗文化村</h3></div></li><li><div class="time">14:50</div><div class="event spot"><h3>獅山砲操</h3></div></li><li><div class="time">15:35</div><div class="event spot"><h3>馬山觀測所</h3></div></li><li><div class="time">16:45</div><div class="event spot"><h3>沙美老街</h3></div></li><li><div class="time">17:45</div><div class="event food"><h3>沙美／金湖晚餐</h3></div></li></ol></section>
+<section class="card"><div class="day"><div><span class="tag">Day 4｜8/1（六）</span><h2>建功嶼、翟山坑道、水頭聚落群、莒光樓</h2></div><span class="meta">取消採買時段｜兩個停車 Hub＋一個地標</span></div><div class="mapbox" data-map="day4"><p class="map-title">Day 4｜西南區完整收尾</p><p class="map-note">建功嶼後，以翟山與水頭兩個停車點串景點，最後到莒光樓，再前往機場。</p></div><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=金門微醺民宿TipsyHotel&destination=金門尚義機場&waypoints=建功嶼|傳記廣東粥|翟山坑道|阡湖餐廳|水頭聚落|莒光樓&travelmode=driving">Day 4 導航</a><div class="info"><b>調整重點：</b>完全取消 13:00～16:30 的採買安排；把 Day 2 的莒光樓移到 Day 4，並加入可停一次車步行參觀多處的水頭聚落群。</div><ol class="timeline"><li><div class="time">06:35</div><div class="event drive"><h3>退房、行李上車</h3></div></li><li><div class="time">07:10</div><div class="event spot"><h3>抵達建功嶼入口</h3></div></li><li><div class="time">07:21</div><div class="event spot"><h3>建功嶼登島</h3><p>建議 07:50～08:00 開始折返，不拖到潮汐時段尾端。</p></div></li><li><div class="time">08:20</div><div class="event food"><h3>傳記廣東粥＋和記油條</h3></div></li><li><div class="time">09:45</div><div class="event spot"><h3>翟山坑道 Hub</h3><p>停留約 75～90 分鐘；停車後完整參觀坑道，不再插入零碎景點。</p></div></li><li><div class="time">11:30</div><div class="event food"><h3>阡湖餐廳午餐</h3></div></li><li><div class="time">13:00</div><div class="event spot"><h3>水頭聚落 Hub</h3><p>停一次車步行串聯得月樓、金水國小、僑鄉文化展示館與洋樓巷弄，預留約 2 小時。這種群聚價值比單看水頭聚落的評論數更高。</p></div></li><li><div class="time">15:20</div><div class="event spot"><h3>莒光樓</h3><p>從 Day 2 移到 Day 4，約停留 60 分鐘；室內外皆可參觀，也讓 Day 2 晚上不必再趕一個景點。</p></div></li><li><div class="time">16:30</div><div class="event food"><h3>金城市區短暫休息／冰品</h3><p>不安排採買，僅保留洗手間、補水及孩子休息時間。</p></div></li><li><div class="time">17:00</div><div class="event drive"><h3>加油、前往租車公司</h3></div></li><li><div class="time">18:00</div><div class="event danger"><h3>最晚完成還車、前往機場</h3></div></li></ol></section>
+<section class="card"><h2>出發前 48 小時再確認</h2><ul><li>建功嶼官方潮汐及現場開放狀況。</li><li>翟山坑道、水頭聚落各館舍、莒光樓是否臨時休館。</li><li>阡湖餐廳、傳記廣東粥與和記油條是否臨時公休。</li><li>班機、租車公司位置、加油規則及 18:00 還車流程。</li></ul></section>
+<footer>手繪地圖用於理解相對位置；實際道路與導航仍以 Google Maps 為準。</footer>
 </main>
 <script>
-const P={airport:[610,315,'尚義機場',-42,17,94],hotel:[430,350,'微醺民宿',-43,18,96],jcity:[365,240,'金城市區',-42,-48,94],bridge:[280,260,'金門大橋',-44,-48,100],saxi:[105,315,'沙溪堡',-38,18,84],jiugong:[220,285,'九宮坑道',-45,18,100],taro:[150,225,'三層樓',-39,-48,88],guning:[365,115,'古寧頭戰史館',-60,-50,132],beishan:[315,90,'北山備選',-48,18,104],juguang:[385,285,'莒光樓',-38,18,84],oucuo:[500,390,'歐厝海岸',-43,18,98],taiwu:[680,210,'太武山',-38,-48,84],museum823:[705,285,'八二三戰史館',-58,18,128],shanhou:[815,220,'山后民俗村',-52,18,116],lion:[850,170,'獅山砲操',-47,-50,104],mashan:[920,100,'馬山觀測所',-108,-50,116],shamei:[755,135,'沙美老街',-44,-50,96],jiangong:[310,300,'建功嶼',-42,18,90],zhai:[445,382,'翟山坑道',-45,18,100],kkl:[535,180,'購酒採買',-45,-50,100]};
-const D={day1:['airport','hotel','jcity'],day2:['hotel','bridge','jiugong','saxi','taro','bridge','guning','jcity','juguang'],day3:['hotel','oucuo','hotel','taiwu','museum823','shanhou','lion','mashan','shamei','hotel'],day4:['hotel','jiangong','jcity','zhai','kkl','airport']};
-function baseSvg(id){return `<svg viewBox="0 0 1000 460" role="img" aria-label="金門相對位置手繪路線圖"><defs><marker id="arr-${id}" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c5523c"/></marker></defs><rect class="sea" width="1000" height="460" rx="14"/><path class="island" d="M300 255 C325 205 355 160 410 142 C455 105 510 82 565 105 C615 82 668 98 700 130 C764 115 839 139 878 184 C915 226 898 279 854 310 C812 340 751 338 706 356 C651 393 592 410 530 391 C483 410 431 380 405 347 C357 337 315 306 300 255 Z"/><path class="rough" d="M306 258 C331 208 359 164 414 147 C458 110 512 88 565 110 C615 88 665 103 696 135 C760 121 834 144 873 188 C907 228 891 274 849 305 C808 334 748 332 702 350 C648 386 590 403 532 385 C485 402 435 374 410 342 C360 332 321 302 306 258 Z"/><path class="island" d="M78 143 C111 119 163 113 201 132 C235 151 247 193 232 226 C250 259 234 304 199 329 C160 354 105 342 77 306 C52 275 57 238 69 213 C54 184 58 158 78 143 Z"/><path class="rough" d="M84 148 C114 126 160 120 197 138 C228 155 239 193 226 224 C243 256 228 297 195 322 C157 346 110 335 83 301 C60 272 64 239 75 215 C61 187 65 163 84 148 Z"/><path d="M238 245 C258 246 276 250 298 257" stroke="#6c7d85" stroke-width="6" fill="none"/><text class="base-label" x="560" y="132">金門本島</text><text class="base-label" x="125" y="235">烈嶼</text><text class="base-label" x="248" y="238">橋</text><path d="M945 80 L945 35 M945 35 L936 49 M945 35 L954 49" stroke="#343a40" stroke-width="3"/><text class="base-label" x="932" y="25">北</text></svg>`}
+const P={airport:[610,315,'尚義機場',-42,17,94],hotel:[430,350,'微醺民宿',-43,18,96],jcity:[365,240,'金城市區',-42,-48,94],bridge:[280,260,'金門大橋',-44,-48,100],saxi:[105,315,'沙溪堡',-38,18,84],jiugong:[220,285,'九宮坑道',-45,18,100],taro:[150,225,'三層樓',-39,-48,88],guning:[365,115,'古寧頭戰史館',-60,-50,132],beishan:[330,105,'北山聚落群',-52,18,112],juguang:[385,285,'莒光樓',-38,18,84],oucuo:[500,390,'歐厝海岸',-43,18,98],taiwu:[680,210,'太武山',-38,-48,84],museum823:[705,285,'八二三戰史館',-58,18,128],shanhou:[815,220,'山后民俗村',-52,18,116],lion:[835,170,'獅山砲操',-47,-50,104],mashan:[858,145,'馬山觀測所',-118,-50,116],shamei:[755,135,'沙美老街',-44,-50,96],jiangong:[310,300,'建功嶼',-42,18,90],zhai:[445,382,'翟山坑道',-45,18,100],shuitou:[365,355,'水頭聚落群',-52,18,112]};
+const D={day1:['airport','hotel','jcity'],day2:['hotel','bridge','jiugong','saxi','taro','bridge','guning','beishan','hotel'],day3:['hotel','oucuo','hotel','taiwu','museum823','shanhou','lion','mashan','shamei','hotel'],day4:['hotel','jiangong','jcity','zhai','shuitou','juguang','airport']};
+function baseSvg(id){return `<svg viewBox="0 0 1000 460" role="img" aria-label="金門相對位置手繪路線圖"><defs><marker id="arr-${id}" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c5523c"/></marker></defs><rect class="sea" width="1000" height="460" rx="14"/><path class="island" d="M300 255 C325 205 355 160 410 142 C455 105 510 82 565 105 C615 82 668 98 700 130 C764 115 839 139 878 184 C915 226 898 279 854 310 C812 340 751 338 706 356 C651 393 592 410 530 391 C483 410 431 380 405 347 C357 337 315 306 300 255 Z"/><path class="island" d="M78 143 C111 119 163 113 201 132 C235 151 247 193 232 226 C250 259 234 304 199 329 C160 354 105 342 77 306 C52 275 57 238 69 213 C54 184 58 158 78 143 Z"/><path d="M238 245 C258 246 276 250 298 257" stroke="#6c7d85" stroke-width="6" fill="none"/><text class="base-label" x="560" y="132">金門本島</text><text class="base-label" x="125" y="235">烈嶼</text><path d="M945 80 L945 35 M945 35 L936 49 M945 35 L954 49" stroke="#343a40" stroke-width="3"/><text class="base-label" x="932" y="25">北</text></svg>`}
 function draw(el,id){el.insertAdjacentHTML('beforeend',baseSvg(id));const svg=el.querySelector('svg'),seq=D[id];let d='';seq.forEach((k,i)=>{const [x,y]=P[k];d+=(i?' L ':'M ')+x+' '+y});const route=document.createElementNS('http://www.w3.org/2000/svg','path');route.setAttribute('d',d);route.setAttribute('class','route-line');route.setAttribute('marker-end',`url(#arr-${id})`);svg.appendChild(route);const seen=new Set();seq.forEach((k,i)=>{if(seen.has(k))return;seen.add(k);const [x,y,t,dx,dy,w]=P[k];const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.innerHTML=`<circle class="point ${i===0?'start':''}" cx="${x}" cy="${y}" r="9"/><circle cx="${x}" cy="${y}" r="3" fill="#343a40"/><rect class="label-bg" x="${x+dx}" y="${y+dy}" width="${w}" height="30" rx="9"/><text class="map-label" x="${x+dx+w/2}" y="${y+dy+20}" text-anchor="middle">${t}</text>`;svg.appendChild(g)})}
 document.querySelectorAll('[data-map]').forEach(el=>draw(el,el.dataset.map));
 </script>
