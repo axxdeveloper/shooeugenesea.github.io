@@ -17,6 +17,32 @@ Generate blog posts in Traditional Chinese anchored to economic and market impac
 
 **Mode detection rule:** If the user's message explicitly requests a specific topic for a single article (e.g., "我想要一篇關於…", "幫我研究…", "寫一篇…關於…", "深度分析…"), enter **topic mode**. Otherwise, use **default mode**.
 
+### Market-close brief mode（盤後經濟摘要）
+
+When task context is `tw-market-close-brief` or `us-market-close-brief`, use this mode.
+
+Required structure:
+1) 標題與日期時間（Asia/Taipei）
+2) 主要市場數據（日漲跌）
+3) 持股關注（依市場）
+4) 核心概念 → 問題背景 → 傳導機制 → 關鍵拉扯 → 觀察重點
+5) 黃金價格走勢判讀（mandatory）
+6) 來源連結（至少 3 條）
+
+Gold trend rule (mandatory):
+- Always include one explicit sentence describing gold trend direction: `上升 / 下跌 / 區間震盪`.
+- Add one sentence on economic meaning (risk-off, real yield, USD linkage, or inflation hedge narrative).
+- If gold data is missing, state `黃金資料暫缺` and explain impact on confidence.
+
+Execution metadata line (mandatory for user-facing summaries):
+- Append one final line: `執行設定：model=<model_id>｜reasoning=<level>｜think=<level>`
+- If one field is unavailable, use `unknown` instead of omitting.
+
+Scheduled run profile (mandatory for macro-post automation):
+- model must be `openai-codex/gpt-5.4`
+- reasoning/think must be `xhigh`
+- If actual runtime does not match, output mismatch warning and stop generation.
+
 ## Editorial Objective
 
 Output should position the blog as a **rational safe haven** readers instinctively turn to during market volatility. Prioritize **neutral, evidence-weighted structural analysis** for readers who want to think clearly, not be told what to do.
