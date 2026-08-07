@@ -226,6 +226,15 @@ Parse the user's input to determine which mode to use:
 
 **Crisis mode check:** Before proceeding with either mode, check whether crisis conditions are met (see Special Post Types > Crisis Mode). If crisis conditions are detected, override normal output and produce only a crisis post.
 
+### Step 0.3: News Triage (MANDATORY)
+
+Before topic selection, build a 24-48 hour candidate pool and rank it:
+- Collect up to 50 candidate stories from major/primary sources.
+- De-duplicate same-core stories across outlets.
+- Rank by: (1) cross-source citation frequency, (2) source authority, (3) implementation/market impact.
+- Keep a short ranked list as evidence for why the final topic was selected.
+- If a new ByteByteGo post appears in the top-50 pool and is still relevant, prioritize it.
+
 ### Step 0.5: Publication Frequency & Quality Gate (MANDATORY)
 
 Before generating any new posts, assess whether it's the right time to publish. This step prevents quality degradation from over-publishing.
@@ -522,6 +531,7 @@ lang: zh-TW
 
 1. **Use 0050 instead of EWT** — When discussing Taiwan equity ETFs, always use **元大台灣50 (0050)** instead of EWT (iShares MSCI Taiwan ETF). The blog's audience is Taiwanese investors who trade on TWSE; 0050 is the most liquid and well-known Taiwan large-cap ETF they can buy directly. Prices are in NT$, not USD.
 1.1 **No personal-holdings personalization by default** — Do NOT inject the user's personal holdings (e.g., 中鋼, specific ETF list) into macro posts unless the user explicitly asks for a holdings-focused analysis in that same request. Macro posts should stay topic-first and framework-first; mention individual holdings only when they are objectively necessary for the argument and not merely because they appear in memory.
+1.2 **Market-close financing & capital-flow requirement** — In market-close briefs, include both `融資餘額觀察` and `資金面判斷（資金去處/來源）` sections whenever data is available. For Taiwan, include TWSE margin balance (融資餘額交易單位 + 融資餘額金額) and institutional net buy/sell direction (外資/投信/自營商/三大法人). For US, include latest FINRA customer margin debt month+MoM and ETF flow proxies (SPY/QQQ/IWM/XLK/XLE/XLF day move + volume change) to infer where risk appetite is flowing. If unavailable, explicitly mark `資料暫缺` and do not fabricate.
 2. **Taiwan stance** — This blog treats Taiwan as an independent, sovereign country. When covering Taiwan-related topics (trade, geopolitics, semiconductor, cross-strait), never adopt framing that implies Taiwan is part of China or that China has legitimate authority over Taiwan. Use "台灣" and "中國" as parallel entities, not "中國大陸" vs "台灣地區". Avoid Beijing's preferred language (e.g., "統一", "台灣問題", "分裂勢力"). This does not mean ignoring China's perspective — analyzing what Beijing might do (military, economic coercion, diplomatic pressure) is essential for investment analysis — but the analytical frame must be from Taiwan's standpoint as an independent actor making sovereign decisions.
 3. **Consider the global picture** — every post should account for international context, not just US data in isolation. How do ECB/BOJ/PBoC policies, geopolitical tensions, global supply chains, and cross-border capital flows affect the thesis? A US CPI post should mention tariff impacts; a tech post should mention TSMC/Taiwan risk.
 4. **Conditional reasoning, not probability scenarios** — Use conditional reasoning (if X then Y) instead of probability-weighted scenarios. Do NOT assign percentages to outcomes or create "base/upside/downside" buckets with probabilities summing to 100%. Instead, describe observable conditions and their structural implications in the 分水嶺 section.
