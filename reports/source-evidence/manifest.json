@@ -1,0 +1,19 @@
+{
+  "fetchedAt": "2026-11-08T15:13:13.926107+00:00",
+  "files": [
+    {
+      "file": "price-2026-11-08.csv",
+      "sha256": "4ae632e5037f0c397c250afdb3d41671bd46bf2d334d780c65e74fcf9f0309db",
+      "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data",
+      "license": "https://data.gov.tw/license",
+      "dataset": "https://data.gov.tw/dataset/11549"
+    },
+    {
+      "file": "cbc-2026-11-08.csv",
+      "sha256": "230a19469d0ee6817190ea21a8a50158aaa47d07d420591c18549d772e00b15d",
+      "source": "https://www.cbc.gov.tw/public/data/OpenData/%E7%B6%93%E7%A0%94%E8%99%95/EG25M01.csv",
+      "license": "https://data.gov.tw/license",
+      "dataset": "https://data.gov.tw/dataset/10805"
+    }
+  ]
+}

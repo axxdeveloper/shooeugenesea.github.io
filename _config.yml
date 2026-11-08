@@ -65,3 +65,16 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# Development-only dashboard checks and review notes.
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - tests
+  - scripts/import_margin.py
+  - reports/dashboard-review.md
+  - reports/source-evidence
+  - scripts/update_market_data.py
+  - scripts/package_market_review.py

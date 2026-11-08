@@ -1,0 +1,42 @@
+<section class="market-dashboard" aria-labelledby="market-heading">
+  <header class="market-hero">
+    <div><p class="market-eyebrow">ISAAC NOTE / MARKET OBSERVATORY</p><h1 id="market-heading">把市場，放進視野。</h1><p class="market-intro">從台灣到全球，觀察股票、債券與市場信用的變化。</p></div>
+    <a class="market-article-link" href="#recent-posts">閱讀最新筆記 ↗</a>
+  </header>
+  <div class="market-section-label"><h2>01 <span>ETF 走勢</span></h2><span>日線 · 原幣價格</span></div>
+  <div class="market-tabs" role="group" aria-label="選擇 ETF">
+    <button type="button" data-symbol="0050" aria-pressed="true"><strong>0050</strong><span>台灣大型股</span><small>TWD · 台灣</small></button>
+    <button type="button" data-symbol="QQQ" aria-pressed="false"><strong>QQQ</strong><span>Nasdaq 100</span><small>USD · 美國</small></button>
+    <button type="button" data-symbol="VT" aria-pressed="false"><strong>VT</strong><span>全球股票</span><small>USD · 全球</small></button>
+    <button type="button" data-symbol="VTI" aria-pressed="false"><strong>VTI</strong><span>美國全市場</span><small>USD · 美國</small></button>
+    <button type="button" data-symbol="VGIT" aria-pressed="false"><strong>VGIT</strong><span>美國中期公債</span><small>USD · 債券</small></button>
+  </div>
+  <section class="market-panel" aria-labelledby="market-chart-title">
+    <div class="market-panel-heading"><div><p class="market-eyebrow">PRICE & TREND</p><h3 id="market-chart-title">0050 · 台灣大型股</h3></div><span class="market-badge" id="market-currency">TWD</span></div>
+    <p class="market-caption" id="market-ma-caption">均線觀察：5、20、120、240 個交易日。可在圖表「指標」加入移動平均線並設定長度；切換為週線後，均線單位也會隨之改變。</p>
+    <div id="market-widget" class="market-widget"><p class="market-empty">圖表需要 JavaScript 與 TradingView 連線。</p></div>
+    <p id="market-widget-status" class="market-caption" role="status">資料日期、價格與延遲狀態以圖表內標示為準。</p>
+    <a id="market-source" href="https://data.gov.tw/dataset/11549" target="_blank" rel="noopener noreferrer">查看 0050 官方開放資料 ↗</a>
+    <p class="market-caption">價格走勢不是含息總報酬；不同幣別未換匯，不直接比較價格高低。圖表供應商控制除息、分割調整與資料更新。</p>
+    <noscript><p>請啟用 JavaScript 切換圖表。也可直接查看 <a href="https://www.tradingview.com/symbols/TWSE-0050/">0050</a>、<a href="https://www.tradingview.com/symbols/NASDAQ-QQQ/">QQQ</a>、<a href="https://www.tradingview.com/symbols/AMEX-VT/">VT</a>、<a href="https://www.tradingview.com/symbols/AMEX-VTI/">VTI</a>、<a href="https://www.tradingview.com/symbols/NASDAQ-VGIT/">VGIT</a>。</p></noscript>
+  </section>
+  <div class="market-section-label"><h2>02 <span>台股融資水位</span></h2><span>融資金額 · 新台幣億元</span></div>
+  <div class="market-margin-grid">
+    <section class="market-panel" data-market="listed"><p class="market-eyebrow">TWSE / 上市</p><h3>上市融資餘額</h3><p class="market-value">—</p><p class="market-margin-status">資料日期：未取得可發布資料</p><div class="market-margin-chart"></div><p class="market-caption">金額歷史資料與再利用授權待核實，不以融資張數代替。</p><a href="https://www.twse.com.tw/exchangeReport/MI_MARGN?response=html" target="_blank" rel="noopener noreferrer">證交所信用交易統計 ↗</a></section>
+    <section class="market-panel" data-market="otc"><p class="market-eyebrow">TPEX / 上櫃</p><h3>上櫃融資餘額</h3><p class="market-value">—</p><p class="market-margin-status">資料日期：未取得可發布資料</p><div class="market-margin-chart"></div><p class="market-caption">官方 API 連線未成功；金額、日期與再利用授權待核實。</p><a href="https://www.tpex.org.tw/zh-tw/mainboard/trading/margin-trading/transactions.html" target="_blank" rel="noopener noreferrer">櫃買融資融券資料 ↗</a></section>
+  </div>
+  <p class="market-caption" id="market-total">上市櫃合計：—。只有兩市場最後資料日一致、資料均已核實時才計算。</p>
+  <section class="market-panel market-monthly" aria-labelledby="market-monthly-title">
+    <div class="market-panel-heading"><div><p class="market-eyebrow">CBC / MONTHLY HISTORY</p><h3 id="market-monthly-title">上市櫃合計融資餘額 · 月資料</h3></div><span class="market-badge">每月</span></div>
+    <p class="market-value" id="market-monthly-value">—</p><p id="market-monthly-date" class="market-caption"></p>
+    <div class="market-periods" role="group" aria-label="融資月資料顯示期間"><button type="button" data-months="60" aria-pressed="true">近 5 年</button><button type="button" data-months="0" aria-pressed="false">全部期間</button></div>
+    <div id="market-monthly-chart" class="market-margin-chart"></div>
+    <p class="market-caption">單位：新台幣億元。這是央行彙整的上市櫃合計月資料，不是每日餘額、也不是兩張日資料卡片的加總。月資料不套用 5／20／120／240 日均線。</p>
+    <p class="market-caption">中央銀行 2026「股票市場統計－信用交易」；依 <a href="https://data.gov.tw/license">政府資料開放授權條款第 1 版</a> 使用，原始數值單位為百萬元。來源不代表認可本站。</p>
+    <a href="https://data.gov.tw/dataset/10805" target="_blank" rel="noopener noreferrer">官方資料集與授權 ↗</a> · <a href="https://www.cbc.gov.tw/public/data/EBOOKXLS/133_EG25_A4L.pdf" target="_blank" rel="noopener noreferrer">央行月報交叉核對 ↗</a>
+  </section>
+  <details class="market-method"><summary>資料來源、更新與計算方式</summary><div><p>ETF 使用 TradingView 官方嵌入圖表並保留供應商標示。美股可能為延遲行情；網站不擷取、儲存或重新分發其原始行情。0050 使用證交所每日開放資料快照；日歷史仍待累積或取得明確授權，沒有以臺灣50指數替代 ETF 價格。</p><p>本站資料快照尚未啟用自動更新；0050 最新價格及央行月資料可由本地更新工具更新，日期以各圖標示為準。上市與上櫃分市場日融資歷史仍待接通。缺值不補零、不沿用為今日資料；匯入經核實的每日金額後才繪圖。每個交易日一筆，5／20／120／240 日簡單平均採完整視窗，樣本不足不顯示。金額以新台幣元儲存、除以一億顯示；不使用張數推算金額。</p><p>證交所提醒：次日調帳可能更正餘額，當日「今日餘額」僅供輔助參考。日變化與同日合計也會受更帳或轉上市影響。</p><p><a href="https://www.tradingview.com/widget-docs/faq/data/">TradingView 資料說明</a> · <a href="https://openapi.twse.com.tw/">證交所 OpenAPI</a> · <a href="https://www.tpex.org.tw/openapi/">櫃買 OpenAPI</a> · <a href="https://data.gov.tw/license">政府資料開放授權條款</a></p></div></details>
+</section>
+<script type="application/json" id="market-margin-data">{{ site.data.margin | jsonify }}</script>
+<script type="application/json" id="market-extra-data">{{ site.data.market_extra | jsonify }}</script>
+<script src="{{ '/assets/js/market-dashboard.js' | relative_url }}" defer></script>

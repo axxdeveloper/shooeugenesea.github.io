@@ -12,3 +12,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/atom+xml" title="Isaac Note — 技術" href="{{ site.url }}/feed/tech.xml">
 <link rel="alternate" type="application/atom+xml" title="Isaac Note — 總經" href="{{ site.url }}/feed/macro.xml">
+
+{% if page.layout == "home" %}
+<link rel="stylesheet" href="{{ "/assets/css/market-dashboard.css" | relative_url }}">
+{% endif %}
