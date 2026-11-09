@@ -1,4 +1,6 @@
 main:
+  - title: "文章"
+    url: /notes/
   - title: "技術"
     url: /tech/
   - title: "總經"

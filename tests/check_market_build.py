@@ -6,7 +6,14 @@ from urllib.parse import unquote, urlsplit
 
 site = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[1] / '_site'
 home = (site / 'index.html').read_text()
-assert 'market-dashboard' in home and 'recent-posts' in home
+assert 'market-dashboard' in home and 'id="recent-posts"' not in home
+assert 'class="entries-list"' not in home
+assert 'href="/notes/"' in home
+assert 'data-market="listed"' not in home and 'data-market="otc"' not in home
+assert 'market-margin-data' not in home
+notes = (site / 'notes/index.html').read_text()
+assert 'us-price-pipeline-margin-squeeze-zh/' in notes
+assert (site / '2026/04/17/us-price-pipeline-margin-squeeze-zh/index.html').exists()
 assert 'class="masthead' in home, 'requires complete Jekyll output'
 assert 'data-symbol="0050"' in home
 assert '1999-02' in home and '2026-09' in home, 'monthly series must be embedded'

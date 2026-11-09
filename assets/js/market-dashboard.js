@@ -11,7 +11,7 @@
         !/^https:\/\//.test(market.source || '') || !Array.isArray(market.observations)) return [];
     let last = '';
     for (const row of market.observations) {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(row.date) || !Number.isFinite(Date.parse(row.date)) ||
+      if (!row || typeof row !== 'object' || !/^\d{4}-\d{2}-\d{2}$/.test(row.date) || !Number.isFinite(Date.parse(row.date)) ||
           new Date(row.date).toISOString().slice(0, 10) !== row.date || row.date <= last ||
           row.date > new Date().toISOString().slice(0, 10) ||
           !Number.isSafeInteger(row.amountTwd) || row.amountTwd < 0) return [];
@@ -41,6 +41,8 @@
   const status = root.querySelector('#market-widget-status');
   function select(ticker) {
     const item = symbols[ticker];
+    root.querySelector('#market-taiwan-data').hidden = ticker !== '0050';
+    root.querySelector('#market-us-method').hidden = ticker === '0050';
     root.querySelectorAll('[data-symbol]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.symbol === ticker)));
     root.querySelector('#market-chart-title').textContent = ticker + ' · ' + item.name;
     root.querySelector('#market-currency').textContent = item.currency;
@@ -133,22 +135,4 @@
   } else {
     root.querySelector('#market-monthly-date').textContent = '月資料無法讀取，請查看央行來源。';
   }
-  Promise.resolve().then(() => embedded('market-margin-data')).then(data=>{
-    if(data.schemaVersion!==1)throw Error('schema');
-    const markets={};
-    for(const key of ['listed','otc']) {
-      const rows=verifiedRows(data.markets[key]);markets[key]=rows;
-      if(!rows.length)continue;
-      const panel=root.querySelector(`[data-market="${key}"]`),last=rows[rows.length-1];
-      panel.querySelector('.market-value').textContent=number(last.amountTwd);
-      const age=Math.floor((Date.now()-Date.parse(last.date+'T00:00:00+08:00'))/86400000);
-      const change=rows.length>1? ' · 較前筆 '+number(last.amountTwd-rows[rows.length-2].amountTwd)+' 億元':'';
-      panel.querySelector('.market-margin-status').textContent='資料日期：'+last.date+change+(age>7?' · 資料超過 7 天未更新':'');
-      panel.querySelector('.market-caption').textContent='經核實每日融資金額；來源與授權：'+data.markets[key].license;
-      panel.querySelector('a').href=data.markets[key].source;
-      chart(panel,rows);
-    }
-    const total=combined(markets.listed,markets.otc);
-    if(total)root.querySelector('#market-total').textContent='上市櫃合計：'+number(total.amountTwd)+' 億元 · 資料日期 '+total.date;
-  }).catch(()=>{root.querySelector('#market-total').textContent='融資資料檔讀取失敗；請使用各市場官方來源。未計算合計。';});
 })();

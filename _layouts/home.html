@@ -5,7 +5,7 @@ layout: default
 <div id="main" role="main">
   {% unless paginator.page > 1 %}
     {% include market-dashboard.html %}
-  {% endunless %}
+  {% else %}
   <div class="archive page__inner-wrap">
     <div class="page__content">
       {{ content }}
@@ -31,4 +31,5 @@ layout: default
       {% include sidebar-tags.html %}
     </aside>
   </div>
+  {% endunless %}
 </div>
