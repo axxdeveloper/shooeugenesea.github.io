@@ -18,6 +18,13 @@ class RefreshTest(unittest.TestCase):
             u.MARKET: json.dumps([{'Date':'1151106','TAIEX':'100','Change':'-5','TradeValue':'100000000'}]).encode()
         }
         self.old = u.refresh({}, self.files.__getitem__, '2026-11-08T00:00:00Z')
+    def test_official_csv_uses_own_date_and_units(self):
+        raw = (ROOT/'reports/source-evidence/market-2026-11-13.csv').read_bytes()
+        result = u.market_rows(raw)
+        self.assertEqual(result[-1],dict(date='2026-11-13',close=43675.12,change=583.25,tradeValueTwd=951580008082))
+        for bad in ['date,close\n2026-11-13,123\n', '日期,發行量加權股價指數,漲跌點數,成交金額\n1151113,43675.12,583.25,-1\n']:
+            with self.assertRaises(ValueError):u.market_rows(bad.encode())
+
     def test_repeat_and_revision(self):
         new = u.refresh(self.old, self.files.__getitem__, '2026-11-09T00:00:00Z')
         self.assertEqual(len(new['price0050']['observations']), 1)

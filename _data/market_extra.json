@@ -13,11 +13,15 @@
       {
         "date": "2026-11-12",
         "close": 100.95
+      },
+      {
+        "date": "2026-11-13",
+        "close": 102.5
       }
     ],
     "update": {
-      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
-      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "checkedAt": "2026-11-13T14:35:21.432737+00:00",
+      "lastSuccessAt": "2026-11-13T14:35:21.432737+00:00",
       "status": "ok"
     }
   },
@@ -1360,13 +1364,13 @@
       }
     ],
     "update": {
-      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
-      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "checkedAt": "2026-11-13T14:35:21.432737+00:00",
+      "lastSuccessAt": "2026-11-13T14:35:21.432737+00:00",
       "status": "ok"
     }
   },
   "taiwanMarket": {
-    "source": "https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK",
+    "source": "https://www.twse.com.tw/exchangeReport/FMTQIK?response=open_data",
     "dataset": "https://data.gov.tw/dataset/11672",
     "license": "https://data.gov.tw/license",
     "provider": "臺灣證券交易所",
@@ -1427,11 +1431,17 @@
         "close": 43091.87,
         "change": -1165.28,
         "tradeValueTwd": 1056842457091
+      },
+      {
+        "date": "2026-11-13",
+        "close": 43675.12,
+        "change": 583.25,
+        "tradeValueTwd": 951580008082
       }
     ],
     "update": {
-      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
-      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "checkedAt": "2026-11-13T14:35:21.432737+00:00",
+      "lastSuccessAt": "2026-11-13T14:35:21.432737+00:00",
       "status": "ok"
     }
   }

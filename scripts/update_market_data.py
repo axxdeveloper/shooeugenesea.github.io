@@ -17,7 +17,8 @@ from urllib.error import HTTPError, URLError
 ROOT = Path(__file__).resolve().parents[1]
 PRICE = 'https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data'
 CREDIT = 'https://www.cbc.gov.tw/public/data/OpenData/%E7%B6%93%E7%A0%94%E8%99%95/EG25M01.csv'
-MARKET = 'https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK'
+# Dataset 11672 links this CSV directly. The OpenAPI mirror can lag a trading day.
+MARKET = 'https://www.twse.com.tw/exchangeReport/FMTQIK?response=open_data'
 LICENSE = 'https://data.gov.tw/license'
 
 
@@ -70,7 +71,15 @@ def download(url):
 
 
 def market_rows(raw):
-    records = json.loads(raw)
+    text = raw.decode('utf-8-sig').lstrip()
+    if text.startswith(('[', '{')):
+        records = json.loads(text)  # Retain offline OpenAPI fixture compatibility.
+    else:
+        reader = csv.DictReader(io.StringIO(text))
+        mapping = {'日期':'Date', '發行量加權股價指數':'TAIEX', '漲跌點數':'Change', '成交金額':'TradeValue'}
+        if not reader.fieldnames or not set(mapping).issubset(reader.fieldnames):
+            raise ValueError('unexpected official market CSV headers')
+        records = [{key:row[column] for column,key in mapping.items()} for row in reader]
     if not isinstance(records, list) or not records:
         raise ValueError('empty market report')
     result = []
