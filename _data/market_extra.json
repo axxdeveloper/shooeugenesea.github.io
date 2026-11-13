@@ -1,5 +1,4 @@
 {
-  "fetchedAt": "2026-11-08T15:13:13.926107+00:00",
   "price0050": {
     "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data",
     "dataset": "https://data.gov.tw/dataset/11549",
@@ -10,8 +9,17 @@
       {
         "date": "2026-11-06",
         "close": 92.5
+      },
+      {
+        "date": "2026-11-12",
+        "close": 100.95
       }
-    ]
+    ],
+    "update": {
+      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
+      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "status": "ok"
+    }
   },
   "creditMonthly": {
     "source": "https://www.cbc.gov.tw/public/data/OpenData/%E7%B6%93%E7%A0%94%E8%99%95/EG25M01.csv",
@@ -1350,6 +1358,81 @@
         "date": "2026-09",
         "amountTwd": 834297000000
       }
-    ]
+    ],
+    "update": {
+      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
+      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "status": "ok"
+    }
+  },
+  "taiwanMarket": {
+    "source": "https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK",
+    "dataset": "https://data.gov.tw/dataset/11672",
+    "license": "https://data.gov.tw/license",
+    "provider": "臺灣證券交易所",
+    "frequency": "daily",
+    "scope": "集中市場（上市），不含上櫃",
+    "sourceUnit": "新台幣元／指數點",
+    "observations": [
+      {
+        "date": "2026-11-02",
+        "close": 44920.14,
+        "change": -291.69,
+        "tradeValueTwd": 799687507911
+      },
+      {
+        "date": "2026-11-03",
+        "close": 43307.54,
+        "change": -1612.6,
+        "tradeValueTwd": 1002035660990
+      },
+      {
+        "date": "2026-11-04",
+        "close": 42948.91,
+        "change": -358.63,
+        "tradeValueTwd": 1176930442854
+      },
+      {
+        "date": "2026-11-05",
+        "close": 41574.72,
+        "change": -1374.19,
+        "tradeValueTwd": 987098883153
+      },
+      {
+        "date": "2026-11-06",
+        "close": 39701.64,
+        "change": -1873.08,
+        "tradeValueTwd": 1321071858650
+      },
+      {
+        "date": "2026-11-09",
+        "close": 41661.7,
+        "change": 1960.06,
+        "tradeValueTwd": 877025617232
+      },
+      {
+        "date": "2026-11-10",
+        "close": 42711.92,
+        "change": 1050.22,
+        "tradeValueTwd": 1034012240502
+      },
+      {
+        "date": "2026-11-11",
+        "close": 44257.15,
+        "change": 1545.23,
+        "tradeValueTwd": 876295459349
+      },
+      {
+        "date": "2026-11-12",
+        "close": 43091.87,
+        "change": -1165.28,
+        "tradeValueTwd": 1056842457091
+      }
+    ],
+    "update": {
+      "checkedAt": "2026-11-13T02:52:55.116712+00:00",
+      "lastSuccessAt": "2026-11-13T02:52:55.116712+00:00",
+      "status": "ok"
+    }
   }
 }

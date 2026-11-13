@@ -3,6 +3,9 @@ name: Deploy Jekyll with GitHub Pages
 on:
   push:
     branches: ["master"]
+  schedule:
+    # Taiwan weekdays, 18:45 and 21:45. GitHub may delay scheduled jobs.
+    - cron: "45 10,13 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -20,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Refresh licensed market snapshots
+        run: python3 -B scripts/update_market_data.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

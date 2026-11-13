@@ -37,10 +37,23 @@
   const embedded = id => JSON.parse(document.getElementById(id).textContent);
   let extra = {};
   try { extra = embedded('market-extra-data'); } catch (_) { /* preserve explicit missing-data states */ }
+  function updateNotice(value) {
+    const update = value && value.update;
+    if (!update || !Number.isFinite(Date.parse(update.checkedAt))) return '尚無來源檢查紀錄；請以資料日期判斷新舊。';
+    const checked = new Date(update.checkedAt).toLocaleString('zh-TW', {timeZone:'Asia/Taipei', hour12:false});
+    if (update.status === 'error') {
+      const reason = /^http_(403|530)$/.test(update.errorCode) ? '來源拒絕存取' :
+        update.errorCode === 'invalid_data' ? '資料未通過檢查' : '來源連線未成功';
+      return '最近檢查：' + checked + '（台灣時間） · ' + reason + '；保留已儲存快照，未將舊資料標成今日行情。';
+    }
+    return '來源檢查：' + checked + '（台灣時間） · 檢查成功不代表已有新一期資料，請以資料日期為準。';
+  }
   const host = root.querySelector('#market-widget');
   const status = root.querySelector('#market-widget-status');
   function select(ticker) {
     const item = symbols[ticker];
+    root.querySelector('#market-price-update').hidden = ticker !== '0050';
+    root.querySelector('#market-price-update').textContent = updateNotice(extra.price0050);
     root.querySelector('#market-taiwan-data').hidden = ticker !== '0050';
     root.querySelector('#market-us-method').hidden = ticker === '0050';
     root.querySelectorAll('[data-symbol]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.symbol === ticker)));
@@ -117,7 +130,25 @@
     const table=document.createElement('table');const header=document.createElement('tr');for(const name of ['日期','餘額（億元）']){const th=document.createElement('th');th.scope='col';th.textContent=name;header.append(th);}table.append(header);
     visible.slice().reverse().forEach(row=>{const tr=document.createElement('tr');[row.date,number(row.amountTwd)].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td);});table.append(tr);});details.append(table);target.append(details);
   }
+  const market = extra.taiwanMarket;
+  root.querySelector('#market-day-update').textContent = updateNotice(market);
+  if (market && Array.isArray(market.observations) && market.observations.length) {
+    const last = market.observations[market.observations.length - 1];
+    if ([last.close, last.change, last.tradeValueTwd].every(Number.isFinite) && last.close > 0 && last.close - last.change > 0) {
+      const percent = 100 * last.change / (last.close - last.change);
+      root.querySelector('#market-day-date').textContent = '最新已取得盤後資料：' + last.date + ' · 非盤中即時';
+      const target = root.querySelector('#market-day-values');
+      const format = n => n.toLocaleString('zh-TW', {minimumFractionDigits:2, maximumFractionDigits:2});
+      const sign = last.change > 0 ? '+' : '';
+      for (const text of [
+        '加權指數：' + format(last.close) + ' 點',
+        '較前一交易日：' + sign + format(last.change) + ' 點（' + sign + format(percent) + '%）',
+        '市場成交金額：' + number(last.tradeValueTwd) + ' 億元'
+      ]) { const p = document.createElement('p'); p.textContent = text; target.append(p); }
+    }
+  }
   const monthly = extra.creditMonthly;
+  root.querySelector('#market-monthly-update').textContent = updateNotice(monthly);
   if (monthly && Array.isArray(monthly.observations) && monthly.observations.length) {
     const rows = monthly.observations;
     const last = rows[rows.length - 1];

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Update only the two explicitly licensed, public official datasets.
+"""Update only the explicitly licensed, public official datasets.
 No historical website scraping, retries, credentials, scheduling or deployment.
 """
 import argparse
+import copy
 import csv
 from datetime import date, datetime, timezone
 from decimal import Decimal
@@ -11,10 +12,12 @@ import json
 from pathlib import Path
 import re
 from urllib.request import urlopen
+from urllib.error import HTTPError, URLError
 
 ROOT = Path(__file__).resolve().parents[1]
 PRICE = 'https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL?response=open_data'
 CREDIT = 'https://www.cbc.gov.tw/public/data/OpenData/%E7%B6%93%E7%A0%94%E8%99%95/EG25M01.csv'
+MARKET = 'https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK'
 LICENSE = 'https://data.gov.tw/license'
 
 
@@ -60,43 +63,108 @@ def monthly_rows(raw):
     return result
 
 
+def download(url):
+    # One request only. In particular, do not evade or retry 403/530 responses.
+    with urlopen(url, timeout=30) as response:
+        return response.read()
+
+
+def market_rows(raw):
+    records = json.loads(raw)
+    if not isinstance(records, list) or not records:
+        raise ValueError('empty market report')
+    result = []
+    for row in records:
+        stamp = row['Date']
+        if not re.fullmatch(r'\d{7}', stamp):
+            raise ValueError('invalid market date')
+        day = date(int(stamp[:3]) + 1911, int(stamp[3:5]), int(stamp[5:]))
+        close, change, amount = [Decimal(row[k].replace(',', '')) for k in ('TAIEX', 'Change', 'TradeValue')]
+        if (day > date.today() or any(not n.is_finite() for n in (close, change, amount))
+                or close <= 0 or close - change <= 0 or amount < 0 or amount != int(amount)
+                or amount > 9007199254740991):
+            raise ValueError('invalid market values')
+        result.append(dict(date=day.isoformat(), close=float(close), change=float(change),
+                           tradeValueTwd=int(amount)))
+    result.sort(key=lambda row: row['date'])
+    if len({r['date'] for r in result}) != len(result):
+        raise ValueError('duplicate market date')
+    return result
+
+
+def refresh(old, fetch=download, checked_at=None):
+    """Refresh sources independently; keep the last good values on any failure."""
+    data = copy.deepcopy(old)
+    checked_at = checked_at or datetime.now(timezone.utc).isoformat()
+    sources = {
+        'price0050': dict(source=PRICE, dataset='https://data.gov.tw/dataset/11549',
+                          license=LICENSE, provider='臺灣證券交易所／金融監督管理委員會證券期貨局',
+                          adjustment='unadjusted'),
+        'creditMonthly': dict(source=CREDIT, dataset='https://data.gov.tw/dataset/10805',
+                              license=LICENSE, provider='中央銀行', frequency='monthly',
+                              scope='上市及上櫃合計（自1999-02）', sourceUnit='新台幣百萬元'),
+        'taiwanMarket': dict(source=MARKET, dataset='https://data.gov.tw/dataset/11672',
+                            license=LICENSE, provider='臺灣證券交易所', frequency='daily',
+                            scope='集中市場（上市），不含上櫃', sourceUnit='新台幣元／指數點')
+    }
+    for key, metadata in sources.items():
+        previous = data.get(key, {})
+        observations = previous.get('observations', [])
+        status = dict(checkedAt=checked_at,
+                      lastSuccessAt=previous.get('update', {}).get('lastSuccessAt'))
+        try:
+            raw = fetch(metadata['source'])
+            if key == 'price0050':
+                row = price_row(raw)
+                if observations and row['date'] < observations[-1]['date']:
+                    raise ValueError('source date regressed')
+                updated = [r for r in observations if r['date'] != row['date']] + [row]
+            elif key == 'creditMonthly':
+                updated = monthly_rows(raw)
+                if observations and updated[-1]['date'] < observations[-1]['date']:
+                    raise ValueError('source month regressed')
+            else:
+                updated = market_rows(raw)
+                if observations and updated[-1]['date'] < observations[-1]['date']:
+                    raise ValueError('source date regressed')
+            status.update(status='ok', lastSuccessAt=checked_at)
+        except (HTTPError, URLError, TimeoutError, OSError, ValueError, ArithmeticError, KeyError, TypeError, AttributeError) as error:
+            if isinstance(error, HTTPError) and error.code == 429:
+                raise  # Stop immediately on rate limits; never retry or publish a partial run.
+            updated = observations
+            # Publish only a safe, stable error code, never a response body or exception text.
+            code = 'http_' + str(error.code) if isinstance(error, HTTPError) else (
+                'network' if isinstance(error, (URLError, TimeoutError, OSError)) else 'invalid_data')
+            status.update(status='error', errorCode=code)
+        data[key] = dict(metadata, observations=updated, update=status)
+    # fetchedAt from the old format is not a current data date. Per-source update
+    # metadata now distinguishes a check attempt from a successful retrieval.
+    data.pop('fetchedAt', None)
+    return data
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--price-csv', type=Path)
     parser.add_argument('--credit-csv', type=Path)
+    parser.add_argument('--market-json', type=Path)
     parser.add_argument('--output', type=Path, default=ROOT / '_data/market_extra.json')
     args = parser.parse_args()
-    if bool(args.price_csv) != bool(args.credit_csv):
-        parser.error('provide both cached official CSV files, or neither')
-    # urlopen raises on 403/530; do not retry with a proxy, cookies or another identity.
-    if args.price_csv:
-        price_raw, credit_raw = args.price_csv.read_bytes(), args.credit_csv.read_bytes()
-    else:
-        with urlopen(PRICE, timeout=30) as response:
-            price_raw = response.read()
-        with urlopen(CREDIT, timeout=30) as response:
-            credit_raw = response.read()
-    price, credit = price_row(price_raw), monthly_rows(credit_raw)
+    if any((args.price_csv, args.credit_csv, args.market_json)) and not all((args.price_csv, args.credit_csv, args.market_json)):
+        parser.error('provide all three cached source files, or none')
     old = json.loads(args.output.read_text()) if args.output.exists() else {}
-    observations = old.get('price0050', {}).get('observations', [])
-    if observations and price['date'] < observations[-1]['date']:
-        raise ValueError('refuse stale price snapshot')
-    if old.get('creditMonthly', {}).get('observations', []) and credit[-1]['date'] < old['creditMonthly']['observations'][-1]['date']:
-        raise ValueError('refuse stale monthly series')
-    observations = [row for row in observations if row['date'] != price['date']] + [price]
-    data = {
-        'fetchedAt': datetime.now(timezone.utc).isoformat(),
-        'price0050': dict(source=PRICE, dataset='https://data.gov.tw/dataset/11549',
-                          license=LICENSE, provider='臺灣證券交易所／金融監督管理委員會證券期貨局',
-                          adjustment='unadjusted', observations=observations),
-        'creditMonthly': dict(source=CREDIT, dataset='https://data.gov.tw/dataset/10805',
-                              license=LICENSE, provider='中央銀行', frequency='monthly',
-                              scope='上市及上櫃合計（自1999-02）', sourceUnit='新台幣百萬元', observations=credit)
-    }
+    files = {PRICE:args.price_csv, CREDIT:args.credit_csv, MARKET:args.market_json}
+    fetch = (lambda url: files[url].read_bytes()) if args.price_csv else download
+    data = refresh(old, fetch)
     temporary = args.output.with_suffix('.json.tmp')
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     temporary.replace(args.output)
-    print(f"Updated 0050 {price['date']} and {len(credit)} monthly observations through {credit[-1]['date']}; no deployment.")
+    for key in ('price0050', 'creditMonthly', 'taiwanMarket'):
+        value = data[key]
+        last = value['observations'][-1]['date'] if value['observations'] else 'unavailable'
+        print(f"{key}: {value['update']['status']}; data date {last}; no deployment.")
+        if value['update']['status'] == 'error':
+            print(f"::warning::{key}: {value['update']['errorCode']}; kept last good data")
 
 
 if __name__ == '__main__':

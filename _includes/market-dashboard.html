@@ -16,23 +16,39 @@
     <p class="market-caption" id="market-ma-caption">均線觀察：5、20、120、240 個交易日。可在圖表「指標」加入移動平均線並設定長度；切換為週線後，均線單位也會隨之改變。</p>
     <div id="market-widget" class="market-widget"><p class="market-empty">圖表需要 JavaScript 與 TradingView 連線。</p></div>
     <p id="market-widget-status" class="market-caption" role="status">資料日期、價格與延遲狀態以圖表內標示為準。</p>
+    <p id="market-price-update" class="market-caption" role="status"></p>
     <a id="market-source" href="https://data.gov.tw/dataset/11549" target="_blank" rel="noopener noreferrer">查看 0050 官方開放資料 ↗</a>
     <p class="market-caption">價格走勢不是含息總報酬；不同幣別未換匯，不直接比較價格高低。圖表供應商控制除息、分割調整與資料更新。</p>
     <noscript><p>請啟用 JavaScript 切換圖表。也可直接查看 <a href="https://www.tradingview.com/symbols/TWSE-0050/">0050</a>、<a href="https://www.tradingview.com/symbols/NASDAQ-QQQ/">QQQ</a>、<a href="https://www.tradingview.com/symbols/AMEX-VT/">VT</a>、<a href="https://www.tradingview.com/symbols/AMEX-VTI/">VTI</a>、<a href="https://www.tradingview.com/symbols/NASDAQ-VGIT/">VGIT</a>。</p></noscript>
   </section>
   <section id="market-taiwan-data" aria-label="台股整體市場資料">
+  <section class="market-panel" aria-labelledby="market-day-title">
+    <p class="market-eyebrow">TWSE / DAILY MARKET</p><h2 id="market-day-title">台股每日市場觀察</h2>
+    <p id="market-day-date" class="market-caption">尚無可用的盤後資料。</p>
+    <div id="market-day-values"></div>
+    <p id="market-day-update" class="market-caption" role="status"></p>
+    <p class="market-caption">範圍：集中市場（上市），不含上櫃。指數單位為點、成交金額為新台幣億元；成交金額是成交規模，不是新資金流入。這是盤後資料，不是即時行情；來源未承諾固定發布時間，更新可能延遲。</p>
+    <p class="market-caption">休市狀態：尚未接通可核實的當年度完整交易日曆；資料日期較早不代表今日休市。以交易所公告為準。</p>
+    <a href="https://data.gov.tw/dataset/11672" target="_blank" rel="noopener noreferrer">證交所每日市場成交資訊與授權 ↗</a>
+    <details class="market-method"><summary>法人買賣與漲跌原因怎麼看？</summary>
+      <p>外資／投信／自營商買進、賣出與淨額尚未接通可確認公開再利用授權的來源，因此目前不顯示數字。可先查看 <a href="https://www.twse.com.tw/zh/trading/foreign/bfi82u.html" target="_blank" rel="noopener noreferrer">證交所三大法人買賣金額統計 ↗</a>。</p>
+      <p>法人淨額是買進減賣出的差額，不是全市場新錢流入，也不能用來辨識國安基金。指數漲跌與法人買賣同時出現，不能單憑這些數字判定因果。本頁不估算個股指數貢獻或編造漲跌原因。</p>
+    </details>
+    <p class="market-caption">臺灣證券交易所 2026「盤後資訊 &gt; 每日市場成交資訊」，依政府資料開放授權條款第 1 版使用；來源不代表認可本站。</p>
+  </section>
   <p class="market-caption">以下為台股整體信用交易與融資水位，作為觀察 0050 的市場背景，並非 0050 專屬融資資料。上櫃市場也不代表 0050 的成分股。</p>
   <div class="market-section-label"><h2>02 <span>台股整體融資水位</span></h2><span>融資金額 · 新台幣億元</span></div>
   <section class="market-panel market-monthly" aria-labelledby="market-monthly-title">
     <div class="market-panel-heading"><div><p class="market-eyebrow">CBC / MONTHLY HISTORY</p><h3 id="market-monthly-title">上市櫃合計融資餘額 · 月資料</h3></div><span class="market-badge">每月</span></div>
     <p class="market-value" id="market-monthly-value">—</p><p id="market-monthly-date" class="market-caption"></p>
+    <p id="market-monthly-update" class="market-caption" role="status"></p>
     <div class="market-periods" role="group" aria-label="融資月資料顯示期間"><button type="button" data-months="60" aria-pressed="true">近 5 年</button><button type="button" data-months="0" aria-pressed="false">全部期間</button></div>
     <div id="market-monthly-chart" class="market-margin-chart"></div>
     <p class="market-caption">單位：新台幣億元。這是央行彙整的上市櫃合計月資料，不是每日餘額。月資料不套用 5／20／120／240 日均線。</p>
     <p class="market-caption">中央銀行 2026「股票市場統計－信用交易」；依 <a href="https://data.gov.tw/license">政府資料開放授權條款第 1 版</a> 使用，原始數值單位為百萬元。來源不代表認可本站。</p>
     <a href="https://data.gov.tw/dataset/10805" target="_blank" rel="noopener noreferrer">官方資料集與授權 ↗</a> · <a href="https://www.cbc.gov.tw/public/data/EBOOKXLS/133_EG25_A4L.pdf" target="_blank" rel="noopener noreferrer">央行月報交叉核對 ↗</a>
   </section>
-  <details class="market-method"><summary>台股資料來源、更新與計算方式</summary><div><p>0050 使用證交所每日開放資料快照；日歷史仍待累積或取得明確授權，沒有以臺灣50指數替代 ETF 價格。</p><p>本站資料快照尚未啟用自動更新；0050 最新價格及央行月資料可由本地更新工具更新，日期以各圖標示為準。金額以新台幣元儲存、除以一億顯示；月資料不套用日均線。</p><p><a href="https://openapi.twse.com.tw/">證交所 OpenAPI</a> · <a href="https://data.gov.tw/license">政府資料開放授權條款</a></p></div></details>
+  <details class="market-method"><summary>台股資料來源、更新與計算方式</summary><div><p>0050 使用證交所每日開放資料快照；日歷史仍待累積或取得明確授權，沒有以臺灣50指數替代 ETF 價格。</p><p>0050 與央行月資料由網站更新流程取得；資料日期與來源檢查時間分開標示。重新整理頁面不會直接向官方查價。0050 是每日收盤資料，央行融資是月資料，皆非盤中即時行情。金額以新台幣元儲存、除以一億顯示；月資料不套用日均線。</p><p><a href="https://openapi.twse.com.tw/">證交所 OpenAPI</a> · <a href="https://data.gov.tw/license">政府資料開放授權條款</a></p></div></details>
   </section>
   <details class="market-method" id="market-us-method" hidden><summary>美股 ETF 資料來源</summary><p>QQQ、VT、VTI、VGIT 使用 TradingView 官方嵌入圖表並保留供應商標示，可能為延遲行情；網站不擷取、儲存或重新分發其原始行情。</p><p><a href="https://www.tradingview.com/widget-docs/faq/data/">TradingView 資料說明 ↗</a></p></details>
 </section>

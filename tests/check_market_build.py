@@ -17,7 +17,7 @@ assert (site / '2026/04/17/us-price-pipeline-margin-squeeze-zh/index.html').exis
 assert 'class="masthead' in home, 'requires complete Jekyll output'
 assert 'data-symbol="0050"' in home
 assert '1999-02' in home and '2026-09' in home, 'monthly series must be embedded'
-assert '92.5' in home and '2026-11-06' in home, '0050 snapshot must be embedded'
+assert 'price0050' in home and 'taiwanMarket' in home, 'official snapshots must be embedded'
 pages = sorted(site.glob('page/*/index.html'))
 assert pages, 'pagination pages must be generated'
 for page in pages:
