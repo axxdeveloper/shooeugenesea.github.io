@@ -1,11 +1,8 @@
-name: Deploy Jekyll with GitHub Pages
+name: Deploy student resources to GitHub Pages
 
 on:
   push:
     branches: ["master"]
-  schedule:
-    # Taiwan weekdays, 18:45 and 21:45. GitHub may delay scheduled jobs.
-    - cron: "45 10,13 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -23,17 +20,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Refresh licensed market snapshots
-        run: python3 -B scripts/update_market_data.py
+      - name: Verify study question keys
+        run: |
+          node tests/study/check-bank.cjs
+          node tests/study/check-extra.cjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - name: Stage only public student resources
+        run: |
+          set -euo pipefail
+          mkdir -p _site/study/fraction-division
+          cp CNAME index.html 404.html robots.txt sitemap.xml _site/
+          cp study/index.html study/app.js study/questions.js study/extra.js _site/study/
+          cp study/fraction-division/index.html _site/study/fraction-division/
+          test "$(find _site -type f | wc -l)" -eq 10
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
   deploy:
     environment:
