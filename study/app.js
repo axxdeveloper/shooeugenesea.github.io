@@ -14,7 +14,13 @@ catch { storageOK=false; }
 if(!gradeLabel(state.grade)) state.grade=0;
 if(state.round && (!byUnit(state.round.unit) || !Array.isArray(state.round.qs) || !state.round.qs.length)) state.round=null;
 const persist=()=>{try { localStorage.setItem(key,JSON.stringify(state));storageOK=true; } catch { storageOK=false; }};
-let view=state.round&&!state.round.done?"quiz":"home", paperFilter="all", printDraft=null;
+// Shared links carry just an allowlisted unit ID; they never restore or write activity data.
+function unitFromLocation(){
+ try{const ids=new URL(window.location.href).searchParams.getAll("unit");return ids.length===1?byUnit(ids[0])||null:null;}
+ catch{return null;}
+}
+let linkedUnit=unitFromLocation(), shareDraft=null, shareAttempt=0;
+let view=!linkedUnit&&state.round&&!state.round.done?"quiz":"home", paperFilter="all", printDraft=null;
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const archive=[
  ["elementary","校內段考","臺中大墩國小","依學年、學期和期中／期末排列；可查 114 學年度等公開卷。","https://sites.google.com/ddes.tc.edu.tw/testpaper"],
@@ -48,10 +54,10 @@ function getSessionQs(unit, focus, avoid=[]) {
 function start(id, focus=null, avoid=[]) {
  const unit=byUnit(id); if(!unit)return;
  const old=state.round;
- if(old&&!old.done&&old.picks.length&&!window.confirm("改開新一輪會放棄這輪尚未做完的進度。要繼續嗎？"))return;
+ if(old&&!old.done&&(old.picks.length||linkedUnit)&&!window.confirm("改開新一輪會放棄這輪尚未做完的進度。要繼續嗎？"))return;
  const qs=getSessionQs(unit,focus,avoid);
  if(!qs.length)return;
- state.round={unit:id,qs,picks:[],index:0,done:false,focus:!!focus};state.grade=unit.grade;
+ state.round={unit:id,qs,picks:[],index:0,done:false,focus:!!focus};state.grade=unit.grade;linkedUnit=null;shareDraft=null;
  persist(); go("quiz");
 }
 function go(next, focus=true) {
@@ -60,19 +66,48 @@ function go(next, focus=true) {
 }
 function heading(s){return '<h2 tabindex="-1">'+esc(s)+'</h2>'}
 function act(name,title,cls="",attrs=""){return '<button type="button" data-act="'+name+'" class="'+cls+'" '+attrs+'>'+title+'</button>'}
+function shareControl(unit){
+ const id=esc(unit.id);
+ return act("share-unit","分享單元","",'data-id="'+id+'" aria-label="分享 '+esc(unit.unit)+' 單元"');
+}
+function sharedLink(unit){
+ const url=new URL(window.location.pathname,window.location.origin);
+ url.searchParams.set("unit",unit.id);
+ return url.href;
+}
+function shareBox(){
+ if(!shareDraft)return "";
+ return '<section class="card" aria-label="單元分享"><p role="status" id="share-status" tabindex="-1">'+esc(shareDraft.message)+'</p><label for="share-url">單元連結</label> <input id="share-url" readonly value="'+esc(shareDraft.url)+'" style="width:min(100%,30rem)" autocomplete="off" spellcheck="false"> '+act("select-share","選取連結")+'<p class="muted">連結只指定單元，不會帶上姓名、答案或練習紀錄。</p></section>';
+}
+function selectShare(){
+ const field=$("#share-url");if(field){field.focus();field.select();field.setSelectionRange?.(0,field.value.length);}
+}
+async function shareUnit(unit){
+ const attempt=++shareAttempt,url=sharedLink(unit);
+ shareDraft={url,message:"正在準備連結…"};render();
+ let copied=false;
+ try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(url);copied=true;}}catch{}
+ if(attempt!==shareAttempt||shareDraft?.url!==url)return;
+ shareDraft.message=copied?"已複製單元連結，可以貼給孩子。":"無法自動複製，請從下方選取並複製連結。";
+ if(view!=="home")return;
+ const status=$("#share-status");if(status)status.textContent=shareDraft.message;
+ if(!copied)selectShare();else status?.focus?.();
+}
 function chooser(){
- const selected=gradeLabel(state.grade);
- let h='<section class="card" aria-labelledby="grade-head"><h2 id="grade-head" tabindex="-1">1. 選你的年級</h2>';
+ const selection=linkedUnit?.grade??state.grade,selected=gradeLabel(selection), live=state.round&&!state.round.done;
+ const resume=live?'<section class="card"><p>上次還有一輪沒做完。開啟單元連結不會清除原本進度。</p>'+act("resume","繼續上次練習","primary")+'</section>':"";
+ let h=linkedUnit?'<section class="card" aria-labelledby="linked-unit-heading"><h2 id="linked-unit-heading" tabindex="-1">'+esc(selected+' · '+linkedUnit.unit)+'</h2><p>這是分享的單元。準備好再按開始，這一輪有 10 題。</p><div class="flex">'+act("start","開始 10 題","primary",'data-id="'+esc(linkedUnit.id)+'"')+act("make-print","列印練習卷","",'data-id="'+esc(linkedUnit.id)+'"')+shareControl(linkedUnit)+'</div></section>'+resume:"";
+ h+=shareBox();
+ h+='<section class="card" aria-labelledby="grade-head"><h2 id="grade-head" tabindex="-1">1. 選你的年級</h2>';
  for(const [stage,start,end] of [["國小",1,6],["國中",7,9],["高中",10,12]]){
    h+='<div class="stage"><div class="stage-label">'+stage+'</div><div class="grid">';
-   h+=grades.filter(g=>g.id>=start&&g.id<=end).map(g=>act("grade",esc(g.label),"",'data-id="'+g.id+'" aria-pressed="'+(g.id===state.grade)+'"')).join("");
+   h+=grades.filter(g=>g.id>=start&&g.id<=end).map(g=>act("grade",esc(g.label),"",'data-id="'+g.id+'" aria-pressed="'+(g.id===selection)+'"')).join("");
    h+='</div></div>';
  }
  h+='</section><section id="unit-list" class="card">'+heading(selected?"2. 選想練的單元":"2. 選單元");
  if(!selected)h+='<p class="muted">先選一個年級，這裡就會出現能練的單元。</p>';
- else h+='<p class="muted">'+esc(selected)+' · 數學｜目前試用範圍，不是全年教材</p><div class="units">'+units.filter(u=>u.grade===state.grade).map(u=>'<div>'+act("start",esc(u.unit)+'<small>開始 10 題</small>',"unit primary",'data-id="'+esc(u.id)+'"')+'<div style="margin-top:.4rem">'+act("make-print","列印練習卷","",'data-id="'+esc(u.id)+'" aria-label="列印 '+esc(u.unit)+' 練習卷"')+'</div></div>').join("")+'</div>';
- h+='</section>'; if(state.round&&!state.round.done)h+='<section class="card"><p>上次還有一輪沒做完。</p>'+act("resume","繼續上次練習","primary")+'</section>';
- return h;
+ else h+='<p class="muted">'+esc(selected)+' · 數學｜目前試用範圍，不是全年教材</p><p class="muted">自己練可以直接開始。家長或老師也能複製單元連結，讓孩子打開就找到同一單元。</p><div class="units">'+units.filter(u=>u.grade===selection).map(u=>'<div>'+act("start",esc(u.unit)+'<small>開始 10 題</small>',"unit primary",'data-id="'+esc(u.id)+'"')+'<div class="flex" style="margin-top:.4rem">'+act("make-print","列印練習卷","",'data-id="'+esc(u.id)+'" aria-label="列印 '+esc(u.unit)+' 練習卷"')+shareControl(u)+'</div></div>').join("")+'</div>';
+ return h+'</section>'+(!linkedUnit?resume:"");
 }
 function quiz(){
  const r=state.round;
@@ -119,8 +154,10 @@ document.addEventListener("click",e=>{
  if(b.dataset.view){go(b.dataset.view);return;}
  const id=b.dataset.id, r=state.round;
  switch(b.dataset.act){
- case "grade":state.grade=Number(id);persist();render();screen.querySelector("#unit-list h2")?.focus();break;
+ case "grade":linkedUnit=null;shareDraft=null;state.grade=Number(id);persist();render();screen.querySelector("#unit-list h2")?.focus();break;
  case "start":start(id);break;
+ case "share-unit":{const u=byUnit(id);if(u)void shareUnit(u);break;}
+ case "select-share":selectShare();break;
  case "resume":go("quiz");break;
  case "home":go("home");break;
  case "filter":paperFilter=id;render();screen.querySelector('button[data-act="filter"][aria-pressed="true"]')?.focus();break;
