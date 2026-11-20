@@ -1,4 +1,6 @@
 main:
+  - title: "學生自習室"
+    url: /study/
   - title: "文章"
     url: /notes/
   - title: "技術"
