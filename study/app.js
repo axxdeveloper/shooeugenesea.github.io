@@ -142,7 +142,7 @@ function papers(){
 }
 function printable(){
  const p=printDraft;if(!p)return chooser();
- return '<section class="card print-controls">'+heading("列印練習卷")+'<p>題目與答案分頁。也可以在列印視窗選「另存為 PDF」。</p><label><input type="checkbox" id="include-key" checked> 附上答案頁</label><div class="flex" style="margin-top:.7rem">'+act("print","列印／存成 PDF","primary")+(p.fresh?act("refresh-print","換一份題目"):"")+act("close-print","返回")+'</div></section><section class="card worksheet"><h2>'+esc(p.title)+'｜練習卷</h2><p class="worksheet-lines">姓名：________________　日期：________________</p><ol class="worksheet-questions">'+p.qs.map(q=>'<li><strong>'+esc(q.stem)+'</strong><div class="paper-options">'+q.options.map((o,i)=>'<span>'+label(i)+'. '+esc(o)+'</span>').join("")+'</div></li>').join("")+'</ol><section class="answer-sheet"><h2>'+esc(p.title)+'｜答案</h2><ol>'+p.qs.map(q=>'<li>'+label(q.answer)+'. '+esc(q.options[q.answer])+'</li>').join("")+'</ol></section></section>';
+ return '<section class="card print-controls">'+heading("列印練習卷")+'<p>題目與答案分頁。也可以在列印視窗選「另存為 PDF」。</p><label><input type="checkbox" id="include-key" checked> 附上答案頁</label><div class="flex" style="margin-top:.7rem">'+act("print","列印／存成 PDF","primary")+(p.fresh?act("refresh-print","換一份題目"):"")+act("close-print","返回")+'</div></section><section class="card worksheet"><h2>'+esc(p.title)+'｜練習卷</h2><p class="worksheet-lines">姓名：________________　日期：________________</p>'+(p.unit==="math-6"?'<p class="source-note">線上練同單元：<a href="https://www.isaacnote.com/study/?unit=math-6">www.isaacnote.com/study/?unit=math-6</a></p>':"")+'<ol class="worksheet-questions">'+p.qs.map(q=>'<li><strong>'+esc(q.stem)+'</strong><div class="paper-options">'+q.options.map((o,i)=>'<span>'+label(i)+'. '+esc(o)+'</span>').join("")+'</div></li>').join("")+'</ol><section class="answer-sheet"><h2>'+esc(p.title)+'｜答案</h2><ol>'+p.qs.map(q=>'<li>'+label(q.answer)+'. '+esc(q.options[q.answer])+'</li>').join("")+'</ol></section></section>';
 }
 function openPrint(id,existing=null) {const u=byUnit(id);if(!u&&!existing)return;printDraft={unit:id,title:existing?.title??gradeLabel(u.grade)+" · "+u.unit,qs:existing?.qs??u.make(seed()),fresh:!existing,back:view};go("print");}
 function render(){
@@ -192,5 +192,6 @@ document.addEventListener("click",e=>{
  case "clear":if(window.confirm("只清除這個瀏覽器的練習紀錄、錯題和進度。確定清除？")){state={grade:state.grade,round:null,wrong:[],history:[]};persist();go("history");}break;
  }
 });
-render();
+if(linkedUnit && new URL(window.location.href).searchParams.get("mode")==="print"){openPrint(linkedUnit.id);}
+else render();
 })();
